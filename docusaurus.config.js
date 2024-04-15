@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -49,11 +51,14 @@ const config = {
       ({
         docs: {
           routeBasePath: '/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/100askTeam/eLinuxAI-TrainingDocs/tree/main/',
+          
         },
         blog: {
           showReadingTime: true,
@@ -83,10 +88,16 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'linuxuserSidebar',
+            sidebarId: 'elinuxaiSidebar',
             position: 'left',
-            label: 'Linux手册',
-          },                 
+            label: '嵌入式AI基础',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'calsspartoneSidebar',
+            position: 'left',
+            label: '嘉楠K510模型部署',
+          },                   
           {
             type: 'localeDropdown',
             position: 'right',
