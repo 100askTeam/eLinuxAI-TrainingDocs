@@ -1,7 +1,7 @@
 ---
-sidebar_position: 7
+sidebar_position: 5
 ---
-# 基础算子及卷积神经网络
+# 5.基础算子及卷积神经网络
 
 ### 4.1 基础算子
 

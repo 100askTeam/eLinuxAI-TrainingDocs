@@ -1,7 +1,7 @@
 ---
-sidebar_position: 12
+sidebar_position: 10
 ---
-# 模型层和算力层
+# 10.模型层和算力层
 
 ### 2.1 模型推理框架-nnaces
 

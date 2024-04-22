@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-# K510端侧部署模型
+# 3.K510端侧部署模型
 
 ### 10.1 DongshanPI-vision开发板操作
 

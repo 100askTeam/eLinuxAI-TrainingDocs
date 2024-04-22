@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 ---
-# 深度学习框架Pytorch入门
+# 6.深度学习框架Pytorch入门
 
 ### 3.1 深度学习框架简介
 

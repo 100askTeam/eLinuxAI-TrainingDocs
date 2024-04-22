@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
-# 深度学习及神经网络
+# 4.深度学习及神经网络
 
 ### 2.1 深度学习
 

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 ---
-# 模型及部署
+# 7.模型及部署
 
 ### 5.1 模型
 

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 9
+sidebar_position: 8
 ---
-# 边缘部署
+# 8.边缘部署
 
 ### 6.1 部署硬件GPU/FPGA/ASIC
 

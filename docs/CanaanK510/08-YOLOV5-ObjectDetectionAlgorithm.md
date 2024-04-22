@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# YOLOV5目标检测算法
+# 1.YOLOV5目标检测算法
 
 ​	 YOLOV5目标检测算法是YOLO算法的第五次迭代，YOLO全称为You Only Look Once(你只需看一次)，YOLO在2015年提出将物体检测作为回归问题求解，论文地址:[https://arxiv.org/pdf/1506.02640.](https://arxiv.org/pdf/1506.02640.pdf)[pdf](https://arxiv.org/pdf/1506.02640.pdf)。
 
