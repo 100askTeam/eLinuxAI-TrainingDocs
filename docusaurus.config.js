@@ -94,9 +94,15 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'canaanK230Sidebar',
+            position: 'left',
+            label: '嘉楠K230开发',
+          }, 
+          {
+            type: 'docSidebar',
             sidebarId: 'calsspartoneSidebar',
             position: 'left',
-            label: '嘉楠K510模型部署',
+            label: '嘉楠K510开发',
           },                   
           {
             type: 'localeDropdown',
