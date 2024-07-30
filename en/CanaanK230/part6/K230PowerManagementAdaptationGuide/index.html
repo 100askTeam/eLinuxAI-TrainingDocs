@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-CanaanK230/part6/K230PowerManagementAdaptationGuide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">K230_功耗管理适配指南 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://eai.100ask.net/en/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://eai.100ask.net/en/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://eai.100ask.net/en/CanaanK230/part6/K230PowerManagementAdaptationGuide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="K230_功耗管理适配指南 | 东山Π"><meta data-rh="true" name="description" content="1. 概述"><meta data-rh="true" property="og:description" content="1. 概述"><link data-rh="true" rel="icon" href="/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://eai.100ask.net/en/CanaanK230/part6/K230PowerManagementAdaptationGuide"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part6/K230PowerManagementAdaptationGuide" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/en/CanaanK230/part6/K230PowerManagementAdaptationGuide" hreflang="en"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part6/K230PowerManagementAdaptationGuide" hreflang="x-default"><link rel="stylesheet" href="/en/assets/css/styles.e3ab61ce.css">
+<script src="/en/assets/js/runtime~main.64f70688.js" defer="defer"></script>
+<script src="/en/assets/js/main.9a84e7c0.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="/en/img/logo.svg" alt="DshanPI" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/en/img/logo.svg" alt="DshanPI" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">eLinux AI开发</b></a><a class="navbar__item navbar__link" href="/en/ELinuxAIBase/BoardIntroduction-1">嵌入式AI基础</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/en/CanaanK230/Userdoc">嘉楠K230开发</a><a class="navbar__item navbar__link" href="/en/CanaanK510/YOLOV5-ObjectDetectionAlgorithm">嘉楠K510开发</a></div><div class="navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/CanaanK230/part6/K230PowerManagementAdaptationGuide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh-Hans">简体中文</a></li><li><a href="/en/CanaanK230/part6/K230PowerManagementAdaptationGuide" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/en/CanaanK230/Userdoc">文档阅读指南</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/1开发板上手指南">1.开发板上手指南</a><button aria-label="Expand sidebar category &#x27;1.开发板上手指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/2开发环境搭建指南">2.开发环境  搭建指南</a><button aria-label="Expand sidebar category &#x27;2.开发环境搭建指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/3嵌入式应用开发指南">3.嵌入式应用开发指南</a><button aria-label="Expand sidebar category &#x27;3.嵌入式应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/4ai应用开发指南">4.AI应用开发指南</a><button aria-label="Expand sidebar category &#x27;4.AI应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/5micropython应用开发指南">5.MicroPython应用开发指南</a><button aria-label="Expand sidebar category &#x27;5.MicroPython应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/en/category/6系统开发指南">6.系统开发指南</a><button aria-label="Collapse sidebar category &#x27;6.系统开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230RVVoptimizationperformance">K230 RVV优化性能说明</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230MemoryOptimizationGuide">K230 内存优化指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230MemoryAnalysisGuide">K230 内存分析指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230LaunchtheOptimizationGuide">K230 启动优化指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230IntroductiontotheuseofSharefsintheBigandSmallCoreCommunication">K230大小核通讯Sharefs使用简介</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230OpenBLASDeveloperGuide">K230 OpenBLAS开发指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230OpenCVDeveloperGuide">K230 OpenCV开发指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230CameraSensorAdaptationGuide">K230 Camera Sensor适配指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/en/CanaanK230/part6/K230PowerManagementAdaptationGuide">K230_功耗管理适配指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230VICAPSENSORParameterpartitionreference">K230 VICAP SENSOR 参数分区参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230LCDAdaptationGuide">K230 LCD适配指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230PMUUserGuide">K230 PMU使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230SDKIoTWiFiAiW4211LV10Directionsforuse">K230 SDK IoT WiFi AiW4211LV10使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230SDKIoTWiFiAiW4211LV10DriverDevelopmentGuide">K230 SDK IoT WiFi AiW4211LV10驱动开发指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230nncaseDeveloperGuide">K230 nncase开发指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230SteckupdatedtheEncasRuntimeLibraryGuide">K230 SDK 更新nncase运行时库指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230debianubuntuillustrate">K230 debian ubuntu 说明</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230SDKBurntoolDirectionsforuse">K230 SDK Burntool使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230SDKDewarpDirectionsforuse">K230 SDK Dewarp 使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230ISPImageTuningGuide">K230 ISP图像调优指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230ISPInitializationConfigurationGuide">K230 ISP初始化配置指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/en/CanaanK230/part6/K230ISPTuningToolDirectionsforuse">K230 ISP Tuning Tool使用指南</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/7sdk-api参考指南">7.SDK API参考指南</a><button aria-label="Expand sidebar category &#x27;7.SDK API参考指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/en/category/8常见问题">8.常见问题</a><button aria-label="Expand sidebar category &#x27;8.常见问题&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/en/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/en/category/6系统开发指南"><span itemprop="name">6.系统开发指南</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">K230_功耗管理适配指南</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>K230_功耗管理适配指南</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-概述">1. 概述<a href="#1-概述" class="hash-link" aria-label="Direct link to 1. 概述" title="Direct link to 1. 概述">​</a></h2>
+<p>k230平台功耗管理框架分为大核功耗管理和小核功耗管理，两个核独立控制。 大核(rt-smart)主要控制CPU1、AI模块、显示模块、多媒体模块等，小核(linux)主要控制CPU0等。 芯片上电后默认使能所有电源域及时钟，为了减少功耗，因此在uboot-spl阶段关闭了以下电源域及时钟:</p>
+<ol>
+<li>KPU电源、KPU clk、KPU aclk</li>
+<li>VPU电源、VPU clk、VPU aclk、VPU cfgclk</li>
+<li>DPU电源、DPU clk、DPU aclk、DPU pclk</li>
+<li>DISP电源、disp clk</li>
+<li>mclk</li>
+</ol>
+<p>同时各设备驱动负责相应的时钟及电源域管理，当用户打开设备时，驱动应打开电源域和时钟，当用户关闭设备时，驱动应关闭时钟和电源域。对于不支持电源域管理的设备，只需要控制时钟。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-大核功耗控制">2. 大核功耗控制<a href="#2-大核功耗控制" class="hash-link" aria-label="Direct link to 2. 大核功耗控制" title="Direct link to 2. 大核功耗控制">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-控制框架介绍">2.1 控制框架介绍<a href="#21-控制框架介绍" class="hash-link" aria-label="Direct link to 2.1 控制框架介绍" title="Direct link to 2.1 控制框架介绍">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="211-电源管理域">2.1.1 电源管理域<a href="#211-电源管理域" class="hash-link" aria-label="Direct link to 2.1.1 电源管理域" title="Direct link to 2.1.1 电源管理域">​</a></h4>
+<p>大核功耗控制主要围绕几个电源管理域:</p>
+<ol>
+<li>CPU1</li>
+<li>KPU</li>
+<li>DPU</li>
+<li>VPU</li>
+<li>DISP</li>
+</ol>
+<p>每个电源管理域可分别设置频率，其中CPU1和KPU还支持DVFS，其它电源管理域只支持设置频率。电源管理域支持频率为驱动内置，用户可根据自己实际场景进行更改。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="212-控制策略">2.1.2 控制策略<a href="#212-控制策略" class="hash-link" aria-label="Direct link to 2.1.2 控制策略" title="Direct link to 2.1.2 控制策略">​</a></h4>
+<p>每个电源管理域可分别设置功耗控制策略，分为四种策略:</p>
+<ol>
+<li>手动模式，用户可在程序中调用接口手动配置频率</li>
+<li>性能模式，锁定最高频率</li>
+<li>省电模式，锁定最低频率</li>
+<li>自动模式，根据负载自动切换频率(仅支持CPU1)</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="213-热保护">2.1.3 热保护<a href="#213-热保护" class="hash-link" aria-label="Direct link to 2.1.3 热保护" title="Direct link to 2.1.3 热保护">​</a></h4>
+<p>功耗控制支持两级热保护，第一级是超过指定温度后对模块进行频率限制，第二级是超过指定温度后强制模块关闭电源域，两级均支持用户配置。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="214-电源和时钟">2.1.4 电源和时钟<a href="#214-电源和时钟" class="hash-link" aria-label="Direct link to 2.1.4 电源和时钟" title="Direct link to 2.1.4 电源和时钟">​</a></h4>
+<p>功耗控制支持手动对每个电源管理域进行上下电和时钟控制，用户一般不需要手动调用，使用设备时设备驱动会打开电源和时钟，关闭设备时设备驱动会关闭电源和时钟。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="215-cpu1">2.1.5 CPU1<a href="#215-cpu1" class="hash-link" aria-label="Direct link to 2.1.5 CPU1" title="Direct link to 2.1.5 CPU1">​</a></h4>
+<p>cpu支持4种策略：<code>手动模式</code>、<code>性能模式</code>、<code>省电模式</code>、<code>自动模式</code></p>
+<p>针对目前门锁和词典笔POC的CPU1功耗优化，主要还是采用手动模式，用户在计算量大的程序段前设置高频，运行完成后设置为低频。对于多进程或多线程应用，每个应用可以锁定最低运行频率。 可通过查看cpu统计信息来调整应用以达到最佳功耗。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="216-kpu">2.1.6 KPU<a href="#216-kpu" class="hash-link" aria-label="Direct link to 2.1.6 KPU" title="Direct link to 2.1.6 KPU">​</a></h4>
+<p>kpu支持3种策略：<code>手动模式</code>、<code>性能模式</code>、<code>省电模式</code></p>
+<p>KPU功耗控制主要是通过调整KPU频率和开关电源时钟，通过nncase调用<code>kd_mpi_pm_runtime_runstage</code>接口告知目前KPU的运行阶段，用户可通过各阶段控制各模块时钟和电源，如在AI使用KPU时，可打开KPU时钟，使用完成后立即关闭时钟(AI2D时钟的控制默认由硬件自动控制)。用户也可根据实际场景，手动设置KPU频率，如要求模型高帧率则设置最大频率，帧率无要求或可满足需求，则设置较低的频率来降低功耗。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="217-dpu">2.1.7 DPU<a href="#217-dpu" class="hash-link" aria-label="Direct link to 2.1.7 DPU" title="Direct link to 2.1.7 DPU">​</a></h4>
+<p>参考 KPU</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="218-vpu">2.1.8 VPU<a href="#218-vpu" class="hash-link" aria-label="Direct link to 2.1.8 VPU" title="Direct link to 2.1.8 VPU">​</a></h4>
+<p>参考 KPU</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="219-display">2.1.9 DISPLAY<a href="#219-display" class="hash-link" aria-label="Direct link to 2.1.9 DISPLAY" title="Direct link to 2.1.9 DISPLAY">​</a></h4>
+<p>显示相关部分，内置几种频率组合，如60fps、30fps等，启动时根据不同场景设置好，不支持运行时调整频率，仅支持关闭时钟和关闭电源域</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-使用方式">2.2 使用方式<a href="#22-使用方式" class="hash-link" aria-label="Direct link to 2.2 使用方式" title="Direct link to 2.2 使用方式">​</a></h3>
+<p>功耗管理框架默认使能，所有域初始为<code>手动模式</code>，并且频率为系统默认初始值，不影响原系统功能。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="221-使用手动模式">2.2.1 使用手动模式<a href="#221-使用手动模式" class="hash-link" aria-label="Direct link to 2.2.1 使用手动模式" title="Direct link to 2.2.1 使用手动模式">​</a></h4>
+<p>用户可参考以下流程使用<code>手动模式</code>:</p>
+<ol>
+<li>通过<code>kd_mpi_pm_get_profiles</code>接口获取电源管理域支持的频点</li>
+<li>通过<code>kd_mpi_pm_set_governor</code>接口设置电源管理域的管理策略为手动模式</li>
+<li>通过<code>kd_mpi_pm_set_profile</code>或<code>kd_mpi_pm_set_profile_lock</code>接口设置电源管理域的profile序号</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="222-使用其它模式">2.2.2 使用其它模式<a href="#222-使用其它模式" class="hash-link" aria-label="Direct link to 2.2.2 使用其它模式" title="Direct link to 2.2.2 使用其它模式">​</a></h4>
+<p>用户可参考以下流程使用<code>性能模式</code>、<code>省电模式</code>、<code>自动模式</code>:</p>
+<ol>
+<li>通过<code>kd_mpi_pm_set_governor</code>接口设置电源管理域的管理策略为相应模式</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="223-使用热保护">2.2.3 使用热保护<a href="#223-使用热保护" class="hash-link" aria-label="Direct link to 2.2.3 使用热保护" title="Direct link to 2.2.3 使用热保护">​</a></h4>
+<ol>
+<li>通过<code>kd_mpi_pm_set_thermal_protect</code>接口设置热保护温度和降频序号，当温度超过指定值后降频到指定profile</li>
+<li>通过<code>kd_mpi_pm_set_thermal_shutdown</code>接口设置热关机温度，当温度超过指定值后各电源管理域会强制下电</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="224-使用自定义频率">2.2.4 使用自定义频率<a href="#224-使用自定义频率" class="hash-link" aria-label="Direct link to 2.2.4 使用自定义频率" title="Direct link to 2.2.4 使用自定义频率">​</a></h4>
+<p>比如需要修改CPU支持的频率，可以修改<code>k230_sdk/src/big/mpp/kernel/pm/src/pm_domain_cpu.c</code>文件中的<code>profiles</code>数组:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">static k_pm_profile profiles[] = {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {1.6e9, 0.8e6},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {1.188e9, 0.7e6},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {0.8e9, 0.68e6},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {0.594e9, 0.66e6},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {0.4e9, 0.64e6},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {0.2e9, 0.62e6},</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">};</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>修改完数组后，同样需要修改同一文件下的<code>set_clock</code>函数，去生成相应的频率，如果域支持DVFS，用户还需要指定每个频率对应的电压，如果不支持，则统一为默认电压。</p>
+<p>KPU, DPU, VPU的修改也是类似。</p>
+<p><em>注意:</em> 如果需要使用CPU<code>自动模式</code>策略，修改了频率后，同时需要修改负载转换表<code>load_table</code>。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-api-参考">2.3 API 参考<a href="#23-api-参考" class="hash-link" aria-label="Direct link to 2.3 API 参考" title="Direct link to 2.3 API 参考">​</a></h3>
+<p>该框架提  供以下API:</p>
+<ul>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-reg" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_reg</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-reg" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_reg</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-profiles" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_profiles</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-stat" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_stat</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-governor" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_governor</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-governor" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_governor</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-profile" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_profile</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-profile" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_profile</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-profile-lock" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_profile_lock</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-profile-unlock" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_profile_unlock</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-thermal-protect" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_thermal_protect</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-thermal-protect" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_thermal_protect</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-thermal-shutdown" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_thermal_shutdown</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-get-thermal-shutdown" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_thermal_shutdown</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-clock" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_clock</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-power" target="_blank" rel="noopener noreferrer">kd_mpi_pm_set_power</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-runtime-runstage" target="_blank" rel="noopener noreferrer">kd_mpi_pm_runtime_runstage</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="231-kd_mpi_pm_set_reg">2.3.1 kd_mpi_pm_set_reg<a href="#231-kd_mpi_pm_set_reg" class="hash-link" aria-label="Direct link to 2.3.1 kd_mpi_pm_set_reg" title="Direct link to 2.3.1 kd_mpi_pm_set_reg">​</a></h4>
+<p>【描述】</p>
+<p>写寄存器，用于扩展或调试</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_reg(uint32_t reg, uint32_t val);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>reg</td><td>寄存器地址</td><td>输入</td></tr><tr><td>val</td><td>寄存器数据</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>只支持CMU，PWR地址段</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="232-kd_mpi_pm_get_reg">2.3.2 kd_mpi_pm_get_reg<a href="#232-kd_mpi_pm_get_reg" class="hash-link" aria-label="Direct link to 2.3.2 kd_mpi_pm_get_reg" title="Direct link to 2.3.2 kd_mpi_pm_get_reg">​</a></h4>
+<p>【描述】</p>
+<p>读寄存器，用于扩展或调试</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_reg(uint32_t reg, uint32_t *pval);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>reg</td><td>寄存器地址</td><td>输入</td></tr><tr><td>pval</td><td>寄存器数据</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>只支持CMU，PWR地址段</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="233-kd_mpi_pm_get_profiles">2.3.3 kd_mpi_pm_get_profiles<a href="#233-kd_mpi_pm_get_profiles" class="hash-link" aria-label="Direct link to 2.3.3 kd_mpi_pm_get_profiles" title="Direct link to 2.3.3 kd_mpi_pm_get_profiles">​</a></h4>
+<p>【描述】</p>
+<p>获取电源管理域的profile属性</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_profiles(k_pm_domain domain, uint32_t *pcount, k_pm_profile *pprofile);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>pcount</td><td>属性个数</td><td>输入/输出</td></tr><tr><td>pprofile</td><td>属性</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>*pcount最大值为128</li>
+<li>*pcount为0时，返回电源管理域的profile个数，pprofile未使用</li>
+<li><em>pcount大于0小于某个值时，返回指定个数的profile属性，pprofile不能为空且必须大于</em>pcount</li>
+<li><em>pcount大于某个值时，返回最大的profile个数和最大个数的profile属性，pprofile不能为空且必须大于</em>pcount最大值</li>
+<li>profile为降序排列，序号0为最高频率，序号越大频率越低</li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="234-kd_mpi_pm_get_stat">2.3.4 kd_mpi_pm_get_stat<a href="#234-kd_mpi_pm_get_stat" class="hash-link" aria-label="Direct link to 2.3.4 kd_mpi_pm_get_stat" title="Direct link to 2.3.4 kd_mpi_pm_get_stat">​</a></h4>
+<p>【描述】</p>
+<p>获取电源管理域的统计信息</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_stat(k_pm_domain domain);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>目前仅支持CPU电源管理域</li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="235-kd_mpi_pm_set_governor">2.3.5 kd_mpi_pm_set_governor<a href="#235-kd_mpi_pm_set_governor" class="hash-link" aria-label="Direct link to 2.3.5 kd_mpi_pm_set_governor" title="Direct link to 2.3.5 kd_mpi_pm_set_governor">​</a></h4>
+<p>【描述 】</p>
+<p>设置电源管理域的管理策略</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_governor(k_pm_domain domain, k_pm_governor governor);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>governor</td><td>管理策略</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="236-kd_mpi_pm_get_governor">2.3.6 kd_mpi_pm_get_governor<a href="#236-kd_mpi_pm_get_governor" class="hash-link" aria-label="Direct link to 2.3.6 kd_mpi_pm_get_governor" title="Direct link to 2.3.6 kd_mpi_pm_get_governor">​</a></h4>
+<p>【描述】</p>
+<p>获取电源管理域的管理策略</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_governor(k_pm_domain domain, k_pm_governor *pgovernor);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>pgovernor</td><td>管理策略</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="237-kd_mpi_pm_set_profile">2.3.7 kd_mpi_pm_set_profile<a href="#237-kd_mpi_pm_set_profile" class="hash-link" aria-label="Direct link to 2.3.7 kd_mpi_pm_set_profile" title="Direct link to 2.3.7 kd_mpi_pm_set_profile">​</a></h4>
+<p>【描述】</p>
+<p>设置电源管理域当前的profile序号</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_profile(k_pm_domain domain, int32_t index);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>index</td><td>profile序号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>仅支持手动模式下设置</li>
+<li>支持负数，如-1代表倒数第一个profile，-2代表倒数第二个profile</li>
+<li>超出范围的负数，会被限制为第一个profile</li>
+<li>超出范围的正数，会被限制为最后一个profile</li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="238-kd_mpi_pm_get_profile">2.3.8 kd_mpi_pm_get_profile<a href="#238-kd_mpi_pm_get_profile" class="hash-link" aria-label="Direct link to 2.3.8 kd_mpi_pm_get_profile" title="Direct link to 2.3.8 kd_mpi_pm_get_profile">​</a></h4>
+<p>【描述】</p>
+<p>获取电源管理域当前的profile序号</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_profile(k_pm_domain domain, int32_t *pindex);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>pindex</td><td>profile序号</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="239-kd_mpi_pm_set_profile_lock">2.3.9 kd_mpi_pm_set_profile_lock<a href="#239-kd_mpi_pm_set_profile_lock" class="hash-link" aria-label="Direct link to 2.3.9 kd_mpi_pm_set_profile_lock" title="Direct link to 2.3.9 kd_mpi_pm_set_profile_lock">​</a></h4>
+<p>【描述】</p>
+<p>设置电源管理域最低的profile序号</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_profile_lock(k_pm_domain domain, int32_t index);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>index</td><td>profile序号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>设置完成后，当前profile可能大于设置值，如其它进程设置最低profile为1，当前进程设置最低profile为2，此时实际profile为1</li>
+<li>其它参考<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#kd-mpi-pm-set-profile" target="_blank" rel="noopener noreferrer">kd_mpi_pm_get_profile</a></li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2310-kd_mpi_pm_set_profile_unlock">2.3.10 kd_mpi_pm_set_profile_unlock<a href="#2310-kd_mpi_pm_set_profile_unlock" class="hash-link" aria-label="Direct link to 2.3.10 kd_mpi_pm_set_profile_unlock" title="Direct link to 2.3.10 kd_mpi_pm_set_profile_unlock"> ​</a></h4>
+<p>【描述】</p>
+<p>清除电源管理域最低的profile序号</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_profile_unlock(k_pm_domain domain, int32_t index);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>index</td><td>profile序号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2311-kd_mpi_pm_set_thermal_protect">2.3.11 kd_mpi_pm_set_thermal_protect<a href="#2311-kd_mpi_pm_set_thermal_protect" class="hash-link" aria-label="Direct link to 2.3.11 kd_mpi_pm_set_thermal_protect" title="Direct link to 2.3.11 kd_mpi_pm_set_thermal_protect">​</a></h4>
+<p>【描述】</p>
+<p>设置电源管理域热保护降频</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_thermal_protect(k_pm_domain domain, int32_t temp, int32_t index);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>temp</td><td>温度，单位0.01℃</td><td>输入</td></tr><tr><td>index</td><td>profile序号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>仅CPU和KPU电源管理域支持热保护设置</li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2312-kd_mpi_pm_get_thermal_protect">2.3.12 kd_mpi_pm_get_thermal_protect<a href="#2312-kd_mpi_pm_get_thermal_protect" class="hash-link" aria-label="Direct link to 2.3.12 kd_mpi_pm_get_thermal_protect" title="Direct link to 2.3.12 kd_mpi_pm_get_thermal_protect">​</a></h4>
+<p>【描述】</p>
+<p>获取电源管理域热保护降频配置</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_thermal_protect(k_pm_domain domain, int32_t *ptemp, int32_t *pindex);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>ptemp</td><td>温度，单位0.01℃</td><td>输出</td></tr><tr><td>pindex</td><td>profile序号</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>仅CPU和KPU电源管理域支持热保护设置</li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2313-kd_mpi_pm_set_thermal_shutdown">2.3.13 kd_mpi_pm_set_thermal_shutdown<a href="#2313-kd_mpi_pm_set_thermal_shutdown" class="hash-link" aria-label="Direct link to 2.3.13 kd_mpi_pm_set_thermal_shutdown" title="Direct link to 2.3.13 kd_mpi_pm_set_thermal_shutdown">​</a></h4>
+<p>【描述】</p>
+<p>设置热关机温度</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_thermal_shutdown(int32_t temp);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>temp</td><td>温度，单位0.01℃</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2314-kd_mpi_pm_get_thermal_shutdown">2.3.14 kd_mpi_pm_get_thermal_shutdown<a href="#2314-kd_mpi_pm_get_thermal_shutdown" class="hash-link" aria-label="Direct link to 2.3.14 kd_mpi_pm_get_thermal_shutdown" title="Direct link to 2.3.14 kd_mpi_pm_get_thermal_shutdown">​</a></h4>
+<p>【描述】</p>
+<p>获取热关机温度</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_get_thermal_shutdown(int32_t *ptemp);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>ptemp</td><td>温度，单位0.01℃</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2315-kd_mpi_pm_set_clock">2.3.15 kd_mpi_pm_set_clock<a href="#2315-kd_mpi_pm_set_clock" class="hash-link" aria-label="Direct link to 2.3.15 kd_mpi_pm_set_clock" title="Direct link to 2.3.15 kd_mpi_pm_set_clock">​</a></h4>
+<p>【描述】</p>
+<p>设置电源管理域时钟</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_clock(k_pm_domain domain, bool enable);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>enable</td><td>开关</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2316-kd_mpi_pm_set_power">2.3.16 kd_mpi_pm_set_power<a href="#2316-kd_mpi_pm_set_power" class="hash-link" aria-label="Direct link to 2.3.16 kd_mpi_pm_set_power" title="Direct link to 2.3.16 kd_mpi_pm_set_power">​</a></h4>
+<p>【描述】</p>
+<p>设置电源管理域电源</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_set_power(k_pm_domain domain, bool enable);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>domain</td><td>电源管理域</td><td>输入</td></tr><tr><td>enable</td><td>开关</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2317-kd_mpi_pm_runtime_runstage">2.3.17 kd_mpi_pm_runtime_runstage<a href="#2317-kd_mpi_pm_runtime_runstage" class="hash-link" aria-label="Direct link to 2.3.17 kd_mpi_pm_runtime_runstage" title="Direct link to 2.3.17 kd_mpi_pm_runtime_runstage">​</a></h4>
+<p>【描述】</p>
+<p>设置nncase运行阶段，由nncase runtime调用</p>
+<p>【语法】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int kd_mpi_pm_runtime_runstage(k_runtimestage_id stage);</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th>输入/输出</th></tr></thead><tbody><tr><td>stage</td><td>运行阶段ID</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败，其值参见<a href="https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html#id14" target="_blank" rel="noopener noreferrer">错误码</a></td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_pm_api.h</li>
+<li>库文件：libpm.a</li>
+</ul>
+<p>【注意】</p>
+<ol>
+<li>PM模块内置了一套控制策略，在<code>RUNTIMESTAGE_ID_KPU_START</code>时打开KPU电源和时钟， <code>RUNTIMESTAGE_ID_KPU_STOP</code>时关闭KPU电源和时钟，用户可根据实际需求重写此函数。</li>
+</ol>
+<p>【举例】</p>
+<p>无</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="24-数据结构">2.4 数据结构<a href="#24-数据结构" class="hash-link" aria-label="Direct link to 2.4 数据结构" title="Direct link to 2.4 数据结构">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="241-k_pm_domain">2.4.1 k_pm_domain<a href="#241-k_pm_domain" class="hash-link" aria-label="Direct link to 2.4.1 k_pm_domain" title="Direct link to 2.4.1 k_pm_domain">​</a></h4>
+<p>【说明】</p>
+<p>定义电源管理域</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_CPU,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_KPU,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_DPU,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_VPU,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_DISPLAY,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_MEDIA,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_DOMAIN_NR,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_pm_domain;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>PM_DOMAIN_CPU</td><td>CPU电源管理域</td></tr><tr><td>PM_DOMAIN_KPU</td><td>KPU电源管理域</td></tr><tr><td>PM_DOMAIN_DPU</td><td>DPU电源管理域</td></tr><tr><td>PM_DOMAIN_VPU</td><td>VPU电源管理域</td></tr><tr><td>PM_DOMAIN_DISPLAY</td><td>显示电源管理域</td></tr><tr><td>PM_DOMAIN_MEDIA</td><td>视频电源管理域</td></tr><tr><td>PM_DOMAIN_NR</td><td>电源管理域总数</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="242-k_pm_governor">2.4.2 k_pm_governor<a href="#242-k_pm_governor" class="hash-link" aria-label="Direct link to 2.4.2 k_pm_governor" title="Direct link to 2.4.2 k_pm_governor">​</a></h4>
+<p>【说明】</p>
+<p>定义电源管理策略</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_GOVERNOR_MANUAL,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_GOVERNOR_PERFORMANCE,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_GOVERNOR_ENERGYSAVING,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    PM_GOVERNOR_AUTO,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_pm_governor;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>PM_GOVERNOR_MANUAL</td><td>手动模式</td></tr><tr><td>PM_GOVERNOR_PERFORMANCE</td><td>性能模式</td></tr><tr><td>PM_GOVERNOR_ENERGYSAVING</td><td>节能模式</td></tr><tr><td>PM_GOVERNOR_AUTO</td><td>自动模式</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="243-k_pm_profile">2.4.3 k_pm_profile<a href="#243-k_pm_profile" class="hash-link" aria-label="Direct link to 2.4.3 k_pm_profile" title="Direct link to 2.4.3 k_pm_profile">​</a></h4>
+<p>【说明】</p>
+<p>定义频点对，包含频率和电压</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    int32_t freq;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    int32_t volt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_pm_profile;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>freq</td><td>频率，单位：Hz</td></tr><tr><td>volt</td><td>电压，单位：uV</td></tr></tbody></table>
+<p>【注意事项】</p>
+<ol>
+<li>频点对为降序排列，序号0为最高频率，序号越大频率越低</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="244-k_runtimestage_id">2.4.4 k_runtimestage_id<a href="#244-k_runtimestage_id" class="hash-link" aria-label="Direct link to 2.4.4 k_runtimestage_id" title="Direct link to 2.4.4 k_runtimestage_id">​</a></h4>
+<p>【说明】</p>
+<p>定义AI运行阶段，AI运行过程中可能会用到AI2D、KPU、CPU</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    RUNTIMESTAGE_ID_AI2D_START,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    RUNTIMESTAGE_ID_AI2D_STOP,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    RUNTIMESTAGE_ID_KPU_START,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    RUNTIMESTAGE_ID_KPU_STOP,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    RUNTIMESTAGE_ID_CPU_START,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    RUNTIMESTAGE_ID_CPU_STOP,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_runtimestage_id;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>RUNTIMESTAGE_ID_AI2D_START</td><td>AI2D运行开始</td></tr><tr><td>RUNTIMESTAGE_ID_AI2D_STOP</td><td>AI2D运行结束</td></tr><tr><td>RUNTIMESTAGE_ID_KPU_START</td><td>KPU运行开始</td></tr><tr><td>RUNTIMESTAGE_ID_KPU_STOP</td><td>KPU运行结束</td></tr><tr><td>RUNTIMESTAGE_ID_CPU_START</td><td>CPU运行开始</td></tr><tr><td>RUNTIMESTAGE_ID_CPU_STOP</td><td>CPU运行结束</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="25-错误码">2.5 错误码<a href="#25-错误码" class="hash-link" aria-label="Direct link to 2.5 错误码" title="Direct link to 2.5 错误码">​</a></h3>
+<table><thead><tr><th><strong>错误代码</strong></th><th><strong>宏定义</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0xa0178003</td><td>K_ERR_PM_ILLEGAL_PARAM</td><td>参数设置无效</td></tr><tr><td>0xa0178004</td><td>K_ERR_PM_EXIST</td><td>设备已存在</td></tr><tr><td>0xa0178005</td><td>K_ERR_PM_UNEXIST</td><td>设备不存在</td></tr><tr><td>0xa0178006</td><td>K_ERR_PM_NULL_PTR</td><td>参数空指针</td></tr><tr><td>0xa0178007</td><td>K_ERR_PM_NOT_CONFIG</td><td>设备未配置</td></tr><tr><td>0xa0178008</td><td>K_ERR_PM_NOT_SUPPORT</td><td>操作不支持</td></tr><tr><td>0xa0178009</td><td>K_ERR_PM_NOT_PERM</td><td>操作不允许</td></tr><tr><td>0xa017800c</td><td>K_ERR_PM_NOMEM</td><td>内存分配失败</td></tr><tr><td>0xa0178010</td><td>K_ERR_PM_NOTREADY</td><td>设备未就绪</td></tr><tr><td>0xa0178011</td><td>K_ERR_PM_BADADDR</td><td>错误地址</td></tr><tr><td>0xa0178012</td><td>K_ERR_PM_BUSY</td><td>设备忙</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-小核功耗控制">3. 小核功耗控制<a href="#3-小核功耗控制" class="hash-link" aria-label="Direct link to 3. 小核功耗控制" title="Direct link to 3. 小核功耗控制">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-控制框架介绍">3.1 控制框架介绍<a href="#31-控制框架介绍" class="hash-link" aria-label="Direct link to 3.1 控制框架介绍" title="Direct link to 3.1 控制框架介绍">​</a></h3>
+<p>小核控制主要是针对CPU0，支持linux cpu_freq、温度保护、降温控制。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="311-cpu_freq">3.1.1 cpu_freq<a href="#311-cpu_freq" class="hash-link" aria-label="Direct link to 3.1.1 cpu_freq" title="Direct link to 3.1.1 cpu_freq">​</a></h3>
+<p>cpu_freq为linux标准，请参考<a href="https://www.kernel.org/doc/html/v5.10/cpu-freq/index.html" target="_blank" rel="noopener noreferrer">kernel文档</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs/tree/main/docs/CanaanK230/part6/09_K230PowerManagementAdaptationGuide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/CanaanK230/part6/K230CameraSensorAdaptationGuide"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">K230 Camera Sensor适配指南</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/en/CanaanK230/part6/K230VICAPSENSORParameterpartitionreference"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">K230 VICAP SENSOR 参数分区参考</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-概述" class="table-of-contents__link toc-highlight">1. 概述</a></li><li><a href="#2-大核功耗控制" class="table-of-contents__link toc-highlight">2. 大核功耗控制</a><ul><li><a href="#21-控制框架介绍" class="table-of-contents__link toc-highlight">2.1 控制框架介绍</a></li><li><a href="#22-使用方式" class="table-of-contents__link toc-highlight">2.2 使用方式</a></li><li><a href="#23-api-参考" class="table-of-contents__link toc-highlight">2.3 API 参考</a></li><li><a href="#24-数据结构" class="table-of-contents__link toc-highlight">2.4 数据结构</a></li><li><a href="#25-错误码" class="table-of-contents__link toc-highlight">2.5 错误码</a></li></ul></li><li><a href="#3-小核功耗控制" class="table-of-contents__link toc-highlight">3. 小核功耗控制</a><ul><li><a href="#31-控制框架介绍" class="table-of-contents__link toc-highlight">3.1 控制框架介绍</a></li><li><a href="#311-cpu_freq" class="table-of-contents__link toc-highlight">3.1.1 cpu_freq</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dongshanpi.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">DongshanPI<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://canaan-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Canaan-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://renesas-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Renesas-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://rtos.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">RTOS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://tina.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TinaSDK-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://allwinner-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Allwinner-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://aw-r128.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">R128-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://space.bilibili.com/275908810" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiliBili<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://forums.100ask.net" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://video.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">VideoCenter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/dongshanpi" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://weidongshan.coding.net/public/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Coding<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/100askTeam" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://gitee.com/weidongshan" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitee<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 100askTeam, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
