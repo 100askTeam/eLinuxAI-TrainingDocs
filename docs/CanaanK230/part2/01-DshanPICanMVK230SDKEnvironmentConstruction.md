@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ## 1.配置SDK环境
 
-### 2.1 更新清华源
+### 2.1 更新国内源
 
 打开Ubuntu20.04系统自带的Software & Update软件
 
