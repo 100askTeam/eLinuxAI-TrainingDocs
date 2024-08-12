@@ -13,7 +13,7 @@ sidebar_position: 5
 
 - DshanPI-CanMV开发板SD卡镜像
 - SD卡格式化工具：[SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter_4/eula_windows/)
-- SD卡刷机工具：[ETCHER](https://www.balena.io/etcher)
+- SD卡刷机工具：[rufus](https://rufus.ie/zh/)
 
 开始前请下载DongshanPI-Vision开发板SD卡镜像，并记住它在计算机中保存的位置。
 
@@ -33,41 +33,39 @@ sidebar_position: 5
 
 
 
-## 2.使用Etcher烧录镜像
+## 2.使用rufus烧录镜像
 
  使用Etcher将DongshanPI-Vision开发板SD卡镜像写入您的microSD卡。
 
- 下载[Etcher](https://www.balena.io/etcher)烧写工具并安装它。启动Etcher应用程序，启动后界面如下图所示：
+ 下载[rufus](https://rufus.ie/zh/)烧写工具并安装它。启动Etcher应用程序，启动后界面如下图所示：
 
-![image-20230721170709568](http://photos.100ask.net/canaan-docs/image-20230721170709568.png)
+![image-20240812105615542](${images}/image-20240812105615542.png)
 
-点击`Flash from file`，如下图所示，点击下图红框处。
+点击`设备的下拉列表`，如下图所示，点击下图红框处，选择插入的SD卡。
 
-![image-20230721170746679](http://photos.100ask.net/canaan-docs/image-20230721170746679.png)
+![QQ_1723431449882](${images}/QQ_1723431449882.png)
 
 此时会弹出文件资源管理器，选择您刚刚下载的DongshanPI-Vision开发板SD卡镜像。
 
-![image-20240724141908669](${images}/image-20240724141908669.png)
+![image-20240812105911850](${images}/image-20240812105911850.png)
 
-选择完成后会，显示下面的界面，点击下图中红框处`Select target`，选择要写入的目标microSD卡。
+选择完成后会，显示下面的界面，点击下图中红框处`开始`。
 
-![image-20230721172244447](http://photos.100ask.net/canaan-docs/image-20230721172244447.png)
+![image-20240812110031852](${images}/image-20240812110031852.png)
 
-点击完成后会弹出选择目标，此时选择您通过读卡器插入电脑中的microSD卡。
 
-![image-20230721172220680](http://photos.100ask.net/canaan-docs/image-20230721172220680.png)
 
-选择完成后，会显示以下界面，点击`Flash`后即可开始烧写。
+点击开始后，会弹出警告，表示SD卡中的数据会被清理，点击`确定`。
 
-![image-20230721172614694](http://photos.100ask.net/canaan-docs/image-20230721172614694.png)
+![image-20240812110154252](${images}/image-20240812110154252.png)
 
-如下图所示等待烧写完成即可。
+点击确定后即可开始将系统烧录进SD卡中。
 
-![image-20230721172653819](http://photos.100ask.net/canaan-docs/image-20230721172653819.png)
+![image-20240812110241617](${images}/image-20240812110241617.png)
 
-使用Etcher烧写完成后，Windows可能会不知道如何读取您的microSD卡，会弹出如下图所示警告，点击`取消`后拔出microSD卡即可。
+烧录完成后可点击关闭并在电脑端弹出SD卡。
 
-![image-20230721172939202](http://photos.100ask.net/canaan-docs/image-20230721172939202.png)
+![image-20240812110324020](${images}/image-20240812110324020.png)
 
 ## 3.启动SD卡系统
 
