@@ -35,7 +35,7 @@ video ouput 包含了一个用例，即vo osd层插入帧的测试
 vo osd 层插入帧
 
 ```
-./sample_vo.elf 15
+./sample_vo.elf 18    //18:DshanPI-CanMV
 ```
 
 执行完命令后、按一次回车会插入一张纯绿色图片、再按一次回车程序退出
@@ -77,13 +77,14 @@ sensor_index: see vicap doc
 
 
 
-sensor_index取值参看`K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述，默认值为7
+sensor_index取值参看`k230_docs/zh/01_software/board/mpp/K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述，默认值为7，GC2093_MIPI_CSI2_1920X1080_30FPS_10为**52**
 
 举例：
 
 ```
 ./sample_venc.elf 0 -sensor 24 -o out.265 // Canmv-K230-V1.0/1.1板
 ./sample_venc.elf 0 -sensor 39 -o out.265 // Canmv-K230-V2.0板
+./sample_venc.elf 0 -sensor 52 -o out.265 // DshanPI-CanMV
 ```
 
 
@@ -95,7 +96,7 @@ sample_venc默认使用的sensor类型是IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS
 启动开发板后:
 
 1. 通过 `lsmod` 检查小核侧是否加载k_ipcm模块，如未加载，执行 `insmod k_ipcm.ko` 加载k_ipcm模块
-2. 在大核侧启动核间通信进程，执行 `./sample_sys_inif.elf`
+2. 在大核侧启动核间通信进程，执行 `./sample_sys_init.elf`
 3. 在小核侧 /mnt 目录下，执行 `./sample_venc`，默认执行1路h264视频编码，分辨率为1280x720，生成的码流文件存放在 /tmp 目录下面，如需传参可参考如下参数说明：
 
 ```
@@ -111,11 +112,12 @@ Usage: ./sample_venc -s 24 -n 2 -o /tmp -t 0            // Canmv-K230-V1.0/1.1�
                      -h or --help, will print usage
 
 Usage: ./sample_venc -s 39 -n 2 -o /tmp -t 0            // Canmv-K230-V2.0板
+Usage: ./sample_venc -s 52 -n 2 -o /tmp -t 0            // DshanPI-CanMV
 ```
 
 
 
-sensor_index取值参看`K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述，默认值为7
+sensor_index取值参看`k230_docs/zh/01_software/board/mpp/K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述，默认值为7，GC2093_MIPI_CSI2_1920X1080_30FPS_10为**52**
 
 可通过`ctrl+c`停止运行，根据不同的编码类型，会在小核指定的输出目录下生成不同的码流文件，对于h264类型，会生成形如`stream_chn0.264`文件，其中 0 代表0通道；对于h265类型，会生成形如 `stream_chn0.265`文件，同样 0 代表0通道；对于jpeg类型，会生成形如`chn0_0.jpg`的jpg图片，代表0通道第0张图片，默认会生成10张jpg图片。
 
@@ -187,18 +189,18 @@ Vdec demo通过读取流文件进行解码。解码输出结果通过屏幕显�
 | i      | 输入文件名，需要后缀名分别为.264/.265/.jpg | -      |
 | type   | vo connector type, 参看vo 文档描述         | 0      |
 
-其中type取值参看`K230_视频输出_API参考.md`中关于k_connector_type的描述，设置为0
+其中type取值参看`k230_docs/zh/01_software/board/mpp/K230_视频输出_API参考.md`中关于k_connector_type的描述，设置为0
 
 ###### 2.4.4.1.1 VDEC绑定VO解码显示
 
 ```
-./sample_vdec.elf -type 1 -i canaan.264
+./sample_vdec.elf -type 4 -i output-480-800.h264   // DshanPI-CanMV
 ```
 
 ###### 2.4.4.1.2 MAPI VDEC绑定VO解码显示
 
 ```
-./sample_vdec.elf -type 1 -i canaan.264
+./sample_vdec.elf -type 4 -i output-480-800.h264   // DshanPI-CanMV
 ```
 
 ##### 2.4.4.2 查看结果
@@ -621,19 +623,19 @@ GPU demo主要覆盖GPU的矢量绘制、线性渐变（通过pattern实现）�
 
 ##### 2.9.4.1 tiger
 
-运行`tiger`命令，执行完成后在当前目录下生成tiger.png，如下图所示
+小核运行`tiger`命令，执行完成后在当前目录下生成tiger.png，如下图所示
 
 ![老虎图像](${images}/e54764629a9e9fb63ec4340d316e4f42.png)
 
 ##### 2.9.4.2 linearGrad
 
-运行`linearGrad`命令，执行完成后在当前目录生成linearGrad.png，如下图所示
+小核运行`linearGrad`命令，执行完成后在当前目录生成linearGrad.png，如下图所示
 
 ![线性渐变](${images}/24db1c231608cd26a5a981e055aa6910.png)
 
 ##### 2.9.4.3 imgIndex
 
-运行`imgIndex`命令，执行完成后在当前目录生成4个图片文件，如下图所示
+小核运行`imgIndex`命令，执行完成后在当前目录生成4个图片文件，如下图所示
 
 - `imgIndex1.png`: index1模式，支持2种颜色
 
@@ -653,13 +655,13 @@ GPU demo主要覆盖GPU的矢量绘制、线性渐变（通过pattern实现）�
 
 ##### 2.9.4.4 vglite_drm
 
-运行`vglite_drm`命令，会在LCD屏幕上显示由GPU绘制的图案，再按一次`Enter`键显示下一个图案，如图所示
+小核运行`vglite_drm`命令，会在LCD屏幕上显示由GPU绘制的图案，再按一次`Enter`键显示下一个图案，如图所示
 
 ![第一个图案](${images}/gpu-hdmi-2.jpg)
 
 ##### 2.9.4.5 vglite_cube
 
-运行`vglite_cube`命令，会在LCD屏幕上显示由GPU绘制的旋转的正方体，如下图所示
+小核运行`vglite_cube`命令，会在LCD屏幕上显示由GPU绘制的旋转的正方体，如下图所示
 
 ![Cube](${images}/gpu-hdmi-1.jpg)
 
@@ -762,6 +764,7 @@ rtsp_demo默认使用的sensor类型是IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_L
 ```
 Usage: ./rtsp_demo -s 24 -n 2 -t h265 -w 1280 -h 720 -a 0  // Canmv-K230-V1.0/1.1板
 Usage: ./rtsp_demo -s 39 -n 2 -t h265 -w 1280 -h 720 -a 0  // Canmv-K230-V2.0板
+Usage: ./rtsp_demo -s 52 -n 2 -t h264 -w 480 -h 800 -a 0   // DshanPI-CanMV
                     -s: the sensor type:
                         see vicap doc
                     -n: the session number, range: 1, 2，3
@@ -773,7 +776,7 @@ Usage: ./rtsp_demo -s 39 -n 2 -t h265 -w 1280 -h 720 -a 0  // Canmv-K230-V2.0板
 
 
 
-其中sensor类型取值查看`K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述 音频输入类型可选择：板载mic或者耳机输入。
+其中sensor类型取值查看`k230_docs/zh/01_software/board/mpp/K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述 音频输入类型可选择：板载mic或者耳机输入。
 
 小核上正常运行rtsp_demo后，会打印出形如：`rtsp://ip:8554/session0` 的url地址，其中 0 代表第0路，可通过vlc拉取url的流进行播放；如需停止运行，请先停止vlc拉流，然后执行`ctrl+c`停止运行 rtsp_demo。
 
@@ -1083,6 +1086,7 @@ msh /sharefs/app>./sample_sys_init.elf
 ./canaan-camera.sh start otg0
 
 ./camera -t 24
+./camera -t 52  // DshanPI-CanMV
 ```
 
 typec USB线连接USB0与PC，potplayer播放器播放摄像头。
@@ -1096,9 +1100,10 @@ typec USB线连接USB0与PC，potplayer播放器播放摄像头。
 
 ./camera -i -t 24  // Canmv-K230-V1.0/1.1板
 ./camera -i -t 39  // Canmv-K230-V2.0板
+./camera -i -t 52  // DshanPI-CanMV
 ```
 
--t 选项用于指定vicap sensor 类型，请参考`K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述，CanMV需指定为24。
+-t 选项用于指定vicap sensor 类型，请参考`k230_docs/zh/01_software/board/mpp/K230_Camera_Sensor适配指南.md`文档中关于k_vicap_sensor_type的描述，CanMV需指定为24。
 
 进入PotPlayer -> `选项` -> `设备` -> `摄像头` 界面, `视频录制设备`->`设备`，选择`UVC Camera` `视频录制设备`-> `格式`，选择`H264 1280*720 30(P 16:9)`或`MJPG 1280*720 30(P 16:9)`或`NV12 640*360p 30(P 16:9)`
 

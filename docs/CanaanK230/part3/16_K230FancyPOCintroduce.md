@@ -45,7 +45,7 @@ K230 Fancy Poc集合包括multimodal_chat_robot(多模态聊天机器人)、meta
 
 #### 4.2 直接下载官网上板镜像
 
-（1）确保已根据[k230 sdk官方说明](https://github.com/kendryte/k230_sdk)构建docker容器
+（1）确保已根据《K230 SDK环境搭建》配置好Ubuntu20.04的开发环境
 
 （2）从[官网资源库](https://developer.canaan-creative.com/resource)下载镜像
 
@@ -56,12 +56,8 @@ cd k230_sdk
 make prepare_sourcecode #（若之前已执行，请忽略）
 make mpp
 #根据使用的开发板型号，分别执行不同的命令
-#若是型号是CanMV-K230-V1.x，执行以下命令
-make CONF=k230_canmv_defconfig prepare_memory
-#若是型号是CanMV-K230-V2.x，执行以下命令
-make CONF=k230_canmv_v2_defconfig prepare_memory
-#若是型号是K230-xxx-xxx-EVB-V1.x，执行以下命令
-make CONF=k230_evb_defconfig prepare_memory
+#若是型号是DshanPI-CanMV，执行以下命令
+make CONF=k230_canmv_dongshanpi_defconfig prepare_memory
 cd k230_sdk/src/reference/fancy_poc
 ```
 

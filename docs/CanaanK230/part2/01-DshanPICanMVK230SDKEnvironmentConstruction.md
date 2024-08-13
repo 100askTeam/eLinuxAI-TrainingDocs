@@ -39,6 +39,16 @@ sidebar_position: 1
 
 ### 2.2 使用apt安装软件包
 
+更新apt软件源：
+
+```
+sudo apt update
+```
+
+
+
+安装软件包：
+
 ```
 sudo apt-get install -y --fix-broken --fix-missing --no-install-recommends \
   sudo vim wget curl git git-lfs openssh-client net-tools sed tzdata expect mtd-utils inetutils-ping locales \
@@ -47,7 +57,7 @@ sudo apt-get install -y --fix-broken --fix-missing --no-install-recommends \
   libc6-dev-i386 libncurses5:i386 libssl-dev \
   python3 python3-pip python-is-python3 \
   lib32z1 scons libncurses5-dev \
-  kmod fakeroot pigz tree doxygen gawk pkg-config libyaml-dev libconfuse2 libconfuse-dev
+  kmod fakeroot pigz tree doxygen gawk pkg-config libyaml-dev libconfuse2 libconfuse-dev cmake
 ```
 
  
@@ -153,7 +163,7 @@ cd genimage-16
 6.安装程序
 
 ```
-sudo make install
+sudo make install && cd ../../
 ```
 
 
