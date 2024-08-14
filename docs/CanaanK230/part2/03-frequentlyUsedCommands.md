@@ -10,6 +10,7 @@ sidebar_position: 3
 | ----------------------------------------------------------- | ----------------------- |
 | source tools/get_download_url.sh && make prepare_sourcecode | 下载toolchain和准备源码 |
 | sudo mount --bind $(pwd)/toolchain /opt/toolchain           | 挂载工具链目录          |
+| make CONF=k230_canmv_dongshanpi_defconfig prepare_memory    | 配置板级型号            |
 | make CONF=k230_canmv_dongshanpi_defconfig                   | 编译SDK                 |
 
 
