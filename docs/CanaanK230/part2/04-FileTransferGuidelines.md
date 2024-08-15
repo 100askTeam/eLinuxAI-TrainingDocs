@@ -13,28 +13,205 @@ sidebar_position: 4
 - 天线 x1
 - Type-C数据线 x2
 
-在开始前请确保您的CanMV开发板已经成功连接至互联网。我们提供两种方法进行文件传输：
+我们提供3种方法进行文件传输：
 
+- ADB
 - SCP
 - TFTP
 
-您可以选择其中一种进行文件传输！！
+您可以选择其中一种进行文件传输！！建议**ADB**进行文件传输！！
 
-## 1.设置Ubuntu虚拟机为桥接模式
+## 1.使用ADB进行文件传输
+
+在使用ADB进行文件传输前，请确保上电前使用Type-C数据线将开发板的OTG口与电脑相连！连接后请连接debug&5V进行上电。上电后等待小核Linux启动后可以在电脑端找到ADB设备，如下所示：
+
+![image-20240815111353090](${images}/image-20240815111353090.png)
+
+> 建议选择其中一种方式进行文件传输！！
+
+### 1.1 Windows进行文件传输
+
+> 注意：如果您开启了虚拟机，新连接的设备可能会被Vmware拦截！！请选择ADB设备连接至Windos主机
+
+打开Windos电脑中的命令提示符（您可以通过搜索或者按下`win+r`输入`cmd`打开），打开后在终端输入`adb devices`，如下所示：
+
+![image-20240815111859881](${images}/image-20240815111859881.png)
+
+可以看到有`k230-adb-dev`设备，此时我们就可以使用adb进行文件传输。
+
+假设你需要将Windos下的1.txt文件传输至开发板端的根目录下，可以输入`adb push <文件路径> <开发板的路径>`，例如：
+
+```
+C:\Users\100ASK-R>adb push 1.txt /
+1.txt: 1 file pushed. 0.0 MB/s (14 bytes in 0.002s)
+```
+
+那么如何从开发板拉取对应的文件?
+
+假设我需要将开发板的根目录下的2.txt拉取当Windows当前目录可以输入`adb pull <开发板文件路径> <windows保存路径>`，例如：
+
+```
+C:\Users\100ASK-R>adb pull /2.txt ./
+/2.txt: 1 file pulled. 0.0 MB/s (12 bytes in 0.001s)
+```
+
+
+
+如果您想使用adb 登录开发板终端，可以输入`adb shell`：
+
+```
+C:\Users\100ASK-R>adb shell
+/sys/kernel/config/usb_gadget/demo #
+```
+
+默认会进入adb的工作目录，可以通过命令`cd /`切换至根目录或者查看文件等
+
+```
+/sys/kernel/config/usb_gadget/demo # cd /
+/ # ls
+1.txt        dev          lib64        media        root         sys
+2.txt        etc          lib64xthead  mnt          run          tmp
+app          init         linuxrc      opt          sbin         usr
+bin          lib          lost+found   proc         sharefs      var
+```
+
+
+
+### 1.2 Ubuntu进行文件传输
+
+> 注意：如果您开启了虚拟机，新连接的设备可能会被Vmware拦截！！请选择ADB设备连接至Ubuntu虚拟机
+
+如果您是第一次使用或者Ubuntu中没有安装adb，需要先安装adb才能正常使用，在终端执行：
+
+```
+sudo apt install adb -y
+```
+
+
+
+打开Ubuntu的终端，打开后输入`adb device`,可能会由于系统的安全模式被禁用，如下所示：
+
+```
+ubuntu@ubuntu2004:~$ adb devices
+List of devices attached
+k230-adb-dev	no permissions (user in plugdev group; are your udev rules wrong?); see [http://developer.android.com/tools/device.html]
+```
+
+**解决办法：**
+
+1.查看adb目录
+
+```
+ubuntu@ubuntu2004:~$ which adb
+/usr/bin/adb
+```
+
+2.切换至adb目录下
+
+```
+ubuntu@ubuntu2004:~$ cd /usr/bin/
+ubuntu@ubuntu2004:/usr/bin$
+```
+
+3.修改所属用户和用户组
+
+```
+ubuntu@ubuntu2004:/usr/bin$ sudo chown root:root ./adb
+```
+
+4.修改权限
+
+```
+ubuntu@ubuntu2004:/usr/bin$ sudo chmod 4777 ./adb
+```
+
+5.重启Ubuntu
+
+```
+ubuntu@ubuntu2004:/usr/bin$ reboot
+```
+
+
+
+重启Ubuntu后，请重新启动开发板连接ADB,此时将Ubuntu可以正常使用ADB功能，在终端输入`adb device`:
+
+```
+ubuntu@ubuntu2004:~$ adb devices
+List of devices attached
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+k230-adb-dev	device
+```
+
+后续我们就可以正常使用ADB进行文件传输了。
+
+假设你需要将Ubuntu下的1.txt文件传输至开发板端的根目录下，可以输入`adb push <文件路径> <开发板的路径>`，例如：
+
+```
+ubuntu@ubuntu2004:~$ adb push 1.txt /
+1.txt: 1 file pushed. 0.0 MB/s (15 bytes in 0.008s)
+```
+
+那么如何从开发板拉取对应的文件?
+
+假设我需要将开发板的根目录下的2.txt拉取当Ubuntu当前目录可以输入`adb pull <开发板文件路径> <windows保存路径>`，例如：
+
+```
+C:\Users\100ASK-R>adb pull /2.txt ./
+/2.txt: 1 file pulled. 0.0 MB/s (12 bytes in 0.001s)
+```
+
+
+
+如果您想使用adb 登录开发板终端，可以输入`adb shell`：
+
+```
+ubuntu@ubuntu2004:~$ adb shell
+/sys/kernel/config/usb_gadget/demo # 
+```
+
+默认会进入adb的工作目录，可以通过命令`cd /`切换至根目录或者查看文件等
+
+```
+/sys/kernel/config/usb_gadget/demo # cd /
+/ # ls
+1.txt        dev          lib64        media        root         sys
+2.txt        etc          lib64xthead  mnt          run          tmp
+app          init         linuxrc      opt          sbin         usr
+bin          lib          lost+found   proc         sharefs      var
+/ # 
+```
+
+### 1.3 FAQ
+
+> 注意：请不要手动切换ADB连接主机/虚拟机
+
+1.如果手动切换ADB连接平台，导致电脑识别不到设备。
+
+解决办法：
+
+1. 重新启动开发板。
+2. 重新选择连接平台
+
+> 建议保存连接规则，如果需要切换连接平台，可点击Vmware软件中`虚拟机`->`可移动设备`->`100ASK K230 ADB`->`忘记连接规则`。选择后再次重新启动开发板，选择需要切换的平台！
+
+## 2.设置Ubuntu虚拟机为桥接模式
+
+在开始前请确保您的CanMV开发板已经成功连接至互联网。使用SCP和TFTP方式进行文件传输需要先修改Ubuntu虚拟机的网络连接模式！！
 
 ![image-20240724155215714](${images}/image-20240724155215714.png)
 
-## 2.使用SCP进行文件传输
+### 2.1.使用SCP进行文件传输
 
 在Ubuntu中，SCP（Secure Copy Protocol）是一种用于在本地和远程计算机之间安全复制文件的命令行工具。它基于SSH（Secure Shell）协议进行加密传输，确保数据在传输过程中不会被窃取或篡改。
 
-### 2.1 确认开发板IP地址
+#### 2.1.1 确认开发板IP地址
 
 ![image-20240812111524330](${images}/image-20240812111524330.png)
 
 这里我确认我的开发板的IP地址为：192.168.0.153，您需要在开发板端自行查看自己的开发板IP地址。
 
-### 2.2 开发板通过SCP传输文件
+#### 2.1.2 开发板通过SCP传输文件
 
 > 注意：以下命令都需要在Ubuntu端执行！！
 
@@ -82,7 +259,7 @@ ubuntu@ubuntu2004:~$ cat 2.txt
 
 
 
-### 2.3 FAQ
+#### 2.1.3 FAQ
 
 1.主机密钥验证问题，报错信息为：
 
@@ -105,9 +282,9 @@ ssh-keygen -f "/home/ubuntu/.ssh/known_hosts" -R "192.168.0.153"
 
 
 
-## 3.使用TFTP进行文件传输
+### 2.2 使用TFTP进行文件传输
 
-### 3.1 在Ubuntu下安装TFTP
+#### 2.2.1 在Ubuntu下安装TFTP
 
 在Ubuntu中执行以下命令安装TFTP服务：
 
@@ -147,7 +324,7 @@ ubuntu 4555 0.0 0.0 9040 652 pts/0 S+ 02:33 0:00 grep --color=auto “tftp”
 
 
 
-### 3.2 开发板通过tftp传输文件
+#### 2.2.2 开发板通过tftp传输文件
 
 首先确保Ubuntu或Windows的tftp服务目录内，有需要下载到板子上的文件，比如：
 
