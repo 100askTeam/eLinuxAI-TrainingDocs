@@ -88,106 +88,32 @@ kmodel、image及相关依赖路径位于`/mnt/src/big/kmodel/ai_poc`，目录�
 
 **本章节基于[kendryte/k230_sdk: Kendryte K230 SDK (github.com)](https://github.com/kendryte/k230_sdk/tree/main)或[kendryte/k230_sdk - 码云 - 开源中国 (gitee.com)](https://gitee.com/kendryte/k230_sdk/tree/main)的最新版本源码实现。**
 
-### 3.3.1. 自编译镜像上板流程
+### 3.4.2. 编译程序上板流程
 
-- 按照[kendryte/k230_sdk: Kendryte K230 SDK (github.com)](https://github.com/kendryte/k230_sdk/tree/main)或[kendryte/k230_sdk - 码云 - 开源中国 (gitee.com)](https://gitee.com/kendryte/k230_sdk/tree/main)构建docker容器，编译上板镜像；
+- 按照《k230 SDK环境搭建》配置好SDK的环境
 
   ```
-  # 下载docker编译镜像
-  docker pull ghcr.io/kendryte/k230_sdk
-  # 可以使用以下命令确认docker镜像是否拉取成功
-  docker images | grep ghcr.io/kendryte/k230_sdk
-  # 下载sdk源码
-  git clone https://github.com/kendryte/k230_sdk.git
+  # 进入 K230 SDK目录
   cd k230_sdk
+  
   # 下载工具链Linux和RT-Smart toolchain, buildroot package, AI package等
   make prepare_sourcecode
-  # 创建docker容器，$(pwd):$(pwd)表示系统当前目录映射到docker容器内部的相同目录下，将系统下的工具链目录映射到docker容器内部的/opt/toolchain目录下
-  docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
-  make CONF=k230_canmv_defconfig
-  ```
-
   
-
-- 请您耐心等待镜像编译成功后，在k230_sdk根目录/output/k230_canmv_defconfig/images中下载编译好的镜像，并将其烧录到SD卡中，烧录步骤参考[镜像烧录](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230快速入门指南.html#id5)：
-
-  ```
-  k230_canmv_defconfig/images
-   ├── big-core
-   ├── little-core
-   ├── sysimage-sdcard.img    # SD卡启动镜像
-   └── sysimage-sdcard.img.gz # SD卡启动镜像压缩包
-  ```
-
+  # 挂载工具链目录
+  sudo mount --bind $(pwd)/toolchain /opt/toolchain
   
-
-- 在docker内部进入k230_sdk根目录，执行下述命令，编译ai demo部分：
-
-  ```
-  cd src/reference/ai_poc
-  # 如果build_app.sh权限不足，执行chmod +x build_app.sh
-  # 执行脚本前确保src/big/kmodel/ai_poc下已经有相应kmodel、images、utils
-  ./build_app.sh
-  ```
-
+  # 配置板级型号
+  make CONF=k230_canmv_dongshanpi_defconfig prepare_memory
   
-
-- 执行build_app.sh脚本后，会将kmodel、images、utils、shell、elf统一拷贝生成到k230_bin文件夹；
-
-- 将整个文件夹拷贝到开发板，在大核上执行sh脚本即可运行相应AI demo；
-
-  ***注：***
-
-  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：[K230大小核通讯Sharefs使用简介](https://developer.canaan-creative.com/k230/dev/zh/02_applications/tutorials/K230_大小核通讯_sharefs用法介绍.html)。
-
-  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：[K230 SDK常见问题解答](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK常见问题解答_C.html#linux) 问题9。
-
-  ```
-  umount /sharefs/
-  parted   -l /dev/mmcblk1
-  # 31.3GB大小请参考上一条命令输出的 Disk /dev/mmcblk1
-  parted  -a minimal  /dev/mmcblk1  resizepart 4  31.3GB
-  mkfs.ext2 /dev/mmcblk1p4
-  mount /dev/mmcblk1p4 /sharefs
-  ```
-
-  
-
-- 分区结束后，重启开发板，在小核sharefs下新建目录test_demo，选择读卡器拷贝或者scp拷贝，因传输较慢不推荐使用tftp拷贝；
-
-- 若您只关注某一个demo，请首先将utils中的所有文件拷贝到开发板/sharefs/test_demo目录下，参照对应demo的shell脚本中使用的文件拷贝elf、kmodel、测试图片；文件准备好后可以在开发板上运行；
-
-### 3.4.2. 免编译镜像上板流程
-
-- 选择[嘉楠开发者社区](https://developer.canaan-creative.com/resource)->资料下载->K230->Images提供的镜像烧录，k230_sdk版本和nncase版本对应关系请点击链接查看：
-
-  [**K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)**](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)
-
-  镜像烧录请参考[镜像烧录](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230快速入门指南.html#id5)。
-
-- 按照[kendryte/k230_sdk: Kendryte K230 SDK (github.com)](https://github.com/kendryte/k230_sdk/tree/main)或[kendryte/k230_sdk - 码云 - 开源中国 (gitee.com)](https://gitee.com/kendryte/k230_sdk/tree/main)构建docker容器；
-
-  ```
-  # 下载docker编译镜像
-  docker pull ghcr.io/kendryte/k230_sdk
-  # 可以使用以下命令确认docker镜像是否拉取成功
-  docker images | grep ghcr.io/kendryte/k230_sdk
-  # 下载sdk源码
-  git clone https://github.com/kendryte/k230_sdk.git
-  cd k230_sdk
-  # 下载工具链Linux和RT-Smart toolchain, buildroot package, AI package等
-  make prepare_sourcecode
-  # 创建docker容器，$(pwd):$(pwd)表示系统当前目录映射到docker容器内部的相同目录下，将系统下的工具链目录映射到docker容器内部的/opt/toolchain目录下
-  docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
+  # 构建mpp内核驱动程序用户api lib和k230的示例代码
   make mpp
-  make CONF=k230_canmv_defconfig prepare_memory；
   ```
 
   
 
   mpp编译相对于镜像编译耗时要少很多；
 
-- 在docker内部进入k230_sdk根目录，执行下述命令，编译ai demo部分：
+- 进入ai demo的目录，执行下述命令，编译ai demo部分：
 
   ```
   cd src/reference/ai_poc
@@ -204,9 +130,9 @@ kmodel、image及相关依赖路径位于`/mnt/src/big/kmodel/ai_poc`，目录�
 
   ***注：***
 
-  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：[K230大小核通讯Sharefs使用简介](https://developer.canaan-creative.com/k230/dev/zh/02_applications/tutorials/K230_大小核通讯_sharefs用法介绍.html)。
+  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：《K230大小核通讯Sharefs使用简介》。
 
-  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：[K230 SDK常见问题解答](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK常见问题解答_C.html#linux) 问题9。
+  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：《K230 SDK常见问题解答》 问题9。
 
   ```
   umount /sharefs/
@@ -227,7 +153,7 @@ kmodel、image及相关依赖路径位于`/mnt/src/big/kmodel/ai_poc`，目录�
 >
 > AI Demo章节和Fancy POC章节旨在展示K230在AI领域的强大性能和广泛应用场景。虽然我们提供了相关源代码供用户参考，但这些源码多是基于特定Demo或POC任务场景的实现。
 >
-> 对于希望深入了解K230人工智能开发流程的用户，建议学习[第5章](https://developer.canaan-creative.com/ai_docs/zh/main/fast_learn)和[第6章](https://developer.canaan-creative.com/ai_docs/zh/main/K230_AI_Demo概述.html#teach_ai)。在这两章中，我们详细讲解了K230的多媒体应用、AI推理流程以及基于K230的人工智能开发流程，从代码层面全面解析了K230的AI开发知识。
+> 对于希望深入了解K230人工智能开发流程的用户，建议学习《第5章》和《第6章》。在这两章中，我们详细讲解了K230的多媒体应用、AI推理流程以及基于K230的人工智能开发流程，从代码层面全面解析了K230的AI开发知识。
 
 ## 3.4. Demo效果集锦
 

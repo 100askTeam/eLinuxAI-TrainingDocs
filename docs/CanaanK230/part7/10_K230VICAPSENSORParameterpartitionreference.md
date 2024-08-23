@@ -1,3 +1,6 @@
+---
+sidebar_position: 10
+---
 # K230 VICAP SENSOR 参数分区参考
 
 ## 1. 概述

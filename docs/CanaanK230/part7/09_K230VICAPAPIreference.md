@@ -1,7 +1,6 @@
 ---
 sidebar_position: 9
 ---
-
 # K230 VICAP API参考
 
 ## 1. 概述
@@ -20,7 +19,7 @@ VICAP模块是对整个图像采集处理单元的抽象描述。
 
 VICAP硬件由Sensor，VI，ISP，Dewarp四大模块组成（如下图1-1所示）。最多支持3路sensor同时接入，ISP内部通过的MCM模块实现多路sensor的时分复用管理，多路sensor输出数据通过MCM的Memory Interface的Write接口写入DDR，再通过Read接口读入并装载到ISP Pipeline进行处理。
 
-![图示 描述已自动生成](images/745a46d8e083d93521d0c5233bdaccdd.png)、
+![](images/745a46d8e083d93521d0c5233bdaccdd.png)
 
 图1-1 VICAP硬件架构图
 
@@ -33,7 +32,7 @@ VICAP软件架构如图1-2所示，从上到下依次是：应用接口层，媒
 
 硬件层：VICAP各个具体硬件模块的集合，包括sensor。
 
-![图形用户界面, 文本, 应用程序 描述已自动生成](images/250b6c36cbd4447bd8c734548fc3b890.png)
+![](images/250b6c36cbd4447bd8c734548fc3b890.png)
 
 #### 1.2.2 Sensor
 
@@ -67,17 +66,23 @@ Sensor模块系统架构如下图1-4所示：
 
 该功能模块提供以下API：
 
-- [kd_mpi_vicap_get_sensor_info](#211-kd_mpi_vicap_get_sensor_info)
-- [kd_mpi_vicap_set_dev_attr](#212-kd_mpi_vicap_set_dev_attr)
-- [kd_mpi_vicap_get_dev_attr](#213-kd_mpi_vicap_get_dev_attr)
-- [kd_mpi_vicap_set_chn_attr](#214-kd_mpi_vicap_set_chn_attr)
-- [kd_mpi_vicap_get_chn_attr](#215-kd_mpi_vicap_get_chn_attr)
-- [kd_mpi_vicap_init](#216-kd_mpi_vicap_init)
-- [kd_mpi_vicap_deinit](#217-kd_mpi_vicap_deinit)
-- [kd_mpi_vicap_start_stream](#218-kd_mpi_vicap_start_stream)
-- [kd_mpi_vicap_stop_stream](#219-kd_mpi_vicap_stop_stream)
-- [kd_mpi_vicap_dump_frame](#2110-kd_mpi_vicap_dump_frame)
-- [kd_mpi_vicap_dump_release](#2111-kd_mpi_vicap_dump_release)
+- [kd_mpi_vicap_get_sensor_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-sensor-info)
+- [kd_mpi_vicap_set_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dev-attr)
+- [kd_mpi_vicap_get_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-dev-attr)
+- [kd_mpi_vicap_set_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-chn-attr)
+- [kd_mpi_vicap_get_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-chn-attr)
+- [kd_mpi_vicap_init](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-init)
+- [kd_mpi_vicap_deinit](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-deinit)
+- [kd_mpi_vicap_start_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-start-stream)
+- [kd_mpi_vicap_stop_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-stop-stream)
+- [kd_mpi_vicap_dump_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-frame)
+- [kd_mpi_vicap_dump_release](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-release)
+- [kd_mpi_vicap_set_vi_drop_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-vi-drop-frame)
+- [kd_mpi_vicap_set_mclk](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-mclk)
+- [kd_mpi_vicap_set_dump_reserved](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dump-reserved)
+- [kd_mpi_vicap_set_slave_enable](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-slave-enable)
+- [kd_mpi_vicap_set_slave_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-slave-attr)
+- [kd_mpi_vicap_3d_mode_crtl](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-3d-mode-crtl)
 
 #### 2.1.1 kd_mpi_vicap_get_sensor_info
 
@@ -87,19 +92,19 @@ Sensor模块系统架构如下图1-4所示：
 
 【语法】
 
-k_s32 kd_mpi_vicap_get_sensor_info(k_vicap_sensor_type sensor_type, k_vicap_sensor_info \*sensor_info)
+k_s32 kd_mpi_vicap_get_sensor_info(k_vicap_sensor_type sensor_type, k_vicap_sensor_info *sensor_info)
 
 【参数】
 
 | **参数名称** | **描述**       | **输入/输出** |
-|--------------|----------------|---------------|
+| ------------ | -------------- | ------------- |
 | sensor_type  | Sensor配置类型 | 输入          |
 | sensor_info  | Sensor配置信息 | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -135,14 +140,14 @@ k_s32 kd_mpi_vicap_set_dev_attr(k_vicap_dev dev_num, k_vicap_dev_attr dev_attr)
 【参数】
 
 | **参数名称** | **描述**      | **输入/输出** |
-|--------------|---------------|---------------|
+| ------------ | ------------- | ------------- |
 | dev_num      | VICAP设备号   | 输入          |
 | dev_attr     | VICAP设备属性 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -178,14 +183,14 @@ k_s23 kd_mpi_vicap_set_chn_attr(k_vicap_dev dev, k_vicap_chn_attr chn_attr)
 【参数】
 
 | **参数名称** | **描述**      | **输入/输出** |
-|--------------|---------------|---------------|
+| ------------ | ------------- | ------------- |
 | dev_num      | VICAP设备号   | 输入          |
 | dev_attr     | VICAP设备属性 | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -221,7 +226,7 @@ k_s32 kd_mpi_vicap_set_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vica
 【参数】
 
 | **参数名称** | **描述**          | **输入/输出** |
-|--------------|-------------------|---------------|
+| ------------ | ----------------- | ------------- |
 | dev_num      | VICAP设备号       | 输入          |
 | chn_num      | VICAP输出通道号   | 输入          |
 | chn_attr     | VICAP输出通道属性 | 输入          |
@@ -229,7 +234,7 @@ k_s32 kd_mpi_vicap_set_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vica
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -260,12 +265,12 @@ k_s32 kd_mpi_vicap_set_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vica
 
 【语法】
 
-k_s32 kd_mpi_vicap_get_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_chn_attr \*chn_attr)
+k_s32 kd_mpi_vicap_get_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_chn_attr *chn_attr)
 
 【参数】
 
 | **参数名称** | **描述**          | **输入/输出** |
-|--------------|-------------------|---------------|
+| ------------ | ----------------- | ------------- |
 | dev_num      | VICAP设备号       | 输入          |
 | chn_num      | VICAP输出通道号   | 输入          |
 | chn_attr     | VICAP输出通道属性 | 输出          |
@@ -273,7 +278,7 @@ k_s32 kd_mpi_vicap_get_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vica
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -309,13 +314,13 @@ k_s32 kd_mpi_vicap_init(k_vicap_dev dev_num)
 【参数】
 
 | **参数名称** | **描述**    | **输入/输出** |
-|--------------|-------------|---------------|
+| ------------ | ----------- | ------------- |
 | dev_num      | VICAP设备号 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -351,13 +356,13 @@ k_s32 kd_mpi_vicap_deinit(k_vicap_dev dev_num)
 【参数】
 
 | **参数名称** | **描述**    | **输入/输出** |
-|--------------|-------------|---------------|
+| ------------ | ----------- | ------------- |
 | dev_num      | VICAP设备号 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -393,13 +398,13 @@ k_s32 kd_mpi_vicap_start_stream(k_vicap_dev dev_num)
 【参数】
 
 | **参数名称** | **描述**    | **输入/输出** |
-|--------------|-------------|---------------|
+| ------------ | ----------- | ------------- |
 | dev_num      | VICAP设备号 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -435,13 +440,13 @@ k_s32 kd_mpi_vicap_stop_stream(k_vicap_dev dev_num)
 【参数】
 
 | **参数名称** | **描述**    | **输入/输出** |
-|--------------|-------------|---------------|
+| ------------ | ----------- | ------------- |
 | dev_num      | VICAP设备号 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -474,12 +479,12 @@ k_s32 kd_mpi_vicap_stop_stream(k_vicap_dev dev_num)
 
 k_s32 kd_mpi_vicap_dump_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_dump_format foramt,
 
-k_video_frame_info \*vf_info, k_u32 milli_sec)
+k_video_frame_info *vf_info, k_u32 milli_sec)
 
 【参数】
 
 | **参数名称** | **描述**        | **输入/输出** |
-|--------------|-----------------|---------------|
+| ------------ | --------------- | ------------- |
 | dev_num      | VICAP设备号     | 输入          |
 | chn_num      | VICAP输出通道号 | 输入          |
 | foramt       | Dump数据类型    | 输入          |
@@ -489,7 +494,7 @@ k_video_frame_info \*vf_info, k_u32 milli_sec)
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -520,12 +525,12 @@ k_video_frame_info \*vf_info, k_u32 milli_sec)
 
 【语法】
 
-k_s32 kd_mpi_vicap_dump_release(k_vicap_dev dev_num, k_vicap_chn chn_num, const k_video_frame_info \*vf_info)
+k_s32 kd_mpi_vicap_dump_release(k_vicap_dev dev_num, k_vicap_chn chn_num, const k_video_frame_info *vf_info)
 
 【参数】
 
 | **参数名称** | **描述**        | **输入/输出** |
-|--------------|-----------------|---------------|
+| ------------ | --------------- | ------------- |
 | dev_num      | VICAP设备号     | 输入          |
 | chn_num      | VICAP输出通道号 | 输入          |
 | vf_info      | Dump帧信息      | 输入          |
@@ -533,7 +538,7 @@ k_s32 kd_mpi_vicap_dump_release(k_vicap_dev dev_num, k_vicap_chn chn_num, const 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -556,26 +561,217 @@ k_s32 kd_mpi_vicap_dump_release(k_vicap_dev dev_num, k_vicap_chn chn_num, const 
 
 【相关主题】
 
+#### 2.1.12 kd_mpi_vicap_set_vi_drop_frame
+
+【描述】
+
+设置硬件丢帧
+
+【语法】
+
+k_s32 kd_mpi_vicap_set_vi_drop_frame(k_vicap_csi_num csi, k_vicap_drop_frame *frame, k_bool enable)
+
+【参数】
+
+| **参数名称** | **描述**         | **输入/输出** |
+| ------------ | ---------------- | ------------- |
+| csi          | VICAP设备号      | 输入          |
+| frame        | 结构体，见下     |               |
+| m            | 每隔 m 帧丢 n 帧 | 输入          |
+| n            | 每隔 m 帧丢 n 帧 | 输入          |
+| mode         | hdr mode         | 输入          |
+| enable       | 是否开启         | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mpi_vicap_api.h
+- 库文件：libvicap.a
+
+#### 2.1.13 kd_mpi_vicap_set_mclk
+
+【描述】
+
+设置 MCLK 频率
+
+【语法】
+
+k_s32 kd_mpi_vicap_set_mclk(k_vicap_mclk_id id, k_vicap_mclk_sel sel, k_u8 mclk_div, k_u8 mclk_en)
+
+【参数】
+
+| **参数名称** | **描述** | **输入/输出** |
+| ------------ | -------- | ------------- |
+| id           | MCLK ID  | 输入          |
+| sel          | 时钟源   | 输入          |
+| mclk_div     | 分频系数 | 输入          |
+| mclk_en      | 是否开启 | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mpi_vicap_api.h
+- 库文件：libvicap.a
+
+#### 2.1.14 kd_mpi_vicap_set_dump_reserved
+
+【描述】
+
+设置是否开启快速dump 模式
+
+【语法】
+
+void kd_mpi_vicap_set_dump_reserved(k_vicap_dev dev_num, k_vicap_chn chn_num, k_bool reserved)
+
+【参数】
+
+| **参数名称** | **描述**              | **输入/输出** |
+| ------------ | --------------------- | ------------- |
+| dev_num      | VICAP设备号           | 输入          |
+| chn_num      | VICAP输出通道号       | 输入          |
+| reserved     | 是否开启快速dump 模式 | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+#### 2.1.15 kd_mpi_vicap_set_slave_enable
+
+【描述】
+
+使能slave mode
+
+【语法】
+
+k_s32 kd_mpi_vicap_set_slave_enable(k_vicap_slave_id id, k_vicap_slave_enable *enable)
+
+【参数】
+
+| **参数名称** | **描述**              | **输入/输出** |
+| ------------ | --------------------- | ------------- |
+| id           | slave mode 的id       | 输入          |
+| enable       | 是否enable slave mode | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+#### 2.1.16 kd_mpi_vicap_set_slave_attr
+
+【描述】
+
+设置slave mode 参数
+
+【语法】
+
+k_s32 kd_mpi_vicap_set_slave_attr(k_vicap_slave_id id, k_vicap_slave_info *info)
+
+【参数】
+
+| **参数名称** | **描述**          | **输入/输出** |
+| ------------ | ----------------- | ------------- |
+| id           | slave mode 的id   | 输入          |
+| info         | slave mode 的参数 | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+#### 2.1.17 kd_mpi_vicap_3d_mode_crtl
+
+【描述】
+
+设置3d 模式使能
+
+【语法】
+
+k_s32 kd_mpi_vicap_3d_mode_crtl(k_bool enable)
+
+【参数】
+
+| **参数名称** | **描述**    | **输入/输出** |
+| ------------ | ----------- | ------------- |
+| enable       | 3d 模式使能 | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mpi_vicap_api.h
+- 库文件：libvicap.a
+
 ### 2.2 Sensor
 
 该功能模块提供以下API：
 
-- [kd_mpi_sensor_open](#221-kd_mpi_sensor_open)
-- [kd_mpi_sensor_close](#222-kd_mpi_sensor_close)
-- [kd_mpi_sensor_power_set](#223-kd_mpi_sensor_power_set)
-- [kd_mpi_sensor_id_get](#224-kd_mpi_sensor_id_get)
-- [kd_mpi_sensor_init](#225-kd_mpi_sensor_init)
-- [kd_mpi_sensor_reg_read](#226-kd_mpi_sensor_reg_read)
-- [kd_mpi_sensor_reg_write](#227-kd_mpi_sensor_reg_write)
-- [kd_mpi_sensor_mode_get](#228-kd_mpi_sensor_mode_get)
-- [kd_mpi_sensor_mode_set](#229-kd_mpi_sensor_mode_set)
-- [kd_mpi_sensor_stream_enable](#2210-kd_mpi_sensor_stream_enable)
-- [kd_mpi_sensor_again_set](#2211-kd_mpi_sensor_again_set)
-- [kd_mpi_sensor_again_get](#2212-kd_mpi_sensor_again_get)
-- [kd_mpi_sensor_dgain_set](#2213-kd_mpi_sensor_dgain_set)
-- [kd_mpi_sensor_dgain_get](#2214-kd_mpi_sensor_dgain_get)
-- [kd_mpi_sensor_intg_time_set](#2215-kd_mpi_sensor_intg_time_set)
-- [kd_mpi_sensor_intg_time_get](#2216-kd_mpi_sensor_intg_time_get)
+- [kd_mpi_sensor_open](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-open)
+- [kd_mpi_sensor_close](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-close)
+- [kd_mpi_sensor_power_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-power-set)
+- [kd_mpi_sensor_id_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-id-get)
+- [kd_mpi_sensor_init](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-init)
+- [kd_mpi_sensor_reg_read](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-reg-read)
+- [kd_mpi_sensor_reg_write](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-reg-write)
+- [kd_mpi_sensor_mode_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-mode-get)
+- [kd_mpi_sensor_mode_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-mode-set)
+- [kd_mpi_sensor_stream_enable](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-stream-enable)
+- [kd_mpi_sensor_again_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-again-set)
+- [kd_mpi_sensor_again_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-again-get)
+- [kd_mpi_sensor_dgain_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-dgain-set)
+- [kd_mpi_sensor_dgain_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-dgain-get)
+- [kd_mpi_sensor_intg_time_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-intg-time-set)
+- [kd_mpi_sensor_intg_time_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-intg-time-get)
+- [kd_mpi_sensor_otpdata_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-otpdata-get)
+- [kd_mpi_sensor_otpdata_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-otpdata-set)
 
 #### 2.2.1 kd_mpi_sensor_open
 
@@ -585,18 +781,18 @@ k_s32 kd_mpi_vicap_dump_release(k_vicap_dev dev_num, k_vicap_chn chn_num, const 
 
 【语法】
 
-k_s32 kd_mpi_sensor_open(const char \*sensor_name)
+k_s32 kd_mpi_sensor_open(const char *sensor_name)
 
 【参数】
 
 | **参数名称** | **描述**       | **输入/输出** |
-|--------------|----------------|---------------|
+| ------------ | -------------- | ------------- |
 | sensor_name  | Sensor设备名称 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 正值       | 成功。返回设备描述符   |
 | 负值       | 失败，参考错误码定义。 |
 
@@ -632,13 +828,13 @@ k_s32 kd_mpi_sensor_close (k_s32 fd)
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -674,14 +870,14 @@ k_s32 kd_mpi_sensor_power_set(k_s32 fd, k_bool on)
 【参数】
 
 | **参数名称** | **描述**                                      | **输入/输出** |
-|--------------|-----------------------------------------------|---------------|
+| ------------ | --------------------------------------------- | ------------- |
 | fd           | Sensor设备文件描述符                          | 输入          |
 | on           | 设置sensor上电状态，K_TRUE:上电，K_FALSE:下电 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -712,19 +908,19 @@ k_s32 kd_mpi_sensor_power_set(k_s32 fd, k_bool on)
 
 【语法】
 
-k_s32 kd_mpi_sensor_id_get(k_s32 fd, k_u32 \*sensor_id)
+k_s32 kd_mpi_sensor_id_get(k_s32 fd, k_u32 *sensor_id)
 
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | sensor_id    | 获取的sensor id      | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -760,14 +956,14 @@ k_s32 kd_mpi_sensor_init(k_s32 fd, k_sensor_mode mode)
 【参数】
 
 | **参数名称** | **描述**                                    | **输入/输出** |
-|--------------|---------------------------------------------|---------------|
+| ------------ | ------------------------------------------- | ------------- |
 | fd           | Sensor设备文件描述符                        | 输入          |
 | mode         | 根据指定的sensor mode初始化sensor配置寄存器 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -798,12 +994,12 @@ k_s32 kd_mpi_sensor_init(k_s32 fd, k_sensor_mode mode)
 
 【语法】
 
-k_s32 kd_mpi_sensor_reg_read(k_s32 fd, k_u32 reg_addr, k_u32 \*reg_val)
+k_s32 kd_mpi_sensor_reg_read(k_s32 fd, k_u32 reg_addr, k_u32 *reg_val)
 
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | reg_addr     | Sensor寄存器地址     | 输入          |
 | reg_val      | 读取寄存器内容       | 输出          |
@@ -811,7 +1007,7 @@ k_s32 kd_mpi_sensor_reg_read(k_s32 fd, k_u32 reg_addr, k_u32 \*reg_val)
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -847,7 +1043,7 @@ k_s32 kd_mpi_sensor_reg_write(k_s32 fd, k_u32 reg_addr, k_u32 reg_val)
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | reg_addr     | Sensor寄存器地址     | 输入          |
 | reg_val      | 写入sensor寄存器内容 | 输入          |
@@ -855,7 +1051,7 @@ k_s32 kd_mpi_sensor_reg_write(k_s32 fd, k_u32 reg_addr, k_u32 reg_val)
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -886,19 +1082,19 @@ k_s32 kd_mpi_sensor_reg_write(k_s32 fd, k_u32 reg_addr, k_u32 reg_val)
 
 【语法】
 
-k_s32 kd_mpi_sensor_mode_get(k_s32 fd, k_sensor_mode \*mode)
+k_s32 kd_mpi_sensor_mode_get(k_s32 fd, k_sensor_mode *mode)
 
 【参数】
 
 | **参数名称** | **描述**                      | **输入/输出** |
-|--------------|-------------------------------|---------------|
+| ------------ | ----------------------------- | ------------- |
 | fd           | Sensor设备文件描述符          | 输入          |
 | mode         | 返回获取的sensor mode配置参数 | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -934,14 +1130,14 @@ k_s32 kd_mpi_sensor_mode_get(k_s32 fd, k_sensor_mode mode)
 【参数】
 
 | **参数名称** | **描述**                | **输入/输出** |
-|--------------|-------------------------|---------------|
+| ------------ | ----------------------- | ------------- |
 | fd           | Sensor设备文件描述符    | 输入          |
 | mode         | 设置sensor mode配置参数 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -977,14 +1173,14 @@ k_s32 kd_mpi_sensor_stream_enable(k_s32 fd, k_s32 enable)
 【参数】
 
 | **参数名称** | **描述**                                         | **输入/输出** |
-|--------------|--------------------------------------------------|---------------|
+| ------------ | ------------------------------------------------ | ------------- |
 | fd           | Sensor设备文件描述符                             | 输入          |
 | enable       | 设置sensor流输出状态，0：禁止输出，非0：使能输出 | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1020,14 +1216,14 @@ k_s32 kd_mpi_sensor_again_set(k_s32 fd, k_sensor_gain gain)
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | gain         | gain配置参数         | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1058,19 +1254,19 @@ k_s32 kd_mpi_sensor_again_set(k_s32 fd, k_sensor_gain gain)
 
 【语法】
 
-k_s32 kd_mpi_sensor_again_set(k_s32 fd, k_sensor_gain \*gain)
+k_s32 kd_mpi_sensor_again_set(k_s32 fd, k_sensor_gain *gain)
 
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | gain         | gain配置参数         | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1106,14 +1302,14 @@ k_s32 kd_mpi_sensor_dgain_set(k_s32 fd, k_sensor_gain gain)
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | gain         | gain配置参数         | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1144,19 +1340,19 @@ k_s32 kd_mpi_sensor_dgain_set(k_s32 fd, k_sensor_gain gain)
 
 【语法】
 
-k_s32 kd_mpi_sensor_dgain_get(k_s32 fd, k_sensor_gain \*gain)
+k_s32 kd_mpi_sensor_dgain_get(k_s32 fd, k_sensor_gain *gain)
 
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | gain         | gain配置参数         | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1192,14 +1388,14 @@ k_s32 kd_mpi_sensor_intg_time_set(k_s32 fd, k_sensor_intg_time time)
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | time         | 积分时间配置参数     | 输入          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1230,19 +1426,105 @@ k_s32 kd_mpi_sensor_intg_time_set(k_s32 fd, k_sensor_intg_time time)
 
 【语法】
 
-k_s32 kd_mpi_sensor_intg_time_get(k_s32 fd, k_sensor_intg_time \*time)
+k_s32 kd_mpi_sensor_intg_time_get(k_s32 fd, k_sensor_intg_time *time)
 
 【参数】
 
 | **参数名称** | **描述**             | **输入/输出** |
-|--------------|----------------------|---------------|
+| ------------ | -------------------- | ------------- |
 | fd           | Sensor设备文件描述符 | 输入          |
 | time         | 积分时间配置参数     | 输出          |
 
 【返回值】
 
 | **返回值** | **描述**               |
-|------------|------------------------|
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mpi_sensor_api.h
+- 库文件：libsensor.a
+
+【注意】
+
+无。
+
+【举例】
+
+无。
+
+【相关主题】
+
+#### 2.2.17 kd_mpi_sensor_otpdata_get
+
+【描述】
+
+获取 sensor otp 数据
+
+【语法】
+
+k_s32 kd_mpi_sensor_otpdata_get(k_s32 fd, void *ota_data)
+
+【参数】
+
+| **参数名称** | **描述**             | **输入/输出** |
+| ------------ | -------------------- | ------------- |
+| fd           | Sensor设备文件描述符 | 输入          |
+| ota_data     | otp 数据             | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mpi_sensor_api.h
+- 库文件：libsensor.a
+
+【注意】
+
+无。
+
+【举例】
+
+无。
+
+【相关主题】
+
+#### 2.2.18 kd_mpi_sensor_otpdata_set
+
+【描述】
+
+设置sensor otp 数据
+
+【语法】
+
+k_s32 kd_mpi_sensor_otpdata_set(k_s32 fd, void *ota_data)
+
+【参数】
+
+| **参数名称** | **描述**             | **输入/输出** |
+| ------------ | -------------------- | ------------- |
+| fd           | Sensor设备文件描述符 | 输入          |
+| ota_data     | otp 数据             | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
 | 0          | 成功。                 |
 | 非0        | 失败，参考错误码定义。 |
 
@@ -1271,21 +1553,21 @@ k_s32 kd_mpi_sensor_intg_time_get(k_s32 fd, k_sensor_intg_time \*time)
 
 该功能模块的相关数据类型定义如下：
 
-- [k_vicap_sensor_type](#311-k_vicap_sensor_type)
-- [k_vicap_dev](#312-k_vicap_dev)
-- [k_vicap_chn](#313-k_vicap_chn)
-- [k_vicap_csi_num](#314-k_vicap_csi_num)
-- [k_vicap_mipi_lanes](#315-k_vicap_mipi_lanes)
-- [k_vicap_csi_data_type](#316-k_vicap_csi_data_type)
-- [k_vicap_data_source](#317-k_vicap_data_source)
-- [k_vicap_vi_dvp_port](#318-k_vicap_vi_dvp_port)
-- [k_vicap_vi_flash_mode](#319-k_vicap_vi_flash_mode)
-- [k_vicap_img_window](#3110-k_vicap_img_window)
-- [k_vicap_work_mode](#3111-k_vicap_work_mode)
-- [k_vicap_sensor_info](#3112-k_vicap_sensor_info)
-- [k_vicap_dump_format](#3113-k_vicap_dump_format)
-- [k_vicap_dev_attr](#3114-k_vicap_dev_attr)
-- [k_vicap_chn_attr](#3115-k_vicap_chn_attr)
+- [k_vicap_sensor_type](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-sensor-type)
+- [k_vicap_dev](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dev)
+- [k_vicap_chn](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-chn)
+- [k_vicap_csi_num](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-csi-num)
+- [k_vicap_mipi_lanes](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-mipi-lanes)
+- [k_vicap_csi_data_type](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-csi-data-type)
+- [k_vicap_data_source](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-data-source)
+- [k_vicap_vi_dvp_port](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-vi-dvp-port)
+- [k_vicap_vi_flash_mode](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-vi-flash-mode)
+- [k_vicap_img_window](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-img-window)
+- [k_vicap_work_mode](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-work-mode)
+- [k_vicap_sensor_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-sensor-info)
+- [k_vicap_dump_format](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dump-format)
+- [k_vicap_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dev-attr)
+- [k_vicap_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-chn-attr)
 
 #### 3.1.1 k_vicap_sensor_type
 
@@ -1293,36 +1575,95 @@ k_s32 kd_mpi_sensor_intg_time_get(k_s32 fd, k_sensor_intg_time \*time)
 
 【定义】
 
-```c
+```
 typedef enum {
-    OV_OV9732_MIPI_1280X720_30FPS_10BIT_LINEAR = 0,
-    OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR = 1,
-    OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_SPECKLE = 2,
-
-    OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR = 3,
-    OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_SPECKLE = 4,
-
-    OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR_SPECKLE = 5,
-    OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR_SPECKLE  = 6,
-
-    IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_LINEAR = 7,
-    IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_LINEAR = 8,
-    IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_LINEAR = 9,
-    SENSOR_TYPE_MAX,
+OV_OV9732_MIPI_1280X720_30FPS_10BIT_LINEAR = 0,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR = 1,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_SPECKLE = 2,
+OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR = 3,
+OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_SPECKLE = 4,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR_SPECKLE = 5,
+OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR_SPECKLE  = 6,
+IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_LINEAR = 7,
+IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_LINEAR = 8,
+IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_LINEAR = 9,
+IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_MCLK_7425_LINEAR = 10,
+IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR = 11,
+IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR = 12,
+IMX335_MIPI_4LANE_RAW10_2XDOL = 13,
+IMX335_MIPI_4LANE_RAW10_3XDOL = 14,
+SC_SC035HGS_MIPI_1LANE_RAW10_640X480_120FPS_LINEAR = 15,
+SC_SC035HGS_MIPI_1LANE_RAW10_640X480_60FPS_LINEAR = 16,
+SC_SC035HGS_MIPI_1LANE_RAW10_640X480_30FPS_LINEAR = 17,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE = 18,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR = 19,
+OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR = 20,
+OV_OV5647_MIPI_1920X1080_30FPS_10BIT_LINEAR = 21,
+OV_OV5647_MIPI_2592x1944_10FPS_10BIT_LINEAR = 22,
+OV_OV5647_MIPI_640x480_60FPS_10BIT_LINEAR = 23,
+OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR = 24,
+SC_SC201CS_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR = 25,
+SC_SC201CS_SLAVE_MODE_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR = 26,
+OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR = 27,
+OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR = 28,
+XS9922B_MIPI_CSI0_1280X720_30FPS_YUV422_DOL3 = 29,
+XS9950_MIPI_CSI0_1280X720_30FPS_YUV422 = 30,
+XS9950_MIPI_CSI1_1280X720_30FPS_YUV422 = 31,
+XS9950_MIPI_CSI2_1280X720_30FPS_YUV422 = 32,
+XS9950_MIPI_CSI0_1920X1080_30FPS_YUV422 = 33,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE_V2 = 34,
+OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR_V2 = 35,
+OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR_V2 = 36,
+OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR_V2 = 37,
+OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR_V2 = 38,
+OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR_V2 = 39,
+GC2053_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR = 40,
+SENSOR_TYPE_MAX,
 } k_vicap_sensor_type;
 ```
 
+
+
 【成员】
 
-| **成员名称**                                          | **描述**                                                 |
-| ----------------------------------------------------- | -------------------------------------------------------- |
-| OV_OV9732_MIPI_1280X720_30FPS_10BIT_LINEAR            | OV9732 720P 10bit 30帧线性输出配置                       |
-| OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR         | OV9286 720P 10bit 30帧线性输出 红外配置（实际帧率15fps） |
-| OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_SPECKLE    | OV9286 720P 10bit 30帧线性输出 散斑配置（实际帧率15fps） |
-| OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR         | OV9286 720P 10bit 60帧线性输出 红外配置（实际帧率30fps） |
-| OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_SPECKLE    | OV9286 720P 10bit 60帧线性输出 散斑配置（实际帧率30fps） |
-| OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR_SPECKLE | OV9286 720P 10bit 30帧线性输出 红外/散斑交替             |
-| OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR_SPECKLE | OV9286 720P 10bit 60帧线性输出 红外/散斑交替             |
+| **成员名称**                                                 | **描述**                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| OV_OV9732_MIPI_1280X720_30FPS_10BIT_LINEAR                   | OV9732 1lan 10bit 720P30帧线性输出配置 外接晶振16M 接csi0    |
+| OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR                | OV9286 2lan 10bit 720P30帧线性输出配置ir图像 外接晶振25M 接csi1 |
+| OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_SPECKLE           | OV9286 2lan 10bit 720P30帧线性输出配置speckle图像 外接晶振25M 接csi1 |
+| OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR                | OV9286 2lan 10bit 720P60帧线性输出配置ir图像 外接晶振25M 接csi1 |
+| OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_SPECKLE           | OV9286 2lan 10bit 720P60帧线性输出配置speckle图像 外接晶振25M 接csi1 |
+| IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_LINEAR               | imx335 12bit 2lan 1080P30帧线性输出 外接晶振24M 接csi0       |
+| IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_LINEAR               | imx335 12bit 2lan 全尺寸30帧线性输出 外接晶振24M 接csi0      |
+| IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_LINEAR               | imx335 12bit 4lan 全尺寸30帧线性输出 外接晶振24M 接csi0      |
+| IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_MCLK_7425_LINEAR     | imx335 12bit 2lan 1080P30帧线性输出 芯片输出74.25M 时钟 接csi0 |
+| IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR     | imx335 12bit 2lan 全尺寸30帧线性输出 芯片输出74.25M 时钟 接csi0 |
+| IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR     | imx335 12bit 4lan 全尺寸30帧线性输出 芯片输出74.25M 时钟 接csi0 |
+| IMX335_MIPI_4LANE_RAW10_2XDOL                                | imx335 10bit 4lan 全尺寸15帧2dol输出 外接晶振24M 接csi0      |
+| IMX335_MIPI_4LANE_RAW10_3XDOL                                | imx335 10bit 4lan 全尺寸15帧3dol输出 外接晶振24M 接csi0      |
+| SC_SC035HGS_MIPI_1LANE_RAW10_640X480_120FPS_LINEAR           | sc035 10bit 1lan 640x480 120帧线性输出 外接晶振24M 接csi2    |
+| SC_SC035HGS_MIPI_1LANE_RAW10_640X480_60FPS_LINEAR            | sc035 10bit 1lan 640x480 60帧线性输出 外接晶振24M 接csi2     |
+| SC_SC035HGS_MIPI_1LANE_RAW10_640X480_30FPS_LINEAR            | sc035 10bit 1lan 640x480 30帧线性输出 外接晶振24M 接csi2     |
+| OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE  | OV9286 2lan 10bit 720P30帧线性输出配置speckle图像 芯片输出25M 时钟 接csi1 |
+| OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR       | OV9286 2lan 10bit 720P30帧线性输出配置ir图像 芯片输出25M 时钟 接csi1 |
+| OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR          | OV9732 1lan 10bit 720P30帧线性输出配置 芯片输出16M时钟 接csi0 |
+| OV_OV5647_MIPI_1920X1080_30FPS_10BIT_LINEAR                  | OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 接csi2   |
+| OV_OV5647_MIPI_2592x1944_10FPS_10BIT_LINEAR                  | OV5647 2lan 10bit 全尺寸 10帧线性输出配置 外接晶振25M 接csi2 |
+| OV_OV5647_MIPI_640x480_60FPS_10BIT_LINEAR                    | OV5647 2lan 10bit 640x480 60帧线性输出配置 外接晶振25M 接csi2 |
+| OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR             | OV5647 2lan 10bit 1080P30帧线性输出配置 芯片输出25M时钟 接csi0 |
+| SC_SC201CS_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR           | sc201 1lan 10bit 1600x1200 30帧线性输出 晶振27M 接csi1       |
+| SC_SC201CS_SLAVE_MODE_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR | sc201 1lan 10bit slave模式 1600x1200 30帧线性输出 晶振27M 接csi1 |
+| OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR             | OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi1 |
+| OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR             | OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi2 |
+| XS9950_MIPI_CSI0_1280X720_30FPS_YUV422                       | XS9950 2lan yuv422 720P25帧线性输出 模拟摄像头 接csi0        |
+| XS9950_MIPI_CSI1_1280X720_30FPS_YUV422                       | XS9950 2lan yuv422 720P25帧线性输出 模拟摄像头 接csi1        |
+| OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE_V2 | OV9286 2lan 10bit 720P30帧线性输出配置speckle图像 芯片输出25M 时钟 接csi1 |
+| OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR_V2    | OV9286 2lan 10bit 720P30帧线性输出配置ir图像 芯片输出25M 时钟 接csi1 |
+| OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR_V2       | OV9732 1lan 10bit 720P30帧线性输出配置 芯片输出16M时钟 接csi2 |
+| OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR_V2          | OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi0 |
+| OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR_V2          | OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi1 |
+| OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR_V2          | OV5647 2lan 10bit 1080P30帧线性输出配置 芯片输出25M时钟 接csi2 |
+| GC2053_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR                | GC2053 2lan 10bit 1080P30帧线性输出配置 芯片输出16M时钟 接csi0 |
 
 【注意事项】
 
@@ -1334,7 +1675,7 @@ typedef enum {
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_DEV_ID_0 = 0,
 VICAP_DEV_ID_1 = 1,
@@ -1343,10 +1684,12 @@ VICAP_DEV_ID_MAX,
 } k_vicap_dev;
 ```
 
+
+
 【成员】
 
 | **成员名称**   | **描述**   |
-|----------------|------------|
+| -------------- | ---------- |
 | VICAP_DEV_ID_0 | VICAP设备0 |
 | VICAP_DEV_ID_1 | VICAP设备1 |
 | VICAP_DEV_ID_2 | VICAP设备2 |
@@ -1357,7 +1700,7 @@ VICAP_DEV_ID_MAX,
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_CHN_ID_0 = 0,
 VICAP_CHN_ID_1 = 1,
@@ -1366,10 +1709,12 @@ VICAP_CHN_ID_MAX,
 } k_vicap_chn;
 ```
 
+
+
 【成员】
 
 | **成员名称**   | **描述**       |
-|----------------|----------------|
+| -------------- | -------------- |
 | VICAP_CHN_ID_0 | VICAP输出通道0 |
 | VICAP_CHN_ID_1 | VICAP输出通道1 |
 | VICAP_CHN_ID_2 | VICAP输出通道2 |
@@ -1380,7 +1725,7 @@ VICAP_CHN_ID_MAX,
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_CSI0 = 1,
 VICAP_CSI1 = 2,
@@ -1388,10 +1733,12 @@ VICAP_CSI2 = 3,
 } k_vicap_csi_num;
 ```
 
+
+
 【成员】
 
 | **成员名称** | **描述** |
-|--------------|----------|
+| ------------ | -------- |
 | VICAP_CSI0   | CSI0     |
 | VICAP_CSI1   | CSI1     |
 | VICAP_CSI2   | CSI2     |
@@ -1406,7 +1753,7 @@ Sensor连接的CSI号由硬件物理连接决定。
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_MIPI_1LANE = 0,
 VICAP_MIPI_2LANE = 1,
@@ -1414,10 +1761,12 @@ VICAP_MIPI_4LANE = 3,
 } k_vicap_mipi_lanes;
 ```
 
+
+
 【成员】
 
 | **成员名称**     | **描述** |
-|------------------|----------|
+| ---------------- | -------- |
 | VICAP_MIPI_1LANE | 1 lane   |
 | VICAP_MIPI_2LANE | 2 lane   |
 | VICAP_MIPI_4LANE | 4 lane   |
@@ -1432,7 +1781,7 @@ Sensor连接使用的mipi 通道个数由硬件物理连接决定，当使用4la
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_CSI_DATA_TYPE_RAW8 = 0x2A,
 VICAP_CSI_DATA_TYPE_RAW10 = 0x2B,
@@ -1441,10 +1790,12 @@ VICAP_CSI_DATA_TYPE_RAW14 = 0x2D,
 } k_vicap_csi_data_type;
 ```
 
+
+
 【成员】
 
 | **成员名称**              | **描述** |
-|---------------------------|----------|
+| ------------------------- | -------- |
 | VICAP_CSI_DATA_TYPE_RAW8  | RAW8     |
 | VICAP_CSI_DATA_TYPE_RAW10 | RAW10    |
 | VICAP_CSI_DATA_TYPE_RAW12 | RAW12    |
@@ -1460,7 +1811,7 @@ VICAP_CSI_DATA_TYPE_RAW14 = 0x2D,
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_SOURCE_CSI0 = 0, /**< vicap acquire data from the csi0*/
 VICAP_SOURCE_CSI1 = 1, /**< vicap acquire data from the csi0*/
@@ -1470,10 +1821,12 @@ VICAP_SOURCE_CSI2 = 4, /**< vicap acquire data from the csi2*/
 } k_vicap_data_source;
 ```
 
+
+
 【成员】
 
 | **成员名称**             | **描述**                            |
-|--------------------------|-------------------------------------|
+| ------------------------ | ----------------------------------- |
 | VICAP_SOURCE_CSI0        | VICAP数据来源为CSI0                 |
 | VICAP_SOURCE_CSI1        | VICAP数据来源为CSI1                 |
 | VICAP_SOURCE_CSI1_FS_TR0 | VICAP数据来源为CSI1 Flash trigger 0 |
@@ -1488,7 +1841,7 @@ VICAP_SOURCE_CSI2 = 4, /**< vicap acquire data from the csi2*/
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_VI_DVP_PORT0 = 0,
 VICAP_VI_DVP_PORT1 = 1,
@@ -1497,10 +1850,12 @@ VICAP_VI_DVP_PORT_MAX,
 } k_vicap_vi_dvp_port;
 ```
 
+
+
 【成员】
 
 | **成员名称**       | **描述**  |
-|--------------------|-----------|
+| ------------------ | --------- |
 | VICAP_VI_DVP_PORT0 | DVP 端口0 |
 | VICAP_VI_DVP_PORT1 | DVP端口1  |
 | VICAP_VI_DVP_PORT2 | DVP端口2  |
@@ -1508,8 +1863,8 @@ VICAP_VI_DVP_PORT_MAX,
 【注意事项】
 
 1. 默认端口0对应CSI0，端口1对应CSI1，端口2对应CSI2
-1. 只有端口0支持HDR sensor，当用户需要使用HDR模式时，必需要将其绑定到DVP端口0。
-1. 当用户需要改变端口映射关系时需要执行绑定操作
+2. 只有端口0支持HDR sensor，当用户需要使用HDR模式时，必需要将其绑定到DVP端口0。
+3. 当用户需要改变端口映射关系时需要执行绑定操作
 
 #### 3.1.9 k_vicap_vi_flash_mode
 
@@ -1517,7 +1872,7 @@ VICAP_VI_DVP_PORT_MAX,
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_FLASH_FOLLOW_STROBE = 0,
 VICAP_FLASH_FOLLOW_STROBE_BASE_PWM = 1,
@@ -1526,10 +1881,12 @@ VICAP_FLASH_DISABLE = 3, /**< disable flash light*/
 } k_vicap_vi_flash_mode;
 ```
 
+
+
 【成员】
 
 | **成员名称**                       | **描述**                    |
-|------------------------------------|-----------------------------|
+| ---------------------------------- | --------------------------- |
 | VICAP_FLASH_FOLLOW_STROBE          | 由strobe信号控制            |
 | VICAP_FLASH_FOLLOW_STROBE_BASE_PWM | 基于PWM模式由strobe信号控制 |
 | VICAP_FLASH_NORMAL_PWM             | 由PWM信号控制               |
@@ -1543,7 +1900,7 @@ VICAP_FLASH_DISABLE = 3, /**< disable flash light*/
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u16 h_start;
 k_u16 v_start;
@@ -1552,10 +1909,12 @@ k_u16 height;
 } k_vicap_img_window;
 ```
 
+
+
 【成员】
 
 | **成员名称** | **描述**     |
-|--------------|--------------|
+| ------------ | ------------ |
 | h_start      | 水平起始位置 |
 | v_start      | 垂直起始位置 |
 | width        | 图像宽度     |
@@ -1567,21 +1926,25 @@ k_u16 height;
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_WORK_ONLINE_MODE,
 VICAP_WORK_OFFLINE_MODE,
+VICAP_WORK_ONLY_MCM_MODE,
 } k_vicap_work_mode;
 ```
 
+
+
 【成员】
 
-| **成员名称**            | **描述** |
-|-------------------------|----------|
-| VICAP_WORK_ONLINE_MODE  | 在线模式 |
-| VICAP_WORK_OFFLINE_MODE | 离线模式 |
+| **成员名称**             | **描述**        |
+| ------------------------ | --------------- |
+| VICAP_WORK_ONLINE_MODE   | 在线模式        |
+| VICAP_WORK_OFFLINE_MODE  | 离线模式        |
+| VICAP_WORK_ONLY_MCM_MODE | 只工作在mcm模式 |
 
-【注意事项】支持多个摄像头输入时，必须指定为离线模式。
+【注意事项】 支持多个摄像头输入时，必须指定为离线模式。 配置VICAP_WORK_ONLY_MCM_MODE，dump图像只能用yuv444这种格式。
 
 #### 3.1.12 k_vicap_sensor_info
 
@@ -1589,7 +1952,7 @@ VICAP_WORK_OFFLINE_MODE,
 
 【定义】
 
-```c
+```
 typedef struct {
 const char *sensor_name;
 k_vicap_csi_num csi_num; /**< CSI NUM that the sensor connects to*/
@@ -1604,10 +1967,12 @@ k_vicap_sensor_type sensor_type;
 } k_vicap_sensor_info;
 ```
 
+
+
 【成员】
 
 | **成员名称** | **描述**                              |
-|--------------|---------------------------------------|
+| ------------ | ------------------------------------- |
 | sensor_name  | Sensor名字                            |
 | csi_num      | 当前sensor硬件连接的CSI号             |
 | mipi_lanes   | 当前sensor硬件连接的使用的MIPI 通道数 |
@@ -1625,21 +1990,25 @@ k_vicap_sensor_type sensor_type;
 
 【定义】
 
-```c
+```
 typedef enum {
 VICAP_DUMP_YUV = 0,
 VICAP_DUMP_RGB = 1,
 VICAP_DUMP_RAW = 2,
+VICAP_DUMP_YUV444 = 3,
 } k_vicap_dump_format;
 ```
 
+
+
 【成员】
 
-| **成员名称**   | **描述**     |
-|----------------|--------------|
-| VICAP_DUMP_YUV | Dump YUV数据 |
-| VICAP_DUMP_RGB | Dump RGB数据 |
-| VICAP_DUMP_RAW | Dump RAW数据 |
+| **成员名称**      | **描述**        |
+| ----------------- | --------------- |
+| VICAP_DUMP_YUV    | Dump YUV数据    |
+| VICAP_DUMP_RGB    | Dump RGB数据    |
+| VICAP_DUMP_RAW    | Dump RAW数据    |
+| VICAP_DUMP_YUV444 | Dump YUV444数据 |
 
 #### 3.1.14 k_vicap_dev_attr
 
@@ -1647,7 +2016,7 @@ VICAP_DUMP_RAW = 2,
 
 【定义】
 
-```c
+```
 typedef struct {
     k_vicap_window acq_win;
     k_vicap_work_mode mode;
@@ -1657,8 +2026,11 @@ typedef struct {
     k_bool dw_enable;
     k_u32 buffer_num;
     k_u32 buffer_size;
+    k_vicap_mirror mirror;
 } k_vicap_dev_attr;
 ```
+
+
 
 【成员】
 
@@ -1667,11 +2039,12 @@ typedef struct {
 | acq_win       | 图像捕获窗口                                                 |
 | mode          | Vicap工作模式。当支持多个摄像头输入时，必须指定为离线模式。  |
 | pipe_ctrl     | ISP pipeline 控制开关。                                      |
-| cpature_frame | 指定采集数据的帧数，输入范围\[0,1023\]，0：持续采集          |
+| cpature_frame | 指定采集数据的帧数，输入范围[0,1023]，0：持续采集            |
 | sensor_info   | Sensor配置信息                                               |
-| dw_enable     | Dewarp使能（详见 《K230_SDK_Dewarp使用指南.md》） |
+| dw_enable     | Dewarp使能（详见 [K230_SDK_Dewarp使用指南.md](https://developer.canaan-creative.com/k230/dev/zh/01_software/pc/dewarp/K230_SDK_Dewarp使用指南.html)） |
 | buffer_num    | 离线模式下，配置sensor接收数据的缓冲区个数                   |
 | buffer_size   | 离线模式下，配置sensor接收数据的缓冲区大小                   |
+| mirror        | sensor 的mirror 功能                                         |
 
 【注意事项】对于小内存应用场景，建议关闭3DNR模块，减小内存占用。关闭方式为应用设置设备属性时，将 pipe_ctrl.bits.dnr3_enable 设置为0
 
@@ -1681,7 +2054,7 @@ typedef struct {
 
 【定义】
 
-```c
+```
 typedef struct {
     k_vicap_window out_win;
     k_vicap_window crop_win;
@@ -1695,6 +2068,8 @@ typedef struct {
     k_u8 alignment;
 } k_vicap_chn_attr;
 ```
+
+
 
 【成员】
 
@@ -1711,24 +2086,53 @@ typedef struct {
 | buffer_size  | 缓冲区大小               |
 | alignment    | 缓冲区对齐方式           |
 
+#### 3.1.16 k_vicap_mirror
+
+【说明】vicap sensor mirror 功能
+
+【定义】
+
+```
+typedef enum {
+VICAP_MIRROR_NONE = 0,
+VICAP_MIRROR_HOR = 1,
+VICAP_MIRROR_VER = 2,
+VICAP_MIRROR_BOTH = 3,
+} k_vicap_mirror;
+```
+
+
+
+【成员】
+
+| **成员名称**      | **描述**                |
+| ----------------- | ----------------------- |
+| VICAP_MIRROR_NONE | sensor不需要mirror      |
+| VICAP_MIRROR_HOR  | sensor 横向mirror       |
+| VICAP_MIRROR_VER  | sensor 纵向mirror       |
+| VICAP_MIRROR_BOTH | sensor 横向和纵向mirror |
+
+【注意事项】
+
 ### 3.2 Sensor
 
 该功能模块的相关数据类型定义如下：
 
-- [k_sensor_bayer_pattern](#321-k_sensor_bayer_pattern)
-- [k_sensor_exp_frame_type](#322-k_sensor_exp_frame_type)
-- [k_sensor_exposure_param](#323-k_sensor_exposure_param)
-- [k_sensor_intg_time](#324-k_sensor_intg_time)
-- [k_sensor_gain](#325-k_sensor_gain)
-- [k_sensor_size](#326-k_sensor_size)
-- [k_sensor_ae_info](#327-k_sensor_ae_info)
-- [k_sensor_mode](#328-k_sensor_mode)
+- [k_sensor_bayer_pattern](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-bayer-pattern)
+- [k_sensor_exp_frame_type](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-exp-frame-type)
+- [k_sensor_exposure_param](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-exposure-param)
+- [k_sensor_intg_time](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-intg-time)
+- [k_sensor_gain](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-gain)
+- [k_sensor_size](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-size)
+- [k_sensor_ae_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-ae-info)
+- [k_sensor_mode](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-mode)
+- [k_sensor_otp_date](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-otp-date)
 
 #### 3.2.1 k_sensor_bayer_pattern
 
 【定义】sensor 输出的拜耳模式定义
 
-```c
+```
 typedef enum {
 BAYER_RGGB = 0,
 BAYER_GRBG = 1,
@@ -1737,10 +2141,12 @@ BAYER_BGGR = 3,
 BAYER_BUTT } k_sensor_bayer_pattern;
 ```
 
+
+
 【成员】
 
 | **成员名称** | **描述** |
-|--------------|----------|
+| ------------ | -------- |
 | BAYER_RGGB   | RGGB模式 |
 | BAYER_GRBG   | GRBG模式 |
 | BAYER_GBRG   | GBRG模式 |
@@ -1752,7 +2158,7 @@ BAYER_BUTT } k_sensor_bayer_pattern;
 
 【定义】
 
-```c
+```
 typedef enum {
 SENSOR_EXPO_FRAME_TYPE_1FRAME = 0,
 SENSOR_EXPO_FRAME_TYPE_2FRAMES = 1,
@@ -1761,10 +2167,12 @@ SENSOR_EXPO_FRAME_TYPE_4FRAMES = 3,
 SENSOR_EXPO_FRAME_TYPE_MAX } k_sensor_exp_frame_type;
 ```
 
+
+
 【成员】
 
 | **成员名称**                   | **描述**           |
-|--------------------------------|--------------------|
+| ------------------------------ | ------------------ |
 | SENSOR_EXPO_FRAME_TYPE_1FRAME  | 线性模式，单帧曝光 |
 | SENSOR_EXPO_FRAME_TYPE_2FRAMES | 2帧HDR曝光模式     |
 | SENSOR_EXPO_FRAME_TYPE_3FRAMES | 2帧HDR曝光模式     |
@@ -1776,7 +2184,7 @@ SENSOR_EXPO_FRAME_TYPE_MAX } k_sensor_exp_frame_type;
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u8 exp_frame_type;
 float gain[SENSOR_EXPO_FRAME_TYPE_MAX];
@@ -1784,10 +2192,12 @@ float exp_time[SENSOR_EXPO_FRAME_TYPE_MAX];
 } k_sensor_exposure_param;
 ```
 
+
+
 【成员】
 
 | **成员名称**   | **描述** |
-|----------------|----------|
+| -------------- | -------- |
 | exp_frame_type | 曝光类型 |
 | gain           | 曝光增益 |
 | exp_time       | 曝光时间 |
@@ -1798,17 +2208,19 @@ float exp_time[SENSOR_EXPO_FRAME_TYPE_MAX];
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u8 exp_frame_type;
 float intg_time[SENSOR_EXPO_FRAME_TYPE_MAX];
 } k_sensor_intg_time;
 ```
 
+
+
 【成员】
 
 | **成员名称**   | **描述** |
-|----------------|----------|
+| -------------- | -------- |
 | exp_frame_type | 曝光类型 |
 | intg_time      | 积分时间 |
 
@@ -1818,17 +2230,19 @@ float intg_time[SENSOR_EXPO_FRAME_TYPE_MAX];
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u8 exp_frame_type;
 float gain[SENSOR_EXPO_FRAME_TYPE_MAX];
 } k_sensor_gain;
 ```
 
+
+
 【成员】
 
 | **成员名称**   | **描述** |
-|----------------|----------|
+| -------------- | -------- |
 | exp_frame_type | 曝光类型 |
 | gain           | 曝光增益 |
 
@@ -1838,7 +2252,7 @@ float gain[SENSOR_EXPO_FRAME_TYPE_MAX];
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u32 bounds_width;
 k_u32 bounds_height;
@@ -1849,10 +2263,12 @@ k_u32 height;
 } k_sensor_size;
 ```
 
+
+
 【成员】
 
 | **成员名称**  | **描述** |
-|---------------|----------|
+| ------------- | -------- |
 | bounds_width  | 宽度边界 |
 | bounds_height | 高度边界 |
 | top           | 顶部边界 |
@@ -1866,7 +2282,7 @@ k_u32 height;
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u16 frame_length;
 k_u16 cur_frame_length;
@@ -1917,10 +2333,12 @@ k_u32 hdr_ratio;
 } k_sensor_ae_info;
 ```
 
+
+
 【成员】
 
 | **成员名称**               | **描述**              |
-|----------------------------|-----------------------|
+| -------------------------- | --------------------- |
 | frame_length               | 帧长度                |
 | cur_frame_length           | 当前帧长度            |
 | one_line_exp_time          | 行曝光时间（单位：s） |
@@ -1973,7 +2391,7 @@ k_u32 hdr_ratio;
 
 【定义】
 
-```c
+```
 typedef struct {
 k_u32 index;
 k_vicap_sensor_type sensor_type;
@@ -1989,28 +2407,483 @@ k_sensor_reg_list *reg_list;
 } k_sensor_mode;
 ```
 
+
+
 【成员】
 
-| **成员名称**   | **描述**                 |
-|----------------|--------------------------|
-| index          | 当前模式索引             |
-| sensor_type    | Sensor配置类型           |
-| size           | 当前模式sensor尺寸       |
-| fps            | 帧率                     |
-| hdr_mode       | HDR模式                  |
-| stitching_mode | HDR stiching模式         |
-| bit_width      | 输出数据宽度             |
-| bayer_pattern  | 拜耳模式                 |
-| mipi_info      | MIPI参数信息             |
-| ae_info        | AE参数信息               |
-| reg_list       | 当前模式的寄存器配置列表 |
+| **成员名称**   | **描述**                      |
+| -------------- | ----------------------------- |
+| index          | 当前模式索引                  |
+| sensor_type    | Sensor配置类型                |
+| size           | 当前模式sensor尺寸            |
+| fps            | 帧率                          |
+| hdr_mode       | HDR模式                       |
+| stitching_mode | HDR stiching模式              |
+| bit_width      | 输出数据宽度                  |
+| bayer_pattern  | 拜耳模式                      |
+| mipi_info      | MIPI参数信息                  |
+| ae_info        | AE参数信息                    |
+| reg_list       | 当前模式的寄存器配置列表      |
+| otp_type       | otp 类型：sensor 自用的和user |
+| otp_date       | otp数据                       |
 
-## 4. 错误码
+#### 3.2.9 k_sensor_otp_date
+
+【说明】sensor otp参数
+
+【定义】
+
+```
+typedef struct {
+k_u8 otp_type;
+k_u8 otp_date[20];
+} k_sensor_otp_date;
+```
+
+
+
+【成员】
+
+| **成员名称** | **描述**                      |
+| ------------ | ----------------------------- |
+| otp_type     | otp 类型：sensor 自用的和user |
+| otp_date     | otp数据                       |
+
+## 4. MAPI
+
+该功能模块提供以下API：
+
+- [kd_mapi_vicap_get_sensor_fd]
+- [kd_mapi_vicap_get_sensor_info]
+- [kd_mapi_vicap_set_dev_attr]
+- [kd_mapi_vicap_set_chn_attr]
+- [kd_mapi_vicap_start]
+- [kd_mapi_vicap_stop]
+- [kd_mapi_vicap_dump_frame]
+- [kd_mapi_vicap_release_frame]
+- [kd_mapi_vicap_set_vi_drop_frame]
+- [kd_mapi_vicap_set_mclk]
+- [kd_mapi_vicap_tuning]
+- [kd_mapi_isp_ae_get_roi]
+- [kd_mapi_isp_ae_set_roi]
+- [kd_mapi_sensor_otpdata_get]
+
+### 4.1 API
+
+#### 4.1.1 kd_mapi_vicap_get_sensor_fd
+
+【描述】
+
+根据指定的sensor获取文件描述符
+
+【语法】
+
+k_s32 kd_mapi_vicap_get_sensor_fd(k_vicap_sensor_attr *sensor_attr)
+
+【参数】
+
+| **参数名称** | **描述**   | **输入/输出** |
+| ------------ | ---------- | ------------- |
+| sensor_attr  | Sensor属性 | 输入 & 输出   |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.2 kd_mapi_vicap_get_sensor_info
+
+【描述】
+
+根据指定的sensor配置类型获取sensor配置信息，参见[kd_mpi_vicap_get_sensor_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-sensor-info)，将 `sensor_type` 放入 `sensor_info.sensor_type` ，用法一致
+
+【语法】
+
+k_s32 kd_mapi_vicap_get_sensor_info(k_vicap_sensor_info *sensor_info)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.3 kd_mapi_vicap_set_dev_attr
+
+【描述】
+
+设置VICAP设备属性，参见[kd_mpi_vicap_set_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dev-attr)，将 `dev_num` 放入 `dev_info.vicap_dev`，用法一致
+
+【语法】
+
+k_s32 kd_mapi_vicap_set_dev_attr(k_vicap_dev_set_info dev_info)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.4 kd_mapi_vicap_set_chn_attr
+
+【描述】
+
+设置VICAP通道属性，参见[kd_mpi_vicap_set_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-chn-attr)，将 `dev_num` 放入 `chn_info.vicap_dev`，将 `chn_num` 放入 `chn_info.vicap_chn`，用法一致
+
+【语法】
+
+k_s32 kd_mapi_vicap_set_chn_attr(k_vicap_chn_set_info chn_info)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.5 kd_mapi_vicap_start
+
+【描述】
+
+[kd_mpi_vicap_init](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-init) + [kd_mpi_vicap_start_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-start-stream)
+
+【语法】
+
+k_s32 kd_mapi_vicap_start(k_vicap_dev vicap_dev)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.6 kd_mapi_vicap_stop
+
+【描述】
+
+[kd_mpi_vicap_stop_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-stop-stream) + [kd_mpi_vicap_deinit](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-deinit)
+
+【语法】
+
+k_s32 kd_mapi_vicap_stop(k_vicap_dev vicap_dev)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.7 kd_mapi_vicap_dump_frame
+
+【描述】
+
+根据指定的设备和输出通道dump vicap数据，参见[kd_mpi_vicap_dump_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-frame)
+
+【语法】
+
+k_s32 kd_mapi_vicap_dump_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_dump_format foramt, k_video_frame_info *vf_info, k_u32 milli_sec)
+
+【参数】
+
+| **参数名称** | **描述**        | **输入/输出** |
+| ------------ | --------------- | ------------- |
+| dev_num      | VICAP设备号     | 输入          |
+| chn_num      | VICAP输出通道号 | 输入          |
+| foramt       | Dump数据类型    | 输入          |
+| vf_info      | Dump帧信息      | 输出          |
+| milli_sec    | 超时时间        | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.8 kd_mapi_vicap_release_frame
+
+【描述】
+
+释放dump数据帧，参见[kd_mpi_vicap_dump_release](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-release)
+
+【语法】
+
+k_s32 kd_mapi_vicap_release_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, const k_video_frame_info *vf_info)
+
+【参数】
+
+| **参数名称** | **描述**        | **输入/输出** |
+| ------------ | --------------- | ------------- |
+| dev_num      | VICAP设备号     | 输入          |
+| chn_num      | VICAP输出通道号 | 输入          |
+| vf_info      | Dump帧信息      | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.9 kd_mapi_vicap_set_vi_drop_frame
+
+【描述】
+
+设置硬件丢帧，参见[kd_mpi_vicap_set_vi_drop_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mapi-vicap-set-vi-drop-frame)
+
+【语法】
+
+k_s32 kd_mapi_vicap_set_vi_drop_frame(k_vicap_csi_num csi, k_vicap_drop_frame *frame, k_bool enable)
+
+【参数】
+
+| **参数名称** | **描述**         | **输入/输出** |
+| ------------ | ---------------- | ------------- |
+| csi          | VICAP设备号      | 输入          |
+| frame        | 结构体，见下     |               |
+| m            | 每隔 m 帧丢 n 帧 | 输入          |
+| n            | 每隔 m 帧丢 n 帧 | 输入          |
+| mode         | hdr mode         | 输入          |
+| enable       | 是否开启         | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.10 kd_mapi_vicap_set_mclk
+
+【描述】
+
+设置 MCLK 频率，参见[kd_mpi_vicap_set_mclk](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-mclk)
+
+【语法】
+
+k_s32 kd_mapi_vicap_set_mclk(k_vicap_mclk_id id, k_vicap_mclk_sel sel, k_u8 mclk_div, k_u8 mclk_en)
+
+【参数】
+
+| **参数名称** | **描述** | **输入/输出** |
+| ------------ | -------- | ------------- |
+| id           | MCLK ID  | 输入          |
+| sel          | 时钟源   | 输入          |
+| mclk_div     | 分频系数 | 输入          |
+| mclk_en      | 是否开启 | 输入          |
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.11 kd_mapi_vicap_tuning
+
+【描述】
+
+用于处理 tuning client 发送的命令
+
+【语法】
+
+k_s32 kd_mapi_vicap_tuning(char* string, k_u32 size, char** response, k_u32* response_len)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_vicap_api.h
+- 库文件：libmapi.a
+
+#### 4.1.12 kd_mapi_isp_ae_get_roi
+
+【描述】
+
+获取 AE ROI 配置
+
+【语法】
+
+k_s32 kd_mapi_isp_ae_get_roi(k_vicap_dev dev_num, k_isp_ae_roi *ae_roi)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_isp_api.h
+- 库文件：libmapi.a
+
+#### 4.1.13 kd_mapi_isp_ae_set_roi
+
+【描述】
+
+设置 AE ROI
+
+【语法】
+
+k_s32 kd_mapi_isp_ae_set_roi(k_vicap_dev dev_num, k_isp_ae_roi ae_roi)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_isp_api.h
+- 库文件：libmapi.a
+
+#### 4.1.14 kd_mapi_sensor_otpdata_get
+
+【描述】
+
+获取sensor otp 数据
+
+【语法】
+
+k_s32 kd_mapi_sensor_otpdata_get(k_s32 sensor_type, k_sensor_otp_date *otp_data)
+
+【返回值】
+
+| **返回值** | **描述**               |
+| ---------- | ---------------------- |
+| 0          | 成功。                 |
+| 非0        | 失败，参考错误码定义。 |
+
+【芯片差异】
+
+无。
+
+【需求】
+
+- 头文件：mapi_isp_api.h
+- 库文件：libmapi.a
+
+## 5. 错误码
 
 表 41 VICAP API 错误码
 
 | 错误代码   | 宏定义                    | 描述                                         |
-|------------|---------------------------|----------------------------------------------|
+| ---------- | ------------------------- | -------------------------------------------- |
 | 0xA0158001 | K_ERR_VICAP_INVALID_DEVID | 设备 ID 超出合法范围                         |
 | 0xA0158002 | K_ERR_VICAP_INVALID_CHNID | 通道 ID 超出合法范围                         |
 | 0xA0158003 | K_ERR_VICAP_ILLEGAL_PARAM | 参数超出合法范围                             |
@@ -2028,6 +2901,6 @@ k_sensor_reg_list *reg_list;
 | 0xA0158011 | K_ERR_VICAP_BADADDR       | 地址超出合法范围                             |
 | 0xA0158012 | K_ERR_VICAP_BUSY          | VICAP系统忙                                  |
 
-## 5. 调试信息
+## 6. 调试信息
 
 VICAP内存管理和和系统绑定调试信息，请参考《K230 系统控制 API参考》。

@@ -436,6 +436,7 @@ Options:
 ```
 ./sample_vicap -conn 1 -dev 0 -sensor 23 -chn 0 -chn 1 -ow 640 -oh 480 -preview 0 // Canmv-K230-V1.0/1.1板
 ./sample_vicap -conn 1 -dev 0 -sensor 33 -chn 0 -chn 1 -ow 640 -oh 480 -preview 0 // Canmv-K230-V2.0板
+./sample_vicap -conn 4 -dev 0 -sensor 46 -chn 0 -chn 1 -ow 640 -oh 480 -preview 1 // DshanPI-CanMV
 ```
 
 说明：将ov5647@1920x1080 RGB输出 绑定到vicap设备0,并使能vicap设备输出通道0和通道1，其中通道0输出大小默认为输入图像大小（1920x1080），通道1输出图像大小为640x480
