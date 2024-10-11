@@ -28,7 +28,7 @@ ifconfig wlan0 up
 需要根据自己实际的WiFi设备信息在Linux终端输入：
 
 ```
-wpa_passphrase <wifi名称> <密码> > /etc/wpa_supplicant.cof
+wpa_passphrase <wifi名称> <密码> > /etc/wpa_supplicant.conf
 ```
 
 假设我的WIFI名为Programmers，密码为12345678，则实际执行的命令为：
