@@ -1331,6 +1331,326 @@ k_s32 kd_mpi_vo_draw_frame([k_vo_draw_frame](#3115-k_vo_draw_frame) \*frame)
 
 无
 
+#### 2.3.19 kd_mpi_get_connector_info
+
+【描述】
+
+获取connecor 连接器的数据结构通过连接类型
+
+【语法】
+
+k_s32 kd_mpi_get_connector_info([k_connector_type](#3120-k_connector_type) connector_type, [k_connector_info](#3125-k_connector_info) \*connector_info)
+
+【参数】
+
+| 参数名称       | 描述             | 输入/输出 |
+| -------------- | ---------------- | --------- |
+| connector_type | 连接器的类型     | 输入      |
+| connector_info | 连接器的数据结构 | 输入      |
+
+【返回值】
+
+| 返回值 | 描述               |
+| ------ | ------------------ |
+| 0      | 成功。             |
+| 非0    | 失败，参见错误码。 |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+无
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
+#### 2.3.20 kd_mpi_connector_open
+
+【描述】
+
+获取connecor 连接器的数据结构通过连接类型
+
+【语法】
+
+k_s32 kd_mpi_connector_open(const char \*connector_name)
+
+【参数】
+
+| 参数名称       | 描述             | 输入/输出 |
+| -------------- | ---------------- | --------- |
+| connector_name | 连接器的设备节点 | 输入      |
+
+【返回值】
+
+| 返回值 | 描述                |
+| ------ | ------------------- |
+| fd     | 成功返回打开fd 的id |
+| 小于0  | 失败，参见错误码。  |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+无
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
+#### 2.3.21 kd_mpi_connector_power_set
+
+【描述】
+
+打开connector 的电源
+
+【语法】
+
+k_s32 kd_mpi_connector_power_set(k_s32 fd, k_bool on)
+
+【参数】
+
+| 参数名称 | 描述             | 输入/输出 |
+| -------- | ---------------- | --------- |
+| fd       | 连接器的设备节点 | 输入      |
+| on       | 连接器设备的开关 | 输入      |
+
+【返回值】
+
+| 返回值 | 描述               |
+| ------ | ------------------ |
+| 0      | 成功。             |
+| 非0    | 失败，参见错误码。 |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+无
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
+#### 2.3.22 kd_mpi_connector_init
+
+【描述】
+
+vo connector 初始化
+
+【语法】
+
+k_s32 kd_mpi_connector_init(k_s32 fd, [k_connector_info](#3125-k_connector_info) info)
+
+【参数】
+
+| 参数名称 | 描述               | 输入/输出 |
+| -------- | ------------------ | --------- |
+| fd       | 连接器的设备节点   | 输入      |
+| info     | 连接器初始化的参数 | 输入      |
+
+【返回值】
+
+| 返回值 | 描述               |
+| ------ | ------------------ |
+| 0      | 成功。             |
+| 非0    | 失败，参见错误码。 |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+无
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
+#### 2.3.23 kd_mpi_connector_get_negotiated_data
+
+【描述】
+
+Display驱动和显示器自动协商分辨率，协商成功后会将协商后的数据保存到negotiated_data变量
+
+【语法】
+
+k_s32 kd_mpi_connector_get_negotiated_data(k_s32 fd, [k_connector_negotiated_data](#3126-k_connector_negotiated_data) *negotiated_data);
+
+【参数】
+
+| 参数名称        | 描述                                | 输入/输出 |
+| --------------- | ----------------------------------- | --------- |
+| fd              | 文件描述符                          | 输入      |
+| negotiated_data | Display驱动和HDMI显示器协商后的数据 | 输入      |
+
+【返回值】
+
+| 返回值 | 描述                                          |
+| ------ | --------------------------------------------- |
+| >= 1   | 成功，自适应成功后Display驱动支持的分辨率数量 |
+| -1     | 失败，参见错误码                              |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+kd_mpi_connector_get_negotiated_data()仅仅只会和显示器进行协商，协商成功后不会将最佳分辨率设置到VO、DSI、HDMI模块上
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
+#### 2.3.24 kd_mpi_connector_adapt_resolution
+
+【描述】
+
+Display驱动和显示器自动协商分辨率，协商成功后会将协商后的数据保存到negotiated_data变量，同时会将最佳的分辨率设置到VO、DSI、HDMI模块
+
+【语法】
+
+k_s32 kd_mpi_connector_adapt_resolution(k_connector_type type, [k_connector_negotiated_data](#3126-k_connector_negotiated_data) *negotiated_data)
+
+【参数】
+
+| 参数名称        | 描述                                                         | 输入/输出 |
+| --------------- | ------------------------------------------------------------ | --------- |
+| type            | 连接器的设备节点，HDMI接口通常设置为LT9611_MIPI_ADAPT_RESOLUTION | 输入      |
+| negotiated_data | Display驱动和HDMI显示器协商后的数据                          | 输入      |
+
+【返回值】
+
+| 返回值 | 描述             |
+| ------ | ---------------- |
+| 0      | 成功             |
+| -1     | 失败，参见错误码 |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+1 kd_mpi_connector_adapt_resolution()内部通过调用kd_mpi_connector_get_negotiated_data()和显示器进行协商
+
+2 当应用程序调用kd_mpi_connector_adapt_resolution()函数完成自适应设置后，仍然可以调用
+kd_mpi_get_connector_info()、kd_mpi_connector_open()、kd_mpi_connector_power_set()、kd_mpi_connector_init()重新设置输出分辨率
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
+#### 2.3.25 kd_mpi_connector_set_mirror
+
+【描述】
+
+设置屏幕mirror 功能
+
+【语法】
+
+k_s32 kd_mpi_connector_set_mirror(k_s32 fd, k_connector_mirror mirror)
+
+【参数】
+
+| 参数名称 | 描述              | 输入/输出 |
+| -------- | ----------------- | --------- |
+| fd       | 文件描述符        | 输入      |
+| mirror   | 屏幕mirror 的功能 | 输入      |
+
+【返回值】
+
+| 返回值 | 描述             |
+| ------ | ---------------- |
+| 0      | 成功             |
+| -1     | 失败，参见错误码 |
+
+【芯片差异】
+
+无
+
+【需求】
+
+- 头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h
+- 库文件：libvo.a libconnector.a
+
+【注意】
+
+1 kd_mpi_connector_adapt_resolution()内部通过调用kd_mpi_connector_get_negotiated_data()和显示器进行协商
+
+2 当应用程序调用kd_mpi_connector_adapt_resolution()函数完成自适应设置后，仍然可以调用
+kd_mpi_get_connector_info()、kd_mpi_connector_open()、kd_mpi_connector_power_set()、kd_mpi_connector_init()重新设置输出分辨率
+
+【举例】
+
+无
+
+【相关主题】
+
+无
+
 ## 3. 数据类型
 
 ### 3.1 VO
@@ -1955,12 +2275,269 @@ typedef struct {
 
 无
 
+#### 3.1.20 k_connector_type
+
+【说明】
+
+连接屏幕的类型。
+
+【定义】
+```
+typedef enum {  
+&emsp;HX8377_V2_MIPI_4LAN_1080X1920_30FPS;
+&emsp;LT9611_MIPI_4LAN_1920X1080_60FPS;
+&emsp;LT9611_MIPI_4LAN_1920X1080_30FPS;
+} k_connector_type;
+```
+【成员】
+
+| 成员名称                            | 描述                |
+| ----------------------------------- | ------------------- |
+| v_frame                             | 帧的信息            |
+| HX8377_V2_MIPI_4LAN_1080X1920_30FPS | hx8377屏幕初始化    |
+| LT9611_MIPI_4LAN_1920X1080_60FPS    | hdmi 1080p60 初始化 |
+| LT9611_MIPI_4LAN_1920X1080_30FPS    | hdmi 1080p30 初始化 |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.21 k_dsi_lan_num
+
+【说明】
+
+dsi 的 lane 数量。
+
+【定义】
+```
+typedef enum {  
+&emsp;K_DSI_1LAN = 0,  
+&emsp;K_DSI_2LAN = 1,  
+&emsp;K_DSI_4LAN = 3,  
+} k_dsi_lan_num;
+```
+【成员】
+
+| 成员名称   | 描述    |
+| ---------- | ------- |
+| K_DSI_1LAN | 1线模式 |
+| K_DSI_2LAN | 2线模式 |
+| K_DSI_4LAN | 4线模式 |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.22 k_dsi_work_mode
+
+【说明】
+
+dsi 的工作模式
+
+【定义】
+```
+typedef enum{  
+&emsp;K_BURST_MODE = 0,  
+&emsp;K_NON_BURST_MODE_WITH_SYNC_EVENT = 1,  
+&emsp;K_NON_BURST_MODE_WITH_PULSES = 2,  
+} k_dsi_work_mode;
+```
+【成员】
+
+| 成员名称                         | 描述                             |
+| -------------------------------- | -------------------------------- |
+| K_BURST_MODE                     | dsi 工作在brust mode             |
+| K_NON_BURST_MODE_WITH_SYNC_EVENT | dsi 工作在 non brust event mode  |
+| K_NON_BURST_MODE_WITH_PULSES     | dsi 工作在 non brust pulses mode |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.23 k_vo_dsi_cmd_mode
+
+【说明】
+
+dsi 发送命令的模式。
+
+【定义】
+```
+typedef enum {  
+&emsp;K_VO_LP_MODE,  
+&emsp;K_VO_HS_MODE,  
+} k_vo_dsi_cmd_mode;
+```
+【成员】
+
+| 成员名称     | 描述            |
+| ------------ | --------------- |
+| K_VO_LP_MODE | lp 模式发送命令 |
+| K_VO_HS_MODE | hs 模式发送命令 |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.24 k_connectori_phy_attr
+
+【说明】
+
+connector 连接器 配置phy 的信息。
+
+【定义】
+```
+typedef struct {  
+&emsp;k_u32 n;  
+&emsp;k_u32 m;  
+&emsp;k_u32 voc;  
+&emsp;k_u32 hs_freq;  
+} k_connectori_phy_attr;
+```
+【成员】
+
+| 成员名称 | 描述           |
+| -------- | -------------- |
+| n        | Pll 系数       |
+| m        | Pll 系数       |
+| voc      | Pll 系数       |
+| hs_freq  | Phy 的频率范围 |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.25 k_connector_info
+
+【说明】
+
+连接器的信息。
+
+【定义】
+```
+typedef struct {  
+&emsp;const char *connector_name;  
+&emsp;k_u32 screen_test_mode;  
+&emsp;k_u32 dsi_test_mode;  
+&emsp;k_u32 bg_color;  
+&emsp;k_u32 intr_line;  
+&emsp;[k_dsi_lan_num](#3121-k_dsi_lan_num) lan_num;  
+&emsp;[k_dsi_work_mode](#3122-k_dsi_work_mode) work_mode;  
+&emsp;[k_vo_dsi_cmd_mode](#3123-k_vo_dsi_cmd_mode) cmd_mode;  
+&emsp;[k_connectori_phy_attr](#3124-k_connectori_phy_attr) phy_attr;  
+&emsp;[k_vo_display_resolution](#3116-k_vo_display_resolution) resolution;  
+&emsp;[k_connector_type](#3120-k_connector_type) type;  
+} k_connector_info;
+```
+【成员】
+
+| 成员名称 | 描述        |
+| -------- | ----------- |
+| v_frame  | 帧的信息    |
+| pool_id  | VB pool ID  |
+| mod_id   | Video帧的id |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.26 k_connector_negotiated_data
+
+【说明】
+
+Display驱动和HDMI显示器协商后的数据
+
+【定义】
+
+```C
+typedef struct {  
+&emsp;k_u32 connection_status;  
+&emsp;k_u32 negotiated_count;  
+&emsp;k_connector_type negotiated_types[256];  
+} k_connector_negotiated_data;
+
+```
+
+【成员】
+
+| 成员名称              | 描述                                                         |
+| --------------------- | ------------------------------------------------------------ |
+| connection_status     | HDMI接口连接状态                                             |
+| negotiated_count      | Display驱动和HDMI显示器协商后，Display驱动支持的分辨率数量   |
+| negotiated_types[256] | Display驱动和HDMI显示器协商后，Display驱动支持的分辨率列表, negotiated_types[0]表示最佳分辨率 |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+#### 3.1.27 k_connector_mirror
+
+【说明】
+
+Display驱动的mirror 功能
+
+【定义】
+
+```C
+typedef enum {  
+&emsp;K_CONNECTOR_MIRROR_HOR = 1,  
+&emsp;K_CONNECTOR_MIRROR_VER,  
+&emsp;K_CONNECTOR_MIRROR_BOTH,  
+}k_connector_mirror;
+
+```
+
+【成员】
+
+| 成员名称                | 描述               |
+| ----------------------- | ------------------ |
+| K_CONNECTOR_MIRROR_HOR  | 横向mirror         |
+| K_CONNECTOR_MIRROR_VER  | 纵向mirror         |
+| K_CONNECTOR_MIRROR_BOTH | 横向和纵向都mirror |
+
+【注意事项】
+
+无
+
+【相关数据类型及接口】
+
+无
+
+
+
 ## 4. 错误码
 
 表 41 xxx API 错误码
 
 | 错误代码   | 宏定义                 | 描述           |
-|------------|------------------------|----------------|
+| ---------- | ---------------------- | -------------- |
 | 0xa00b8006 | K_ERR_VO_NULL_PTR      | 参数空指针错误 |
 | 0xa00b8001 | K_ERR_VO_INVALID_DEVID | 无效dev id     |
 | 0xa00b8002 | K_ERR_VO_INVALID_CHNID | 无效 chn id    |
@@ -1978,3 +2555,4 @@ typedef struct {
 | 0xa00b800f | K_ERR_VO_BUF_FULL      | Buf 为满       |
 | 0xa00b8011 | K_ERR_VO_BADADDR       | 错误的地址     |
 | 0xa00b8012 | K_ERR_VO_BUSY          | 系统忙         |
+|            |                        |                |

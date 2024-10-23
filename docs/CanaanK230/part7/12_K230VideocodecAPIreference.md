@@ -2284,7 +2284,7 @@ k_s32 kd_mpi_vdec_send_stream(k_u32 chn_num, const [k_vdec_stream](#326-k_vdec_s
 
 【芯片差异】
 
-无。
+无
 
 【需求】
 
@@ -2293,15 +2293,15 @@ k_s32 kd_mpi_vdec_send_stream(k_u32 chn_num, const [k_vdec_stream](#326-k_vdec_s
 
 【注意】
 
-无。
+无
 
 【举例】
 
-无。
+无
 
 【相关主题】
 
-无。
+无
 
 #### 2.2.7 kd_mpi_vdec_get_frame
 
