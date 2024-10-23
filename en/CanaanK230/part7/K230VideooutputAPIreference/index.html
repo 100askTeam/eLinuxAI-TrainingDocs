@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">K230视频输出API参考 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://eai.100ask.net/en/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://eai.100ask.net/en/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://eai.100ask.net/en/CanaanK230/part7/K230VideooutputAPIreference"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="zh_Hans"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="K230视频输出API参考 | 东山Π"><meta data-rh="true" name="description" content="1. 概述"><meta data-rh="true" property="og:description" content="1. 概述"><link data-rh="true" rel="icon" href="/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://eai.100ask.net/en/CanaanK230/part7/K230VideooutputAPIreference"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part7/K230VideooutputAPIreference" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/en/CanaanK230/part7/K230VideooutputAPIreference" hreflang="en"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part7/K230VideooutputAPIreference" hreflang="x-default"><link rel="stylesheet" href="/en/assets/css/styles.e3ab61ce.css">
-<script src="/en/assets/js/runtime~main.249372c6.js" defer="defer"></script>
+<script src="/en/assets/js/runtime~main.9fbb1980.js" defer="defer"></script>
 <script src="/en/assets/js/main.04977289.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -703,7 +703,165 @@
 <p>  无</p>
 <p>【相关主题】</p>
 <p>无</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-数据类型">3. 数据类型<a href="#3-数据类型" class="hash-link" aria-label="Direct link to 3. 数据类型" title="Direct link to 3. 数据类型">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2319-kd_mpi_get_connector_info">2.3.19 kd_mpi_get_connector_info<a href="#2319-kd_mpi_get_connector_info" class="hash-link" aria-label="Direct link to 2.3.19 kd_mpi_get_connector_info" title="Direct link to 2.3.19 kd_mpi_get_connector_info">​</a></h4>
+<p>【描述】</p>
+<p>获取connecor 连接器的数据结构通过连接类型</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_get_connector_info(<a href="#3120-k_connector_type">k_connector_type</a> connector_type, <a href="#3125-k_connector_info">k_connector_info</a> *connector_info)</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>connector_type</td><td>连接器的类型</td><td>输入</td></tr><tr><td>connector_info</td><td>连接器的数据结构</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参见错误码。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2320-kd_mpi_connector_open">2.3.20 kd_mpi_connector_open<a href="#2320-kd_mpi_connector_open" class="hash-link" aria-label="Direct link to 2.3.20 kd_mpi_connector_open" title="Direct link to 2.3.20 kd_mpi_connector_open">​</a></h4>
+<p>【描述】</p>
+<p>获取connecor 连接器的数据结构通过连接类型</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_connector_open(const char *connector_name)</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>connector_name</td><td>连接器的设备节点</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>fd</td><td>成功返回打开fd 的id</td></tr><tr><td>小于0</td><td>失败，参见错误码。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2321-kd_mpi_connector_power_set">2.3.21 kd_mpi_connector_power_set<a href="#2321-kd_mpi_connector_power_set" class="hash-link" aria-label="Direct link to 2.3.21 kd_mpi_connector_power_set" title="Direct link to 2.3.21 kd_mpi_connector_power_set">​</a></h4>
+<p>【描述】</p>
+<p>打开connector 的电源</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_connector_power_set(k_s32 fd, k_bool on)</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>fd</td><td>连接器的设备节点</td><td>输入</td></tr><tr><td>on</td><td>连接器设备的开关</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参见错误码。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2322-kd_mpi_connector_init">2.3.22 kd_mpi_connector_init<a href="#2322-kd_mpi_connector_init" class="hash-link" aria-label="Direct link to 2.3.22 kd_mpi_connector_init" title="Direct link to 2.3.22 kd_mpi_connector_init">​</a></h4>
+<p>【描述】</p>
+<p>vo connector 初始 化</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_connector_init(k_s32 fd, <a href="#3125-k_connector_info">k_connector_info</a> info)</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>fd</td><td>连接器的设备节点</td><td>输入</td></tr><tr><td>info</td><td>连接器初始化的参数</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参见错误码。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2323-kd_mpi_connector_get_negotiated_data">2.3.23 kd_mpi_connector_get_negotiated_data<a href="#2323-kd_mpi_connector_get_negotiated_data" class="hash-link" aria-label="Direct link to 2.3.23 kd_mpi_connector_get_negotiated_data" title="Direct link to 2.3.23 kd_mpi_connector_get_negotiated_data">​</a></h4>
+<p>【描述】</p>
+<p>Display驱动和显示器自动协商分辨率，协商成功后会将协商后的数据保存到negotiated_data变量</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_connector_get_negotiated_data(k_s32 fd, <a href="#3126-k_connector_negotiated_data">k_connector_negotiated_data</a> *negotiated_data);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>fd</td><td>文件描述符</td><td>输入</td></tr><tr><td>negotiated_data</td><td>Display驱动和HDMI显示器协商后的数据</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>&gt;= 1</td><td>成功，自适应成功后Display驱动支持的分辨率数量</td></tr><tr><td>-1</td><td>失败，参见错误码</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>kd_mpi_connector_get_negotiated_data()仅仅只会和显示器进行协商，协商成功后不会将最佳分辨率设置到VO、DSI、HDMI模块上</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2324-kd_mpi_connector_adapt_resolution">2.3.24 kd_mpi_connector_adapt_resolution<a href="#2324-kd_mpi_connector_adapt_resolution" class="hash-link" aria-label="Direct link to 2.3.24 kd_mpi_connector_adapt_resolution" title="Direct link to 2.3.24 kd_mpi_connector_adapt_resolution">​</a></h4>
+<p>【描述】</p>
+<p>Display驱动和显示器自动协商分辨率，协商成功后会将协商后的数据保存到negotiated_data变量，同时会将最佳的分辨率设置到VO、DSI、HDMI模块</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_connector_adapt_resolution(k_connector_type type, <a href="#3126-k_connector_negotiated_data">k_connector_negotiated_data</a> *negotiated_data)</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>type</td><td>连接器的设备节点，HDMI接口通常设置为LT9611_MIPI_ADAPT_RESOLUTION</td><td>输入</td></tr><tr><td>negotiated_data</td><td>Display驱动和HDMI显示器协商后的数据</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>-1</td><td>失败，参见错误码</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>1 kd_mpi_connector_adapt_resolution()内部通 过调用kd_mpi_connector_get_negotiated_data()和显示器进行协商</p>
+<p>2 当应用程序调用kd_mpi_connector_adapt_resolution()函数完成自适应设置后，仍然可以调用
+kd_mpi_get_connector_info()、kd_mpi_connector_open()、kd_mpi_connector_power_set()、kd_mpi_connector_init()重新设置输出分辨率</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2325-kd_mpi_connector_set_mirror">2.3.25 kd_mpi_connector_set_mirror<a href="#2325-kd_mpi_connector_set_mirror" class="hash-link" aria-label="Direct link to 2.3.25 kd_mpi_connector_set_mirror" title="Direct link to 2.3.25 kd_mpi_connector_set_mirror">​</a></h4>
+<p>【描述】</p>
+<p>设置屏幕mirror 功能</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_connector_set_mirror(k_s32 fd, k_connector_mirror mirror)</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>fd</td><td>文件描述符</td><td>输入</td></tr><tr><td>mirror</td><td>屏幕mirror 的功能</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>-1</td><td>失败，参见错误码</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vo_api.h k_vo_comm.h k_connector_comm.h</li>
+<li>库文件：libvo.a libconnector.a</li>
+</ul>
+<p>【注意】</p>
+<p>1 kd_mpi_connector_adapt_resolution()内部通过调用kd_mpi_connector_get_negotiated_data()和显示器进行协商</p>
+<p>2 当应用程序调用kd_mpi_connector_adapt_resolution()函数完成自适应设置后，仍然可以调用
+kd_mpi_get_connector_info()、kd_mpi_connector_open()、kd_mpi_connector_power_set()、kd_mpi_connector_init()重新设置输出分辨率</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-数据类型">3. 数据  类型<a href="#3-数据类型" class="hash-link" aria-label="Direct link to 3. 数据类型" title="Direct link to 3. 数据类型">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-vo">3.1 VO<a href="#31-vo" class="hash-link" aria-label="Direct link to 3.1 VO" title="Direct link to 3.1 VO">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="311-k_vo_intf_sync">3.1.1 k_vo_intf_sync<a href="#311-k_vo_intf_sync" class="hash-link" aria-label="Direct link to 3.1.1 k_vo_intf_sync" title="Direct link to 3.1.1 k_vo_intf_sync">​</a></h4>
 <p>【说明】</p>
@@ -861,8 +1019,8 @@
 <p>【定义】</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 draw_en;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 line_x_start;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 line_y_start;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 line_x_end;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 line_y_end;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 frame_num;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}k_vo_draw_frame;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>【成员】</p>
-<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>draw_en</td><td>画框使能</td></tr><tr><td>line_x_start</td><td>X 方向的起始</td></tr><tr><td>line_y_start</td><td>y方向的起始</td></tr><tr><td>line_x_end</td><td>X方向的终点未知</td></tr><tr><td>line_y_end</td><td>y方向的终  点未知</td></tr><tr><td>frame_num</td><td>当前框的num号 【0 - 16】</td></tr></tbody></table>
-<p>【注意事项】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>draw_en</td><td>画框使能</td></tr><tr><td>line_x_start</td><td>X 方向的起始</td></tr><tr><td>line_y_start</td><td>y方向的起始</td></tr><tr><td>line_x_end</td><td>X方向的终点未知</td></tr><tr><td>line_y_end</td><td>y方向的终点未知</td></tr><tr><td>frame_num</td><td>当前框的num号 【0 - 16】</td></tr></tbody></table>
+<p>【注意事项  】</p>
 <p>无</p>
 <p>【相关数据类型及接口】</p>
 <p>无</p>
@@ -883,7 +1041,7 @@
 <p>【定义】</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 n;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 m;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 voc;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 phy_lan_num;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 hs_freq;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}k_vo_mipi_phy_attr;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>【成员】</p>
-<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>n</td><td>Pll 系数</td></tr><tr><td>m</td><td>Pll 系数</td></tr><tr><td>voc</td><td>Pll 系数</td></tr><tr><td>hs_freq</td><td>Phy 的频率范围</td></tr><tr><td>phy_lan_num</td><td>Phy 的lan 数量</td></tr></tbody></table>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>n</td><td>Pll 系数</td></tr><tr><td>m</td><td>Pll 系数</td></tr><tr><td>voc</td><td>Pll 系数</td></tr><tr><td>hs_freq</td><td>Phy 的频 率范围</td></tr><tr><td>phy_lan_num</td><td>Phy 的lan 数量</td></tr></tbody></table>
 <p>【注意事项】</p>
 <p>无</p>
 <p>【相关数据类型及接口】</p>
@@ -910,8 +1068,96 @@
 <p>无</p>
 <p>【相关数据类型及接口】</p>
 <p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3120-k_connector_type">3.1.20 k_connector_type<a href="#3120-k_connector_type" class="hash-link" aria-label="Direct link to 3.1.20 k_connector_type" title="Direct link to 3.1.20 k_connector_type">​</a></h4>
+<p>【说明】</p>
+<p>连接屏幕的类型。</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;HX8377_V2_MIPI_4LAN_1080X1920_30FPS;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;LT9611_MIPI_4LAN_1920X1080_60FPS;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;LT9611_MIPI_4LAN_1920X1080_30FPS;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_connector_type;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>v_frame</td><td>帧的信息</td></tr><tr><td>HX8377_V2_MIPI_4LAN_1080X1920_30FPS</td><td>hx8377屏幕初始化</td></tr><tr><td>LT9611_MIPI_4LAN_1920X1080_60FPS</td><td>hdmi 1080p60 初始化</td></tr><tr><td>LT9611_MIPI_4LAN_1920X1080_30FPS</td><td>hdmi 1080p30 初始化</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3121-k_dsi_lan_num">3.1.21 k_dsi_lan_num<a href="#3121-k_dsi_lan_num" class="hash-link" aria-label="Direct link to 3.1.21 k_dsi_lan_num" title="Direct link to 3.1.21 k_dsi_lan_num">​</a></h4>
+<p>【说明】</p>
+<p>dsi 的 lane 数量。</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_DSI_1LAN = 0,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_DSI_2LAN = 1,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_DSI_4LAN = 3,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_dsi_lan_num;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>K_DSI_1LAN</td><td>1线模式</td></tr><tr><td>K_DSI_2LAN</td><td>2线模式</td></tr><tr><td>K_DSI_4LAN</td><td>4线模式</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3122-k_dsi_work_mode">3.1.22 k_dsi_work_mode<a href="#3122-k_dsi_work_mode" class="hash-link" aria-label="Direct link to 3.1.22 k_dsi_work_mode" title="Direct link to 3.1.22 k_dsi_work_mode">​</a></h4>
+<p>【说明】</p>
+<p>dsi 的工作模式</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum{  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_BURST_MODE = 0,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_NON_BURST_MODE_WITH_SYNC_EVENT = 1,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_NON_BURST_MODE_WITH_PULSES = 2,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_dsi_work_mode;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>K_BURST_MODE</td><td>dsi 工作在brust mode</td></tr><tr><td>K_NON_BURST_MODE_WITH_SYNC_EVENT</td><td>dsi 工作在 non brust event mode</td></tr><tr><td>K_NON_BURST_MODE_WITH_PULSES</td><td>dsi 工作在 non brust pulses mode</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3123-k_vo_dsi_cmd_mode">3.1.23 k_vo_dsi_cmd_mode<a href="#3123-k_vo_dsi_cmd_mode" class="hash-link" aria-label="Direct link to 3.1.23 k_vo_dsi_cmd_mode" title="Direct link to 3.1.23 k_vo_dsi_cmd_mode">​</a></h4>
+<p>【说明】</p>
+<p>dsi 发送命令的模式。</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_VO_LP_MODE,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;K_VO_HS_MODE,  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vo_dsi_cmd_mode;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>K_VO_LP_MODE</td><td>lp 模式发送命令</td></tr><tr><td>K_VO_HS_MODE</td><td>hs 模式发送命令</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3124-k_connectori_phy_attr">3.1.24 k_connectori_phy_attr<a href="#3124-k_connectori_phy_attr" class="hash-link" aria-label="Direct link to 3.1.24 k_connectori_phy_attr" title="Direct link to 3.1.24 k_connectori_phy_attr">​</a></h4>
+<p>【说明】</p>
+<p>connector 连接器 配置phy 的信息。</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 n;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 m;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 voc;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 hs_freq;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_connectori_phy_attr;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>n</td><td>Pll 系数</td></tr><tr><td>m</td><td>Pll 系数</td></tr><tr><td>voc</td><td>Pll 系数</td></tr><tr><td>hs_freq</td><td>Phy 的频率范围</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3125-k_connector_info">3.1.25 k_connector_info<a href="#3125-k_connector_info" class="hash-link" aria-label="Direct link to 3.1.25 k_connector_info" title="Direct link to 3.1.25 k_connector_info">​</a></h4>
+<p>【说明】</p>
+<p>连接器的信息。</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;const char *connector_name;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 screen_test_mode;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 dsi_test_mode;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 bg_color;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;k_u32 intr_line;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;[k_dsi_lan_num](#3121-k_dsi_lan_num) lan_num;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;[k_dsi_work_mode](#3122-k_dsi_work_mode) work_mode;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;[k_vo_dsi_cmd_mode](#3123-k_vo_dsi_cmd_mode) cmd_mode;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;[k_connectori_phy_attr](#3124-k_connectori_phy_attr) phy_attr;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;[k_vo_display_resolution](#3116-k_vo_display_resolution) resolution;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&amp;emsp;[k_connector_type](#3120-k_connector_type) type;  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_connector_info;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>v_frame</td><td>帧的信息</td></tr><tr><td>pool_id</td><td>VB pool ID</td></tr><tr><td>mod_id</td><td>Video帧的id</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3126-k_connector_negotiated_data">3.1.26 k_connector_negotiated_data<a href="#3126-k_connector_negotiated_data" class="hash-link" aria-label="Direct link to 3.1.26 k_connector_negotiated_data" title="Direct link to 3.1.26 k_connector_negotiated_data">​</a></h4>
+<p>【说明】</p>
+<p>Display驱动和HDMI显示器协商后的数据</p>
+<p>【定义】</p>
+<div class="language-C language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">typedef</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">struct</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">emsp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">k_u32 connection_status</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">emsp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">k_u32 negotiated_count</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">emsp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">k_connector_type negotiated_types</span><span class="token punctuation" style="color:#393A34">[</span><span class="token number" style="color:#36acaa">256</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"> k_connector_negotiated_data</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>connection_status</td><td>HDMI接口连接状态</td></tr><tr><td>negotiated_count</td><td>Display驱动和HDMI显示器协商后，Display驱动支持的分辨率数量</td></tr><tr><td>negotiated_types[256]</td><td>Display驱动和HDMI显示器协商后，Display驱动支持的分辨率列表, negotiated_types[0]表示最佳分辨率</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3127-k_connector_mirror">3.1.27 k_connector_mirror<a href="#3127-k_connector_mirror" class="hash-link" aria-label="Direct link to 3.1.27 k_connector_mirror" title="Direct link to 3.1.27 k_connector_mirror">​</a></h4>
+<p>【说明】</p>
+<p>Display驱动的mirror 功能</p>
+<p>【定义】</p>
+<div class="language-C language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">typedef</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">enum</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">emsp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">K_CONNECTOR_MIRROR_HOR </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">emsp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">K_CONNECTOR_MIRROR_VER</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">emsp</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">K_CONNECTOR_MIRROR_BOTH</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain">k_connector_mirror</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th>成员名称</th><th>描述</th></tr></thead><tbody><tr><td>K_CONNECTOR_MIRROR_HOR</td><td>横向mirror</td></tr><tr><td>K_CONNECTOR_MIRROR_VER</td><td>纵向mirror</td></tr><tr><td>K_CONNECTOR_MIRROR_BOTH</td><td>横向和纵向都mirror</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<p>无</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-错误码">4. 错误码<a href="#4-错误码" class="hash-link" aria-label="Direct link to 4. 错误码" title="Direct link to 4. 错误码">​</a></h2>
 <p>表 41 xxx API 错误码</p>
-<table><thead><tr><th>错误代码</th><th>宏定义</th><th>描述</th></tr></thead><tbody><tr><td>0xa00b8006</td><td>K_ERR_VO_NULL_PTR</td><td>参数空指针错误</td></tr><tr><td>0xa00b8001</td><td>K_ERR_VO_INVALID_DEVID</td><td>无效dev id</td></tr><tr><td>0xa00b8002</td><td>K_ERR_VO_INVALID_CHNID</td><td>无效 chn id</td></tr><tr><td>0xa00b8005</td><td>K_ERR_VO_UNEXIST</td><td>视频缓存不存在</td></tr><tr><td>0xa00b8004</td><td>K_ERR_VO_EXIST</td><td>视频缓存存在</td></tr><tr><td>0xa00b8003</td><td>K_ERR_VO_ILLEGAL_PARAM</td><td>参数设置无效</td></tr><tr><td>0xa00b8010</td><td>K_ERR_VO_NOTREADY</td><td>vo还未就绪</td></tr><tr><td>0xa00b8012</td><td>K_ERR_VO_BUSY</td><td>系统忙</td></tr><tr><td>0xa00b8007</td><td>K_ERR_VO_NOT_CONFIG</td><td>不允许配置</td></tr><tr><td>0xa00b8008</td><td>K_ERR_VO_NOT_SUPPORT</td><td>不支持的操作</td></tr><tr><td>0xa00b8009</td><td>K_ERR_VO_NOT_PERM</td><td>操作不允许</td></tr><tr><td>0xa00b800c</td><td>K_ERR_VO_NOMEM</td><td>分配内存失败</td></tr><tr><td>0xa00b800d</td><td>K_ERR_VO_NOBUF</td><td>没有buff</td></tr><tr><td>0xa00b800e</td><td>K_ERR_VO_BUF_EMPTY</td><td>Buf 为空</td></tr><tr><td>0xa00b800f</td><td>K_ERR_VO_BUF_FULL</td><td>Buf 为满</td></tr><tr><td>0xa00b8011</td><td>K_ERR_VO_BADADDR</td><td>错误的地址</td></tr><tr><td>0xa00b8012</td><td>K_ERR_VO_BUSY</td><td>系统忙</td></tr></tbody></table></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs/tree/main/docs/CanaanK230/part7/13_K230VideooutputAPIreference.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/CanaanK230/part7/K230VideocodecAPIreference"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">K230视频编解码API参考</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/en/CanaanK230/part7/K230AudioAPIreference"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">K230音频API参考</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-概述" class="table-of-contents__link toc-highlight">1. 概述</a><ul><li><a href="#11-硬件描述" class="table-of-contents__link toc-highlight">1.1 硬件描述</a></li><li><a href="#12-软件描述" class="table-of-contents__link toc-highlight">1.2 软件描述</a></li></ul></li><li><a href="#2-api-参考" class="table-of-contents__link toc-highlight">2. API 参考</a><ul><li><a href="#21-txphy" class="table-of-contents__link toc-highlight">2.1 TXPHY</a></li><li><a href="#22-dsi" class="table-of-contents__link toc-highlight">2.2 DSI</a></li><li><a href="#23-vo" class="table-of-contents__link toc-highlight">2.3 VO</a></li></ul></li><li><a href="#3-数据类型" class="table-of-contents__link toc-highlight">3. 数据类型</a><ul><li><a href="#31-vo" class="table-of-contents__link toc-highlight">3.1 VO</a></li></ul></li><li><a href="#4-错误码" class="table-of-contents__link toc-highlight">4. 错误码</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dongshanpi.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">DongshanPI<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://canaan-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Canaan-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://renesas-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Renesas-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://rtos.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">RTOS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://tina.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TinaSDK-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://allwinner-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Allwinner-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://aw-r128.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">R128-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://space.bilibili.com/275908810" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiliBili<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://forums.100ask.net" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://video.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">VideoCenter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/dongshanpi" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://weidongshan.coding.net/public/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Coding<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/100askTeam" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://gitee.com/weidongshan" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitee<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 100askTeam, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<table><thead><tr><th>错误代码</th><th>宏定义</th><th>描述</th></tr></thead><tbody><tr><td>0xa00b8006</td><td>K_ERR_VO_NULL_PTR</td><td>参数空指针错误</td></tr><tr><td>0xa00b8001</td><td>K_ERR_VO_INVALID_DEVID</td><td>无效dev id</td></tr><tr><td>0xa00b8002</td><td>K_ERR_VO_INVALID_CHNID</td><td>无效 chn id</td></tr><tr><td>0xa00b8005</td><td>K_ERR_VO_UNEXIST</td><td>视频缓存不存在</td></tr><tr><td>0xa00b8004</td><td>K_ERR_VO_EXIST</td><td>视频缓存存在</td></tr><tr><td>0xa00b8003</td><td>K_ERR_VO_ILLEGAL_PARAM</td><td>参数设置无效</td></tr><tr><td>0xa00b8010</td><td>K_ERR_VO_NOTREADY</td><td>vo还未就绪</td></tr><tr><td>0xa00b8012</td><td>K_ERR_VO_BUSY</td><td>系统忙</td></tr><tr><td>0xa00b8007</td><td>K_ERR_VO_NOT_CONFIG</td><td>不允许配置</td></tr><tr><td>0xa00b8008</td><td>K_ERR_VO_NOT_SUPPORT</td><td>不支持的操作</td></tr><tr><td>0xa00b8009</td><td>K_ERR_VO_NOT_PERM</td><td>操作不允许</td></tr><tr><td>0xa00b800c</td><td>K_ERR_VO_NOMEM</td><td>分配内存失败</td></tr><tr><td>0xa00b800d</td><td>K_ERR_VO_NOBUF</td><td>没有buff</td></tr><tr><td>0xa00b800e</td><td>K_ERR_VO_BUF_EMPTY</td><td>Buf 为空</td></tr><tr><td>0xa00b800f</td><td>K_ERR_VO_BUF_FULL</td><td>Buf 为满</td></tr><tr><td>0xa00b8011</td><td>K_ERR_VO_BADADDR</td><td>错误的地址</td></tr><tr><td>0xa00b8012</td><td>K_ERR_VO_BUSY</td><td>系统忙</td></tr><tr><td></td><td></td><td></td></tr></tbody></table></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs/tree/main/docs/CanaanK230/part7/13_K230VideooutputAPIreference.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/en/CanaanK230/part7/K230VideocodecAPIreference"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">K230视频编解码API参考</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/en/CanaanK230/part7/K230AudioAPIreference"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">K230音频API参考</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-概述" class="table-of-contents__link toc-highlight">1. 概述</a><ul><li><a href="#11-硬件描述" class="table-of-contents__link toc-highlight">1.1 硬件描述</a></li><li><a href="#12-软件描述" class="table-of-contents__link toc-highlight">1.2 软件描述</a></li></ul></li><li><a href="#2-api-参考" class="table-of-contents__link toc-highlight">2. API 参考</a><ul><li><a href="#21-txphy" class="table-of-contents__link toc-highlight">2.1 TXPHY</a></li><li><a href="#22-dsi" class="table-of-contents__link toc-highlight">2.2 DSI</a></li><li><a href="#23-vo" class="table-of-contents__link toc-highlight">2.3 VO</a></li></ul></li><li><a href="#3-数据类型" class="table-of-contents__link toc-highlight">3. 数据类型</a><ul><li><a href="#31-vo" class="table-of-contents__link toc-highlight">3.1 VO</a></li></ul></li><li><a href="#4-错误码" class="table-of-contents__link toc-highlight">4. 错误码</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dongshanpi.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">DongshanPI<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://canaan-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Canaan-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://renesas-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Renesas-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://rtos.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">RTOS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://tina.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TinaSDK-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://allwinner-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Allwinner-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://aw-r128.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">R128-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://space.bilibili.com/275908810" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiliBili<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://forums.100ask.net" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://video.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">VideoCenter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/dongshanpi" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://weidongshan.coding.net/public/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Coding<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/100askTeam" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://gitee.com/weidongshan" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitee<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 100askTeam, Inc. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
