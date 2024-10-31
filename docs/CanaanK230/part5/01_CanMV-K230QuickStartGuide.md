@@ -11,17 +11,13 @@ CanMV-K230开发板采用的是嘉楠科技Kendryte®系列AIoT芯片中的最�
 
 ![K230_block_diagram](${images}/K230_block_diagram.png)
 
-CanMV-K230采用单板设计，扩展接口丰富，极大程度的发挥K230高性能的优势，可直接用于各种智能产品的开发，加速产品落地。
-
-![board-front](${images}/CanMV-K230_front.png) ![board-behind](${images}/CanMV-K230_behind.png)
-
 ## 2. CanMV-K230默认套件
 
 CanMV-K230开发板默认套件包含以下物品：
 
 1、CanMV-K230主板 x 1
 
-2、OV5647摄像头 x 1
+2、GC2093摄像头 x 1
 
 3、Type-C数据线 x 1 (micropython需要2根Type-C数据线，请用户自行准备1根)
 
@@ -31,24 +27,23 @@ CanMV-K230开发板默认套件包含以下物品：
 
 2、带HDMI接口的显示器及HDMI连接线，显示器要求支持1080P30，否则无法显示
 
-3、100M/1000M 以太网线缆，及有线路由器
-
 4、Type-C数据线
 
 ## 3. 固件获取及烧录
 
 ### 3.1 固件获取
 
-CanMV-K230 固件下载地址： [kendryte/k230_canmv](https://github.com/kendryte/k230_canmv/releases) 或者 https://developer.canaan-creative.com/resource
+CanMV-K230 固件下载地址： https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
+
+> 注意：请烧录10_Micropython系统固件目录中的固件，请选择您对应内存固件版本进行烧录。
 
 CanMV源码下载地址如下：
 
 ```
-https://github.com/kendryte/k230_canmv
-https://gitee.com/kendryte/k230_canmv
+https://github.com/canmv-k230/superproject_k230_rtsmart/
 ```
 
-请下载“CanMV-K230_micropython”开头的gz压缩包，解压得到sysimage-sdcard.img文件，即为CanMV-K230的固件。
+
 
 ### 3.2 固件烧录
 
@@ -92,9 +87,9 @@ Windows下可通过rufus工具对TF卡进行烧录（rufus工具下载地址 `ht
 
 ## 4. USB连接
 
-使用Type-C线连接CanMV-K230如下图的位置，线另一端连接至电脑。这时请注意把第3步烧录好的TF卡插到板子上。
+使用两条Type-C线连接CanMV-K230的位置，线另一端连接至电脑。这时请注意把第3步烧录好的TF卡插到板子上。
 
-![CanMV-K230-usbotg](${images}/CanMV-K230-usbotg.png)
+
 
 ### 4.1 Windows
 
@@ -120,7 +115,7 @@ Linux串口显示如下：
 
 ## 6. 启动系统
 
-将烧好固件的TF卡插入CanMV-K230 TF卡插槽，Type-C线连接电脑和板端的POWER口，板子即上电，系统开始启动。(**注意：这里两个USB口都要连接电脑，否则板子无法与IDE联通**) ![CanMV-K230-poweron](${images}/CanMV-K230-poweron.png)
+将烧好固件的TF卡插入CanMV-K230 TF卡插槽，Type-C线连接电脑和板端的POWER口，板子即上电，系统开始启动。(**注意：这里两个USB口都要连接电脑，否则板子无法与IDE联通**) 
 
 ### 6.1 连接开发板
 
