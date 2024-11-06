@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# K230 实战基础篇 - hello world
+# hello world 基础应用
 
 ## 1.概述
 
