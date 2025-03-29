@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# DshanPI-CanMV 快速启动
+# DshanPI-CanMV_V1 快速启动
 
 ## 硬件要求
 

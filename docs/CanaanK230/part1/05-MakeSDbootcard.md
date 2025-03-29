@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 # 制作SD卡镜像
 

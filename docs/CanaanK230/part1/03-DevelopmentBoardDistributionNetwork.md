@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-# 开发板配网
+# 开发板配网(CanMV_V1)
 
 硬件要求：
 

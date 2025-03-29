@@ -5,7 +5,9 @@ sidebar_position: 2
 
 DshanPI-CanMV开发板配套的软件、源码、原理图、芯片手册、工具包等，都可访问以下资料获取。
 
-资料获取链接：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d 
+CANMV_V1开发板资料获取链接：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d 
+
+CANMV_V2开发板资料获取链接: https://pan.baidu.com/s/1ku5j4S5cUU20AbVAeeoUxw?pwd=qrxy 提取码: qrxy 
 
 > 注意：获取资料后请一定阅读下面的文档了解资料中包含那些内容。
 
@@ -23,9 +25,8 @@ DshanPI-CanMV开发板配套的软件、源码、原理图、芯片手册、工�
 07_核心板封装库
 08_底板参考工程
 09_音视频测试资源文件
-10_MicroPython系统固件
-11_MicroPython例程源码
-12.多媒体应用示例源码
+10_MicroPython例程源码
+11.多媒体应用示例源码
 ```
 
 
@@ -76,14 +77,14 @@ DshanPI-CanMV开发板配套的文档都保存在：https://eai.100ask.net/Canaa
 该文件夹中保存有以下内容：
 
 ```
-loader-canmv-dongshanpi.bin
-DshanPI-CanMV-512MB_V1.1.zip
-DshanPI-CanMV-1GB_V1.1.zip
+01_MicroPython固件
+02_RT-smart+Linux双系统固件
+03_Linux系统固件
 ```
 
-- loader-canmv-dongshanpi.bin：用于开发板烧录EMMC系统，引导固件烧录。
-- DshanPI-CanMV-512MB_V1.1.zip：开发板系统固件：可用于512MB内存的硬件。
-- DshanPI-CanMV-1GB_V1.1.zip：开发板系统固件：可用于1GB内存的硬件。
+- 01_MicroPython固件：包含MicroPython系统固件，适用于小白和零基础开发者
+- 02_RT-smart+Linux双系统固件：包含RT-smart+Linux双系统固件，适用于有一定基础的开发者
+- 03_Linux系统固件：包含Linux系统固件，适用于具备一定的开发能力的开发者
 
 
 
@@ -97,8 +98,8 @@ DshanPIxCanMV_SCH_V1.pdf
 ```
 
 - K230-Core-Open_SCH_V1.pdf：K230核心板硬件原理图
-- DshanPIxCanMV_SCH_V1.pdf：K230底板硬件原理图
-
+- DshanPI_CanMV_V2.0底板硬件图：K230底板硬件原理图
+- DshanPI_CanMV_V2.0底板位号图:K230底板硬件位号图
 
 
 ## 5.芯片手册
@@ -163,19 +164,8 @@ output-480-800.h264
 
 - output-480-800.h264：可用于测试音频解码输出码流文件。
 
-## 10.MicroPython系统固件
 
-该文件夹中保存有以下内容：
-
-```
-1GB固件
-512MB固件
-```
-
-- 1GB固件可用于烧录进1GB内存的硬件中。
-- 512MB固件可用于烧录进512MB内存的硬件中。
-
-## 11.MicroPython例程源码
+## 10.MicroPython例程源码
 
 ```
 01_入门实验/  
@@ -262,7 +252,7 @@ output-480-800.h264
 
 
 
-## 12.多媒体应用示例源码
+## 11.多媒体应用示例源码
 
 ```
 01_sample_vi
