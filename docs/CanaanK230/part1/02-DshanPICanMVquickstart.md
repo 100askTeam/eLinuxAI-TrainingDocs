@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 # DshanPI-CanMV_V1 快速启动
 
@@ -18,7 +18,7 @@ sidebar_position: 2
 
 您还需要额外的：
 
-1. 4寸MIPI显示屏
+1. MIPI显示屏
 
 > 注意：使用时还需要一台正常工作且能连接互联网的PC电脑。
 

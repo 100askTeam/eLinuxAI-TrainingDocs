@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 ---
-# 4.ramdisk使用说明
+# ramdisk使用说明
 
 ## 1. 说明
 

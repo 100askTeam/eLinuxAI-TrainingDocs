@@ -8,8 +8,6 @@ DshanPI-CanMV开发板是百问网针对AI应用开发设计出来的一个RSIC-
 
 该芯片同时具备丰富多样的外设接口，以及2D、2.5D等多个标量、向量、图形等专用硬件加速单元，可以对多种图像、视频、音频、AI等多样化计算任务进行全流程计算加速，具备低延迟、高性能、低功耗、快速启动、高安全性等多项特性。
 
-DshanPI-CanMV开发板硬件资料：[DshanPI-CanMV开发板硬件原理图](https://dl.100ask.net/Hardware/MPU/DshanPIxCanMV/)
-
 ![K230_block_diagram1](${images}/K230_block_diagram1.png)
 
 
@@ -23,7 +21,6 @@ DshanPI-CanMV采用核心板+底板设计，扩展接口丰富，极大程度的
 | 处理器     | 嘉楠 勘智K230              |
 | 内存       | 512MB/1GB/2GB LPDDR3       |
 | 存储       | 8GB/32GB EMMC              |
-| WIFI/蓝牙  | 天线：2.4GHz               |
 | 视频输出   | MIPI显示(MIPI DSI)         |
 | 视频输入   | 3路MIPI摄像头(MIPI CSI *3) |
 | 音频输入   | MIC咪头                    |
@@ -31,10 +28,23 @@ DshanPI-CanMV采用核心板+底板设计，扩展接口丰富，极大程度的
 | USB接口    | 3路USB-TypeA               |
 | 其他连接器 | ·TF卡槽 · · JTAG调试口     |
 
+| 外观尺寸 |           |
+| -------- | --------- |
+| CanMV V2 | 92mmx75mm |
+| CanMV V1 | 99mmx92mm |
+
+
+
 ### 开发板组成位置
 
  本章节介绍开发板中关键的元器件及位置功能介绍如下所示:
 
 **开发板功能图：**
+
+**CanMV V2:**
+
+![image-20250421101816321](${images}/image-20250421101816321.png)
+
+**CanMV V1：**
 
 ![image-20240729155648319](${images}/image-20240729155648319.png)

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-# 3.nncase_runtime模块
+# nncase_runtime模块
 
 ## 1. 概述
 

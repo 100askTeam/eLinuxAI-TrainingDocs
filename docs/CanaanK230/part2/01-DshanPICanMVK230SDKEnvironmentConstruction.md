@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# K230 SDK环境搭建
+# K230 SDK环境搭建(待更新)
 
 ## 前提条件
 
