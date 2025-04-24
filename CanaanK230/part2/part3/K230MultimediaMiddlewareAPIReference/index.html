@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">K230 中间件API参考 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://eai.100ask.net/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="K230 中间件API参考 | 东山Π"><meta data-rh="true" name="description" content="1. 概述"><meta data-rh="true" property="og:description" content="1. 概述"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://eai.100ask.net/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/en/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference" hreflang="en"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.e3ab61ce.css">
+<script src="/assets/js/runtime~main.2c754564.js" defer="defer"></script>
+<script src="/assets/js/main.c00dd409.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="DshanPI" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="DshanPI" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">eLinux AI开发</b></a><a class="navbar__item navbar__link" href="/ELinuxAIBase/BoardIntroduction-1">嵌入式AI基础</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/CanaanK230/Userdoc">嘉楠K230开发</a><a class="navbar__item navbar__link" href="/CanaanK510/YOLOV5-ObjectDetectionAlgorithm">嘉楠K510开发</a></div><div class="navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>简体中文</a><ul class="dropdown__menu"><li><a href="/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="zh-Hans">简体中文</a></li><li><a href="/en/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li></ul></div><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/CanaanK230/Userdoc">文档阅读指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/CanaanK230/download">开发板资料下载</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/开发板上手指南">开发板上手指南</a><button aria-label="展开侧边栏分类 &#x27;开发板上手指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/基础实验">基础实验</a><button aria-label="展开侧边栏分类 &#x27;基础实验&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/摄像头实验">摄像头实验</a><button aria-label="展开侧边栏分类 &#x27;摄像头实验&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/特征检测">特征检测</a><button aria-label="展开侧边栏分类 &#x27;特征检测&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/颜色处理">颜色处理</a><button aria-label="展开侧边栏分类 &#x27;颜色处理&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/条形码处理">条形码处理</a><button aria-label="展开侧边栏分类 &#x27;条形码处理&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/ai视觉实验">AI视觉实验</a><button aria-label="展开侧边栏分类 &#x27;AI视觉实验&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/多媒体应用">多媒体应用</a><button aria-label="展开侧边栏分类 &#x27;多媒体应用&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/网络应用">网络应用</a><button aria-label="展开侧边栏分类 &#x27;网络应用&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/常见问题">常见问题</a><button aria-label="展开侧边栏分类 &#x27;常见问题&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/micropython参考开发指南">MicroPython参考开发指南</a><button aria-label="展开侧边栏分类 &#x27;MicroPython参考开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/category/进阶-rtsmartlinux双系统开发">进阶-RTSmart+Linux双系统开发</a><button aria-label="折叠侧边栏分类 &#x27;进阶-RTSmart+Linux双系统开发&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/DshanPICanMVK230SDKEnvironmentConstruction">K230 SDK环境搭建(待更新)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/K230SDKUserGuide">K230_SDK使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/K230_SDKDevelopmentGuide">K230_SDK开发指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/frequentlyUsedCommands">常用命令</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/FileTransferGuidelines">开发板文件传输</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/category/嵌入式应用开发指南">嵌入式应用开发指南</a><button aria-label="展开侧边栏分类 &#x27;嵌入式应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/category/系统开发指南">系统开发指南</a><button aria-label="展开侧边栏分类 &#x27;系统开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/category/sdk-api参考指南">SDK API参考指南</a><button aria-label="折叠侧边栏分类 &#x27;SDK API参考指南&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230Inter-corecommunicationAPIreference">K230核间通讯API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230ThesystemcontrolstheMAPIreference">K230系统控制MAPI参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference">K230 中间件API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230DMAAPIreference">K230 DMA API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230DPUAPIreference">K230 DPU API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230FFTAPIreference">K230 FFT API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230GPUAPIreference">K230 GPU API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230SHA256APIreference">K230 SHA256 API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VICAPAPIreference">K230 VICAP API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VICAPSENSORParameterpartitionreference">K230 VICAP SENSOR 参数分区参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230systemcontrolAPIreference">K230系统控制API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VideocodecAPIreference">K230视频编解码API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VideooutputAPIreference">K230视频输出API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230AudioAPIreference">K230音频API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230DRMUserGuide">K230 DRM使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230Large-corelow-speeddriveAPIreference">K230大核低速驱动API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230ReferenceAPIsmall-coreLinuxdrivers">K230小核Linux驱动API参考</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/category/常见问题-1">常见问题</a><button aria-label="展开侧边栏分类 &#x27;常见问题&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/系统级ai应用开发指南">系统级AI应用开发指南</a><button aria-label="展开侧边栏分类 &#x27;系统级AI应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/category/进阶-rtsmartlinux双系统开发"><span itemprop="name">进阶-RTSmart+Linux双系统开发</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/category/sdk-api参考指南"><span itemprop="name">SDK API参考指南</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">K230 中间件API参考</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>K230 中间件API参考</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-概述">1. 概述<a href="#1-概述" class="hash-link" aria-label="1. 概述的直接链接" title="1. 概述的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-概述">1.1 概述<a href="#11-概述" class="hash-link" aria-label="1.1 概述的直接链接" title="1.1 概述的直接链接">​</a></h3>
+<p>中间件在系统中的位置为<code>k230_sdk/src/common/cdk/user/middleware</code></p>
+<p>本文档描述相关的中间件部分，涉及可视对讲协议、混音、mp4格式封装与解封装、播放器等。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-功能描述">1.2 功能描述<a href="#12-功能描述" class="hash-link" aria-label="1.2 功能描述的直接链接" title="1.2 功能描述的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="121-可视对讲rtsp协议">1.2.1 可视对讲rtsp协议<a href="#121-可视对讲rtsp协议" class="hash-link" aria-label="1.2.1 可视对讲rtsp协议的直接链接" title="1.2.1 可视对讲rtsp协议的直接链接">​</a></h4>
+<p>参照ONVIF rtsp扩展，实现单线视频的可视对讲协议；</p>
+<p>rtsp-server支持发送audio、video以及接收backchannel audio mediaSubSesisons.</p>
+<p>rtsp-client支持接收audio、video以及发送backchannel audio mediaSubSessions.</p>
+<p>相关描述见可视对讲协议章节</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="122-播放器">1.2.2 播放器<a href="#122-播放器" class="hash-link" aria-label="1.2.2 播放器的直接链接" title="1.2.2 播放器的直接链接">​</a></h4>
+<p>实现mp4文件播放。视频支持h264、h265，音频支持g711a/u。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="123-混音">1.2.3 混音<a href="#123-混音" class="hash-link" aria-label="1.2.3 混音的直接链接" title="1.2.3 混音的直接链接">​</a></h4>
+<p>实现两路g711a/u混音。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="124-mp4格式封装解封装">1.2.4 MP4格式封装解封装<a href="#124-mp4格式封装解封装" class="hash-link" aria-label="1.2.4 MP4格式封装解封装的直接链接" title="1.2.4 MP4格式封装解封装的直接链接">​</a></h4>
+<p>实现音视频与mp4格式间的封装与解封装。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-api参考">2. API参考<a href="#2-api参考" class="hash-link" aria-label="2. API参考的直接链接" title="2. API参考的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-可视对讲rtsp-server">2.1 可视对讲rtsp-server<a href="#21-可视对讲rtsp-server" class="hash-link" aria-label="2.1 可视对讲rtsp-server的直接链接" title="2.1 可视对讲rtsp-server的直接链  接">​</a></h3>
+<p>KdRtspServer提供以下API：</p>
+<ul>
+<li><a href="#211-kdrtspserverinit">Init</a>：初始化。</li>
+<li><a href="#212-kdrtspserverdeinit">DeInit</a>：反初始化。</li>
+<li><a href="#213-kdrtspservercreatesession">CreateSession</a>：创建rtsp session。</li>
+<li><a href="#214-kdrtspserverdestroysession">DestroySession</a>：销毁rtsp session。</li>
+<li><a href="#215-kdrtspserverstart">Start</a>：开启rtsp-server服务。</li>
+<li><a href="#216-kdrtspserverstop">Stop</a>：停止rtsp-server服务。</li>
+<li><a href="#217-kdrtspserversendvideodata">SendVideoData</a>：写入视频码流数据。</li>
+<li><a href="#218-kdrtspserversendaudiodata">SendAudioData</a>：写入音频码流数据。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="211-kdrtspserverinit">2.1.1 KdRtspServer::Init<a href="#211-kdrtspserverinit" class="hash-link" aria-label="2.1.1 KdRtspServer::Init的直接链接" title="2.1.1 KdRtspServer::Init的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>rtsp-server初始化。</p>
+<p>【语法】</p>
+<p>int Init(Port port = 8554, IOnBackChannel *back_channel = nullptr);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>port</td><td>rtsp服务端口。</td><td>输入</td></tr><tr><td>back_channel</td><td>对端来的音频数据回调指针。</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="212-kdrtspserverdeinit">2.1.2 KdRtspServer::DeInit<a href="#212-kdrtspserverdeinit" class="hash-link" aria-label="2.1.2 KdRtspServer::DeInit的直接链接" title="2.1.2 KdRtspServer::DeInit的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>反初始化。</p>
+<p>【语法】</p>
+<p>void DeInit();</p>
+<p>【参数】</p>
+<p>无。</p>
+<p>【返回值】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【举例】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="213-kdrtspservercreatesession">2.1.3 KdRtspServer::CreateSession<a href="#213-kdrtspservercreatesession" class="hash-link" aria-label="2.1.3 KdRtspServer::CreateSession的直接链接" title="2.1.3 KdRtspServer::CreateSession的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>创建RtspSession。</p>
+<p>【语法】</p>
+<p>int CreateSession(const std::string &amp;session_name, const SessionAttr &amp;session_attr);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>session_name</td><td>stream url。</td><td>输入</td></tr><tr><td>session_attr</td><td>session 配置参数。</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>【举例】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="214-kdrtspserverdestroysession">2.1.4 KdRtspServer::DestroySession<a href="#214-kdrtspserverdestroysession" class="hash-link" aria-label="2.1.4 KdRtspServer::DestroySession的直接链接" title="2.1.4 KdRtspServer::DestroySession的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>销毁rtsp session。</p>
+<p>【语法】</p>
+<p>int DestroySession(const std::string &amp;session_name);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>session_name</td><td>stream url。</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="215-kdrtspserverstart">2.1.5 KdRtspServer::Start<a href="#215-kdrtspserverstart" class="hash-link" aria-label="2.1.5 KdRtspServer::Start的直接链接" title="2.1.5 KdRtspServer::Start的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>开启rtsp server服务。</p>
+<p>【语法】</p>
+<p>void Start();</p>
+<p>【参数】</p>
+<p>无。</p>
+<p>【返回值】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp-server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】
+无</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="216-kdrtspserverstop">2.1.6 KdRtspServer::Stop<a href="#216-kdrtspserverstop" class="hash-link" aria-label="2.1.6 KdRtspServer::Stop的直接链接" title="2.1.6 KdRtspServer::Stop的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>停止rtsp-server服务。</p>
+<p>【语法】</p>
+<p>void Stop();</p>
+<p>【参数】</p>
+<p>无</p>
+<p>【返回值】</p>
+<p>无</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>【举例】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="217-kdrtspserversendvideodata">2.1.7 KdRtspServer::SendVideoData<a href="#217-kdrtspserversendvideodata" class="hash-link" aria-label="2.1.7 KdRtspServer::SendVideoData的直接链接" title="2.1.7 KdRtspServer::SendVideoData的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>写入视频码流数据。</p>
+<p>【语法】</p>
+<p>int SendVideoData(const std::string &amp;session_name, const uint8_t *data, size_t size, uint64_t timestamp);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>session_name</td><td>stream url</td><td>输入</td></tr><tr><td>data</td><td>视频码流地址。</td><td>输入</td></tr><tr><td>size</td><td>视频码流大小。</td><td>输入</td></tr><tr><td>timestamp</td><td>码流时间戳（毫秒）</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【举例】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="218-kdrtspserversendaudiodata">2.1.8 KdRtspServer::SendAudioData<a href="#218-kdrtspserversendaudiodata" class="hash-link" aria-label="2.1.8 KdRtspServer::SendAudioData的直接链接" title="2.1.8 KdRtspServer::SendAudioData的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>写入音频码流数据。</p>
+<p>【语法】</p>
+<p>int SendAudioData(const std::string &amp;session_name, const uint8_t *data, size_t size, uint64_t timestamp);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>session_name</td><td>stream url</td><td>输入</td></tr><tr><td>data</td><td>音频码流地址。</td><td>输入</td></tr><tr><td>size</td><td>音频码流大小。</td><td>输入</td></tr><tr><td>timestamp</td><td>码流时间戳（毫秒）</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_server.h</li>
+<li>库文件：</li>
+</ul>
+<p>【举例】</p>
+<p>无。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-可视对讲rtsp-client">2.2 可视对讲rtsp-client<a href="#22-可视对讲rtsp-client" class="hash-link" aria-label="2.2 可视对讲rtsp-client的直接链接" title="2.2 可视对讲rtsp-client的直接链接">​</a></h3>
+<p>KdRtspClient模块提供以下API：</p>
+<ul>
+<li><a href="#221-kdrtspclientinit">Init</a>：初始化。</li>
+<li><a href="#222-kdrtspclientdeinit">DeInit</a>：反初始化。</li>
+<li><a href="#223-kdrtspclientopen">Open</a>：打开并运行rtspclient连接。</li>
+<li><a href="#224-kdrtspclientclose">Close</a>：关闭rtspclient连接。</li>
+<li><a href="#225-kdrtspclientsendaudiodata">SendAudioData</a>：写入backchannel音频码流数据。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="221-kdrtspclientinit">2.2.1 KdRtspClient::Init<a href="#221-kdrtspclientinit" class="hash-link" aria-label="2.2.1 KdRtspClient::Init的直接链接" title="2.2.1 KdRtspClient::Init的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>初始化</p>
+<p>【语法】</p>
+<p>int Init(const RtspClientInitParam &amp;param);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>param</td><td>rtspclient初始化参数</td><td>输入</td></tr></tbody></table>
+<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    class IOnAudioData </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token operator" style="color:#393A34">~</span><span class="token function" style="color:#d73a49">IOnAudioData</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">OnAudioData</span><span class="token punctuation" style="color:#393A34">(</span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> </span><span class="token class-name">uint8_t</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">data</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token class-name">size_t</span><span class="token plain"> size</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token class-name">uint64_t</span><span class="token plain"> timestamp</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    class IOnVideoData </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">enum</span><span class="token plain"> </span><span class="token class-name">VideoType</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">VideoTypeInvalid</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> VideoTypeH264</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> VideoTypeH265</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token operator" style="color:#393A34">~</span><span class="token function" style="color:#d73a49">IOnVideoData</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">OnVideoType</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">VideoType type</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token class-name">uint8_t</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">extra_data</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token class-name">size_t</span><span class="token plain"> extra_data_size</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">OnVideoData</span><span class="token punctuation" style="color:#393A34">(</span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> </span><span class="token class-name">uint8_t</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">data</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token class-name">size_t</span><span class="token plain"> size</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token class-name">uint64_t</span><span class="token plain"> timestamp</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> bool keyframe</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    class IRtspClientEvent </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token operator" style="color:#393A34">~</span><span class="token function" style="color:#d73a49">IRtspClientEvent</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        virtual </span><span class="token keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">OnRtspClientEvent</span><span class="token punctuation" style="color:#393A34">(</span><span class="token keyword" style="color:#00009f">int</span><span class="token plain"> event</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// event 0: shutdown</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">struct</span><span class="token plain"> </span><span class="token class-name">RtspClientInitParam</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        IOnVideoData </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">on_video_data</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">nullptr</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// 从server侧收到的视频码流帧回调</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        IOnAudioData </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">on_audio_data</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">nullptr</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// 从server侧收到的音频码流帧回调</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        IRtspClientEvent </span><span class="token operator" style="color:#393A34">*</span><span class="token plain">on_event</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">nullptr</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">// rtspclient event回调</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        bool enableBackchanel</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">false</span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">         </span><span class="token comment" style="color:#999988;font-style:italic">// 是否enable audio backchannel</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_client.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="222-kdrtspclientdeinit">2.2.2 KdRtspClient::Deinit<a href="#222-kdrtspclientdeinit" class="hash-link" aria-label="2.2.2 KdRtspClient::Deinit的直接链接" title="2.2.2 KdRtspClient::Deinit的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>反初始化。</p>
+<p>【语法】</p>
+<p>void DeInit();</p>
+<p>【参数】</p>
+<p>无。</p>
+<p>【返回值】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_client.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="223-kdrtspclientopen">2.2.3 KdRtspClient::Open<a href="#223-kdrtspclientopen" class="hash-link" aria-label="2.2.3 KdRtspClient::Open的直接链接" title="2.2.3 KdRtspClient::Open的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>打开并运行rtspclient连接</p>
+<p>【语法】</p>
+<p>int Open(const char *url);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>url</td><td>rtsp url。</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_client.h</li>
+<li>库文件:</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="224-kdrtspclientclose">2.2.4 KdRtspClient::Close<a href="#224-kdrtspclientclose" class="hash-link" aria-label="2.2.4 KdRtspClient::Close的直接链接" title="2.2.4 KdRtspClient::Close的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>关闭rtsp client。</p>
+<p>【语法】</p>
+<p>void Close();</p>
+<p>【参数】</p>
+<p>【返回值】</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_client.h</li>
+<li>库文件:</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="225-kdrtspclientsendaudiodata">2.2.5 KdRtspClient::SendAudioData<a href="#225-kdrtspclientsendaudiodata" class="hash-link" aria-label="2.2.5 KdRtspClient::SendAudioData的直接链接" title="2.2.5 KdRtspClient::SendAudioData的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>写入音频back channnel码流数据。</p>
+<p>【语法】</p>
+<p>int SendAudioData(const uint8_t *data, size_t size, uint64_t timestamp);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>data</td><td>音频码流数据地址</td><td>输入</td></tr><tr><td>size</td><td>音频码流数据大小</td><td>输出</td></tr><tr><td>timestamp</td><td>音频码流数据时间戳（毫秒）</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：rtsp_client.h</li>
+<li>库文件：</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p> 【相关主题】</p>
+<p>无。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-播放器封装">2.3 播放器封装<a href="#23-播放器封装" class="hash-link" aria-label="2.3 播放器封装的直接链接" title="2.3 播放器封装的直接链接">​</a></h3>
+<p>KdPlayer模块提供以下API：</p>
+<ul>
+<li><a href="#231-kd_player_init">kd_player_init</a>：初始化。</li>
+<li><a href="#232-kd_player_deinit">kd_player_deinit</a>：反初始化。</li>
+<li><a href="#233-kd_player_setdatasource">kd_player_setdatasource</a>：设置媒体播放文件。</li>
+<li><a href="#234-kd_player_regcallback">kd_player_regcallback</a>：注册事件回调。</li>
+<li><a href="#235-kd_player_start">kd_player_start</a>：开始播放。</li>
+<li><a href="#236-kd_player_stop">kd_player_stop</a>：停止播放。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="231-kd_player_init">2.3.1 kd_player_init<a href="#231-kd_player_init" class="hash-link" aria-label="2.3.1 kd_player_init的直接链接" title="2.3.1 kd_player_init的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>播放器初始化。</p>
+<p>【语法】</p>
+<p>k_s32 kd_player_init();</p>
+<p>【参数】</p>
+<p>无</p>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：kplayer.h</li>
+<li>库文件：libkplayer.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="232-kd_player_deinit">2.3.2 kd_player_deinit<a href="#232-kd_player_deinit" class="hash-link" aria-label="2.3.2 kd_player_deinit的直接链接" title="2.3.2 kd_player_deinit的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>反初始化。</p>
+<p>【语法】</p>
+<p>k_s32 kd_player_deinit();</p>
+<p>【参数】</p>
+<p>无</p>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：kplayer.h</li>
+<li>库文件：libkplayer.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="233-kd_player_setdatasource">2.3.3 kd_player_setdatasource<a href="#233-kd_player_setdatasource" class="hash-link" aria-label="2.3.3 kd_player_setdatasource的直接链接" title="2.3.3 kd_player_setdatasource的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>反初始化。</p>
+<p>【语法】</p>
+<p>k_s32 kd_player_setdatasource(const k_char* filePath);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>filePath</td><td>媒体文件路径</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：kplayer.h</li>
+<li>库文件：libkplayer.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="234-kd_player_regcallback">2.3.4 kd_player_regcallback<a href="#234-kd_player_regcallback" class="hash-link" aria-label="2.3.4 kd_player_regcallback的直接链接" title="2.3.4 kd_player_regcallback的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>注册播放器事件回调。</p>
+<p>【语法】</p>
+<p>k_s32 kd_player_regcallback( K_PLAYER_EVENT_FN pfnCallback,void* pData);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>pfnCallback</td><td>回调函数指针</td><td>输入</td></tr><tr><td>pData</td><td>回调数据指针</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：kplayer.h</li>
+<li>库文件：libkplayer.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="235-kd_player_start">2.3.5 kd_player_start<a href="#235-kd_player_start" class="hash-link" aria-label="2.3.5 kd_player_start的直接链接" title="2.3.5 kd_player_start的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>开始播放。</p>
+<p>【语法】</p>
+<p>k_s32 kd_player_start();</p>
+<p>【参数】</p>
+<p>无</p>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：kplayer.h</li>
+<li>库文件：libkplayer.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="236-kd_player_stop">2.3.6 kd_player_stop<a href="#236-kd_player_stop" class="hash-link" aria-label="2.3.6 kd_player_stop的直接链接" title="2.3.6 kd_player_stop的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>停止播放。</p>
+<p>【语法】</p>
+<p>k_s32 kd_player_stop();</p>
+<p>【参数】</p>
+<p>无</p>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：kplayer.h</li>
+<li>库文件：libkplayer.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="24-音频混音">2.4 音频混音<a href="#24-音频混音" class="hash-link" aria-label="2.4 音频混音的直接链接" title="2.4 音频混音的直接链接">​</a></h3>
+<p>混音模块提供以下API：</p>
+<ul>
+<li><a href="#241-kd_mix_g711a_audio">kd_mix_g711a_audio</a>：g711a混音。</li>
+<li><a href="#242-kd_mix_g711u_audio">kd_mix_g711u_audio</a>：g711u混音。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="241-kd_mix_g711a_audio">2.4.1 kd_mix_g711a_audio<a href="#241-kd_mix_g711a_audio" class="hash-link" aria-label="2.4.1 kd_mix_g711a_audio的直接链接" title="2.4.1 kd_mix_g711a_audio的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>g711a混音</p>
+<p>【语法】</p>
+<p>k_s32 kd_mix_g711a_audio(k_char *src_data1, k_char *src_data2, k_u32 data_len, k_char *dst_mix_data);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>src_data1</td><td>混音源数据1</td><td>输入</td></tr><tr><td>src_data2</td><td>混音源数据2</td><td>输入</td></tr><tr><td>data_len</td><td>混音数据长度</td><td>输入</td></tr><tr><td>dst_mix_data</td><td>混音结果数据</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：g711_mix_audio.h</li>
+<li>库文件：libaudio_mix.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="242-kd_mix_g711u_audio">2.4.2 kd_mix_g711u_audio<a href="#242-kd_mix_g711u_audio" class="hash-link" aria-label="2.4.2 kd_mix_g711u_audio的直接链接" title="2.4.2 kd_mix_g711u_audio的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>g711u混音</p>
+<p>【语法】</p>
+<p>k_s32 kd_mix_g711u_audio(k_char *src_data1, k_char *src_data2, k_u32 data_len, k_char *dst_mix_data);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数名称</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>src_data1</td><td>混音源数据1</td><td>输入</td></tr><tr><td>src_data2</td><td>混音源数据2</td><td>输入</td></tr><tr><td>data_len</td><td>混音数据长度</td><td>输入</td></tr><tr><td>dst_mix_data</td><td>混音结果数据</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败。</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：g711_mix_audio.h</li>
+<li>库文件：libaudio_mix.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="25-mp4格式封装解封装">2.5 MP4格式封装解封装<a href="#25-mp4格式封装解封装" class="hash-link" aria-label="2.5 MP4格式封装解封装的直接链接" title="2.5 MP4格式封装解封装的直接链接">​</a></h3>
+<p>MP4格式封装解封装提供如下API：</p>
+<ul>
+<li><a href="#251-kd_mp4_create">kd_mp4_create</a>：MP4实例创建</li>
+<li><a href="#252-kd_mp4_destroy">kd_mp4_destroy</a>：MP4实例销毁</li>
+<li><a href="#253-kd_mp4_create_track">kd_mp4_create_track</a>：为MP4创建track</li>
+<li><a href="#254-kd_mp4_destroy_tracks">kd_mp4_destroy_tracks</a>：为MP4销毁所有track</li>
+<li><a href="#255-kd_mp4_write_frame">kd_mp4_write_frame</a>：MP4中写入帧数据。</li>
+<li><a href="#256-kd_mp4_get_file_info">kd_mp4_get_file_info</a>：获取MP4文件信息。</li>
+<li><a href="#257-kd_mp4_get_track_by_index">kd_mp4_get_track_by_index</a>：根据下标获取track信息。</li>
+<li><a href="#258-kd_mp4_get_frame">kd_mp4_get_frame</a>：获取track码流信息。</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="251-kd_mp4_create">2.5.1 kd_mp4_create<a href="#251-kd_mp4_create" class="hash-link" aria-label="2.5.1 kd_mp4_create的直接链接" title="2.5.1 kd_mp4_create的直  接链接">​</a></h4>
+<p>【描述】</p>
+<p>MP4实例创建</p>
+<p>【语法】</p>
+<p>int kd_mp4_create(KD_HANDLE *mp4_handle, k_mp4_config_s *mp4_cfg);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输出</td></tr><tr><td>mp4_cfg</td><td>参数配置信息</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<p>通过mp4_cfg配置信息可以指定当前创建的MP4实例时muxer实例或者demuxer实例</p>
+<p>【举例】</p>
+<p>参考 samples下 mp4_muxer和mp4_demuxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="252-kd_mp4_destroy">2.5.2 kd_mp4_destroy<a href="#252-kd_mp4_destroy" class="hash-link" aria-label="2.5.2 kd_mp4_destroy的直接链接" title="2.5.2 kd_mp4_destroy的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>MP4实例销毁</p>
+<p>【语法】</p>
+<p>int kd_mp4_destroy(KD_HANDLE mp4_handle);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>参考 samples下 mp4_muxer和mp4_demuxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="253-kd_mp4_create_track">2.5.3 kd_mp4_create_track<a href="#253-kd_mp4_create_track" class="hash-link" aria-label="2.5.3 kd_mp4_create_track的直接链接" title="2.5.3 kd_mp4_create_track的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>为MP4创建track</p>
+<p>【语法】</p>
+<p>int kd_mp4_create_track(KD_HANDLE mp4_handle, KD_HANDLE *track_handle, k_mp4_track_info_s *mp4_track_info);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输入</td></tr><tr><td>track_handle</td><td>track句柄</td><td>输出</td></tr><tr><td>mp4_track_info</td><td>track配置</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>该API为muxer API，当创建的MP4实例为muxer实例时使用</li>
+<li>目前每个MP4支持创建最多3个track</li>
+</ul>
+<p>【举例】</p>
+<p>参考 samples下 mp4_muxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="254-kd_mp4_destroy_tracks">2.5.4 kd_mp4_destroy_tracks<a href="#254-kd_mp4_destroy_tracks" class="hash-link" aria-label="2.5.4 kd_mp4_destroy_tracks的直接链接" title="2.5.4 kd_mp4_destroy_tracks的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>为MP4销毁所有track</p>
+<p>【语法】</p>
+<p>int kd_mp4_destroy_tracks(KD_HANDLE mp4_handle);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>该API为muxer API，当创建的MP4实例为muxer实例时使用</li>
+<li>请在创建MP4实例和track之后调用该接口</li>
+</ul>
+<p>【举例】</p>
+<p>参考 samples下 mp4_muxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="255-kd_mp4_write_frame">2.5.5 kd_mp4_write_frame<a href="#255-kd_mp4_write_frame" class="hash-link" aria-label="2.5.5 kd_mp4_write_frame的直接链接" title="2.5.5 kd_mp4_write_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>MP4中写入帧数据</p>
+<p>【语法】</p>
+<p>int kd_mp4_write_frame(KD_HANDLE mp4_handle, KD_HANDLE track_handle, k_mp4_frame_data_s *frame_data);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输入</td></tr><tr><td>track_handle</td><td>track句柄</td><td>输入</td></tr><tr><td>frame_data</td><td>帧数据信息</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>该API为muxer API，当创建的MP4实例为muxer实例时使用</li>
+<li>请在创建MP4实例和track之后调用该接口</li>
+</ul>
+<p>【举例】</p>
+<p>参考 samples下 mp4_muxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="256-kd_mp4_get_file_info">2.5.6 kd_mp4_get_file_info<a href="#256-kd_mp4_get_file_info" class="hash-link" aria-label="2.5.6 kd_mp4_get_file_info的直接链接" title="2.5.6 kd_mp4_get_file_info的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取MP4文件信息</p>
+<p>【语法】</p>
+<p>int kd_mp4_get_file_info(KD_HANDLE mp4_handle, k_mp4_file_info_s *file_info);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输入</td></tr><tr><td>file_info</td><td>MP4文件信息</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>该API为demuxer API，当创建的MP4实例为demuxer实例时使用</li>
+</ul>
+<p>【举例】</p>
+<p>参考 samples下 mp4_demuxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="257-kd_mp4_get_track_by_index">2.5.7 kd_mp4_get_track_by_index<a href="#257-kd_mp4_get_track_by_index" class="hash-link" aria-label="2.5.7 kd_mp4_get_track_by_index的直接链接" title="2.5.7 kd_mp4_get_track_by_index的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据下标获取track信息</p>
+<p>【语法】</p>
+<p>int kd_mp4_get_track_by_index(KD_HANDLE mp4_handle, uint32_t index, k_mp4_track_info_s *mp4_track_info);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输入</td></tr><tr><td>index</td><td>下标</td><td>输入</td></tr><tr><td>mp4_track_info</td><td>track信息</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>该API为demuxer API，当创建的MP4实例为demuxer实例时使用</li>
+</ul>
+<p>【举例】</p>
+<p>参考 samples下 mp4_demuxer</p>
+<p>【相关主题】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="258-kd_mp4_get_frame">2.5.8 kd_mp4_get_frame<a href="#258-kd_mp4_get_frame" class="hash-link" aria-label="2.5.8 kd_mp4_get_frame的直接链接" title="2.5.8 kd_mp4_get_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取track码流信息</p>
+<p>【语法】</p>
+<p>int kd_mp4_get_frame(KD_HANDLE mp4_handle, k_mp4_frame_data_s *frame_data);</p>
+<p>【参数】</p>
+<table><thead><tr><th>参数</th><th>描述</th><th>输入/输出</th></tr></thead><tbody><tr><td>mp4_handle</td><td>MP4实例句柄</td><td>输入</td></tr><tr><td>frame_data</td><td>码流信息</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th>返回值</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>成功</td></tr><tr><td>非0</td><td>失败</td></tr></tbody></table>
+<p>【需求】</p>
+<ul>
+<li>头文件：mp4_format.h</li>
+<li>库文件：libmp4.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>该API为demuxer API，当创建的MP4实例为demuxer实例时使用</li>
+</ul>
+<p>【举例】</p>
+<p>参考 samples下 mp4_demuxer</p>
+<p>【相关主题】</p>
+<p>无</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs/tree/main/docs/CanaanK230/part2/part3/03_K230MultimediaMiddlewareAPIReference.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/CanaanK230/part2/part3/K230ThesystemcontrolstheMAPIreference"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">K230系统控制MAPI参考</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/CanaanK230/part2/part3/K230DMAAPIreference"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">K230 DMA API参考</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-概述" class="table-of-contents__link toc-highlight">1. 概述</a><ul><li><a href="#11-概述" class="table-of-contents__link toc-highlight">1.1 概述</a></li><li><a href="#12-功能描述" class="table-of-contents__link toc-highlight">1.2 功能描述</a></li></ul></li><li><a href="#2-api参考" class="table-of-contents__link toc-highlight">2. API参考</a><ul><li><a href="#21-可视对讲rtsp-server" class="table-of-contents__link toc-highlight">2.1 可视对讲rtsp-server</a></li><li><a href="#22-可视对讲rtsp-client" class="table-of-contents__link toc-highlight">2.2 可视对讲rtsp-client</a></li><li><a href="#23-播放器封装" class="table-of-contents__link toc-highlight">2.3 播放器封装</a></li><li><a href="#24-音频混音" class="table-of-contents__link toc-highlight">2.4 音频混音</a></li><li><a href="#25-mp4格式封装解封装" class="table-of-contents__link toc-highlight">2.5 MP4格式封装解封装</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dongshanpi.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">DongshanPI<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://canaan-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Canaan-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://renesas-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Renesas-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://rtos.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">RTOS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://tina.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TinaSDK-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://allwinner-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Allwinner-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://aw-r128.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">R128-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://space.bilibili.com/275908810" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiliBili<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://forums.100ask.net" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://video.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">VideoCenter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/dongshanpi" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://weidongshan.coding.net/public/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Coding<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/100askTeam" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://gitee.com/weidongshan" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitee<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 100askTeam, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

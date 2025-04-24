@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-CanaanK230/part2/part3/K230VICAPAPIreference" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">K230 VICAP API参考 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://eai.100ask.net/CanaanK230/part2/part3/K230VICAPAPIreference"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="K230 VICAP API参考 | 东山Π"><meta data-rh="true" name="description" content="1. 概述"><meta data-rh="true" property="og:description" content="1. 概述"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://eai.100ask.net/CanaanK230/part2/part3/K230VICAPAPIreference"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part2/part3/K230VICAPAPIreference" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/en/CanaanK230/part2/part3/K230VICAPAPIreference" hreflang="en"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part2/part3/K230VICAPAPIreference" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.e3ab61ce.css">
+<script src="/assets/js/runtime~main.2c754564.js" defer="defer"></script>
+<script src="/assets/js/main.c00dd409.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="DshanPI" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="DshanPI" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">eLinux AI开发</b></a><a class="navbar__item navbar__link" href="/ELinuxAIBase/BoardIntroduction-1">嵌入式AI基础</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/CanaanK230/Userdoc">嘉楠K230开发</a><a class="navbar__item navbar__link" href="/CanaanK510/YOLOV5-ObjectDetectionAlgorithm">嘉楠K510开发</a></div><div class="navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>简体中文</a><ul class="dropdown__menu"><li><a href="/CanaanK230/part2/part3/K230VICAPAPIreference" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="zh-Hans">简体中文</a></li><li><a href="/en/CanaanK230/part2/part3/K230VICAPAPIreference" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li></ul></div><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/CanaanK230/Userdoc">文档阅读指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/CanaanK230/download">开发板资料下载</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/开发板上手指南">开发板上手指南</a><button aria-label="展开侧边栏分类 &#x27;开发板上手指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/基础实验">基础实验</a><button aria-label="展开侧边栏分类 &#x27;基础实验&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/摄像头实验">摄像头实验</a><button aria-label="展开侧边栏分类 &#x27;摄像头实验&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/特征检测">特征检测</a><button aria-label="展开侧边栏分类 &#x27;特征检测&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/颜色处理">颜色处理</a><button aria-label="展开侧边栏分类 &#x27;颜色处理&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/条形码处理">条形码处理</a><button aria-label="展开侧边栏分类 &#x27;条形码处理&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/ai视觉实验">AI视觉实验</a><button aria-label="展开侧边栏分类 &#x27;AI视觉实验&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/多媒体应用">多媒体应用</a><button aria-label="展开侧边栏分类 &#x27;多媒体应用&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/网络应用">网络应用</a><button aria-label="展开侧边栏分类 &#x27;网络应用&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/常见问题">常见问题</a><button aria-label="展开侧边栏分类 &#x27;常见问题&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/micropython参考开发指南">MicroPython参考开发指南</a><button aria-label="展开侧边栏分类 &#x27;MicroPython参考开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/category/进阶-rtsmartlinux双系统开发">进阶-RTSmart+Linux双系统开发</a><button aria-label="折叠侧边栏分类 &#x27;进阶-RTSmart+Linux双系统开发&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/DshanPICanMVK230SDKEnvironmentConstruction">K230 SDK环境搭建(待更新)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/K230SDKUserGuide">K230_SDK使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/K230_SDKDevelopmentGuide">K230_SDK开发指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/frequentlyUsedCommands">常用命令</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/FileTransferGuidelines">开发板文件传输</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/category/嵌入式应用开发指南">嵌入式应用开发指南</a><button aria-label="展开侧边栏分类 &#x27;嵌入式应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/category/系统开发指南">系统开发指南</a><button aria-label="展开侧边栏分类 &#x27;系统开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" tabindex="0" href="/category/sdk-api参考指南">SDK API参考指南</a><button aria-label="折叠侧边栏分类 &#x27;SDK API参考指南&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230Inter-corecommunicationAPIreference">K230核间通讯API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230ThesystemcontrolstheMAPIreference">K230系统控制MAPI参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230MultimediaMiddlewareAPIReference">K230 中间件API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230DMAAPIreference">K230 DMA API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230DPUAPIreference">K230 DPU API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230FFTAPIreference">K230 FFT API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230GPUAPIreference">K230 GPU API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230SHA256APIreference">K230 SHA256 API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/CanaanK230/part2/part3/K230VICAPAPIreference">K230 VICAP API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VICAPSENSORParameterpartitionreference">K230 VICAP SENSOR 参数分区参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230systemcontrolAPIreference">K230系统控制API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VideocodecAPIreference">K230视频编解码API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230VideooutputAPIreference">K230视频输出API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230AudioAPIreference">K230音频API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230DRMUserGuide">K230 DRM使用指南</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230Large-corelow-speeddriveAPIreference">K230大核低速驱动API参考</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/CanaanK230/part2/part3/K230ReferenceAPIsmall-coreLinuxdrivers">K230小核Linux驱动API参考</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" tabindex="0" href="/category/常见问题-1">常见问题</a><button aria-label="展开侧边栏分类 &#x27;常见问题&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/category/系统级ai应用开发指南">系统级AI应用开发指南</a><button aria-label="展开侧边栏分类 &#x27;系统级AI应用开发指南&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/category/进阶-rtsmartlinux双系统开发"><span itemprop="name">进阶-RTSmart+Linux双系统开发</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/category/sdk-api参考指南"><span itemprop="name">SDK API参考指南</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">K230 VICAP API参考</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>K230 VICAP API参考</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-概述">1. 概述<a href="#1-概述" class="hash-link" aria-label="1. 概述的直接链接" title="1. 概述的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-概述">1.1 概述<a href="#11-概述" class="hash-link" aria-label="1.1 概述的直接链接" title="1.1 概述的直接链接">​</a></h3>
+<p>VICAP子系统是K230 SOC中负责视频图像输入捕获处理的子系统。通过对sensor输出的信号进行实时处理，得到经过复原、增强后的数字图像，使其更接近现实中人眼所见的图像。主要包括MIPI RxDphy、MIPI CSI、ISP和DW。MIPI用于接收sensor传来的高速差分信号，并将其转为DVP接口，供ISP处理 ；ISP用于图像信息的处理；DW用于鱼眼矫正和多路resize输出。</p>
+<p>本文档主要描述VICAP模块应用编程接口，它提供了应用开发者通过VICAP模块捕获视频图像数据的操作接口和配置参数。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-功能描述">1.2 功能描述<a href="#12-功能描述" class="hash-link" aria-label="1.2 功能描述的直接链接" title="1.2 功能描述的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="121-vicap">1.2.1 VICAP<a href="#121-vicap" class="hash-link" aria-label="1.2.1 VICAP的直接链接" title="1.2.1 VICAP的直接链接">​</a></h4>
+<p>VICAP模块是对整个图像采集处理单元的抽象描述。</p>
+<p>VICAP硬件由Sensor，VI，ISP，Dewarp四大模块组成（如下图1-1所示）。最多支持3路sensor同时接入，ISP内部通过的MCM模块实现多路sensor的时分复用管理，多路sensor输出数据通过MCM的Memory Interface的Write接口写入DDR，再通过Read接口读入并装载到ISP Pipeline进行处理。</p>
+<p><img loading="lazy" src="/assets/images/745a46d8e083d93521d0c5233bdaccdd-7e18fb4f0c2412e3606d4a208f91ce76.png" width="1531" height="1080" class="img_ev3q"></p>
+<p>图1-1 VICAP硬件架构图</p>
+<p>VICAP软件架构如图1-2所示，从上到下依次是：应用接口层，媒体接口层，系统框架层，驱动层和硬件层。</p>
+<ul>
+<li>应用层接口： 提供kd_mapi_vicap_xxx形式的API接口及使用说明。它是对媒体接口层各个子模块提供的功能接口的进一步封装，简化应用开发流程。</li>
+<li>媒体接口层：该层由VICAP各个子模块组成，每个子模块提供各自的媒体接口API封装。</li>
+<li>框架层：负责VICAP整个系统软件功能与业务逻辑的控制与管理。通过将各个子模块提供的接口与功能整合统一形成一套完整的VICAP系统控制逻辑和流程。</li>
+<li>驱动层：VICAP各个硬件模块的内核驱动功能的集合。</li>
+</ul>
+<p>硬件层：VICAP各个具体硬件模块的集合，包括sensor。</p>
+<p><img loading="lazy" src="/assets/images/250b6c36cbd4447bd8c734548fc3b890-1d755a5e5c15604dca3f2675bb8c048d.png" width="638" height="401" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="122-sensor">1.2.2 Sensor<a href="#122-sensor" class="hash-link" aria-label="1.2.2 Sensor的直接链接" title="1.2.2 Sensor的直接链接">​</a></h4>
+<p>Sensor模块是VICAP捕获图像的数据源之一，负责配置图像感光单元的运行参数及工作模式。</p>
+<p>K230平台支持多种接口类型的sensor，我们以当前最常用的MIPI CSI接口Sensor为例进行说明。Sensor与主控平台的硬件连接示意图如下：</p>
+<p><img loading="lazy" alt="图示 描述已自动生成" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAC3CAYAAACoq2NBAAAAAXNSR0IArs4c6QAABql0RVh0bXhmaWxlACUzQ214ZmlsZSUyMGhvc3QlM0QlMjJFbGVjdHJvbiUyMiUyMG1vZGlmaWVkJTNEJTIyMjAyMi0xMi0wNVQwMyUzQTM2JTNBNTMuMTU1WiUyMiUyMGFnZW50JTNEJTIyNS4wJTIwKFdpbmRvd3MlMjBOVCUyMDEwLjAlM0IlMjBXaW42NCUzQiUyMHg2NCklMjBBcHBsZVdlYktpdCUyRjUzNy4zNiUyMChLSFRNTCUyQyUyMGxpa2UlMjBHZWNrbyklMjBkcmF3LmlvJTJGMjAuMy4wJTIwQ2hyb21lJTJGMTA0LjAuNTExMi4xMTQlMjBFbGVjdHJvbiUyRjIwLjEuMyUyMFNhZmFyaSUyRjUzNy4zNiUyMiUyMGV0YWclM0QlMjJCTnhsbENHOXRMTnRxVFdUc2djYiUyMiUyMHZlcnNpb24lM0QlMjIyMC4zLjAlMjIlMjB0eXBlJTNEJTIyZGV2aWNlJTIyJTNFJTNDZGlhZ3JhbSUyMGlkJTNEJTIyWmxfTlIyZ0U4UlpyaTdEN21VQ3QlMjIlMjBuYW1lJTNEJTIyJUU3JUFDJUFDJTIwMSUyMCVFOSVBMSVCNSUyMiUzRTdWbGRVJTJCSXdGUDAxZlhTSE52VHJFUXU2ektycmlMdnF2dXpFTnBTTW9XSFM4T1d2MzVRbTBMUkZXUlJsV1Y2WTVOejBwcm5uNU42a0dDQVl6czRaSEEwdWFZU0lZVFdpbVFIYWhtVzVuaVYlMkJNMkNlQXpZd2N5Qm1PTXFoQXRERHowaUNEWW1PY1lSU2JTQ25sSEE4MHNHUUpna0t1WVpCeHVoVUg5YW5SSjkxQkdOVUFYb2hKRlgwRGtkOGtLT2U1YTd3cndqSEF6V3o2Zmk1NVJHR1R6R2o0MFRPbDlBRTVaWWhWRzdrR3RNQmpPaTBBSUdPQVFKR0tjOWJ3MW1BU0JaVkZiSDh1Yk0xMXVVck01VHdUUjVvbWRhdm01dUF3U2xzZHVQNCUyQlhkbmNuVWl2VXdnR2N0UUdKWkRoTCUyRlRSOUdJczBZUEpTbGxDaGIlMkJseGE1TGo1WFlWd0VBbVh6TllSNU9zQWM5VVl3ekt4VG9SdUJEZmlRaUo0cG1uMU1TRUNKY0owOUMlMkZyOXZoV0dBazg1bzAlMkJvWUltY1I4ZDJsdk1WVjZ4ZUh6R09aZ1ZJUnVBYzBTSGliQzZHU0d2VGxjUkpvVnEyWkdkYW9GMUNneUxqamdTaFZGcThkTDBLdVdqSXFQOEZBOWJyREJpZHBuSHFHYWVpNFJoZXgyaTV2ZSUyRkJnUkN5alBZTGhDak9Qb2FRWmcwaHBiQ2lKR3BsV1VmMEZodGVDNk1lY3hFWk5yJTJGUE9sOTgzMUxBd3dKb2VKNEMyclBpJTJCUGE4Mkx0R0RJdWxJYWJBR2ViM2hiYm1UUFJYdnJMT3ZOQXBlMG81WkZ5dEpDUXdUWEdvNEROTTFJckVjbVd2OFJMcEtOS1NiSlh5QXFWMnpSNVRHRU1FY2p6UlUzTWR6WEtHYTRyRm02emY0bDVKS1NrZHN4REpwNG9KcyUyQlFJMks4NEVtR0tFYTg0V3FodXVlenRoZWk4cnhDbGFreE5OWTU1VkUwdDJjQnZicWVhc3Z3cWpuYXNHdmVZdnY1cElWYlNWN25RYloyJTJCeW81MkxFUiUyRlQ5T1hMb2NOTmJUdnFnRzJwMmNkZDB2Vk5OMVhITzFZTmVwR1dKRE5aWER4clNJZGNiemt1bDcwWTZyVVUlMkZGTUt5RkljSnhrWkFzcU0xR2Nab2RWTE82Q0xXa1k0aWpLcHFrOUwlMkJ1cVhDdUx6USUyRkF3TGYwYlZwekFMYmRxbkRNWFoxJTJGemVxZDhLYlQ2OXolMkJSeFM0SDBmQjVPZHNmbkhYZW5DZnJrQkVZdyUyRiUyRnNNQUpPTmJ3RFdwNEtmWFdpR0JmYWpob3VPOVR3eXVPM2k4YjF3cXhlaGZ1V3NKVG94ZGM3SFU2cU96OWpjU3hMaDM0OXVlbUE3dGFFcnZYWFlIc2UyRjhHdzJlJTJCOFhXMWElMkJpJTJGbGxFVkclMkZra29oMjY3WjF5RXdBblFldjVodGQzVWZUWGZGd3ZPTWVXSDIwZkxYVjMxd2hxNjUyWENPOWRUV3lmY2dwb1ZRamdlbnZLaldMN3VwUHNweTAxWCUyQlFvUE1IJTNDJTJGZGlhZ3JhbSUzRSUzQyUyRm14ZmlsZSUzRSH4l8gAABwmSURBVHhe7Z1/bBVXdscvSkIFKrQBGqhYdRHSBlC3QnJZ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" width="300" height="183" class="img_ev3q"></p>
+<p>图1-3</p>
+<p>主控通过I2C接口下发配置寄存器控制sensor的工作方式，sensor通过MIPI CSI接口将图像数据发送至主控SOC。</p>
+<p>Sensor模块系统架构如下图1-4所示：</p>
+<p><img loading="lazy" alt="图形用户界面, 应用程序, 电子邮件 描述已自动生成" src="/assets/images/camera_sensor_arch-21435d1bef6b89971de11afd0f03af53.png" width="591" height="241" class="img_ev3q"></p>
+<p>图1-4 sensor系统架构图</p>
+<p>从上到下依次是：媒体接口层，硬件驱动层以及硬件层</p>
+<ul>
+<li>媒体接口层：提供kd_mpi_sensor_xxx接口给外部模块操作和访问sensor设备。</li>
+<li>驱动层：该层主要包两部分，分别是：sensor_dev，sensor_drv。</li>
+<li>sensor_dev：负责设备驱动文件的注册，提供文件操作接口的实现流程。通过注册设备文件节点/dev/sensorxx供用户空间的程序访问内核驱动。</li>
+<li>sensor_drv：具体sensor的硬件驱动，并将针对sensor的操作封装为统一的接口。</li>
+<li>硬件层：sensor模组硬件，当前系统中最多同时支持三路硬件sensor。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-api-参考">2. API 参考<a href="#2-api-参考" class="hash-link" aria-label="2. API 参考的直接链接" title="2. API 参考的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-vicap">2.1 VICAP<a href="#21-vicap" class="hash-link" aria-label="2.1 VICAP的直接链接" title="2.1 VICAP的直接链接">​</a></h3>
+<p>该功能模块提供以下API：</p>
+<ul>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-get-sensor-info" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_get_sensor_info</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-dev-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_dev_attr</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-get-dev-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_get_dev_attr</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-chn-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_chn_attr</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-get-chn-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_get_chn_attr</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-init" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_init</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-deinit" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_deinit</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-start-stream" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_start_stream</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-stop-stream" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_stop_stream</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-dump-frame" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_dump_frame</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-dump-release" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_dump_release</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-vi-drop-frame" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_vi_drop_frame</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-mclk" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_mclk</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-dump-reserved" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_dump_reserved</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-slave-enable" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_slave_enable</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-slave-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_slave_attr</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-3d-mode-crtl" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_3d_mode_crtl</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="211-kd_mpi_vicap_get_sensor_info">2.1.1 kd_mpi_vicap_get_sensor_info<a href="#211-kd_mpi_vicap_get_sensor_info" class="hash-link" aria-label="2.1.1 kd_mpi_vicap_get_sensor_info的直接链接" title="2.1.1 kd_mpi_vicap_get_sensor_info的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据指定的sensor配置类型获取sensor配置信息</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_get_sensor_info(k_vicap_sensor_type sensor_type, k_vicap_sensor_info *sensor_info)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>sensor_type</td><td>Sensor配置类型</td><td>输入</td></tr><tr><td>sensor_info</td><td>Sensor配置信息</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>应用开发者根据需要要使用的sensor配置类型，需要首先调用该API获取sensor配置信息，并根据配置信息调用后续接口对VICAP其他模块进行初始化。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="212-kd_mpi_vicap_set_dev_attr">2.1.2 kd_mpi_vicap_set_dev_attr<a href="#212-kd_mpi_vicap_set_dev_attr" class="hash-link" aria-label="2.1.2 kd_mpi_vicap_set_dev_attr的直接链接" title="2.1.2 kd_mpi_vicap_set_dev_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置VICAP设备属性</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_set_dev_attr(k_vicap_dev dev_num, k_vicap_dev_attr dev_attr)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>dev_attr</td><td>VICAP设备属性</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="213-kd_mpi_vicap_get_dev_attr">2.1.3 kd_mpi_vicap_get_dev_attr<a href="#213-kd_mpi_vicap_get_dev_attr" class="hash-link" aria-label="2.1.3 kd_mpi_vicap_get_dev_attr的直接链接" title="2.1.3 kd_mpi_vicap_get_dev_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取VICAP设备属性</p>
+<p>【语法】</p>
+<p>k_s23 kd_mpi_vicap_set_chn_attr(k_vicap_dev dev, k_vicap_chn_attr chn_attr)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>dev_attr</td><td>VICAP设备属性</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="214-kd_mpi_vicap_set_chn_attr">2.1.4 kd_mpi_vicap_set_chn_attr<a href="#214-kd_mpi_vicap_set_chn_attr" class="hash-link" aria-label="2.1.4 kd_mpi_vicap_set_chn_attr的直接链接" title="2.1.4 kd_mpi_vicap_set_chn_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置VICAP设备属性</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_set_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_chn_attr chn_attr)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>chn_attr</td><td>VICAP输出通道属性</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="215-kd_mpi_vicap_get_chn_attr">2.1.5 kd_mpi_vicap_get_chn_attr<a href="#215-kd_mpi_vicap_get_chn_attr" class="hash-link" aria-label="2.1.5 kd_mpi_vicap_get_chn_attr的直接链接" title="2.1.5 kd_mpi_vicap_get_chn_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取VICAP设备属性</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_get_chn_attr(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_chn_attr *chn_attr)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>chn_attr</td><td>VICAP输出通道属性</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="216-kd_mpi_vicap_init">2.1.6 kd_mpi_vicap_init<a href="#216-kd_mpi_vicap_init" class="hash-link" aria-label="2.1.6 kd_mpi_vicap_init的直接链接" title="2.1.6 kd_mpi_vicap_init的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>VICAP设备初始化</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_init(k_vicap_dev dev_num)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>使用该接口之前需要先调用kd_mpi_vicap_set_dev_attr设置设备属性，再调用kd_mpi_vicap_set_chn_attr 设置输出通道属性。</p>
+<p>【举例】</p>
+<p>无</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="217-kd_mpi_vicap_deinit">2.1.7 kd_mpi_vicap_deinit<a href="#217-kd_mpi_vicap_deinit" class="hash-link" aria-label="2.1.7 kd_mpi_vicap_deinit的直接链接" title="2.1.7 kd_mpi_vicap_deinit的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>VICAP设备去初始化</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_deinit(k_vicap_dev dev_num)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="218-kd_mpi_vicap_start_stream">2.1.8 kd_mpi_vicap_start_stream<a href="#218-kd_mpi_vicap_start_stream" class="hash-link" aria-label="2.1.8 kd_mpi_vicap_start_stream的直接链接" title="2.1.8 kd_mpi_vicap_start_stream的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>启动VICAP设备输出数据流</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_start_stream(k_vicap_dev dev_num)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="219-kd_mpi_vicap_stop_stream">2.1.9 kd_mpi_vicap_stop_stream<a href="#219-kd_mpi_vicap_stop_stream" class="hash-link" aria-label="2.1.9 kd_mpi_vicap_stop_stream的直接链接" title="2.1.9 kd_mpi_vicap_stop_stream的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>停止VICAP设备数据流输出</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_stop_stream(k_vicap_dev dev_num)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备 号</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2110-kd_mpi_vicap_dump_frame">2.1.10 kd_mpi_vicap_dump_frame<a href="#2110-kd_mpi_vicap_dump_frame" class="hash-link" aria-label="2.1.10 kd_mpi_vicap_dump_frame的直接链接" title="2.1.10 kd_mpi_vicap_dump_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据指定的设备和输出通道dump vicap数据</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_dump_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_dump_format foramt,</p>
+<p>k_video_frame_info *vf_info, k_u32 milli_sec)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>foramt</td><td>Dump数据类型</td><td>输入</td></tr><tr><td>vf_info</td><td>Dump帧信息</td><td>输出</td></tr><tr><td>milli_sec</td><td>超时时间</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2111-kd_mpi_vicap_dump_release">2.1.11 kd_mpi_vicap_dump_release<a href="#2111-kd_mpi_vicap_dump_release" class="hash-link" aria-label="2.1.11 kd_mpi_vicap_dump_release的直接链接" title="2.1.11 kd_mpi_vicap_dump_release的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>释放dump数据帧</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_dump_release(k_vicap_dev dev_num, k_vicap_chn chn_num, const k_video_frame_info *vf_info)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>vf_info</td><td>Dump帧信息</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2112-kd_mpi_vicap_set_vi_drop_frame">2.1.12 kd_mpi_vicap_set_vi_drop_frame<a href="#2112-kd_mpi_vicap_set_vi_drop_frame" class="hash-link" aria-label="2.1.12 kd_mpi_vicap_set_vi_drop_frame的直接链接" title="2.1.12 kd_mpi_vicap_set_vi_drop_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置硬件丢帧</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_set_vi_drop_frame(k_vicap_csi_num csi, k_vicap_drop_frame *frame, k_bool enable)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>csi</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>frame</td><td>结构体，见下</td><td></td></tr><tr><td>m</td><td>每隔 m 帧丢 n 帧</td><td>输入</td></tr><tr><td>n</td><td>每隔 m 帧丢 n 帧</td><td>输入</td></tr><tr><td>mode</td><td>hdr mode</td><td>输入</td></tr><tr><td>enable</td><td>是否开启</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2113-kd_mpi_vicap_set_mclk">2.1.13 kd_mpi_vicap_set_mclk<a href="#2113-kd_mpi_vicap_set_mclk" class="hash-link" aria-label="2.1.13 kd_mpi_vicap_set_mclk的直接链接" title="2.1.13 kd_mpi_vicap_set_mclk的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置 MCLK 频率</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_set_mclk(k_vicap_mclk_id id, k_vicap_mclk_sel sel, k_u8 mclk_div, k_u8 mclk_en)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>id</td><td>MCLK ID</td><td>输入</td></tr><tr><td>sel</td><td>时钟源</td><td>输入</td></tr><tr><td>mclk_div</td><td>分频系数</td><td>输入</td></tr><tr><td>mclk_en</td><td>是否开启</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2114-kd_mpi_vicap_set_dump_reserved">2.1.14 kd_mpi_vicap_set_dump_reserved<a href="#2114-kd_mpi_vicap_set_dump_reserved" class="hash-link" aria-label="2.1.14 kd_mpi_vicap_set_dump_reserved的直接链接" title="2.1.14 kd_mpi_vicap_set_dump_reserved的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置是否开启快速dump 模式</p>
+<p>【语法】</p>
+<p>void kd_mpi_vicap_set_dump_reserved(k_vicap_dev dev_num, k_vicap_chn chn_num, k_bool reserved)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>reserved</td><td>是否开启快速dump 模式</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2115-kd_mpi_vicap_set_slave_enable">2.1.15 kd_mpi_vicap_set_slave_enable<a href="#2115-kd_mpi_vicap_set_slave_enable" class="hash-link" aria-label="2.1.15 kd_mpi_vicap_set_slave_enable的直接链接" title="2.1.15 kd_mpi_vicap_set_slave_enable的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>使能slave mode</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_set_slave_enable(k_vicap_slave_id id, k_vicap_slave_enable *enable)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>id</td><td>slave mode 的id</td><td>输入</td></tr><tr><td>enable</td><td>是否enable slave mode</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2116-kd_mpi_vicap_set_slave_attr">2.1.16 kd_mpi_vicap_set_slave_attr<a href="#2116-kd_mpi_vicap_set_slave_attr" class="hash-link" aria-label="2.1.16 kd_mpi_vicap_set_slave_attr的直接链接" title="2.1.16 kd_mpi_vicap_set_slave_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置slave mode 参数</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_set_slave_attr(k_vicap_slave_id id, k_vicap_slave_info *info)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>id</td><td>slave mode 的id</td><td>输入</td></tr><tr><td>info</td><td>slave mode 的参数</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2117-kd_mpi_vicap_3d_mode_crtl">2.1.17 kd_mpi_vicap_3d_mode_crtl<a href="#2117-kd_mpi_vicap_3d_mode_crtl" class="hash-link" aria-label="2.1.17 kd_mpi_vicap_3d_mode_crtl的直接链接" title="2.1.17 kd_mpi_vicap_3d_mode_crtl的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置3d 模式使能</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_vicap_3d_mode_crtl(k_bool enable)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>enable</td><td>3d 模式使能</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_vicap_api.h</li>
+<li>库文件：libvicap.a</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-sensor">2.2 Sensor<a href="#22-sensor" class="hash-link" aria-label="2.2 Sensor的直接链接" title="2.2 Sensor的直接链接">​</a></h3>
+<p>该功能模块提供以下API：</p>
+<ul>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-open" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_open</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-close" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_close</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-power-set" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_power_set</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-id-get" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_id_get</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-init" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_init</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-reg-read" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_reg_read</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-reg-write" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_reg_write</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-mode-get" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_mode_get</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-mode-set" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_mode_set</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-stream-enable" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_stream_enable</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-again-set" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_again_set</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-again-get" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_again_get</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-dgain-set" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_dgain_set</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-dgain-get" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_dgain_get</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-intg-time-set" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_intg_time_set</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-intg-time-get" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_intg_time_get</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-otpdata-get" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_otpdata_get</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-sensor-otpdata-set" target="_blank" rel="noopener noreferrer">kd_mpi_sensor_otpdata_set</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="221-kd_mpi_sensor_open">2.2.1 kd_mpi_sensor_open<a href="#221-kd_mpi_sensor_open" class="hash-link" aria-label="2.2.1 kd_mpi_sensor_open的直接链接" title="2.2.1 kd_mpi_sensor_open的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据sensor设备名称打开sensor设备</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_open(const char *sensor_name)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>sensor_name</td><td>Sensor设备名称</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>正值</td><td>成功。返回设备描述符</td></tr><tr><td>负值</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="222-kd_mpi_sensor_close">2.2.2 kd_mpi_sensor_close<a href="#222-kd_mpi_sensor_close" class="hash-link" aria-label="2.2.2 kd_mpi_sensor_close的直接链接" title="2.2.2 kd_mpi_sensor_close的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>关闭sensor设备</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_close (k_s32 fd)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="223-kd_mpi_sensor_power_set">2.2.3 kd_mpi_sensor_power_set<a href="#223-kd_mpi_sensor_power_set" class="hash-link" aria-label="2.2.3 kd_mpi_sensor_power_set的直接链接" title="2.2.3 kd_mpi_sensor_power_set的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor电源状态</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_power_set(k_s32 fd, k_bool on)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>on</td><td>设置sensor上电状态，K_TRUE:上电，K_FALSE:下电</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="224-kd_mpi_sensor_id_get">2.2.4 kd_mpi_sensor_id_get<a href="#224-kd_mpi_sensor_id_get" class="hash-link" aria-label="2.2.4 kd_mpi_sensor_id_get的直接链接" title="2.2.4 kd_mpi_sensor_id_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取sensor id</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_id_get(k_s32 fd, k_u32 *sensor_id)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>sensor_id</td><td>获取的sensor id</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="225-kd_mpi_sensor_init">2.2.5 kd_mpi_sensor_init<a href="#225-kd_mpi_sensor_init" class="hash-link" aria-label="2.2.5 kd_mpi_sensor_init的直接链接" title="2.2.5 kd_mpi_sensor_init的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>Sensor初始化</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_init(k_s32 fd, k_sensor_mode mode)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>mode</td><td>根据指定的sensor mode初始化sensor配置寄存器</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="226-kd_mpi_sensor_reg_read">2.2.6 kd_mpi_sensor_reg_read<a href="#226-kd_mpi_sensor_reg_read" class="hash-link" aria-label="2.2.6 kd_mpi_sensor_reg_read的直接链接" title="2.2.6 kd_mpi_sensor_reg_read的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>读取sensor寄存器内容</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_reg_read(k_s32 fd, k_u32 reg_addr, k_u32 *reg_val)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>reg_addr</td><td>Sensor寄存器地址</td><td>输入</td></tr><tr><td>reg_val</td><td>读取寄存器内容</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="227-kd_mpi_sensor_reg_write">2.2.7 kd_mpi_sensor_reg_write<a href="#227-kd_mpi_sensor_reg_write" class="hash-link" aria-label="2.2.7 kd_mpi_sensor_reg_write的直接链接" title="2.2.7 kd_mpi_sensor_reg_write的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>写sensor寄存器内容</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_reg_write(k_s32 fd, k_u32 reg_addr, k_u32 reg_val)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>reg_addr</td><td>Sensor寄存器地址</td><td>输入</td></tr><tr><td>reg_val</td><td>写入sensor寄存器内容</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="228-kd_mpi_sensor_mode_get">2.2.8 kd_mpi_sensor_mode_get<a href="#228-kd_mpi_sensor_mode_get" class="hash-link" aria-label="2.2.8 kd_mpi_sensor_mode_get的直接链接" title="2.2.8 kd_mpi_sensor_mode_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取sensor mode配置</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_mode_get(k_s32 fd, k_sensor_mode *mode)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>mode</td><td>返回获取的sensor mode配置参数</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="229-kd_mpi_sensor_mode_set">2.2.9 kd_mpi_sensor_mode_set<a href="#229-kd_mpi_sensor_mode_set" class="hash-link" aria-label="2.2.9 kd_mpi_sensor_mode_set的直接链接" title="2.2.9 kd_mpi_sensor_mode_set的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor mode配置</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_mode_get(k_s32 fd, k_sensor_mode mode)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>mode</td><td>设置sensor mode配置参数</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2210-kd_mpi_sensor_stream_enable">2.2.10 kd_mpi_sensor_stream_enable<a href="#2210-kd_mpi_sensor_stream_enable" class="hash-link" aria-label="2.2.10 kd_mpi_sensor_stream_enable的直接链接" title="2.2.10 kd_mpi_sensor_stream_enable的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor mode配置</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_stream_enable(k_s32 fd, k_s32 enable)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>enable</td><td>设置sensor流输出状态，0：禁止输  出，非0：使能输出</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2211-kd_mpi_sensor_again_set">2.2.11 kd_mpi_sensor_again_set<a href="#2211-kd_mpi_sensor_again_set" class="hash-link" aria-label="2.2.11 kd_mpi_sensor_again_set的直接链接" title="2.2.11 kd_mpi_sensor_again_set的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor 模拟增益</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_again_set(k_s32 fd, k_sensor_gain gain)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>gain</td><td>gain配置参数</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2212-kd_mpi_sensor_again_get">2.2.12 kd_mpi_sensor_again_get<a href="#2212-kd_mpi_sensor_again_get" class="hash-link" aria-label="2.2.12 kd_mpi_sensor_again_get的直接链接" title="2.2.12 kd_mpi_sensor_again_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取sensor 模拟增益</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_again_set(k_s32 fd, k_sensor_gain *gain)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>gain</td><td>gain配置参数</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2213-kd_mpi_sensor_dgain_set">2.2.13 kd_mpi_sensor_dgain_set<a href="#2213-kd_mpi_sensor_dgain_set" class="hash-link" aria-label="2.2.13 kd_mpi_sensor_dgain_set的直接链接" title="2.2.13 kd_mpi_sensor_dgain_set的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor 数字增益</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_dgain_set(k_s32 fd, k_sensor_gain gain)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>gain</td><td>gain配置参数</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件  ：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2214-kd_mpi_sensor_dgain_get">2.2.14 kd_mpi_sensor_dgain_get<a href="#2214-kd_mpi_sensor_dgain_get" class="hash-link" aria-label="2.2.14 kd_mpi_sensor_dgain_get的直接链接" title="2.2.14 kd_mpi_sensor_dgain_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取sensor 数字增益</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_dgain_get(k_s32 fd, k_sensor_gain *gain)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>gain</td><td>gain配置参数</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2215-kd_mpi_sensor_intg_time_set">2.2.15 kd_mpi_sensor_intg_time_set<a href="#2215-kd_mpi_sensor_intg_time_set" class="hash-link" aria-label="2.2.15 kd_mpi_sensor_intg_time_set的直接链接" title="2.2.15 kd_mpi_sensor_intg_time_set的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor 积分时间</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_intg_time_set(k_s32 fd, k_sensor_intg_time time)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>time</td><td>积分时间配置参数</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2216-kd_mpi_sensor_intg_time_get">2.2.16 kd_mpi_sensor_intg_time_get<a href="#2216-kd_mpi_sensor_intg_time_get" class="hash-link" aria-label="2.2.16 kd_mpi_sensor_intg_time_get的直接链接" title="2.2.16 kd_mpi_sensor_intg_time_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取sensor 积分时间</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_intg_time_get(k_s32 fd, k_sensor_intg_time *time)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>time</td><td>积分时间配置参数</td><td>输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2217-kd_mpi_sensor_otpdata_get">2.2.17 kd_mpi_sensor_otpdata_get<a href="#2217-kd_mpi_sensor_otpdata_get" class="hash-link" aria-label="2.2.17 kd_mpi_sensor_otpdata_get的直接链接" title="2.2.17 kd_mpi_sensor_otpdata_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取 sensor otp 数据</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_otpdata_get(k_s32 fd, void *ota_data)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>ota_data</td><td>otp 数据</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2218-kd_mpi_sensor_otpdata_set">2.2.18 kd_mpi_sensor_otpdata_set<a href="#2218-kd_mpi_sensor_otpdata_set" class="hash-link" aria-label="2.2.18 kd_mpi_sensor_otpdata_set的直接链接" title="2.2.18 kd_mpi_sensor_otpdata_set的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置sensor otp 数据</p>
+<p>【语法】</p>
+<p>k_s32 kd_mpi_sensor_otpdata_set(k_s32 fd, void *ota_data)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>fd</td><td>Sensor设备文件描述符</td><td>输入</td></tr><tr><td>ota_data</td><td>otp 数据</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mpi_sensor_api.h</li>
+<li>库文件：libsensor.a</li>
+</ul>
+<p>【注意】</p>
+<p>无。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-数据类型">3. 数据类型<a href="#3-数据类型" class="hash-link" aria-label="3. 数据类型的直接链接" title="3. 数据类型的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-vicap">3.1 VICAP<a href="#31-vicap" class="hash-link" aria-label="3.1 VICAP的直接链接" title="3.1 VICAP的直接链接">​</a></h3>
+<p>该功能模块的相关数据类型定义如下：</p>
+<ul>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-sensor-type" target="_blank" rel="noopener noreferrer">k_vicap_sensor_type</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-dev" target="_blank" rel="noopener noreferrer">k_vicap_dev</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-chn" target="_blank" rel="noopener noreferrer">k_vicap_chn</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-csi-num" target="_blank" rel="noopener noreferrer">k_vicap_csi_num</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-mipi-lanes" target="_blank" rel="noopener noreferrer">k_vicap_mipi_lanes</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-csi-data-type" target="_blank" rel="noopener noreferrer">k_vicap_csi_data_type</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-data-source" target="_blank" rel="noopener noreferrer">k_vicap_data_source</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-vi-dvp-port" target="_blank" rel="noopener noreferrer">k_vicap_vi_dvp_port</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-vi-flash-mode" target="_blank" rel="noopener noreferrer">k_vicap_vi_flash_mode</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-img-window" target="_blank" rel="noopener noreferrer">k_vicap_img_window</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-work-mode" target="_blank" rel="noopener noreferrer">k_vicap_work_mode</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-sensor-info" target="_blank" rel="noopener noreferrer">k_vicap_sensor_info</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-dump-format" target="_blank" rel="noopener noreferrer">k_vicap_dump_format</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-dev-attr" target="_blank" rel="noopener noreferrer">k_vicap_dev_attr</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-vicap-chn-attr" target="_blank" rel="noopener noreferrer">k_vicap_chn_attr</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="311-k_vicap_sensor_type">3.1.1 k_vicap_sensor_type<a href="#311-k_vicap_sensor_type" class="hash-link" aria-label="3.1.1 k_vicap_sensor_type的直接链接" title="3.1.1 k_vicap_sensor_type的直接链接">​</a></h4>
+<p>【说明】当前系统支持的sensor类型定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9732_MIPI_1280X720_30FPS_10BIT_LINEAR = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_SPECKLE = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_SPECKLE = 4,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR_SPECKLE = 5,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR_SPECKLE  = 6,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_LINEAR = 7,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_LINEAR = 8,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_LINEAR = 9,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_MCLK_7425_LINEAR = 10,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR = 11,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR = 12,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_4LANE_RAW10_2XDOL = 13,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IMX335_MIPI_4LANE_RAW10_3XDOL = 14,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SC_SC035HGS_MIPI_1LANE_RAW10_640X480_120FPS_LINEAR = 15,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SC_SC035HGS_MIPI_1LANE_RAW10_640X480_60FPS_LINEAR = 16,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SC_SC035HGS_MIPI_1LANE_RAW10_640X480_30FPS_LINEAR = 17,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE = 18,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR = 19,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR = 20,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_1920X1080_30FPS_10BIT_LINEAR = 21,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_2592x1944_10FPS_10BIT_LINEAR = 22,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_640x480_60FPS_10BIT_LINEAR = 23,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR = 24,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SC_SC201CS_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR = 25,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SC_SC201CS_SLAVE_MODE_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR = 26,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR = 27,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR = 28,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">XS9922B_MIPI_CSI0_1280X720_30FPS_YUV422_DOL3 = 29,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">XS9950_MIPI_CSI0_1280X720_30FPS_YUV422 = 30,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">XS9950_MIPI_CSI1_1280X720_30FPS_YUV422 = 31,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">XS9950_MIPI_CSI2_1280X720_30FPS_YUV422 = 32,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">XS9950_MIPI_CSI0_1920X1080_30FPS_YUV422 = 33,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE_V2 = 34,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR_V2 = 35,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR_V2 = 36,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR_V2 = 37,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR_V2 = 38,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR_V2 = 39,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">GC2053_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR = 40,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SENSOR_TYPE_MAX,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_sensor_type;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>OV_OV9732_MIPI_1280X720_30FPS_10BIT_LINEAR</td><td>OV9732 1lan 10bit 720P30帧线性输出配置 外接晶振16M 接csi0</td></tr><tr><td>OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_IR</td><td>OV9286 2lan 10bit 720P30帧线性输出配置ir图像 外接晶振25M 接csi1</td></tr><tr><td>OV_OV9286_MIPI_1280X720_30FPS_10BIT_LINEAR_SPECKLE</td><td>OV9286 2lan 10bit 720P30帧线性输出配置speckle图像 外接晶振25M 接csi1</td></tr><tr><td>OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_IR</td><td>OV9286 2lan 10bit 720P60帧线性输出配置ir图像 外接晶振25M 接csi1</td></tr><tr><td>OV_OV9286_MIPI_1280X720_60FPS_10BIT_LINEAR_SPECKLE</td><td>OV9286 2lan 10bit 720P60帧线性输出配置speckle图像 外接晶振25M 接csi1</td></tr><tr><td>IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_LINEAR</td><td>imx335 12bit 2lan 1080P30帧线性输出 外接晶振24M 接csi0</td></tr><tr><td>IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_LINEAR</td><td>imx335 12bit 2lan 全尺寸30帧线性输出 外接晶振24M 接csi0</td></tr><tr><td>IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_LINEAR</td><td>imx335 12bit 4lan 全尺寸30帧线性输出 外接晶振24M 接csi0</td></tr><tr><td>IMX335_MIPI_2LANE_RAW12_1920X1080_30FPS_MCLK_7425_LINEAR</td><td>imx335 12bit 2lan 1080P30帧线性输出 芯片输出74.25M 时钟 接csi0</td></tr><tr><td>IMX335_MIPI_2LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR</td><td>imx335 12bit 2lan 全尺寸30帧线性输出 芯片输出74.25M 时钟 接csi0</td></tr><tr><td>IMX335_MIPI_4LANE_RAW12_2592X1944_30FPS_MCLK_7425_LINEAR</td><td>imx335 12bit 4lan 全尺寸30帧线性输出 芯片输出74.25M 时钟 接csi0</td></tr><tr><td>IMX335_MIPI_4LANE_RAW10_2XDOL</td><td>imx335 10bit 4lan 全尺寸15帧2dol输出 外接晶振24M 接csi0</td></tr><tr><td>IMX335_MIPI_4LANE_RAW10_3XDOL</td><td>imx335 10bit 4lan 全尺寸15帧3dol输出 外接晶振24M 接csi0</td></tr><tr><td>SC_SC035HGS_MIPI_1LANE_RAW10_640X480_120FPS_LINEAR</td><td>sc035 10bit 1lan 640x480 120帧线性输出 外接晶振24M 接csi2</td></tr><tr><td>SC_SC035HGS_MIPI_1LANE_RAW10_640X480_60FPS_LINEAR</td><td>sc035 10bit 1lan 640x480 60帧线性输出 外接晶振24M 接csi2</td></tr><tr><td>SC_SC035HGS_MIPI_1LANE_RAW10_640X480_30FPS_LINEAR</td><td>sc035 10bit 1lan 640x480 30帧线性输出 外接晶振24M 接csi2</td></tr><tr><td>OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE</td><td>OV9286 2lan 10bit 720P30帧线性输出配置speckle图像 芯片输出25M 时钟 接csi1</td></tr><tr><td>OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR</td><td>OV9286 2lan 10bit 720P30帧线性输出配置ir图像 芯片输出25M 时钟 接csi1</td></tr><tr><td>OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR</td><td>OV9732 1lan 10bit 720P30帧线性输出配置 芯片输出16M时钟 接csi0</td></tr><tr><td>OV_OV5647_MIPI_1920X1080_30FPS_10BIT_LINEAR</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 接csi2</td></tr><tr><td>OV_OV5647_MIPI_2592x1944_10FPS_10BIT_LINEAR</td><td>OV5647 2lan 10bit 全尺寸 10帧线性输出配置 外接晶振25M 接csi2</td></tr><tr><td>OV_OV5647_MIPI_640x480_60FPS_10BIT_LINEAR</td><td>OV5647 2lan 10bit 640x480 60帧线性输出配置 外接晶振25M 接csi2</td></tr><tr><td>OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 芯片输出25M时钟 接csi0</td></tr><tr><td>SC_SC201CS_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR</td><td>sc201 1lan 10bit 1600x1200 30帧线性输出 晶振27M 接csi1</td></tr><tr><td>SC_SC201CS_SLAVE_MODE_MIPI_1LANE_RAW10_1600X1200_30FPS_LINEAR</td><td>sc201 1lan 10bit slave模式 1600x1200 30帧线性输出 晶振27M 接csi1</td></tr><tr><td>OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi1</td></tr><tr><td>OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi2</td></tr><tr><td>XS9950_MIPI_CSI0_1280X720_30FPS_YUV422</td><td>XS9950 2lan yuv422 720P25帧线性输出 模拟摄像头 接csi0</td></tr><tr><td>XS9950_MIPI_CSI1_1280X720_30FPS_YUV422</td><td>XS9950 2lan yuv422 720P25帧线性输出 模拟摄像头 接csi1</td></tr><tr><td>OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_SPECKLE_V2</td><td>OV9286 2lan 10bit 720P30帧线性输出配置speckle图像 芯片输出25M 时钟 接csi1</td></tr><tr><td>OV_OV9286_MIPI_1280X720_30FPS_10BIT_MCLK_25M_LINEAR_IR_V2</td><td>OV9286 2lan 10bit 720P30帧线性输出配置ir图像 芯片输出25M 时钟 接csi1</td></tr><tr><td>OV_OV9732_MIPI_1280X720_30FPS_10BIT_MCLK_16M_LINEAR_V2</td><td>OV9732 1lan 10bit 720P30帧线性输出配置 芯片输出16M时钟 接csi2</td></tr><tr><td>OV_OV5647_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR_V2</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi0</td></tr><tr><td>OV_OV5647_MIPI_CSI1_1920X1080_30FPS_10BIT_LINEAR_V2</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 外接晶振25M 外接csi1</td></tr><tr><td>OV_OV5647_MIPI_CSI2_1920X1080_30FPS_10BIT_LINEAR_V2</td><td>OV5647 2lan 10bit 1080P30帧线性输出配置 芯片输出25M时钟 接csi2</td></tr><tr><td>GC2053_MIPI_CSI0_1920X1080_30FPS_10BIT_LINEAR</td><td>GC2053 2lan 10bit 1080P30帧线性输出配置 芯片输出16M时钟 接csi0</td></tr></tbody></table>
+<p>【注意事项】</p>
+<ol>
+<li>该列表需要有sensor驱动开发人员维护，应用开发者通过此处定义的sensor type来打开指定类型的sensor设备</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="312-k_vicap_dev">3.1.2 k_vicap_dev<a href="#312-k_vicap_dev" class="hash-link" aria-label="3.1.2 k_vicap_dev的直接链接" title="3.1.2 k_vicap_dev的直接链接">​</a></h4>
+<p>【说明】vicap设备号定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DEV_ID_0 = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DEV_ID_1 = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DEV_ID_2 = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DEV_ID_MAX,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_dev;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_DEV_ID_0</td><td>VICAP设备0</td></tr><tr><td>VICAP_DEV_ID_1</td><td>VICAP设备1</td></tr><tr><td>VICAP_DEV_ID_2</td><td>VICAP设备2</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="313-k_vicap_chn">3.1.3 k_vicap_chn<a href="#313-k_vicap_chn" class="hash-link" aria-label="3.1.3 k_vicap_chn的直接链接" title="3.1.3 k_vicap_chn的直接链接">​</a></h4>
+<p>【说明】vicap输出通道号定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CHN_ID_0 = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CHN_ID_1 = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CHN_ID_2 = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CHN_ID_MAX,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_chn;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_CHN_ID_0</td><td>VICAP输出通道0</td></tr><tr><td>VICAP_CHN_ID_1</td><td>VICAP输出通道1</td></tr><tr><td>VICAP_CHN_ID_2</td><td>VICAP输出通道2</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="314-k_vicap_csi_num">3.1.4 k_vicap_csi_num<a href="#314-k_vicap_csi_num" class="hash-link" aria-label="3.1.4 k_vicap_csi_num的直接链接" title="3.1.4 k_vicap_csi_num的直接链接">​</a></h4>
+<p>【说明】vicap csi标号定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI0 = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI1 = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI2 = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_csi_num;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_CSI0</td><td>CSI0</td></tr><tr><td>VICAP_CSI1</td><td>CSI1</td></tr><tr><td>VICAP_CSI2</td><td>CSI2</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>Sensor连接的CSI号由硬件物理连接决定。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="315-k_vicap_mipi_lanes">3.1.5 k_vicap_mipi_lanes<a href="#315-k_vicap_mipi_lanes" class="hash-link" aria-label="3.1.5 k_vicap_mipi_lanes的直接链接" title="3.1.5 k_vicap_mipi_lanes的直接链接">​</a></h4>
+<p>【说明】vicap mipi通道数定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIPI_1LANE = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIPI_2LANE = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIPI_4LANE = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_mipi_lanes;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_MIPI_1LANE</td><td>1 lane</td></tr><tr><td>VICAP_MIPI_2LANE</td><td>2 lane</td></tr><tr><td>VICAP_MIPI_4LANE</td><td>4 lane</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>Sensor连接使用的mipi 通道个数由硬件物理连接决定，当使用4lane时，最多只能连接两个sensor。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="316-k_vicap_csi_data_type">3.1.6 k_vicap_csi_data_type<a href="#316-k_vicap_csi_data_type" class="hash-link" aria-label="3.1.6 k_vicap_csi_data_type的直接链接" title="3.1.6 k_vicap_csi_data_type的直接链接">​</a></h4>
+<p>【说明】vicap mipi通道数定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI_DATA_TYPE_RAW8 = 0x2A,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI_DATA_TYPE_RAW10 = 0x2B,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI_DATA_TYPE_RAW12 = 0x2C,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_CSI_DATA_TYPE_RAW14 = 0x2D,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_csi_data_type;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_CSI_DATA_TYPE_RAW8</td><td>RAW8</td></tr><tr><td>VICAP_CSI_DATA_TYPE_RAW10</td><td>RAW10</td></tr><tr><td>VICAP_CSI_DATA_TYPE_RAW12</td><td>RAW12</td></tr><tr><td>VICAP_CSI_DATA_TYPE_RAW14</td><td>RAW14</td></tr></tbody></table>
+<p>【注意事项】</p>
+<p>无</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="317-k_vicap_data_source">3.1.7 k_vicap_data_source<a href="#317-k_vicap_data_source" class="hash-link" aria-label="3.1.7 k_vicap_data_source的直接链接" title="3.1.7 k_vicap_data_source的直接链接">​</a></h4>
+<p>【说明】vicap 数据源</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_SOURCE_CSI0 = 0, /**&lt; vicap acquire data from the csi0*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_SOURCE_CSI1 = 1, /**&lt; vicap acquire data from the csi0*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_SOURCE_CSI1_FS_TR0 = 2, /**&lt;vicap acquire data from the csi1 for flash trigger 0*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_SOURCE_CSI1_FS_TR1 = 3, /**&lt;vicap acquire data from the csi0 for flash trigger 1*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_SOURCE_CSI2 = 4, /**&lt; vicap acquire data from the csi2*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_data_source;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_SOURCE_CSI0</td><td>VICAP数据来源为CSI0</td></tr><tr><td>VICAP_SOURCE_CSI1</td><td>VICAP数据来源为CSI1</td></tr><tr><td>VICAP_SOURCE_CSI1_FS_TR0</td><td>VICAP数据来源为CSI1 Flash trigger 0</td></tr><tr><td>VICAP_SOURCE_CSI1_FS_TR1</td><td>VICAP数据来源为CSI1 Flash trigger 1</td></tr><tr><td>VICAP_SOURCE_CSI2</td><td>VICAP数据来源为CSI2</td></tr></tbody></table>
+<p>【注意事项】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="318-k_vicap_vi_dvp_port">3.1.8 k_vicap_vi_dvp_port<a href="#318-k_vicap_vi_dvp_port" class="hash-link" aria-label="3.1.8 k_vicap_vi_dvp_port的直接链接" title="3.1.8 k_vicap_vi_dvp_port的直接链接">​</a></h4>
+<p>【说明】vicap vi dvp端口号</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_VI_DVP_PORT0 = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_VI_DVP_PORT1 = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_VI_DVP_PORT2 = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_VI_DVP_PORT_MAX,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_vi_dvp_port;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_VI_DVP_PORT0</td><td>DVP 端口0</td></tr><tr><td>VICAP_VI_DVP_PORT1</td><td>DVP端口1</td></tr><tr><td>VICAP_VI_DVP_PORT2</td><td>DVP端口2</td></tr></tbody></table>
+<p>【注意事项】</p>
+<ol>
+<li>默认端口0对应CSI0，端口1对应CSI1，端口2对应CSI2</li>
+<li>只有端口0支持HDR sensor，当用户需要使用HDR模式时，必需要将其绑定到DVP端口0。</li>
+<li>当用户需要改变端口映射关系时需要执行绑定操作</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="319-k_vicap_vi_flash_mode">3.1.9 k_vicap_vi_flash_mode<a href="#319-k_vicap_vi_flash_mode" class="hash-link" aria-label="3.1.9 k_vicap_vi_flash_mode的直接链接" title="3.1.9 k_vicap_vi_flash_mode的直接链接">​</a></h4>
+<p>【说明】vicap 闪光灯光源控制模式</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_FLASH_FOLLOW_STROBE = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_FLASH_FOLLOW_STROBE_BASE_PWM = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_FLASH_NORMAL_PWM = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_FLASH_DISABLE = 3, /**&lt; disable flash light*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_vi_flash_mode;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_FLASH_FOLLOW_STROBE</td><td>由strobe信号控制</td></tr><tr><td>VICAP_FLASH_FOLLOW_STROBE_BASE_PWM</td><td>基于PWM模式由strobe信号控制</td></tr><tr><td>VICAP_FLASH_NORMAL_PWM</td><td>由PWM信号控制</td></tr><tr><td>VICAP_FLASH_DISABLE</td><td>禁用</td></tr></tbody></table>
+<p>【注意事项】</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3110-k_vicap_img_window">3.1.10 k_vicap_img_window<a href="#3110-k_vicap_img_window" class="hash-link" aria-label="3.1.10 k_vicap_img_window的直接链接" title="3.1.10 k_vicap_img_window的直接链接">​</a></h4>
+<p>【说明】VICAP图像窗口定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 h_start;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 v_start;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 width;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 height;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_img_window;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>h_start</td><td>水平起始位置</td></tr><tr><td>v_start</td><td>垂直起始位置</td></tr><tr><td>width</td><td>图像宽度</td></tr><tr><td>height</td><td>图像高度</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3111-k_vicap_work_mode">3.1.11 k_vicap_work_mode<a href="#3111-k_vicap_work_mode" class="hash-link" aria-label="3.1.11 k_vicap_work_mode的直接链接" title="3.1.11 k_vicap_work_mode的直接链接">​</a></h4>
+<p>【说明】vicap工作模式</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_WORK_ONLINE_MODE,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_WORK_OFFLINE_MODE,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_WORK_ONLY_MCM_MODE,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_work_mode;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_WORK_ONLINE_MODE</td><td>在线模式</td></tr><tr><td>VICAP_WORK_OFFLINE_MODE</td><td>离线模式</td></tr><tr><td>VICAP_WORK_ONLY_MCM_MODE</td><td>只工作在mcm模式</td></tr></tbody></table>
+<p>【注意事项】 支持多个摄像头输入时，必须指定为离线模式。 配置VICAP_WORK_ONLY_MCM_MODE，dump图像只能用yuv444这种格式。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3112-k_vicap_sensor_info">3.1.12 k_vicap_sensor_info<a href="#3112-k_vicap_sensor_info" class="hash-link" aria-label="3.1.12 k_vicap_sensor_info的直接链接" title="3.1.12 k_vicap_sensor_info的直接链接">​</a></h4>
+<p>【说明】VICAP sensor配置信息</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const char *sensor_name;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_csi_num csi_num; /**&lt; CSI NUM that the sensor connects to*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_mipi_lanes mipi_lanes; /**&lt; MIPI lanes that the sensor connects to*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_data_source source_id; /**&lt;source id that the sensor used to*/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_bool is_3d_sensor;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_mipi_phy_freq phy_freq;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_csi_data_type data_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_hdr_mode hdr_mode;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_vi_flash_mode flash_mode;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_sensor_type sensor_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_sensor_info;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴  板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>sensor_name</td><td>Sensor名字</td></tr><tr><td>csi_num</td><td>当前sensor硬件连接的CSI号</td></tr><tr><td>mipi_lanes</td><td>当前sensor硬件连接的使用的MIPI 通道数</td></tr><tr><td>source_id</td><td>当前sensor使用的VICAP数据源标号</td></tr><tr><td>is_3d_sensor</td><td>是否为3Dsensor</td></tr><tr><td>phy_freq</td><td>PHY频率</td></tr><tr><td>data_type</td><td>MIPI CSI数据类型</td></tr><tr><td>hdr_mode</td><td>HDR模式</td></tr><tr><td>flash_mode</td><td>闪光灯配置模式</td></tr><tr><td>sensor_type</td><td>Sensor配置类型</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3113-k_vicap_dump_format">3.1.13 k_vicap_dump_format<a href="#3113-k_vicap_dump_format" class="hash-link" aria-label="3.1.13 k_vicap_dump_format的直接链接" title="3.1.13 k_vicap_dump_format的直接链接">​</a></h4>
+<p>【说明】VICAPdumo数据帧格式</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DUMP_YUV = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DUMP_RGB = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DUMP_RAW = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_DUMP_YUV444 = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_dump_format;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_DUMP_YUV</td><td>Dump YUV数据</td></tr><tr><td>VICAP_DUMP_RGB</td><td>Dump RGB数据</td></tr><tr><td>VICAP_DUMP_RAW</td><td>Dump RAW数据</td></tr><tr><td>VICAP_DUMP_YUV444</td><td>Dump YUV444数据</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3114-k_vicap_dev_attr">3.1.14 k_vicap_dev_attr<a href="#3114-k_vicap_dev_attr" class="hash-link" aria-label="3.1.14 k_vicap_dev_attr的直接链接" title="3.1.14 k_vicap_dev_attr的直接链接">​</a></h4>
+<p>【说明】VICAP设备属性</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_window acq_win;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_work_mode mode;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_isp_pipe_ctrl pipe_ctrl;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_u32 cpature_frame;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_sensor_info sensor_info;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_bool dw_enable;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_u32 buffer_num;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_u32 buffer_size;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_mirror mirror;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_dev_attr;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>acq_win</td><td>图像捕获窗口</td></tr><tr><td>mode</td><td>Vicap工作模式。当支持多个摄像头输入时，必须指定为离线模式。</td></tr><tr><td>pipe_ctrl</td><td>ISP pipeline 控制开关。</td></tr><tr><td>cpature_frame</td><td>指定采集数据的帧数，输入范围[0,1023]，0：持续采集</td></tr><tr><td>sensor_info</td><td>Sensor配置信息</td></tr><tr><td>dw_enable</td><td>Dewarp使能（详见 <a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/pc/dewarp/K230_SDK_Dewarp%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html" target="_blank" rel="noopener noreferrer">K230_SDK_Dewarp使用指南.md</a>）</td></tr><tr><td>buffer_num</td><td>离线模式下，配置sensor接收数据的缓冲区个数</td></tr><tr><td>buffer_size</td><td>离线模式下，配置sensor接收数据的缓冲区大小</td></tr><tr><td>mirror</td><td>sensor 的mirror 功能</td></tr></tbody></table>
+<p>【注意事项】对于小内存应用场景，建议关闭3DNR模块，减小内存占用。关闭方式为应用设置设备属性时，将 pipe_ctrl.bits.dnr3_enable 设置为0</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3115-k_vicap_chn_attr">3.1.15 k_vicap_chn_attr<a href="#3115-k_vicap_chn_attr" class="hash-link" aria-label="3.1.15 k_vicap_chn_attr的直接链接" title="3.1.15 k_vicap_chn_attr的直接链接">​</a></h4>
+<p>【说明】VICAP设备属性</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_window out_win;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_window crop_win;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_vicap_window scale_win;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_bool crop_enable;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_bool scale_enable;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_bool chn_enable;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_pixel_format pix_format;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_u32 buffer_num;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_u32 buffer_size;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    k_u8 alignment;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_chn_attr;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>out_win</td><td>输出窗口大小</td></tr><tr><td>crop_win</td><td>裁剪窗口大小</td></tr><tr><td>scale_win</td><td>缩放窗口大小</td></tr><tr><td>crop_enable</td><td>裁剪使能</td></tr><tr><td>scale_enable</td><td>缩放使能</td></tr><tr><td>chn_enable</td><td>通道使能</td></tr><tr><td>pix_format</td><td>输出像素格式</td></tr><tr><td>buffer_num</td><td>当前通道使用的缓冲区个数</td></tr><tr><td>buffer_size</td><td>缓冲区大小</td></tr><tr><td>alignment</td><td>缓冲区对齐方式</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3116-k_vicap_mirror">3.1.16 k_vicap_mirror<a href="#3116-k_vicap_mirror" class="hash-link" aria-label="3.1.16 k_vicap_mirror的直接链接" title="3.1.16 k_vicap_mirror的直接链接">​</a></h4>
+<p>【说明】vicap sensor mirror 功能</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIRROR_NONE = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIRROR_HOR = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIRROR_VER = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VICAP_MIRROR_BOTH = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_vicap_mirror;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>VICAP_MIRROR_NONE</td><td>sensor不需要mirror</td></tr><tr><td>VICAP_MIRROR_HOR</td><td>sensor 横向mirror</td></tr><tr><td>VICAP_MIRROR_VER</td><td>sensor 纵向mirror</td></tr><tr><td>VICAP_MIRROR_BOTH</td><td>sensor 横向和纵向mirror</td></tr></tbody></table>
+<p>【注意事项】</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-sensor">3.2 Sensor<a href="#32-sensor" class="hash-link" aria-label="3.2 Sensor的直接链接" title="3.2 Sensor的直接链接">​</a></h3>
+<p>该功能模块的相关数据类型定义如下：</p>
+<ul>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-bayer-pattern" target="_blank" rel="noopener noreferrer">k_sensor_bayer_pattern</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-exp-frame-type" target="_blank" rel="noopener noreferrer">k_sensor_exp_frame_type</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-exposure-param" target="_blank" rel="noopener noreferrer">k_sensor_exposure_param</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-intg-time" target="_blank" rel="noopener noreferrer">k_sensor_intg_time</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-gain" target="_blank" rel="noopener noreferrer">k_sensor_gain</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-size" target="_blank" rel="noopener noreferrer">k_sensor_size</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-ae-info" target="_blank" rel="noopener noreferrer">k_sensor_ae_info</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-mode" target="_blank" rel="noopener noreferrer">k_sensor_mode</a></li>
+<li><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#k-sensor-otp-date" target="_blank" rel="noopener noreferrer">k_sensor_otp_date</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="321-k_sensor_bayer_pattern">3.2.1 k_sensor_bayer_pattern<a href="#321-k_sensor_bayer_pattern" class="hash-link" aria-label="3.2.1 k_sensor_bayer_pattern的直接链接" title="3.2.1 k_sensor_bayer_pattern的直接链接">​</a></h4>
+<p>【定义】sensor 输出的拜耳模式定义</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BAYER_RGGB = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BAYER_GRBG = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BAYER_GBRG = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BAYER_BGGR = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BAYER_BUTT } k_sensor_bayer_pattern;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>BAYER_RGGB</td><td>RGGB模式</td></tr><tr><td>BAYER_GRBG</td><td>GRBG模式</td></tr><tr><td>BAYER_GBRG</td><td>GBRG模式</td></tr><tr><td>BAYER_BGGR</td><td>BGGR模式</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="322-k_sensor_exp_frame_type">3.2.2 k_sensor_exp_frame_type<a href="#322-k_sensor_exp_frame_type" class="hash-link" aria-label="3.2.2 k_sensor_exp_frame_type的直接链接" title="3.2.2 k_sensor_exp_frame_type的直接链接">​</a></h4>
+<p>【说明】</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef enum {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SENSOR_EXPO_FRAME_TYPE_1FRAME = 0,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SENSOR_EXPO_FRAME_TYPE_2FRAMES = 1,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SENSOR_EXPO_FRAME_TYPE_3FRAMES = 2,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SENSOR_EXPO_FRAME_TYPE_4FRAMES = 3,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SENSOR_EXPO_FRAME_TYPE_MAX } k_sensor_exp_frame_type;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>SENSOR_EXPO_FRAME_TYPE_1FRAME</td><td>线性模式，单帧曝光</td></tr><tr><td>SENSOR_EXPO_FRAME_TYPE_2FRAMES</td><td>2帧HDR曝光模式</td></tr><tr><td>SENSOR_EXPO_FRAME_TYPE_3FRAMES</td><td>2帧HDR曝光模式</td></tr><tr><td>SENSOR_EXPO_FRAME_TYPE_4FRAMES</td><td>4帧HDR曝光模式</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="323-k_sensor_exposure_param">3.2.3 k_sensor_exposure_param<a href="#323-k_sensor_exposure_param" class="hash-link" aria-label="3.2.3 k_sensor_exposure_param的直接链接" title="3.2.3 k_sensor_exposure_param的直接链接">​</a></h4>
+<p>【说明】sensor曝光参数定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u8 exp_frame_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float gain[SENSOR_EXPO_FRAME_TYPE_MAX];</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float exp_time[SENSOR_EXPO_FRAME_TYPE_MAX];</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_exposure_param;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>exp_frame_type</td><td>曝光类型</td></tr><tr><td>gain</td><td>曝光增益</td></tr><tr><td>exp_time</td><td>曝光时间</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="324-k_sensor_intg_time">3.2.4 k_sensor_intg_time<a href="#324-k_sensor_intg_time" class="hash-link" aria-label="3.2.4 k_sensor_intg_time的直接链接" title="3.2.4 k_sensor_intg_time的直接链接">​</a></h4>
+<p>【说明】sensor曝光时间定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u8 exp_frame_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float intg_time[SENSOR_EXPO_FRAME_TYPE_MAX];</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_intg_time;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>exp_frame_type</td><td>曝光类型</td></tr><tr><td>intg_time</td><td>积分时间</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="325-k_sensor_gain">3.2.5 k_sensor_gain<a href="#325-k_sensor_gain" class="hash-link" aria-label="3.2.5 k_sensor_gain的直接链接" title="3.2.5 k_sensor_gain的直接链接">​</a></h4>
+<p>【说明】曝光增益定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u8 exp_frame_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float gain[SENSOR_EXPO_FRAME_TYPE_MAX];</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_gain;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>exp_frame_type</td><td>曝光类型</td></tr><tr><td>gain</td><td>曝光增益</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="326-k_sensor_size">3.2.6 k_sensor_size<a href="#326-k_sensor_size" class="hash-link" aria-label="3.2.6 k_sensor_size的直接链接" title="3.2.6 k_sensor_size的直接链接">​</a></h4>
+<p>【说明】sensor支持的图像尺寸定义</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 bounds_width;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 bounds_height;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 top;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 left;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 width;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 height;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_size;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>bounds_width</td><td>宽度边界</td></tr><tr><td>bounds_height</td><td>高度边界</td></tr><tr><td>top</td><td>顶部边界</td></tr><tr><td>left</td><td>左边界</td></tr><tr><td>width</td><td>宽度</td></tr><tr><td>height</td><td>高度</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="327-k_sensor_ae_info">3.2.7 k_sensor_ae_info<a href="#327-k_sensor_ae_info" class="hash-link" aria-label="3.2.7 k_sensor_ae_info的直接链接" title="3.2.7 k_sensor_ae_info的直接链接">​</a></h4>
+<p>【说明】ae参数配置</p>
+<p> 【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 frame_length;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 cur_frame_length;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float one_line_exp_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 gain_accuracy;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float min_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float max_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float integration_time_increment;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float gain_increment;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 max_long_integraion_line;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 min_long_integraion_line;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 max_integraion_line;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 min_integraion_line;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 max_vs_integraion_line;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u16 min_vs_integraion_line;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float max_long_integraion_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float min_long_integraion_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float max_integraion_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float min_integraion_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float max_vs_integraion_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float min_vs_integraion_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_long_integration_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_integration_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_vs_integration_time;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_long_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_long_again;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_long_dgain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_again;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_dgain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_vs_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_vs_again;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">float cur_vs_dgain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info long_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info vs_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info a_long_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info a_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info a_vs_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info d_long_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info d_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_gain_info d_vs_gain;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 max_fps;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 min_fps;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 cur_fps;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_auto_fps afps_info;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 hdr_ratio;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_ae_info;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>frame_length</td><td>帧长度</td></tr><tr><td>cur_frame_length</td><td>当前帧长度</td></tr><tr><td>one_line_exp_time</td><td>行曝光时间（单位：s）</td></tr><tr><td>gain_accuracy</td><td>Gain精度</td></tr><tr><td>min_gain</td><td>最小增益</td></tr><tr><td>max_gain</td><td>最大增益</td></tr><tr><td>integration_time_increment</td><td>积分时间的增量</td></tr><tr><td>gain_increment</td><td>增益的增量</td></tr><tr><td>max_long_integraion_line</td><td>最大长帧积分行</td></tr><tr><td>min_long_integraion_line</td><td>最小长帧积分行</td></tr><tr><td>max_integraion_line</td><td>最大中帧积分行</td></tr><tr><td>min_integraion_line</td><td>最小中帧积分行</td></tr><tr><td>max_vs_integraion_line</td><td>最大短帧积分行</td></tr><tr><td>min_vs_integraion_line</td><td>最小短帧积分行</td></tr><tr><td>max_long_integraion_time</td><td>最大长帧积时间</td></tr><tr><td>min_long_integraion_time</td><td>最小长帧积时间</td></tr><tr><td>max_integraion_time</td><td>最大中帧积时间</td></tr><tr><td>min_integraion_time</td><td>最小中帧积时间</td></tr><tr><td>max_vs_integraion_time</td><td>最大短帧积时间</td></tr><tr><td>min_vs_integraion_time</td><td>最小短帧积时间</td></tr><tr><td>cur_long_integration_time</td><td>当前长帧积分时间</td></tr><tr><td>cur_integration_time</td><td>当前帧积分时间</td></tr><tr><td>cur_vs_integration_time</td><td>当前短帧积分时间</td></tr><tr><td>cur_long_gain</td><td>当前长帧增益</td></tr><tr><td>cur_long_again</td><td>当前长帧模拟增益</td></tr><tr><td>cur_long_dgain</td><td>当前长帧数字增益</td></tr><tr><td>cur_gain</td><td>当前帧增益</td></tr><tr><td>cur_again</td><td>当前帧模拟增益</td></tr><tr><td>cur_dgain</td><td>当前帧数字增益</td></tr><tr><td>cur_vs_gain</td><td>当前短帧增益</td></tr><tr><td>cur_vs_again</td><td>当前短帧模拟增益</td></tr><tr><td>cur_vs_dgain</td><td>当前短帧数字增益</td></tr><tr><td>long_gain</td><td>长帧增益</td></tr><tr><td>gain</td><td>中增益</td></tr><tr><td>vs_gain</td><td>短帧增益</td></tr><tr><td>a_long_gain</td><td>长帧模拟增益</td></tr><tr><td>a_gain</td><td>中帧模拟增益</td></tr><tr><td>a_vs_gain</td><td>短帧模拟增益</td></tr><tr><td>d_long_gain</td><td>长帧数字增益</td></tr><tr><td>d_gain</td><td>中帧数字增益</td></tr><tr><td>d_vs_gain</td><td>短帧数字增益</td></tr><tr><td>max_fps</td><td>最大帧率</td></tr><tr><td>min_fps</td><td>最小帧率</td></tr><tr><td>cur_fps</td><td>当前帧率</td></tr><tr><td>hdr_ratio</td><td>HDR 比率</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="328-k_sensor_mode">3.2.8 k_sensor_mode<a href="#328-k_sensor_mode" class="hash-link" aria-label="3.2.8 k_sensor_mode的直接链接" title="3.2.8 k_sensor_mode的直接链接">​</a></h4>
+<p>【说明】sensor模式参数</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 index;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_vicap_sensor_type sensor_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_size size;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 fps;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 hdr_mode;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 stitching_mode;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 bit_width;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u32 bayer_pattern;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_mipi_info mipi_info;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_ae_info ae_info;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_sensor_reg_list *reg_list;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_mode;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>index</td><td>当前模式索引</td></tr><tr><td>sensor_type</td><td>Sensor配置类型</td></tr><tr><td>size</td><td>当前模式sensor尺寸</td></tr><tr><td>fps</td><td>帧率</td></tr><tr><td>hdr_mode</td><td>HDR模式</td></tr><tr><td>stitching_mode</td><td>HDR stiching模式</td></tr><tr><td>bit_width</td><td>输出数据宽度</td></tr><tr><td>bayer_pattern</td><td>拜耳模式</td></tr><tr><td>mipi_info</td><td>MIPI参数信息</td></tr><tr><td>ae_info</td><td>AE参数信息</td></tr><tr><td>reg_list</td><td>当前模式的寄存器配置列表</td></tr><tr><td>otp_type</td><td>otp 类型：sensor 自用的和user</td></tr><tr><td>otp_date</td><td>otp数据</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="329-k_sensor_otp_date">3.2.9 k_sensor_otp_date<a href="#329-k_sensor_otp_date" class="hash-link" aria-label="3.2.9 k_sensor_otp_date的直接链接" title="3.2.9 k_sensor_otp_date的直接链接">​</a></h4>
+<p>【说明】sensor otp参数</p>
+<p>【定义】</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">typedef struct {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u8 otp_type;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">k_u8 otp_date[20];</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} k_sensor_otp_date;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>【成员】</p>
+<table><thead><tr><th><strong>成员名称</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>otp_type</td><td>otp 类型：sensor 自用的和user</td></tr><tr><td>otp_date</td><td>otp数据</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-mapi">4. MAPI<a href="#4-mapi" class="hash-link" aria-label="4. MAPI的直接链接" title="4. MAPI的直接链接">​</a></h2>
+<p>该功能模块提供以下API：</p>
+<ul>
+<li>[kd_mapi_vicap_get_sensor_fd]</li>
+<li>[kd_mapi_vicap_get_sensor_info]</li>
+<li>[kd_mapi_vicap_set_dev_attr]</li>
+<li>[kd_mapi_vicap_set_chn_attr]</li>
+<li>[kd_mapi_vicap_start]</li>
+<li>[kd_mapi_vicap_stop]</li>
+<li>[kd_mapi_vicap_dump_frame]</li>
+<li>[kd_mapi_vicap_release_frame]</li>
+<li>[kd_mapi_vicap_set_vi_drop_frame]</li>
+<li>[kd_mapi_vicap_set_mclk]</li>
+<li>[kd_mapi_vicap_tuning]</li>
+<li>[kd_mapi_isp_ae_get_roi]</li>
+<li>[kd_mapi_isp_ae_set_roi]</li>
+<li>[kd_mapi_sensor_otpdata_get]</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-api">4.1 API<a href="#41-api" class="hash-link" aria-label="4.1 API的直接链接" title="4.1 API的直接链接">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="411-kd_mapi_vicap_get_sensor_fd">4.1.1 kd_mapi_vicap_get_sensor_fd<a href="#411-kd_mapi_vicap_get_sensor_fd" class="hash-link" aria-label="4.1.1 kd_mapi_vicap_get_sensor_fd的直接链接" title="4.1.1 kd_mapi_vicap_get_sensor_fd的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据指定的sensor获取文件描述符</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_get_sensor_fd(k_vicap_sensor_attr *sensor_attr)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>sensor_attr</td><td>Sensor属性</td><td>输入 &amp;   输出</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="412-kd_mapi_vicap_get_sensor_info">4.1.2 kd_mapi_vicap_get_sensor_info<a href="#412-kd_mapi_vicap_get_sensor_info" class="hash-link" aria-label="4.1.2 kd_mapi_vicap_get_sensor_info的直接链接" title="4.1.2 kd_mapi_vicap_get_sensor_info的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据指定的sensor配置类型获取sensor配置信息，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-get-sensor-info" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_get_sensor_info</a>，将 <code>sensor_type</code> 放入 <code>sensor_info.sensor_type</code> ，用法一致</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_get_sensor_info(k_vicap_sensor_info *sensor_info)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="413-kd_mapi_vicap_set_dev_attr">4.1.3 kd_mapi_vicap_set_dev_attr<a href="#413-kd_mapi_vicap_set_dev_attr" class="hash-link" aria-label="4.1.3 kd_mapi_vicap_set_dev_attr的直接链接" title="4.1.3 kd_mapi_vicap_set_dev_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置VICAP设备属性，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-dev-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_dev_attr</a>，将 <code>dev_num</code> 放入 <code>dev_info.vicap_dev</code>，用法一致</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_set_dev_attr(k_vicap_dev_set_info dev_info)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="414-kd_mapi_vicap_set_chn_attr">4.1.4 kd_mapi_vicap_set_chn_attr<a href="#414-kd_mapi_vicap_set_chn_attr" class="hash-link" aria-label="4.1.4 kd_mapi_vicap_set_chn_attr的直接链接" title="4.1.4 kd_mapi_vicap_set_chn_attr的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置VICAP通道属性，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-chn-attr" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_chn_attr</a>，将 <code>dev_num</code> 放入 <code>chn_info.vicap_dev</code>，将 <code>chn_num</code> 放入 <code>chn_info.vicap_chn</code>，用法一致</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_set_chn_attr(k_vicap_chn_set_info chn_info)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="415-kd_mapi_vicap_start">4.1.5 kd_mapi_vicap_start<a href="#415-kd_mapi_vicap_start" class="hash-link" aria-label="4.1.5 kd_mapi_vicap_start的直接链接" title="4.1.5 kd_mapi_vicap_start的直接链接">​</a></h4>
+<p>【描述】</p>
+<p><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-init" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_init</a> + <a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-start-stream" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_start_stream</a></p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_start(k_vicap_dev vicap_dev)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="416-kd_mapi_vicap_stop">4.1.6 kd_mapi_vicap_stop<a href="#416-kd_mapi_vicap_stop" class="hash-link" aria-label="4.1.6 kd_mapi_vicap_stop的直接链接" title="4.1.6 kd_mapi_vicap_stop的直接链接">​</a></h4>
+<p>【描述】</p>
+<p><a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-stop-stream" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_stop_stream</a> + <a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-deinit" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_deinit</a></p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_stop(k_vicap_dev vicap_dev)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败， 参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="417-kd_mapi_vicap_dump_frame">4.1.7 kd_mapi_vicap_dump_frame<a href="#417-kd_mapi_vicap_dump_frame" class="hash-link" aria-label="4.1.7 kd_mapi_vicap_dump_frame的直接链接" title="4.1.7 kd_mapi_vicap_dump_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>根据指定的设备和输出通道dump vicap数据，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-dump-frame" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_dump_frame</a></p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_dump_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap_dump_format foramt, k_video_frame_info *vf_info, k_u32 milli_sec)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>foramt</td><td>Dump数据类型</td><td>输入</td></tr><tr><td>vf_info</td><td>Dump帧信息</td><td>输出</td></tr><tr><td>milli_sec</td><td>超时时间</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="418-kd_mapi_vicap_release_frame">4.1.8 kd_mapi_vicap_release_frame<a href="#418-kd_mapi_vicap_release_frame" class="hash-link" aria-label="4.1.8 kd_mapi_vicap_release_frame的直接链接" title="4.1.8 kd_mapi_vicap_release_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>释放dump数据帧，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-dump-release" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_dump_release</a></p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_release_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, const k_video_frame_info *vf_info)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>dev_num</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>chn_num</td><td>VICAP输出通道号</td><td>输入</td></tr><tr><td>vf_info</td><td>Dump帧信息</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="419-kd_mapi_vicap_set_vi_drop_frame">4.1.9 kd_mapi_vicap_set_vi_drop_frame<a href="#419-kd_mapi_vicap_set_vi_drop_frame" class="hash-link" aria-label="4.1.9 kd_mapi_vicap_set_vi_drop_frame的直接链接" title="4.1.9 kd_mapi_vicap_set_vi_drop_frame的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置硬件丢帧，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mapi-vicap-set-vi-drop-frame" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_vi_drop_frame</a></p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_set_vi_drop_frame(k_vicap_csi_num csi, k_vicap_drop_frame *frame, k_bool enable)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>csi</td><td>VICAP设备号</td><td>输入</td></tr><tr><td>frame</td><td>结构体，见下</td><td></td></tr><tr><td>m</td><td>每隔 m 帧丢 n 帧</td><td>输入</td></tr><tr><td>n</td><td>每隔 m 帧丢 n 帧</td><td>输入</td></tr><tr><td>mode</td><td>hdr mode</td><td>输入</td></tr><tr><td>enable</td><td>是否开启</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4110-kd_mapi_vicap_set_mclk">4.1.10 kd_mapi_vicap_set_mclk<a href="#4110-kd_mapi_vicap_set_mclk" class="hash-link" aria-label="4.1.10 kd_mapi_vicap_set_mclk的直接链接" title="4.1.10 kd_mapi_vicap_set_mclk的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置 MCLK 频率，参见<a href="https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API%E5%8F%82%E8%80%83.html#kd-mpi-vicap-set-mclk" target="_blank" rel="noopener noreferrer">kd_mpi_vicap_set_mclk</a></p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_set_mclk(k_vicap_mclk_id id, k_vicap_mclk_sel sel, k_u8 mclk_div, k_u8 mclk_en)</p>
+<p>【参数】</p>
+<table><thead><tr><th><strong>参数名称</strong></th><th><strong>描述</strong></th><th><strong>输入/输出</strong></th></tr></thead><tbody><tr><td>id</td><td>MCLK ID</td><td>输入</td></tr><tr><td>sel</td><td>时钟源</td><td>输入</td></tr><tr><td>mclk_div</td><td>分频系数</td><td>输入</td></tr><tr><td>mclk_en</td><td>是否开启</td><td>输入</td></tr></tbody></table>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4111-kd_mapi_vicap_tuning">4.1.11 kd_mapi_vicap_tuning<a href="#4111-kd_mapi_vicap_tuning" class="hash-link" aria-label="4.1.11 kd_mapi_vicap_tuning的直接链接" title="4.1.11 kd_mapi_vicap_tuning的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>用于处理 tuning client 发送的命令</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_vicap_tuning(char* string, k_u32 size, char** response, k_u32* response_len)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_vicap_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4112-kd_mapi_isp_ae_get_roi">4.1.12 kd_mapi_isp_ae_get_roi<a href="#4112-kd_mapi_isp_ae_get_roi" class="hash-link" aria-label="4.1.12 kd_mapi_isp_ae_get_roi的直接链接" title="4.1.12 kd_mapi_isp_ae_get_roi的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取 AE ROI 配置</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_isp_ae_get_roi(k_vicap_dev dev_num, k_isp_ae_roi *ae_roi)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_isp_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4113-kd_mapi_isp_ae_set_roi">4.1.13 kd_mapi_isp_ae_set_roi<a href="#4113-kd_mapi_isp_ae_set_roi" class="hash-link" aria-label="4.1.13 kd_mapi_isp_ae_set_roi的直接链接" title="4.1.13 kd_mapi_isp_ae_set_roi的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>设置 AE ROI</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_isp_ae_set_roi(k_vicap_dev dev_num, k_isp_ae_roi ae_roi)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_isp_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4114-kd_mapi_sensor_otpdata_get">4.1.14 kd_mapi_sensor_otpdata_get<a href="#4114-kd_mapi_sensor_otpdata_get" class="hash-link" aria-label="4.1.14 kd_mapi_sensor_otpdata_get的直接链接" title="4.1.14 kd_mapi_sensor_otpdata_get的直接链接">​</a></h4>
+<p>【描述】</p>
+<p>获取sensor otp 数据</p>
+<p>【语法】</p>
+<p>k_s32 kd_mapi_sensor_otpdata_get(k_s32 sensor_type, k_sensor_otp_date *otp_data)</p>
+<p>【返回值】</p>
+<table><thead><tr><th><strong>返回值</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>0</td><td>成功。</td></tr><tr><td>非0</td><td>失败，参考错误码定义。</td></tr></tbody></table>
+<p>【芯片差异】</p>
+<p>无。</p>
+<p>【需求】</p>
+<ul>
+<li>头文件：mapi_isp_api.h</li>
+<li>库文件：libmapi.a</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-错误码">5. 错误码<a href="#5-错误码" class="hash-link" aria-label="5. 错误码的直接链接" title="5. 错误码的直接链接">​</a></h2>
+<p>表 41 VICAP API 错误码</p>
+<table><thead><tr><th>错误代码</th><th>宏定义</th><th>描述</th></tr></thead><tbody><tr><td>0xA0158001</td><td>K_ERR_VICAP_INVALID_DEVID</td><td>设备 ID 超出 合法范围</td></tr><tr><td>0xA0158002</td><td>K_ERR_VICAP_INVALID_CHNID</td><td>通道 ID 超出合法范围</td></tr><tr><td>0xA0158003</td><td>K_ERR_VICAP_ILLEGAL_PARAM</td><td>参数超出合法范围</td></tr><tr><td>0xA0158004</td><td>K_ERR_VICAP_EXIST</td><td>试图申请或者创建已经存在的设备、通道或者资源</td></tr><tr><td>0xA0158005</td><td>K_ERR_VICAP_UNEXIST</td><td>试图使用或者销毁不存在的设备、通道或者资源</td></tr><tr><td>0xA0158006</td><td>K_ERR_VICAP_NULL_PTR</td><td>函数参数中有空指针</td></tr><tr><td>0xA0158007</td><td>K_ERR_VICAP_NOT_CONFIG</td><td>使用前未配置</td></tr><tr><td>0xA0158008</td><td>K_ERR_VICAP_NOT_SUPPORT</td><td>不支持的参数或者功能</td></tr><tr><td>0xA0158009</td><td>K_ERR_VICAP_NOT_PERM</td><td>该操作不允许，如试图修改静态配置参数</td></tr><tr><td>0xA015800C</td><td>K_ERR_VICAP_NOMEM</td><td>分配内存失败，如系统内存不足</td></tr><tr><td>0xA015800D</td><td>K_ERR_VICAP_NOBUF</td><td>分配缓存失败，如申请的数据缓冲区太大</td></tr><tr><td>0xA015800E</td><td>K_ERR_VICAP_BUF_EMPTY</td><td>缓冲区中无数据</td></tr><tr><td>0xA015800F</td><td>K_ERR_VICAP_BUF_FULL</td><td>缓冲区中数据满</td></tr><tr><td>0xA0158010</td><td>K_ERR_VICAP_NOTREADY</td><td>系统没有初始化或没有加载相应模块</td></tr><tr><td>0xA0158011</td><td>K_ERR_VICAP_BADADDR</td><td>地址超出合法范围</td></tr><tr><td>0xA0158012</td><td>K_ERR_VICAP_BUSY</td><td>VICAP系统忙</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-调试信息">6. 调试信息<a href="#6-调试信息" class="hash-link" aria-label="6. 调试信息的直接链接" title="6. 调试信息的直接链接">​</a></h2>
+<p>VICAP内存管理和和系统绑定调试信息，请参考《K230 系统控制 API参考》。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/100askTeam/eLinuxAI-TrainingDocs/tree/main/docs/CanaanK230/part2/part3/09_K230VICAPAPIreference.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/CanaanK230/part2/part3/K230SHA256APIreference"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">K230 SHA256 API参考</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/CanaanK230/part2/part3/K230VICAPSENSORParameterpartitionreference"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">K230 VICAP SENSOR 参数分区参考</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-概述" class="table-of-contents__link toc-highlight">1. 概述</a><ul><li><a href="#11-概述" class="table-of-contents__link toc-highlight">1.1 概述</a></li><li><a href="#12-功能描述" class="table-of-contents__link toc-highlight">1.2 功能描述</a></li></ul></li><li><a href="#2-api-参考" class="table-of-contents__link toc-highlight">2. API 参考</a><ul><li><a href="#21-vicap" class="table-of-contents__link toc-highlight">2.1 VICAP</a></li><li><a href="#22-sensor" class="table-of-contents__link toc-highlight">2.2 Sensor</a></li></ul></li><li><a href="#3-数据类型" class="table-of-contents__link toc-highlight">3. 数据类型</a><ul><li><a href="#31-vicap" class="table-of-contents__link toc-highlight">3.1 VICAP</a></li><li><a href="#32-sensor" class="table-of-contents__link toc-highlight">3.2 Sensor</a></li></ul></li><li><a href="#4-mapi" class="table-of-contents__link toc-highlight">4. MAPI</a><ul><li><a href="#41-api" class="table-of-contents__link toc-highlight">4.1 API</a></li></ul></li><li><a href="#5-错误码" class="table-of-contents__link toc-highlight">5. 错误码</a></li><li><a href="#6-调试信息" class="table-of-contents__link toc-highlight">6. 调试信息</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://dongshanpi.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">DongshanPI<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://canaan-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Canaan-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://renesas-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Renesas-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://rtos.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">RTOS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://tina.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TinaSDK-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://allwinner-docs.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Allwinner-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://aw-r128.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">R128-Docs<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://space.bilibili.com/275908810" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiliBili<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://forums.100ask.net" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://video.100ask.net/" target="_blank" rel="noopener noreferrer" class="footer__link-item">VideoCenter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/dongshanpi" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://weidongshan.coding.net/public/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Coding<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/100askTeam" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://gitee.com/weidongshan" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitee<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 100askTeam, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
