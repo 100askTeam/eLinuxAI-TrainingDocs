@@ -37,7 +37,7 @@ sidebar_position: 2
 
  通过Type-C线将板连接到PC电脑，您可以使用DshanPI-CanMV盒子中的的Type-C线。连接指南如下所示：
 
-![image-20250329142707796](${images}/image-20250329142707796.png)
+![image-20250627093612460](${images}/image-20250627093612460.png)
 
 > 注意：需要将拨码开关调整为Boot0为ON,Boot1为OFF；并将电源开关拨向Type-C线方向。
 
@@ -75,3 +75,68 @@ sidebar_position: 2
 
 官方例程讲解教程：https://developer.canaan-creative.com/k230_canmv/zh/main/zh/example/index.html
 
+
+
+## [拓展]访问开发板的串口
+
+硬件要求：
+
+- USB转UART串口模块
+- Type-C转双串口模块
+
+软件注意事项：
+
+- MicroPython系统（默认）：UART0
+- RT-smart系统：UART0
+- Linux系统：UART0
+- Rt-smart+Linux双系统：UART0(Linux小核)，UART3(Rt-smart大核)
+
+
+
+### 使用Type-C访问串口
+
+将Type-C数据线接入Type-C双串口模块，杜邦线端接入USB转串口模块。连接成功后，USB转串口模块需要接入电脑，使用电脑访问串口模块，波特率为115200。
+
+> 注意：
+>
+> - Type-C双串口模块的RX需要连接USB转串口模块的TX。
+> - Type-C双串口模块的TX需要连接USB转串口模块的RX。
+> - Type-C双串口模块的GND需要连接USB转串口模块的GND。
+
+![image-20250627100241144](${images}/image-20250627100241144.png)
+
+> - MicroPython系统：只有UART0作为系统串口输出。
+> - RT-smart系统：只有UART0作为系统串口输出。
+> - Linux系统：只有UART0作为系统串口输出。
+> - Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。
+
+### 使用拓展排针访问串口
+
+在拓展排针上，硬件也将UART0和UART3引到了拓展排针上，即您可以使用USB转UART串口使用杜邦线连接拓展排针上的串口进行访问，可以查看硬件原理图中拓展排针部分，可知UART0和UART3的位置：
+
+![image-20250627102544058](${images}/image-20250627102544058.png)
+
+下面展示如何通过拓展排针访问UART0:
+
+![image-20250627104141126](${images}/image-20250627104141126.png)
+
+实际连接图如下所示：
+![image-20250627104829720](${images}/image-20250627104829720.png)
+
+> - MicroPython系统：只有UART0作为系统串口输出。
+> - RT-smart系统：只有UART0作为系统串口输出。
+> - Linux系统：只有UART0作为系统串口输出。
+> - Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。
+
+下面展示如何通过拓展排针访问UART3:
+
+![image-20250627104348893](${images}/image-20250627104348893.png)
+
+实际连接图如下所示：
+
+![image-20250627144635760](${images}/image-20250627144635760.png)
+
+> - MicroPython系统：只有UART0作为系统串口输出。
+> - RT-smart系统：只有UART0作为系统串口输出。
+> - Linux系统：只有UART0作为系统串口输出。
+> - Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。

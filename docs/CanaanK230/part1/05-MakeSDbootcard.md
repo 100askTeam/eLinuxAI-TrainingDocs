@@ -17,6 +17,10 @@ sidebar_position: 4
 
 开始前请下载DongshanPI-Vision开发板SD卡镜像，并记住它在计算机中保存的位置。
 
+> 开始前请注意：EMMC与SD卡不允许存在不同的系统，例如EMMC中MicroPython系统，SD不允许烧录Linux系统启动，请保证EMMC和SD中为同一系统或者清空EMMC，否则会导致启动异常！！！
+>
+> 请记住：同一块硬件只能同时存在一个系统！！！
+
 ## 1.格式化microSD卡
 
 将您的SD卡使用读卡器通过USB口插入您的PC电脑，使用SD卡格式化工具[SD Memory Card Formatter在新窗口打开](https://www.sdcard.org/downloads/formatter_4/eula_windows/)格式化您的SD卡。点击下图中红框位置，开始格式化内存卡。
@@ -74,5 +78,4 @@ sidebar_position: 4
 ![image-20250421105005687](${images}/image-20250421105005687.png)
 
 使用Type-C线连接开发板端和电脑端，用于给开发板进行供电和使用串口登录开发板控制台。
-
 
