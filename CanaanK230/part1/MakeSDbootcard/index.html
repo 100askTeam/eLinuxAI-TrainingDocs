@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">制作SD卡镜像 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://eai.100ask.net/CanaanK230/part1/MakeSDbootcard"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="制作SD卡镜像 | 东山Π"><meta data-rh="true" name="description" content="硬件要求："><meta data-rh="true" property="og:description" content="硬件要求："><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://eai.100ask.net/CanaanK230/part1/MakeSDbootcard"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part1/MakeSDbootcard" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/en/CanaanK230/part1/MakeSDbootcard" hreflang="en"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part1/MakeSDbootcard" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.e3ab61ce.css">
-<script src="/assets/js/runtime~main.2c754564.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9111a0f9.js" defer="defer"></script>
 <script src="/assets/js/main.c00dd409.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -22,6 +22,10 @@
 <li>SD卡刷机工具：<a href="https://rufus.ie/zh/" target="_blank" rel="noopener noreferrer">rufus</a></li>
 </ul>
 <p>开始前请下载DongshanPI-Vision开发板SD卡镜像，并记住它在计算机中保存的位置。</p>
+<blockquote>
+<p>开始前请注意：EMMC与SD卡不允许存在不同的系统，例如EMMC中MicroPython系统，SD不允许烧录Linux系统启动，请保证EMMC和SD中为同一系统或者清空EMMC，否则会导致启动异常！！！</p>
+<p>请记住：同一块硬件只能同时存在一个系统！！！</p>
+</blockquote>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="1格式化microsd卡">1.格式化microSD卡<a href="#1格式化microsd卡" class="hash-link" aria-label="1.格式化microSD卡的直接链接" title="1.格式化microSD卡的直接链接">​</a></h2>
 <p>将您的SD卡使用读卡器通过USB口插入您的PC电脑，使用SD卡格式化工具<a href="https://www.sdcard.org/downloads/formatter_4/eula_windows/" target="_blank" rel="noopener noreferrer">SD Memory Card Formatter在新窗口打开</a>格式化您的SD卡。点击下图中红框位置，开始格式化内存卡。</p>
 <p><img loading="lazy" src="http://photos.100ask.net/canaan-docs/image-20230721165711205.png" alt="image-20230721165711205" class="img_ev3q"></p>
