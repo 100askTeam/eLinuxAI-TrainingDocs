@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 # DshanPI-CanMV_V1 快速启动
 
