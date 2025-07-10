@@ -66,23 +66,23 @@ Sensor模块系统架构如下图1-4所示：
 
 该功能模块提供以下API：
 
-- [kd_mpi_vicap_get_sensor_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-sensor-info)
-- [kd_mpi_vicap_set_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dev-attr)
-- [kd_mpi_vicap_get_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-dev-attr)
-- [kd_mpi_vicap_set_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-chn-attr)
-- [kd_mpi_vicap_get_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-chn-attr)
-- [kd_mpi_vicap_init](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-init)
-- [kd_mpi_vicap_deinit](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-deinit)
-- [kd_mpi_vicap_start_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-start-stream)
-- [kd_mpi_vicap_stop_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-stop-stream)
-- [kd_mpi_vicap_dump_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-frame)
-- [kd_mpi_vicap_dump_release](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-release)
-- [kd_mpi_vicap_set_vi_drop_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-vi-drop-frame)
-- [kd_mpi_vicap_set_mclk](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-mclk)
-- [kd_mpi_vicap_set_dump_reserved](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dump-reserved)
-- [kd_mpi_vicap_set_slave_enable](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-slave-enable)
-- [kd_mpi_vicap_set_slave_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-slave-attr)
-- [kd_mpi_vicap_3d_mode_crtl](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-3d-mode-crtl)
+- [kd_mpi_vicap_get_sensor_info](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-sensor-info)
+- [kd_mpi_vicap_set_dev_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dev-attr)
+- [kd_mpi_vicap_get_dev_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-dev-attr)
+- [kd_mpi_vicap_set_chn_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-chn-attr)
+- [kd_mpi_vicap_get_chn_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-chn-attr)
+- [kd_mpi_vicap_init](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-init)
+- [kd_mpi_vicap_deinit](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-deinit)
+- [kd_mpi_vicap_start_stream](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-start-stream)
+- [kd_mpi_vicap_stop_stream](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-stop-stream)
+- [kd_mpi_vicap_dump_frame](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-frame)
+- [kd_mpi_vicap_dump_release](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-release)
+- [kd_mpi_vicap_set_vi_drop_frame](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-vi-drop-frame)
+- [kd_mpi_vicap_set_mclk](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-mclk)
+- [kd_mpi_vicap_set_dump_reserved](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dump-reserved)
+- [kd_mpi_vicap_set_slave_enable](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-slave-enable)
+- [kd_mpi_vicap_set_slave_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-slave-attr)
+- [kd_mpi_vicap_3d_mode_crtl](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-3d-mode-crtl)
 
 #### 2.1.1 kd_mpi_vicap_get_sensor_info
 
@@ -754,24 +754,24 @@ k_s32 kd_mpi_vicap_3d_mode_crtl(k_bool enable)
 
 该功能模块提供以下API：
 
-- [kd_mpi_sensor_open](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-open)
-- [kd_mpi_sensor_close](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-close)
-- [kd_mpi_sensor_power_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-power-set)
-- [kd_mpi_sensor_id_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-id-get)
-- [kd_mpi_sensor_init](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-init)
-- [kd_mpi_sensor_reg_read](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-reg-read)
-- [kd_mpi_sensor_reg_write](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-reg-write)
-- [kd_mpi_sensor_mode_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-mode-get)
-- [kd_mpi_sensor_mode_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-mode-set)
-- [kd_mpi_sensor_stream_enable](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-stream-enable)
-- [kd_mpi_sensor_again_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-again-set)
-- [kd_mpi_sensor_again_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-again-get)
-- [kd_mpi_sensor_dgain_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-dgain-set)
-- [kd_mpi_sensor_dgain_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-dgain-get)
-- [kd_mpi_sensor_intg_time_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-intg-time-set)
-- [kd_mpi_sensor_intg_time_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-intg-time-get)
-- [kd_mpi_sensor_otpdata_get](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-otpdata-get)
-- [kd_mpi_sensor_otpdata_set](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-otpdata-set)
+- [kd_mpi_sensor_open](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-open)
+- [kd_mpi_sensor_close](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-close)
+- [kd_mpi_sensor_power_set](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-power-set)
+- [kd_mpi_sensor_id_get](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-id-get)
+- [kd_mpi_sensor_init](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-init)
+- [kd_mpi_sensor_reg_read](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-reg-read)
+- [kd_mpi_sensor_reg_write](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-reg-write)
+- [kd_mpi_sensor_mode_get](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-mode-get)
+- [kd_mpi_sensor_mode_set](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-mode-set)
+- [kd_mpi_sensor_stream_enable](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-stream-enable)
+- [kd_mpi_sensor_again_set](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-again-set)
+- [kd_mpi_sensor_again_get](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-again-get)
+- [kd_mpi_sensor_dgain_set](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-dgain-set)
+- [kd_mpi_sensor_dgain_get](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-dgain-get)
+- [kd_mpi_sensor_intg_time_set](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-intg-time-set)
+- [kd_mpi_sensor_intg_time_get](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-intg-time-get)
+- [kd_mpi_sensor_otpdata_get](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-otpdata-get)
+- [kd_mpi_sensor_otpdata_set](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-sensor-otpdata-set)
 
 #### 2.2.1 kd_mpi_sensor_open
 
@@ -1553,21 +1553,21 @@ k_s32 kd_mpi_sensor_otpdata_set(k_s32 fd, void *ota_data)
 
 该功能模块的相关数据类型定义如下：
 
-- [k_vicap_sensor_type](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-sensor-type)
-- [k_vicap_dev](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dev)
-- [k_vicap_chn](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-chn)
-- [k_vicap_csi_num](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-csi-num)
-- [k_vicap_mipi_lanes](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-mipi-lanes)
-- [k_vicap_csi_data_type](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-csi-data-type)
-- [k_vicap_data_source](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-data-source)
-- [k_vicap_vi_dvp_port](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-vi-dvp-port)
-- [k_vicap_vi_flash_mode](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-vi-flash-mode)
-- [k_vicap_img_window](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-img-window)
-- [k_vicap_work_mode](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-work-mode)
-- [k_vicap_sensor_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-sensor-info)
-- [k_vicap_dump_format](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dump-format)
-- [k_vicap_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dev-attr)
-- [k_vicap_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-chn-attr)
+- [k_vicap_sensor_type](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-sensor-type)
+- [k_vicap_dev](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dev)
+- [k_vicap_chn](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-chn)
+- [k_vicap_csi_num](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-csi-num)
+- [k_vicap_mipi_lanes](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-mipi-lanes)
+- [k_vicap_csi_data_type](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-csi-data-type)
+- [k_vicap_data_source](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-data-source)
+- [k_vicap_vi_dvp_port](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-vi-dvp-port)
+- [k_vicap_vi_flash_mode](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-vi-flash-mode)
+- [k_vicap_img_window](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-img-window)
+- [k_vicap_work_mode](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-work-mode)
+- [k_vicap_sensor_info](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-sensor-info)
+- [k_vicap_dump_format](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dump-format)
+- [k_vicap_dev_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-dev-attr)
+- [k_vicap_chn_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-vicap-chn-attr)
 
 #### 3.1.1 k_vicap_sensor_type
 
@@ -2041,7 +2041,7 @@ typedef struct {
 | pipe_ctrl     | ISP pipeline 控制开关。                                      |
 | cpature_frame | 指定采集数据的帧数，输入范围[0,1023]，0：持续采集            |
 | sensor_info   | Sensor配置信息                                               |
-| dw_enable     | Dewarp使能（详见 [K230_SDK_Dewarp使用指南.md](https://developer.canaan-creative.com/k230/dev/zh/01_software/pc/dewarp/K230_SDK_Dewarp使用指南.html)） |
+| dw_enable     | Dewarp使能（详见 [K230_SDK_Dewarp使用指南.md](https://www.kendryte.com/k230/dev/zh/01_software/pc/dewarp/K230_SDK_Dewarp使用指南.html)） |
 | buffer_num    | 离线模式下，配置sensor接收数据的缓冲区个数                   |
 | buffer_size   | 离线模式下，配置sensor接收数据的缓冲区大小                   |
 | mirror        | sensor 的mirror 功能                                         |
@@ -2118,15 +2118,15 @@ VICAP_MIRROR_BOTH = 3,
 
 该功能模块的相关数据类型定义如下：
 
-- [k_sensor_bayer_pattern](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-bayer-pattern)
-- [k_sensor_exp_frame_type](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-exp-frame-type)
-- [k_sensor_exposure_param](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-exposure-param)
-- [k_sensor_intg_time](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-intg-time)
-- [k_sensor_gain](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-gain)
-- [k_sensor_size](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-size)
-- [k_sensor_ae_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-ae-info)
-- [k_sensor_mode](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-mode)
-- [k_sensor_otp_date](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-otp-date)
+- [k_sensor_bayer_pattern](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-bayer-pattern)
+- [k_sensor_exp_frame_type](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-exp-frame-type)
+- [k_sensor_exposure_param](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-exposure-param)
+- [k_sensor_intg_time](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-intg-time)
+- [k_sensor_gain](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-gain)
+- [k_sensor_size](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-size)
+- [k_sensor_ae_info](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-ae-info)
+- [k_sensor_mode](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-mode)
+- [k_sensor_otp_date](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#k-sensor-otp-date)
 
 #### 3.2.1 k_sensor_bayer_pattern
 
@@ -2506,7 +2506,7 @@ k_s32 kd_mapi_vicap_get_sensor_fd(k_vicap_sensor_attr *sensor_attr)
 
 【描述】
 
-根据指定的sensor配置类型获取sensor配置信息，参见[kd_mpi_vicap_get_sensor_info](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-sensor-info)，将 `sensor_type` 放入 `sensor_info.sensor_type` ，用法一致
+根据指定的sensor配置类型获取sensor配置信息，参见[kd_mpi_vicap_get_sensor_info](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-get-sensor-info)，将 `sensor_type` 放入 `sensor_info.sensor_type` ，用法一致
 
 【语法】
 
@@ -2532,7 +2532,7 @@ k_s32 kd_mapi_vicap_get_sensor_info(k_vicap_sensor_info *sensor_info)
 
 【描述】
 
-设置VICAP设备属性，参见[kd_mpi_vicap_set_dev_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dev-attr)，将 `dev_num` 放入 `dev_info.vicap_dev`，用法一致
+设置VICAP设备属性，参见[kd_mpi_vicap_set_dev_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-dev-attr)，将 `dev_num` 放入 `dev_info.vicap_dev`，用法一致
 
 【语法】
 
@@ -2558,7 +2558,7 @@ k_s32 kd_mapi_vicap_set_dev_attr(k_vicap_dev_set_info dev_info)
 
 【描述】
 
-设置VICAP通道属性，参见[kd_mpi_vicap_set_chn_attr](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-chn-attr)，将 `dev_num` 放入 `chn_info.vicap_dev`，将 `chn_num` 放入 `chn_info.vicap_chn`，用法一致
+设置VICAP通道属性，参见[kd_mpi_vicap_set_chn_attr](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-chn-attr)，将 `dev_num` 放入 `chn_info.vicap_dev`，将 `chn_num` 放入 `chn_info.vicap_chn`，用法一致
 
 【语法】
 
@@ -2584,7 +2584,7 @@ k_s32 kd_mapi_vicap_set_chn_attr(k_vicap_chn_set_info chn_info)
 
 【描述】
 
-[kd_mpi_vicap_init](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-init) + [kd_mpi_vicap_start_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-start-stream)
+[kd_mpi_vicap_init](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-init) + [kd_mpi_vicap_start_stream](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-start-stream)
 
 【语法】
 
@@ -2610,7 +2610,7 @@ k_s32 kd_mapi_vicap_start(k_vicap_dev vicap_dev)
 
 【描述】
 
-[kd_mpi_vicap_stop_stream](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-stop-stream) + [kd_mpi_vicap_deinit](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-deinit)
+[kd_mpi_vicap_stop_stream](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-stop-stream) + [kd_mpi_vicap_deinit](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-deinit)
 
 【语法】
 
@@ -2636,7 +2636,7 @@ k_s32 kd_mapi_vicap_stop(k_vicap_dev vicap_dev)
 
 【描述】
 
-根据指定的设备和输出通道dump vicap数据，参见[kd_mpi_vicap_dump_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-frame)
+根据指定的设备和输出通道dump vicap数据，参见[kd_mpi_vicap_dump_frame](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-frame)
 
 【语法】
 
@@ -2672,7 +2672,7 @@ k_s32 kd_mapi_vicap_dump_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, k_vicap
 
 【描述】
 
-释放dump数据帧，参见[kd_mpi_vicap_dump_release](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-release)
+释放dump数据帧，参见[kd_mpi_vicap_dump_release](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-dump-release)
 
 【语法】
 
@@ -2706,7 +2706,7 @@ k_s32 kd_mapi_vicap_release_frame(k_vicap_dev dev_num, k_vicap_chn chn_num, cons
 
 【描述】
 
-设置硬件丢帧，参见[kd_mpi_vicap_set_vi_drop_frame](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mapi-vicap-set-vi-drop-frame)
+设置硬件丢帧，参见[kd_mpi_vicap_set_vi_drop_frame](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mapi-vicap-set-vi-drop-frame)
 
 【语法】
 
@@ -2743,7 +2743,7 @@ k_s32 kd_mapi_vicap_set_vi_drop_frame(k_vicap_csi_num csi, k_vicap_drop_frame *f
 
 【描述】
 
-设置 MCLK 频率，参见[kd_mpi_vicap_set_mclk](https://developer.canaan-creative.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-mclk)
+设置 MCLK 频率，参见[kd_mpi_vicap_set_mclk](https://www.kendryte.com/k230/dev/zh/01_software/board/mpp/K230_VICAP_API参考.html#kd-mpi-vicap-set-mclk)
 
 【语法】
 

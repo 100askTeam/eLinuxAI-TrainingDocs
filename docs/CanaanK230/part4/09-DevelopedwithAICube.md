@@ -5,9 +5,9 @@ sidebar_position: 9
 
 > **注：**
 >
-> - **本章节使用SDK1.1.0版本和nncase2.4.0版本实现，后续更改请参考: [嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)->资料下载->Tools->AI Cube->AI_Cube_V##_用户指南**。
-> - **开发时需要注意版本对应，k230_sdk版本和nncase版本对应关系参考链接：[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)。**
-> - **MicroPython开发时需要注意版本对应，k230_canmv(MicroPython开发)版本和k230_sdk、nncase版本对应关系参考链接：[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**。
+> - **本章节使用SDK1.1.0版本和nncase2.4.0版本实现，后续更改请参考: [嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)->资料下载->Tools->AI Cube->AI_Cube_V##_用户指南**。
+> - **开发时需要注意版本对应，k230_sdk版本和nncase版本对应关系参考链接：[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)。**
+> - **MicroPython开发时需要注意版本对应，k230_canmv(MicroPython开发)版本和k230_sdk、nncase版本对应关系参考链接：[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**。
 > - **相关教学视频，见参考章节链接。**
 > - **AI Cube不支持AMD训练显卡。**
 
@@ -21,7 +21,7 @@ AI Cube是嘉楠为开发者提供的离线开发工具，该平台保证了数�
 
 现在以使用Ubuntu版本AI Cube实现蔬菜分类并在CanMV-K230上部署为例，介绍利用AI Cube快速开发的流程。请准备一台带有界面的ubuntu系统PC，安装cuda驱动。
 
-首先，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，选择Tools，下载Linux版本AI Cube，推荐使用V1.2版本。
+首先，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，选择Tools，下载Linux版本AI Cube，推荐使用V1.2版本。
 
 ![下载AI Cube_V1.2_Linux](${images}/download_ubuntu_aicube.png)
 
@@ -67,7 +67,7 @@ AI Cube包含5个功能页，“项目”页面主要实现项目管理功能，
 
 “图像”页面图示：
 
-![图像页面](https://developer.canaan-creative.com/ai_docs/zh/main/_images/ubuntu_ai_cube_image.png)
+![图像页面](https://www.kendryte.com/ai_docs/zh/main/_images/ubuntu_ai_cube_image.png)
 
 “拆分”页面图示：
 
@@ -199,13 +199,13 @@ AI Cube包含5个功能页，“项目”页面主要实现项目管理功能，
 
 #### 9.1.8.1 镜像烧录
 
-首先在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看9.1.7章节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
+首先在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看9.1.7章节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
 
 > **注：**
 >
 > **k230_sdk版本和nncase版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 **Linux:**
 
@@ -275,7 +275,7 @@ Serial Port选择两个连续的串口，波特率Speed(bps)选择115200。
 
 需要登录的是小核串口，进入后输入root登录；不需要登录的是大核串口，进入后按”q”回车，退出自启人脸识别程序。
 
-![双核串口](https://developer.canaan-creative.com/ai_docs/zh/main/_images/CanMV-K230-run.png)
+![双核串口](https://www.kendryte.com/ai_docs/zh/main/_images/CanMV-K230-run.png)
 
 - Windows系统PC端网络配置
 
@@ -415,13 +415,13 @@ cd /sharefs/test_cls
 
 #### 9.1.10.1 镜像烧录
 
-烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用9.1.8.1章节的方法进行烧录。
+烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用9.1.8.1章节的方法进行烧录。
 
 > **注：**
 >
 > **k230_canmv和k230_sdk、nncase的版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 #### 9.1.10.2 文件拷贝
 
@@ -429,7 +429,7 @@ cd /sharefs/test_cls
 
 #### 9.1.10.3 安装IDE
 
-安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
+安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
 
 ![CanMV IDE](${images}/canmv_ide-1721612628530-66.png)
 
@@ -471,7 +471,7 @@ cd /sharefs/test_cls
 
 ![dotnet sdk 7.0下载](${images}/windows_dotnet.png)
 
-首先，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，选择Tools，下载Windows版本AI Cube，推荐使用V1.2版本。
+首先，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，选择Tools，下载Windows版本AI Cube，推荐使用V1.2版本。
 
 ![Windows版本AI Cube](${images}/download_windows_aicube.png)
 
@@ -491,7 +491,7 @@ AI Cube包含5个功能页，“项目”页面主要实现项目管理功能，
 
 “图像”页面图示：
 
-![图像页面](https://developer.canaan-creative.com/ai_docs/zh/main/_images/windows_ai_cube_image.png)
+![图像页面](https://www.kendryte.com/ai_docs/zh/main/_images/windows_ai_cube_image.png)
 
 “拆分”页面图示：
 
@@ -591,13 +591,13 @@ insect
 
 #### 9.2.8.1 镜像烧录
 
-首先在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看9.2.7章节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
+首先在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看9.2.7章节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
 
 > **注：**
 >
 > **k230_sdk版本和nncase版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 **Linux:**
 
@@ -818,13 +818,13 @@ cd /sharefs/test_det
 
 #### 9.2.10.1 镜像烧录
 
-烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用9.2.8.1章节的方法进行烧录。
+烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用9.2.8.1章节的方法进行烧录。
 
 > **注：**
 >
 > **k230_canmv和k230_sdk、nncase的版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 #### 9.2.10.2 文件拷贝
 
@@ -832,7 +832,7 @@ cd /sharefs/test_det
 
 #### 9.2.10.3 安装IDE
 
-安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
+安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
 
 ![CanMV IDE](${images}/canmv_ide.png)
 

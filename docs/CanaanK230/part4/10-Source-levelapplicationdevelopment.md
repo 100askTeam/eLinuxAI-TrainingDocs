@@ -6,7 +6,7 @@ sidebar_position: 10
 > **注：**
 >
 > - **本章节使用SDK1.1.0版本和nncase2.4.0版本实现，后续更改请参考: [kendryte/K230_training_scripts (github.com)](https://github.com/kendryte/K230_training_scripts)**。
-> - **开发时需要注意版本对应，k230_sdk版本和nncase版本对应关系参考链接：[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)。**
+> - **开发时需要注意版本对应，k230_sdk版本和nncase版本对应关系参考链接：[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)。**
 > - **相关教学视频，见参考章节链接。**
 
 本章节介绍了KTS(k230_training_scripts)工具的使用方法和模型上板部署过程。KTS提供了分类、检测、翻译、关键词唤醒共四个任务从训练到部署的源码，覆盖cv、nlp、语音等多个模态。用户对源码可见，感兴趣的用户可以对源码进行修改，实现更换数据集、更换模型等部分。本工具适合对深度学习的不同模态的任务有比较成熟的了解，并希望使用k230开发板完成部署的用户。
@@ -66,7 +66,7 @@ pip install -r requriements.txt
 
 编译镜像和使用nncase转换kmodel时请注意版本对应关系，k230_sdk版本和nncase版本对应关系参考下述链接：
 
-**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
+**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
 
 您可以按照对应版本更换nncase和nncase-kpu的版本，比如更换nncase版本为2.7.0：
 
@@ -148,9 +148,9 @@ python3 inference.py
 
 编译镜像和使用nncase转换kmodel时请注意版本对应关系，k230_sdk版本和nncase版本对应关系参考下述链接：
 
-**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
+**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
 
-如果您选择使用[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)资料下载->K230->Images部分提供的镜像，请您注意版本对应关系下载烧录。
+如果您选择使用[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)资料下载->K230->Images部分提供的镜像，请您注意版本对应关系下载烧录。
 
 #### 10.1.4.1 Docker环境搭建
 
@@ -1621,7 +1621,7 @@ pip install -r requriements.txt
 
 编译镜像和使用nncase转换kmodel时请注意版本对应关系，k230_sdk版本和nncase版本对应关系参考下述链接：
 
-**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
+**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
 
 您可以按照对应版本更换nncase和nncase-kpu的版本，比如更换nncase版本为2.7.0：
 
@@ -1711,9 +1711,9 @@ python3 inference.py
 
 编译镜像和使用nncase转换kmodel时请注意版本对应关系，k230_sdk版本和nncase版本对应关系参考下述链接：
 
-**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
+**[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)**
 
-如果您选择使用[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)资料下载->K230->Images部分提供的镜像，请您注意版本对应关系下载烧录。
+如果您选择使用[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)资料下载->K230->Images部分提供的镜像，请您注意版本对应关系下载烧录。
 
 #### 10.2.4.1 Docker环境搭建
 

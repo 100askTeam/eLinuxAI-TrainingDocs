@@ -30,8 +30,8 @@ touch = TOUCH(index, type = TOUCH.TYPE_CST328, rotate = -1, range_x = -1, range_
 **参数**
 
 - `index`: `TOUCH` 设备号，为 `0` 时，表示使用系统自带的触摸，为 `1` 时，表示使用 `CanMV` 专有的触摸驱动
-- `type`: 触摸驱动类型，具体定义参考[触摸类型](https://developer.canaan-creative.com/k230_canmv/zh/main/zh/api/machine/K230_CanMV_TOUCH模块API手册.html#id6)
-- `rotate`: 面板输出坐标与屏幕坐标的旋转，取值范围为 [0-3]，具体定义参考[坐标旋转](https://developer.canaan-creative.com/k230_canmv/zh/main/zh/api/machine/K230_CanMV_TOUCH模块API手册.html#id5)。
+- `type`: 触摸驱动类型，具体定义参考[触摸类型](https://www.kendryte.com/k230_canmv/zh/main/zh/api/machine/K230_CanMV_TOUCH模块API手册.html#id6)
+- `rotate`: 面板输出坐标与屏幕坐标的旋转，取值范围为 [0-3]，具体定义参考[坐标旋转](https://www.kendryte.com/k230_canmv/zh/main/zh/api/machine/K230_CanMV_TOUCH模块API手册.html#id5)。
 - `range_x`: `index=1` 时有效，触摸输出坐标的宽度最大值
 - `range_y`: `index=1` 时有效，触摸输出坐标的高度最大值
 - `i2c`: `index=1` 时有效，触摸使用 `I2C` 总线对象
@@ -75,7 +75,7 @@ TOUCH.deinit()
 
 TOUCH_INFO 类用于存储触摸点的信息，用户可通过相关只读属性访问。
 
-- `event`: 事件码，具体参考[触摸事件](https://developer.canaan-creative.com/k230_canmv/zh/main/zh/api/machine/K230_CanMV_TOUCH模块API手册.html#id4)。
+- `event`: 事件码，具体参考[触摸事件](https://www.kendryte.com/k230_canmv/zh/main/zh/api/machine/K230_CanMV_TOUCH模块API手册.html#id4)。
 - `track_id`: 触点 ID，用于多点触摸。
 - `width`: 触点宽度。
 - `x`: 触点的 x 坐标。

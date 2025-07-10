@@ -29,7 +29,7 @@ sidebar_position: 30
 | 文档版本号 | 修改说明                                                     | 修改者 | 日期       |
 | ---------- | ------------------------------------------------------------ | ------ | ---------- |
 | V1.0       | 初版                                                         | 孙小朋 | 2023-09-18 |
-| V1.1       | 修改audio模块内存分配方式:所有模块统一由media.media分配内存，详见[示例程序](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Audio模块API手册.html#id9)中的修改:media.buffer_init() | 孙小朋 | 2023/10/12 |
+| V1.1       | 修改audio模块内存分配方式:所有模块统一由media.media分配内存，详见[示例程序](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Audio模块API手册.html#id9)中的修改:media.buffer_init() | 孙小朋 | 2023/10/12 |
 
 ## 1. 概述
 
@@ -276,7 +276,7 @@ def write_frames(self, data)
 
 ### 2.2 mpp.pyaudio
 
-pyaudio为音频处理模块，负责采集和播放二进制pcm音频数据。如想播放wav格式文件或将采集到的数据保存成wav文件，需与mpp.wave库配合使用，详见[示例程序](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Audio模块API手册.html#id9)部分。
+pyaudio为音频处理模块，负责采集和播放二进制pcm音频数据。如想播放wav格式文件或将采集到的数据保存成wav文件，需与mpp.wave库配合使用，详见[示例程序](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Audio模块API手册.html#id9)部分。
 
 #### 2.2.1 pyaudio.PyAudio
 

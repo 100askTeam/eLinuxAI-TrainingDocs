@@ -51,7 +51,7 @@ sidebar_position: 2
 
 ### 下载并安装IDE开发工具
 
-​	进入嘉楠开发者社区下载IDE开发工具：[嘉楠开发者社区下载中心](https://developer.canaan-creative.com/zh/resource?selected=0-2-1)
+​	进入嘉楠开发者社区下载IDE开发工具：[嘉楠开发者社区下载中心](https://www.kendryte.com/zh/resource?selected=0-2-1)
 
 ![image-20250329145733348](${images}/image-20250329145733348.png)
 
@@ -73,7 +73,7 @@ sidebar_position: 2
 
 
 
-官方例程讲解教程：https://developer.canaan-creative.com/k230_canmv/zh/main/zh/example/index.html
+官方例程讲解教程：https://www.kendryte.com/k230_canmv/zh/main/zh/example/index.html
 
 
 

@@ -160,7 +160,7 @@ K230 主板通过USB提供两路调试串口，windows下使用调试串口，�
 
 编译环境搭建涉及[sdk](https://github.com/kendryte/k230_sdk)、[nncase](https://github.com/kendryte/nncase)，sdk和nncase有一定的对应关系。我们今天以sdk v1.3.0，nncase v2.7.0为例，进行讲解。k230 sdk和nncase版本的对应关系请参考下述链接：
 
-[**K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)**](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)
+[**K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)**](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)
 
 #### 6.2.2.1 docker容器构建
 
@@ -242,7 +242,7 @@ pip install nncase-kpu==2.7.0
 5. **使用K230Runtime进行推理：**
    - 在K230上加载kmodel，使用K230Runtime进行推理。这确保模型在K230的运行效果。K230Runtime推理的主要流程包括预处理、运行、后处理。
 
-![pytorch2onnx2kmodel](https://developer.canaan-creative.com/ai_docs/zh/main/_images/pytorch2onnx2kmodel.png)
+![pytorch2onnx2kmodel](https://www.kendryte.com/ai_docs/zh/main/_images/pytorch2onnx2kmodel.png)
 
 整个流程通过将PyTorch模型经由ONNX中间格式，最终优化为适合K230的kmodel格式，实现了从PC端到K230的无缝部署。从pth/ckpt->onnx->kmodel，模型文件有3种文件格式，各种文件格式推理流程一一对应，因此转换完成后，我们需要在对应的推理流程下，验证转换模型的准确性。
 
@@ -432,7 +432,7 @@ python face_detector.py
 
 **编译模型API**的接口如下图所示。若是在github无法看到[K230_nncase_开发指南.md](https://github.com/kendryte/k230_docs/blob/main/zh/01_software/board/ai/K230_nncase_开发指南.md)文档中目录结构，可以下载到本地，使用Typora工具打开。
 
-![image-20240221130451008](https://developer.canaan-creative.com/ai_docs/zh/main/_images/image-20240221130451008.png)
+![image-20240221130451008](https://www.kendryte.com/ai_docs/zh/main/_images/image-20240221130451008.png)
 
 ##### 6.3.1.3.1 配置生成kmodel参数
 

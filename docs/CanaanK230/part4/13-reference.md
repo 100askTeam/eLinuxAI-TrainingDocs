@@ -23,7 +23,7 @@ nncase gitee：[nncase: Open deep learning compiler stack for Kendryte AI accele
 
 K230_AI_Demo_Development_Process_Analysis：[JayL323/K230_AI_Demo_Development_Process_Analysis: 基于K230的AI算法开发是把已训练好AI模型在PC上的推理流程，移植到K230开发板的过程 (github.com)](https://github.com/JayL323/K230_AI_Demo_Development_Process_Analysis/)
 
-嘉楠科技开发者社区：[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)
+嘉楠科技开发者社区：[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)
 
 在线训练平台教程视频：[嘉楠在线训练平台教程-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/677429436/channel/seriesdetail?sid=3697710&ctype=0)
 

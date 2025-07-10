@@ -41,16 +41,16 @@ sidebar_position: 22
 
 | 按钮                                                         | 描述                                         |
 | ------------------------------------------------------------ | -------------------------------------------- |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/111.png) | 将设置导出到文件                             |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/121.png) | 从文件导入设置                               |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/101.png) | 拍摄图像或视频                               |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/131.png) | 将本地raw图像或视频发送到调试服务器由ISP处理 |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/091.png) | 视频预览                                     |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/141.png) | 配置寄存器                                   |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/021.png) | 配置连接调试服务器                           |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/151.png) | 修改首选项                                   |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/191.png) | 在一个批次中调整多个参数                     |
-| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://developer.canaan-creative.com/k230/zh/dev/_images/161.png) | 提供对额外组件的访问                         |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/111.png) | 将设置导出到文件                             |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/121.png) | 从文件导入设置                               |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/101.png) | 拍摄图像或视频                               |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/131.png) | 将本地raw图像或视频发送到调试服务器由ISP处理 |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/091.png) | 视频预览                                     |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/141.png) | 配置寄存器                                   |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/021.png) | 配置连接调试服务器                           |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/151.png) | 修改首选项                                   |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/191.png) | 在一个批次中调整多个参数                     |
+| ![Graphical User Interface,Text,Application,Email Description is automatically generated](https://www.kendryte.com/k230/zh/dev/_images/161.png) | 提供对额外组件的访问                         |
 
 (3) 工程管理区域：选择和管理不同工程
 
@@ -64,7 +64,7 @@ sidebar_position: 22
 
 #### 3.1.1 使用HTTP方式连接板端tuning-server
 
-SDK默认支持HTTP方式连接，点击工具栏中的配置连接调试服务器按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://developer.canaan-creative.com/k230/zh/dev/_images/021.png)，将弹出图3-2。
+SDK默认支持HTTP方式连接，点击工具栏中的配置连接调试服务器按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://www.kendryte.com/k230/zh/dev/_images/021.png)，将弹出图3-2。
 
 ![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](${images}/031.png)
 
@@ -212,7 +212,7 @@ DCI模块实现对图像的动态对比度调整。
 
 #### 3.4.1 设置图像格式和大小
 
-点击工具栏中的预览按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://developer.canaan-creative.com/k230/zh/dev/_images/091.png)，将弹出图3-7。
+点击工具栏中的预览按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://www.kendryte.com/k230/zh/dev/_images/091.png)，将弹出图3-7。
 
 ![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](${images}/081.png)
 
@@ -228,7 +228,7 @@ DCI模块实现对图像的动态对比度调整。
 
 #### 3.4.2 采集图像
 
-点击工具栏中的拍摄按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://developer.canaan-creative.com/k230/zh/dev/_images/101.png)，将弹出图3-9。
+点击工具栏中的拍摄按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://www.kendryte.com/k230/zh/dev/_images/101.png)，将弹出图3-9。
 
 ![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](${images}/181.png)
 
@@ -242,7 +242,7 @@ DCI模块实现对图像的动态对比度调整。
 
 工具默认支持导入的参数文件为标准xml和json格式，分为标定参数和tuning参数两部分，支持PC本地导入。
 
-点击工具栏中的导入按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://developer.canaan-creative.com/k230/zh/dev/_images/121.png)，将弹出图3-10。
+点击工具栏中的导入按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://www.kendryte.com/k230/zh/dev/_images/121.png)，将弹出图3-10。
 
 ![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](${images}/import.png)
 
@@ -254,7 +254,7 @@ DCI模块实现对图像的动态对比度调整。
 
 工具默认导出方式会将在线调试参数汇总为一个json文件存放。
 
-点击工具栏中的导出按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://developer.canaan-creative.com/k230/zh/dev/_images/111.png)，将弹出图3-11。
+点击工具栏中的导出按钮![图形用户界面, 文本, 应用程序 描述已自动生成](https://www.kendryte.com/k230/zh/dev/_images/111.png)，将弹出图3-11。
 
 ![图形用户界面, 文本, 应用程序, 电子邮件 描述已自动生成](${images}/export.png)
 

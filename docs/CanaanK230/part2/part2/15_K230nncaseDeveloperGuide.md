@@ -2013,7 +2013,7 @@ int main(int argc, char *argv[])
 
 ### 5.1 简介
 
-AI2D运行时APIs用于在AI设备配置AI2D的参数，生成相关寄存器配置，执行AI2D计算等。请在使用前阅读最后一部分[注意事项](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/ai/K230_nncase_开发指南.html#id24)。
+AI2D运行时APIs用于在AI设备配置AI2D的参数，生成相关寄存器配置，执行AI2D计算等。请在使用前阅读最后一部分[注意事项](https://www.kendryte.com/k230/zh/dev/01_software/board/ai/K230_nncase_开发指南.html#id24)。
 
 #### 5.1.1 支持的格式转换
 

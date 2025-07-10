@@ -292,7 +292,7 @@ demo实现思路:该测试通过循环调用api函数：`kd_mpi_ao_send_frame`�
 
 通过调用系统绑定api接口：`kd_mpi_sys_bind`将ai和ao模块绑定，来测试音频输入和输出整体功能。用户可以按任意键来退出该功能测试。
 
-![文本 描述已自动生成](https://developer.canaan-creative.com/k230/zh/dev/_images/2bd93e4768f76c6af98aa69137156f09.png)
+![文本 描述已自动生成](https://www.kendryte.com/k230/zh/dev/_images/2bd93e4768f76c6af98aa69137156f09.png)
 
 ###### 2.5.3.2.5 编码测试
 
@@ -1073,7 +1073,7 @@ PC的相机应用或安装PotPlayer软件
 
 小核linux实现USB驱动功能，通过mapi从大核获取摄像头图像。
 
-参考 [K230_USB应用实战_UVC传输YUV及编码码流](https://developer.canaan-creative.com/k230/zh/dev/02_applications/tutorials/K230_USB应用实战_UVC传输YUV及编码码流.html)
+参考 [K230_USB应用实战_UVC传输YUV及编码码流](https://www.kendryte.com/k230/zh/dev/02_applications/tutorials/K230_USB应用实战_UVC传输YUV及编码码流.html)
 
 ##### 2.15.4.2 执行
 

@@ -6,7 +6,7 @@ sidebar_position: 17
 
 ## 1.镜像说明
 
-镜像请从[嘉楠开发者社区](https://developer.canaan-creative.com/resource?selected=0-0-1) 下载，在嘉楠开发者社区网站的k230/images下面可以找到debian和ubuntu相关文件。
+镜像请从[嘉楠开发者社区](https://www.kendryte.com/resource?selected=0-0-1) 下载，在嘉楠开发者社区网站的k230/images下面可以找到debian和ubuntu相关文件。
 
 1.1). 类似xxxx_debian_sdcard_x.x.img.gz文件是k230 的debian镜像压缩包：
 
@@ -73,7 +73,7 @@ tar -czvf debian13.ext4.tar.gz debian13.ext4
 
 ### 2.3 镜像制作
 
-1).下载k230 sdk并进行编译：备注：sdk编译相关问题请[参考](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html#id12)
+1).下载k230 sdk并进行编译：备注：sdk编译相关问题请[参考](https://www.kendryte.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html#id12)
 
 ```
 git clone git@github.com:kendryte/k230_sdk.git
@@ -118,7 +118,7 @@ make build-image
 
 5).烧录到tf卡，并重启设备
 
-把output/k230_canmv_only_linux_defconfig/images/sysimage-sdcard.img 文件烧录到tf卡，把tf卡插入设备并重启设备。烧录方法可以[参考](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html#id21)。
+把output/k230_canmv_only_linux_defconfig/images/sysimage-sdcard.img 文件烧录到tf卡，把tf卡插入设备并重启设备。烧录方法可以[参考](https://www.kendryte.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html#id21)。
 
 备注：网口不稳定，如果找不到网口，请重启设备试下。
 
@@ -212,7 +212,7 @@ tar -czvf ubuntu23_rootfs.ext4.tar.gz ubuntu23_rootfs.ext4
 
 ### 3.3 镜像制作及验证
 
-1).下载k230 sdk并进行编译：备注：sdk编译相关问题请[参考](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html#id16)
+1).下载k230 sdk并进行编译：备注：sdk编译相关问题请[参考](https://www.kendryte.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html#id16)
 
 ```
 git clone git@github.com:kendryte/k230_sdk.git
@@ -257,7 +257,7 @@ make build-image
 
 5).烧录到tf卡，并重启设备
 
-把output/k230_canmv_only_linux_defconfig/images/sysimage-sdcard.img 文件烧录到tf卡，把tf卡插入设备并重启设备。烧录方法可以[参考](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html)。
+把output/k230_canmv_only_linux_defconfig/images/sysimage-sdcard.img 文件烧录到tf卡，把tf卡插入设备并重启设备。烧录方法可以[参考](https://www.kendryte.com/k230/zh/dev/01_software/board/K230_SDK_使用说明.html)。
 
 备注：网口不稳定，如果找不到网口，请重启设备试下。
 
@@ -283,7 +283,7 @@ gcc a.c
 
 ### 4.1 安装Qt, lxqt
 
-参考[debian根文件系统制作](https://developer.canaan-creative.com/k230/zh/dev/03_other/K230_debian_ubuntu说明.html#debian-rootfs)或[ubuntu根文件系统制作](https://developer.canaan-creative.com/k230/zh/dev/03_other/K230_debian_ubuntu说明.html#k230-ubuntu)步骤
+参考[debian根文件系统制作](https://www.kendryte.com/k230/zh/dev/03_other/K230_debian_ubuntu说明.html#debian-rootfs)或[ubuntu根文件系统制作](https://www.kendryte.com/k230/zh/dev/03_other/K230_debian_ubuntu说明.html#k230-ubuntu)步骤
 
 ```
 chroot /path/to/rootfs

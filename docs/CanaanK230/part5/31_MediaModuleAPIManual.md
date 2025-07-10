@@ -41,7 +41,7 @@ K230 CanMV平台media模块提供MediaManager静态类，该类提供以下章�
 
 【描述】
 
-用户[配置](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Media模块API手册.html#config)完`buffer`之后，调用`init`进行初始化，必须在最后进行调用
+用户[配置](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Media模块API手册.html#config)完`buffer`之后，调用`init`进行初始化，必须在最后进行调用
 
 【语法】
 
@@ -192,9 +192,9 @@ MediaManager.link(src=(mod,dev,chn), dst = (mod,dev,chn))
 
 【描述】
 
-用户在[_config](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Media模块API手册.html#config)之后，可通过`MediaManager.Buffer.get`获取`buffer`
+用户在[_config](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Media模块API手册.html#config)之后，可通过`MediaManager.Buffer.get`获取`buffer`
 
-**必须在[init](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Media模块API手册.html#init)执行之后才能获取**
+**必须在[init](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Media模块API手册.html#init)执行之后才能获取**
 
 【语法】
 

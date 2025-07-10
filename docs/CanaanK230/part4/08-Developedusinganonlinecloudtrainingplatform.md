@@ -5,9 +5,9 @@ sidebar_position: 8
 
 > **注：**
 >
-> - **本章节使用SDK1.1.0版本和nncase2.4.0版本实现，后续更改请参考: [嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)->资料下载->Tools->云训练平台->在线训练平台使用文档V2**。
-> - **开发时需要注意版本对应，k230_sdk版本和nncase版本对应关系参考链接：[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)。**
-> - **MicroPython开发时需要注意版本对应，k230_canmv(MicroPython开发)版本和k230_sdk、nncase版本对应关系参考链接：[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**。
+> - **本章节使用SDK1.1.0版本和nncase2.4.0版本实现，后续更改请参考: [嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)->资料下载->Tools->云训练平台->在线训练平台使用文档V2**。
+> - **开发时需要注意版本对应，k230_sdk版本和nncase版本对应关系参考链接：[K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com)](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)。**
+> - **MicroPython开发时需要注意版本对应，k230_canmv(MicroPython开发)版本和k230_sdk、nncase版本对应关系参考链接：[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**。
 > - **相关教学视频，见参考章节链接。**
 
 本章节对在线训练平台的应用和模型在K230开发板的部署进行了介绍，以图像分类和目标检测为例，提供了详细的使用流程，帮助用户尽快上手，使用在线训练平台将任务在K230开发板上运行成功。在线训练平台适合没有计算资源，并不关注训练过程的用户使用。
@@ -16,7 +16,7 @@ sidebar_position: 8
 
 ### 8.1.1 平台注册
 
-首先，新用户需要进入[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/model/training) 注册，注册完成后登录系统。
+首先，新用户需要进入[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/model/training) 注册，注册完成后登录系统。
 
 ### 8.1.2 创建项目
 
@@ -97,13 +97,13 @@ sidebar_position: 8
 
 #### 8.1.5.1 镜像烧录
 
-首先在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看上一节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
+首先在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看上一节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
 
 > **注：**
 >
 > **k230_sdk版本和nncase版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 **Linux:**
 
@@ -312,13 +312,13 @@ cd /sharefs/test_cls
 
 #### 8.1.7.1 镜像烧录
 
-烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用8.1.5.1章节的方法进行烧录。
+烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用8.1.5.1章节的方法进行烧录。
 
 > **注：**
 >
 > **k230_canmv和k230_sdk、nncase的版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 #### 8.1.7.2 文件拷贝
 
@@ -326,7 +326,7 @@ cd /sharefs/test_cls
 
 #### 8.1.7.3 安装IDE
 
-安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
+安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
 
 ![CanMV IDE](${images}/canmv_ide.png)
 
@@ -362,7 +362,7 @@ cd /sharefs/test_cls
 
 ### 8.2.1 平台注册
 
-首先，新用户需要进入[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/model/training) 注册，注册完成后登录系统。
+首先，新用户需要进入[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/model/training) 注册，注册完成后登录系统。
 
 ### 8.2.2 创建项目
 
@@ -455,13 +455,13 @@ cd /sharefs/test_cls
 
 #### 8.2.5.1 镜像烧录
 
-首先在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看上一节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
+首先在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，选择K230->Images，选择K230_canmv_sdcard_v##_nncase_v###.img.gz，通过查看上一节得到的deploy_config.json中的”nncase_version”字段选择对应版本的镜像。
 
 > **注：**
 >
 > **k230_sdk版本和nncase版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 **Linux:**
 
@@ -670,13 +670,13 @@ cd /sharefs/test_det
 
 #### 8.2.7.1 镜像烧录
 
-烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用8.2.5.1章节的方法进行烧录。
+烧录MicroPython的镜像，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的K230/Images，选择CanMV-K230_micropython_v##_sdk_v##__nncase_v###.img.gz下载。版本选择请参考deploy_config.json文件中的“nncase_version”字段。并使用8.2.5.1章节的方法进行烧录。
 
 > **注：**
 >
 > **k230_canmv和k230_sdk、nncase的版本对应关系请查看链接：**
 >
-> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
+> **[CanMV-K230_SDK_nncase版本对应关系 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230_SDK_nncase版本对应关系.html)**
 
 #### 8.2.7.2 文件拷贝
 
@@ -684,7 +684,7 @@ cd /sharefs/test_det
 
 #### 8.2.7.3 安装IDE
 
-安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://developer.canaan-creative.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
+安装CanMV IDE，在[嘉楠开发者社区 (canaan-creative.com)](https://www.kendryte.com/resource)的资料下载页面，点击左侧的Tools，根据您的系统下载图中CanMV IDE不同版本的安装包安装。
 
 ![CanMV IDE](${images}/canmv_ide-1721612451704-121.png)
 

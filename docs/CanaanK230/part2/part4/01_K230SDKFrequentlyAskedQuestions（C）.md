@@ -339,7 +339,7 @@ make clean; make;
 
 ## 14 支持的sensor list在哪里
 
-答：请参考 [K230_Camera_Sensor适配指南](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_Camera_Sensor适配指南.html) 第4.1章节“支持的sensor类型”，目前支持
+答：请参考 [K230_Camera_Sensor适配指南](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_Camera_Sensor适配指南.html) 第4.1章节“支持的sensor类型”，目前支持
 
 ov9732
 
@@ -581,7 +581,7 @@ all:
 
 ## 22 支持的屏有哪些？
 
-答：移植新的屏请参考 [K230_LCD适配指南](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_LCD适配指南.html)。 目前我们支持的屏有
+答：移植新的屏请参考 [K230_LCD适配指南](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_LCD适配指南.html)。 目前我们支持的屏有
 
 | 品牌     | 型号          | 屏驱型号 | 分辨率                     | 帧率                 | 备注 |
 | -------- | ------------- | -------- | -------------------------- | -------------------- | ---- |

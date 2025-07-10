@@ -23,10 +23,10 @@ ISP对sensor输出的信号进行实时处理的过程中，调优参数和标�
 
 制作步骤如下：
 
-- [第一步，转换头文件](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id6)
-- [第二步，转换二进制文件](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id7)
-- [第三步，使用方法](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id12)
-- [注意事项](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id13)
+- [第一步，转换头文件](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id6)
+- [第二步，转换二进制文件](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id7)
+- [第三步，使用方法](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id12)
+- [注意事项](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id13)
 
 ### 2.2 制作步骤
 
@@ -89,7 +89,7 @@ static const TUNING_PARAM_T database_tuning_param =
 
 calib data、auto data、manual data分别由外部指定的配置文件解析生成
 
-dewarp data需要根据实际配置替换在结构体中，参考[dewarp参数配置](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#dewarp)
+dewarp data需要根据实际配置替换在结构体中，参考[dewarp参数配置](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#dewarp)
 
 version info为转变换工具自动生成，描述sensor name以及创建日期
 
@@ -97,12 +97,12 @@ version info为转变换工具自动生成，描述sensor name以及创建日期
 
 二进制文件由header、配置参数、padding、dewarp参数四个文件拼接而成，考虑到参数分区的实际分配大小，建议最多添加三组配置文件
 
-- [第一步，header制作](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#header)
-- [第二步，配置参数二进制文件制作](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id8)
-- [第三步，padding文件制作](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#padding)
-- [第四步，dewarp参数配置](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#dewarp)
-- [第五步，合并文件](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id9)
-- [其他，脚本化制作方法（推荐使用）](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id10)
+- [第一步，header制作](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#header)
+- [第二步，配置参数二进制文件制作](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id8)
+- [第三步，padding文件制作](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#padding)
+- [第四步，dewarp参数配置](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#dewarp)
+- [第五步，合并文件](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id9)
+- [其他，脚本化制作方法（推荐使用）](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id10)
 
 ##### 2.2.2.1 header制作
 
@@ -118,7 +118,7 @@ version info为转变换工具自动生成，描述sensor name以及创建日期
 
 格式要求为驱动中对应的sensor名称-宽x高，如imx335-2592x1944的配置在驱动中对应的sensor name为imx335且分辨率为2592x1944，则修改FILENAME_0X为”imx335-2592x1944”，该定义将作为使用参数分区时的校验头，如果校验头不匹配，则会默认使用配置文件加载的方式进行读取，并在log中打印相应的警告提示，且校验头定义的名称唯一，不能重复。
 
-可添加三组校验头，一旦顺序固定，则参数分区的顺序也需要与校验头同步，同步方法参考后文[二进制文件制作](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id8)。
+可添加三组校验头，一旦顺序固定，则参数分区的顺序也需要与校验头同步，同步方法参考后文[二进制文件制作](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_VICAP_SENSOR_参数分区参考.html#id8)。
 
 修改定义后将该源码编译为可执行程序并执行，得到header: sensor_cfg_calib_header.bin
 

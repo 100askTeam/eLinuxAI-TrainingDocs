@@ -172,7 +172,7 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [acodec](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_播放器模块API手册.html)
+具体接口定义请参考 [acodec](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_播放器模块API手册.html)
 
 ## 2.audio - 音频采集输出例程
 
@@ -322,7 +322,7 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [audio](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Audio模块API手册.html)
+具体接口定义请参考 [audio](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Audio模块API手册.html)
 
 ## 3.Camera - 摄像头预览及图像采集示例
 
@@ -398,7 +398,7 @@ finally:
 
 
 
-具体接口定义请参考 [camera](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html)
+具体接口定义请参考 [camera](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html)
 
 ## 4. Camera - 多摄像头预览及图像采集示例
 
@@ -475,7 +475,7 @@ finally:
 
 
 
-具体接口定义请参考 [camera](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html)
+具体接口定义请参考 [camera](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html)
 
 ## 5. Display - 图像采集显示实例
 
@@ -538,7 +538,7 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [display](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html)
+具体接口定义请参考 [display](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html)
 
 ## 6. mp4 muxer 例程
 
@@ -594,7 +594,7 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [VENC](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_MP4模块API手册.html)
+具体接口定义请参考 [VENC](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_MP4模块API手册.html)
 
 ## 8. player - mp4 文件播放器例程
 
@@ -644,7 +644,7 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [player](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_播放器模块API手册.html)
+具体接口定义请参考 [player](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_播放器模块API手册.html)
 
 ## 9. venc - venc 例程
 
@@ -753,7 +753,7 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [VENC](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_VENC模块API手册.html)
+具体接口定义请参考 [VENC](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_VENC模块API手册.html)
 
 ## 10. lvgl - lvgl 例程
 
@@ -879,4 +879,4 @@ if __name__ == "__main__":
 
 
 
-具体接口定义请参考 [lvgl](https://developer.canaan-creative.com/k230_canmv/main/zh/api/lvgl/lvgl.html)
+具体接口定义请参考 [lvgl](https://www.kendryte.com/k230_canmv/main/zh/api/lvgl/lvgl.html)

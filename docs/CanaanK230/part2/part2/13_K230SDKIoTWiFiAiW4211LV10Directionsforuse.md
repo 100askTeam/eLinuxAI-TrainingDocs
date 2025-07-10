@@ -14,7 +14,7 @@ AiW4211LV10是一款低功耗IoT WiFi芯片，我司采用该芯片平台设计�
 
 WiFi主要功能如图1-1所示：
 
-![WiFi功能框图](https://developer.canaan-creative.com/k230/zh/dev/_images/f09a29152cf3ccca9d2e2602a62f6d64.png)
+![WiFi功能框图](https://www.kendryte.com/k230/zh/dev/_images/f09a29152cf3ccca9d2e2602a62f6d64.png)
 
 图1-1 WiFi功能框图
 
@@ -238,7 +238,7 @@ AiW4211LV10开发板支持通过消息通道配置目标AP参数（与5.3.1功�
 
 step 1: 准备一个路由器并启动热点 step 2: 将PC接入该热点，然后启动NetAssist，这里为简单起见使用PC+NetAssist作为远端保活服务器 step 3: 配置NetAssist作为 tcp socket server等待WiFi保活链路的接入 step 4: K230端根据热点信息和NetAssist启动的server信息编辑配置文件/etc/wifi.conf step 5: 运行配置工具client端，解析配置文件，发送配置消息：iotwifi_cli –config /etc/wifi.conf step 6: AiW4211LV10接收到配置参数之后，首先存储休眠参数，然后接入指定AP，最后建立tcp socket client连入NetAssist建立的 tcp socket server
 
-/etc/wifi.conf是WiFi工作参数配置文件，以json格式编写，基本上是对[wifi_config_t](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-config-t)结构体的映射，具体可参考6.1.2章节。文件内容如下：
+/etc/wifi.conf是WiFi工作参数配置文件，以json格式编写，基本上是对[wifi_config_t](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-config-t)结构体的映射，具体可参考6.1.2章节。文件内容如下：
 
 ```
 {
@@ -276,7 +276,7 @@ step 1: 准备一个路由器并启动热点 step 2: 将PC接入该热点，然�
 
 ##### 5.3.2.2 通过调用API配置
 
-在实际的业务程序中，可以通过调用通信接口共享库libhal_iotwifi.so提供的API接口[kd_wifi_config](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-config-t)进行参数配置，API说明请参考6.1.1章节，配置步骤与5.3.2.1相同。
+在实际的业务程序中，可以通过调用通信接口共享库libhal_iotwifi.so提供的API接口[kd_wifi_config](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-config-t)进行参数配置，API说明请参考6.1.1章节，配置步骤与5.3.2.1相同。
 
 5.3.2.1节当中介绍的工具iotwifi_cli也是通过调用该接口实现WiFi参数配置的。
 
@@ -292,7 +292,7 @@ step 1: 准备一个路由器并启动热点 step 2: 将PC接入该热点，然�
 
 #### 5.4.2 通过调用API休眠
 
-在实际的业务程序中，可以通过调用通信接口共享库libhal_iotwifi.so提供的API接口[kd_wifi_sleep](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#sleep)触发WiFi休眠，具体请参考6.2章节。
+在实际的业务程序中，可以通过调用通信接口共享库libhal_iotwifi.so提供的API接口[kd_wifi_sleep](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#sleep)触发WiFi休眠，具体请参考6.2章节。
 
 工具iotwifi_cli也是通过调用该接口触发WiFi休眠的。
 
@@ -330,7 +330,7 @@ AiW4211LV10驱动加载后生成的无线网卡与一般WiFi网卡无异，因�
 
 #### 6.1.1 API
 
-int kd_wifi_config([wifi_config_t](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-config-t) *config) 配置WiFi工作参数：
+int kd_wifi_config([wifi_config_t](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-config-t) *config) 配置WiFi工作参数：
 
 - 配置目标AP的名称、密码、认证及加密方式
 - 配置WiFi休眠等级，苏醒周期以及可唤醒的gpio
@@ -356,9 +356,9 @@ wifi_keepalive_t keepalive;
 
 | config_mask                                                  | 配置目标项掩码，使能或屏蔽目标项，例如全部配置则：config_mask = CFG_MASK_SLEEP\|CFG_MASK_CONNECT\|CFG_MASK_KEEPALIVE CFG_MASK_SLEEP：配置休眠参数 CFG_MASK_CONNECT：配置AP连接参数 CFG_MASK_KEEPALIVE：配置tcp keepalive参数 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [sleep](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-sleep-t) | 休眠参数                                                     |
-| [conn](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-connect-t) | AP连接参数                                                   |
-| [keepalive](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-keepalive-t) | tcp keepalive参数                                            |
+| [sleep](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-sleep-t) | 休眠参数                                                     |
+| [conn](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-connect-t) | AP连接参数                                                   |
+| [keepalive](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_使用指南.html#wifi-keepalive-t) | tcp keepalive参数                                            |
 
 ##### 6.1.2.2 wifi_sleep_t
 

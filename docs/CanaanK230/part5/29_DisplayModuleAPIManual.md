@@ -58,10 +58,10 @@ def init(type = None, width = None, height = None, osd_num = 1, to_ide = False, 
 
 | 参数名称 | 描述                                                         | 输入/输出 | 说明                 |
 | -------- | ------------------------------------------------------------ | --------- | -------------------- |
-| type     | [显示设备类型](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#type) | 输入      | 必选                 |
+| type     | [显示设备类型](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#type) | 输入      | 必选                 |
 | width    | 分辨率宽度                                                   | 输入      | 默认值根据`type`决定 |
 | height   | 分辨率高度                                                   | 输入      | 默认值根据`type`决定 |
-| osd_num  | 在[show_image](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)时可以支持的LAYER数量 | 输入      | 越大占用内存越多     |
+| osd_num  | 在[show_image](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)时可以支持的LAYER数量 | 输入      | 越大占用内存越多     |
 | to_ide   | 是否将屏幕显示传输到IDE显示                                  | 输入      | 开启会占用更多内存   |
 | fps      | 显示帧率                                                     | 输入      | 仅支持`VIRT`类型     |
 
@@ -104,9 +104,9 @@ def show_image(img, x = 0, y = 0, layer = None, alpha = 255, flag = 0)
 | img      | 显示的图像                                                   | 输入      |                                                              |
 | x        | 起始坐标的x值                                                | 输入      |                                                              |
 | y        | 起始坐标的y值                                                | 输入      |                                                              |
-| layer    | 显示到[指定层](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#layer) | 输入      | 仅支持`OSD`层 若需要多层请设置[init](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#init)参数中的`osd_num` |
+| layer    | 显示到[指定层](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#layer) | 输入      | 仅支持`OSD`层 若需要多层请设置[init](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#init)参数中的`osd_num` |
 | alpha    | 图层混合alpha                                                | 输入      |                                                              |
-| flag     | 显示[标志](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#flag) | 输入      |                                                              |
+| flag     | 显示[标志](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#flag) | 输入      |                                                              |
 
 【返回值】
 
@@ -181,11 +181,11 @@ def bind_layer(src=(mod, dev, layer), dstlayer, rect = (x, y, w, h), pix_format,
 | 参数名称   | 描述                                                         | 输入/输出 | 说明                           |
 | ---------- | ------------------------------------------------------------ | --------- | ------------------------------ |
 | src        | `sensor`或`vdec` 输出信息                                    | 输入      | 可通过`sensor.bind_info()`获取 |
-| dstlayer   | 绑定到Display的[显示层](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#layer) | 输入      | 可绑定到`video`或`osd`层       |
+| dstlayer   | 绑定到Display的[显示层](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#layer) | 输入      | 可绑定到`video`或`osd`层       |
 | rect       | 显示区域                                                     | 输入      | 可通过`sensor.bind_info()`获取 |
 | pix_format | 图像像素格式                                                 | 输入      | 可通过`sensor.bind_info()`获取 |
 | alpha      | 图层混合alpha                                                | 输入      |                                |
-| flag       | 显示[标志](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#flag) | 输入      | `LAYER_VIDEO1`不支持           |
+| flag       | 显示[标志](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#flag) | 输入      | `LAYER_VIDEO1`不支持           |
 
 【返回值】
 
@@ -224,12 +224,12 @@ def bind_layer(src=(mod, dev, layer), dstlayer, rect = (x, y, w, h), pix_format,
 
 | 显示层       | 说明 | 备注                                                         |
 | ------------ | ---- | ------------------------------------------------------------ |
-| LAYER_VIDEO1 |      | 仅[bind_layer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)可用 |
-| LAYER_VIDEO2 |      | 仅[bind_layer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)可用 |
-| LAYER_OSD0   |      | 支持[show_image](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
-| LAYER_OSD1   |      | 支持[show_image](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
-| LAYER_OSD2   |      | 支持[show_image](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
-| LAYER_OSD3   |      | 支持[show_image](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
+| LAYER_VIDEO1 |      | 仅[bind_layer](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)可用 |
+| LAYER_VIDEO2 |      | 仅[bind_layer](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)可用 |
+| LAYER_OSD0   |      | 支持[show_image](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
+| LAYER_OSD1   |      | 支持[show_image](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
+| LAYER_OSD2   |      | 支持[show_image](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
+| LAYER_OSD3   |      | 支持[show_image](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#show-image)和[bind_layer](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Display模块API手册.html#bind-layer)使用 |
 
 ### 3.3 flag
 

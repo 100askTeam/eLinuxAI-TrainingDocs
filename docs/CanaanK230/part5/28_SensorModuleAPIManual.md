@@ -37,7 +37,7 @@ K230 CanMV平台sensor模块负责图像采集处理任务。本模块提供了�
 
 K230 CanMV平台sensor模块包括三个独立的能力完全相同的sensor设备，每个sensor设备均可独立完成图像数据采集捕获处理，并可以同时输出3路图像数据。如下图所示：
 
-![cover](https://developer.canaan-creative.com/k230_canmv/main/_images/k230-canmv-camera-top.png)
+![cover](https://www.kendryte.com/k230_canmv/main/_images/k230-canmv-camera-top.png)
 
 sensor 0，sensor 1，sensor 2表示三个图像传感器；Camera Device 0，Camera Device 1，Camera Device 2表示三个sensor设备；output channel 0，output channel 1，output channel 2表示sensor设备的三个输出通道。三个图像传感器可以通过软件配置映射到不同的sensor 设备。
 
@@ -51,7 +51,7 @@ sensor 0，sensor 1，sensor 2表示三个图像传感器；Camera Device 0，Ca
 
 用户需要先构建`Sensor`对象再继续操作
 
-目前已实现自动探测摄像头，用户可选择输出图像的最大分辨率和帧率，参考[摄像头列表](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#id9)
+目前已实现自动探测摄像头，用户可选择输出图像的最大分辨率和帧率，参考[摄像头列表](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#id9)
 
 用户设置目标分辨率和帧率之后，如果底层驱动不支持该设置，则会进行自动匹配出最佳配置
 
@@ -157,8 +157,8 @@ sensor.set_framesize(framesize = FRAME_SIZE_INVAILD, chn = CAM_CHN_ID_0, alignme
 
 | 参数名称  | 描述                                                         | 输入/输出 |
 | --------- | ------------------------------------------------------------ | --------- |
-| framesize | sensor[输出图像尺寸](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#frame-size) | 输入      |
-| chn       | sensor输出[通道号](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) | 输入      |
+| framesize | sensor[输出图像尺寸](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#frame-size) | 输入      |
+| chn       | sensor输出[通道号](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) | 输入      |
 | width     | 输出图像宽度,*kw_arg*                                        | 输入      |
 | height    | 输出图像高度,*kw_arg*                                        | 输入      |
 
@@ -208,8 +208,8 @@ sensor.set_pixformat(pix_format, chn = CAM_CHN_ID_0)
 
 | 参数名称   | 描述                                                         | 输入/输出 |
 | ---------- | ------------------------------------------------------------ | --------- |
-| pix_format | [输出图像格式](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#pixel-format) | 输入      |
-| chn_num    | sensor输出[通道号](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) | 输入      |
+| pix_format | [输出图像格式](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#pixel-format) | 输入      |
+| chn_num    | sensor输出[通道号](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) | 输入      |
 
 【返回值】
 
@@ -413,7 +413,7 @@ sensor.snapshot(chn = CAM_CHN_ID_0)
 
 | 参数名称 | 描述                                                         | 输入/输出 |
 | -------- | ------------------------------------------------------------ | --------- |
-| chn_num  | sensor输出[通道号](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) |           |
+| chn_num  | sensor输出[通道号](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) |           |
 
 【返回值】
 
@@ -457,7 +457,7 @@ sensor.bind_info(x = 0, y = 0, chn = CAM_CHN_ID_0)
 | -------- | ------------------------------------------------------------ | --------- |
 | x        | 将`sensor`指定通道输出图像绑定到`Display`或`Venc`模块的指定坐标 |           |
 | y        | 将`sensor`指定通道输出图像绑定到`Display`或`Venc`模块的指定坐标 |           |
-| chn_num  | sensor输出[通道号](https://developer.canaan-creative.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) |           |
+| chn_num  | sensor输出[通道号](https://www.kendryte.com/k230_canmv/main/zh/api/mpp/K230_CanMV_Sensor模块API手册.html#channel) |           |
 
 【返回值】
 

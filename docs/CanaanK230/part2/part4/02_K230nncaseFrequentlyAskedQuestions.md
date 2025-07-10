@@ -109,4 +109,4 @@ interp.load_model(ifs).expect("Invalid kmodel");
 
 
 
-- A：在不存在其他问题的情况下，是由于编译`kmodel`时的nncase版本与当前SDK版本不匹配导致，请按照[SDK、nncase版本对应关系](https://developer.canaan-creative.com/k230/zh/dev/03_other/K230_SDK_nncase版本对应关系.html)查询，并按照[更新nncase运行时库教程](https://developer.canaan-creative.com/k230/zh/dev/03_other/K230_SDK更新nncase运行时库指南.html)解决。
+- A：在不存在其他问题的情况下，是由于编译`kmodel`时的nncase版本与当前SDK版本不匹配导致，请按照[SDK、nncase版本对应关系](https://www.kendryte.com/k230/zh/dev/03_other/K230_SDK_nncase版本对应关系.html)查询，并按照[更新nncase运行时库教程](https://www.kendryte.com/k230/zh/dev/03_other/K230_SDK更新nncase运行时库指南.html)解决。

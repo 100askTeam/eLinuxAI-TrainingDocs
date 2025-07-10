@@ -57,7 +57,7 @@ ap_test()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -107,7 +107,7 @@ client()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -165,7 +165,7 @@ udpserver()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -216,7 +216,7 @@ main(use_stream=False)
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -267,7 +267,7 @@ udpclient()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -361,7 +361,7 @@ main()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -444,7 +444,7 @@ server()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
 
 ------
 
@@ -494,4 +494,4 @@ main()
 
 
 
-具体接口定义请参考 [socket](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://developer.canaan-creative.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)
+具体接口定义请参考 [socket](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_socket模块API手册.html)、[network](https://www.kendryte.com/k230_canmv/main/zh/api/extmod/K230_CanMV_network模块API手册.html)

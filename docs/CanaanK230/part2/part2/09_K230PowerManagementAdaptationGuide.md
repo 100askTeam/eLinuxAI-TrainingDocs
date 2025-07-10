@@ -121,23 +121,23 @@ KPU, DPU, VPU的修改也是类似。
 
 该框架提供以下API:
 
-- [kd_mpi_pm_set_reg](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-reg)
-- [kd_mpi_pm_get_reg](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-reg)
-- [kd_mpi_pm_get_profiles](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-profiles)
-- [kd_mpi_pm_get_stat](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-stat)
-- [kd_mpi_pm_set_governor](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-governor)
-- [kd_mpi_pm_get_governor](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-governor)
-- [kd_mpi_pm_set_profile](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile)
-- [kd_mpi_pm_get_profile](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-profile)
-- [kd_mpi_pm_set_profile_lock](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile-lock)
-- [kd_mpi_pm_set_profile_unlock](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile-unlock)
-- [kd_mpi_pm_set_thermal_protect](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-thermal-protect)
-- [kd_mpi_pm_get_thermal_protect](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-thermal-protect)
-- [kd_mpi_pm_set_thermal_shutdown](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-thermal-shutdown)
-- [kd_mpi_pm_get_thermal_shutdown](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-thermal-shutdown)
-- [kd_mpi_pm_set_clock](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-clock)
-- [kd_mpi_pm_set_power](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-power)
-- [kd_mpi_pm_runtime_runstage](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-runtime-runstage)
+- [kd_mpi_pm_set_reg](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-reg)
+- [kd_mpi_pm_get_reg](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-reg)
+- [kd_mpi_pm_get_profiles](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-profiles)
+- [kd_mpi_pm_get_stat](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-stat)
+- [kd_mpi_pm_set_governor](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-governor)
+- [kd_mpi_pm_get_governor](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-governor)
+- [kd_mpi_pm_set_profile](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile)
+- [kd_mpi_pm_get_profile](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-profile)
+- [kd_mpi_pm_set_profile_lock](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile-lock)
+- [kd_mpi_pm_set_profile_unlock](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile-unlock)
+- [kd_mpi_pm_set_thermal_protect](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-thermal-protect)
+- [kd_mpi_pm_get_thermal_protect](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-thermal-protect)
+- [kd_mpi_pm_set_thermal_shutdown](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-thermal-shutdown)
+- [kd_mpi_pm_get_thermal_shutdown](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-get-thermal-shutdown)
+- [kd_mpi_pm_set_clock](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-clock)
+- [kd_mpi_pm_set_power](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-power)
+- [kd_mpi_pm_runtime_runstage](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-runtime-runstage)
 
 #### 2.3.1 kd_mpi_pm_set_reg
 
@@ -163,7 +163,7 @@ int kd_mpi_pm_set_reg(uint32_t reg, uint32_t val);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -202,7 +202,7 @@ int kd_mpi_pm_get_reg(uint32_t reg, uint32_t *pval);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -242,7 +242,7 @@ int kd_mpi_pm_get_profiles(k_pm_domain domain, uint32_t *pcount, k_pm_profile *p
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -284,7 +284,7 @@ int kd_mpi_pm_get_stat(k_pm_domain domain);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -323,7 +323,7 @@ int kd_mpi_pm_set_governor(k_pm_domain domain, k_pm_governor governor);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -362,7 +362,7 @@ int kd_mpi_pm_get_governor(k_pm_domain domain, k_pm_governor *pgovernor);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -401,7 +401,7 @@ int kd_mpi_pm_set_profile(k_pm_domain domain, int32_t index);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -443,7 +443,7 @@ int kd_mpi_pm_get_profile(k_pm_domain domain, int32_t *pindex);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -482,7 +482,7 @@ int kd_mpi_pm_set_profile_lock(k_pm_domain domain, int32_t index);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -492,7 +492,7 @@ int kd_mpi_pm_set_profile_lock(k_pm_domain domain, int32_t index);
 【注意】
 
 1. 设置完成后，当前profile可能大于设置值，如其它进程设置最低profile为1，当前进程设置最低profile为2，此时实际profile为1
-2. 其它参考[kd_mpi_pm_get_profile](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile)
+2. 其它参考[kd_mpi_pm_get_profile](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#kd-mpi-pm-set-profile)
 
 【举例】
 
@@ -522,7 +522,7 @@ int kd_mpi_pm_set_profile_unlock(k_pm_domain domain, int32_t index);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -562,7 +562,7 @@ int kd_mpi_pm_set_thermal_protect(k_pm_domain domain, int32_t temp, int32_t inde
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -602,7 +602,7 @@ int kd_mpi_pm_get_thermal_protect(k_pm_domain domain, int32_t *ptemp, int32_t *p
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -640,7 +640,7 @@ int kd_mpi_pm_set_thermal_shutdown(int32_t temp);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -678,7 +678,7 @@ int kd_mpi_pm_get_thermal_shutdown(int32_t *ptemp);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -717,7 +717,7 @@ int kd_mpi_pm_set_clock(k_pm_domain domain, bool enable);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -756,7 +756,7 @@ int kd_mpi_pm_set_power(k_pm_domain domain, bool enable);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 
@@ -794,7 +794,7 @@ int kd_mpi_pm_runtime_runstage(k_runtimestage_id stage);
 | 返回值 | **描述**                                                     |
 | ------ | ------------------------------------------------------------ |
 | 0      | 成功                                                         |
-| 非0    | 失败，其值参见[错误码](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
+| 非0    | 失败，其值参见[错误码](https://www.kendryte.com/k230/zh/dev/01_software/board/mpp/K230_PM框架使用指南.html#id14) |
 
 【需求】
 

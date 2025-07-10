@@ -2403,7 +2403,7 @@ MediaManager.deinit()
 
 ### 5.2.7 完整代码
 
-这里给出完整代码，请参考上述每一步代码之间的变化。对于AI开发的步骤我们进行了封装，相关类在/sdcard/app/libs下面，开发步骤请参考：[AI Demo说明文档 — K230 CanMV 文档 (canaan-creative.com)](https://developer.canaan-creative.com/k230_canmv/main/zh/example/AI_Demo说明文档.html)
+这里给出完整代码，请参考上述每一步代码之间的变化。对于AI开发的步骤我们进行了封装，相关类在/sdcard/app/libs下面，开发步骤请参考：[AI Demo说明文档 — K230 CanMV 文档 (canaan-creative.com)](https://www.kendryte.com/k230_canmv/main/zh/example/AI_Demo说明文档.html)
 
 ```
 import os

@@ -74,7 +74,7 @@ multimodal_chat_robot  K230多模态聊天机器人
 
   
 
-- 请您耐心等待镜像编译成功后，在k230_sdk根目录/output/k230_canmv_defconfig/images中下载编译好的镜像，并将其烧录到SD卡中，烧录步骤参考[镜像烧录](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230快速入门指南.html#id5)：
+- 请您耐心等待镜像编译成功后，在k230_sdk根目录/output/k230_canmv_defconfig/images中下载编译好的镜像，并将其烧录到SD卡中，烧录步骤参考[镜像烧录](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230快速入门指南.html#id5)：
 
   ```
   k230_canmv_defconfig/images
@@ -102,9 +102,9 @@ multimodal_chat_robot  K230多模态聊天机器人
 
   ***注：***
 
-  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：[K230大小核通讯Sharefs使用简介](https://developer.canaan-creative.com/k230/dev/zh/02_applications/tutorials/K230_大小核通讯_sharefs用法介绍.html)。
+  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：[K230大小核通讯Sharefs使用简介](https://www.kendryte.com/k230/dev/zh/02_applications/tutorials/K230_大小核通讯_sharefs用法介绍.html)。
 
-  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：[K230 SDK常见问题解答](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK常见问题解答_C.html#linux) 问题9。
+  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：[K230 SDK常见问题解答](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK常见问题解答_C.html#linux) 问题9。
 
   ```
   umount /sharefs/
@@ -123,11 +123,11 @@ multimodal_chat_robot  K230多模态聊天机器人
 
 ### 4.3.2. 免编译镜像上板流程
 
-- 选择[嘉楠开发者社区](https://developer.canaan-creative.com/resource)->资料下载->K230->Images提供的镜像烧录，k230_sdk版本和nncase版本对应关系如下链接：
+- 选择[嘉楠开发者社区](https://www.kendryte.com/resource)->资料下载->K230->Images提供的镜像烧录，k230_sdk版本和nncase版本对应关系如下链接：
 
-  [**K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com**](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)
+  [**K230 SDK nncase版本对应关系 — K230 文档 (canaan-creative.com**](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK_nncase版本对应关系.html)
 
-  镜像烧录请参考[镜像烧录](https://developer.canaan-creative.com/k230_canmv/dev/zh/CanMV-K230快速入门指南.html#id5)。
+  镜像烧录请参考[镜像烧录](https://www.kendryte.com/k230_canmv/dev/zh/CanMV-K230快速入门指南.html#id5)。
 
 - 按照[kendryte/k230_sdk: Kendryte K230 SDK (github.com)](https://github.com/kendryte/k230_sdk/tree/main)或[k230_sdk: Kendryte K230 SDK (Gitee.com)](https://gitee.com/kendryte/k230_sdk/tree/main)构建docker容器；
 
@@ -167,9 +167,9 @@ multimodal_chat_robot  K230多模态聊天机器人
 
   ***注：***
 
-  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：[K230大小核通讯Sharefs使用简介](https://developer.canaan-creative.com/k230/dev/zh/02_applications/tutorials/K230_大小核通讯_sharefs用法介绍.html)。
+  1.sharefs是大小核共用目录，通过对大小核各自/sharefs目录的访问，提供了大核访问小核文件系统的功能。在实际使用中，通常会将大核的可执行程序存放在/sharefs目录下，大核通过sharefs功能执行这些程序，方便大核上应用程序的开发和调试；参考：[K230大小核通讯Sharefs使用简介](https://www.kendryte.com/k230/dev/zh/02_applications/tutorials/K230_大小核通讯_sharefs用法介绍.html)。
 
-  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：[K230 SDK常见问题解答](https://developer.canaan-creative.com/k230/dev/zh/03_other/K230_SDK常见问题解答_C.html#linux) 问题9。
+  2.为了保证系统空间，最后一个disk的空间大小可能不足以存放所有文件；您可以使用下述命令修改最后一个分区大小；参考：[K230 SDK常见问题解答](https://www.kendryte.com/k230/dev/zh/03_other/K230_SDK常见问题解答_C.html#linux) 问题9。
 
   ```
   umount /sharefs/
@@ -190,4 +190,4 @@ multimodal_chat_robot  K230多模态聊天机器人
 >
 > AI Demo章节和Fancy POC章节旨在展示K230在AI领域的强大性能和广泛应用场景。虽然我们提供了相关源代码供用户参考，但这些源码多是基于特定Demo或POC任务场景的实现。
 >
-> 对于希望深入了解K230人工智能开发流程的用户，建议学习[第5章](https://developer.canaan-creative.com/ai_docs/zh/main/fast_learn)和[第6章](https://developer.canaan-creative.com/ai_docs/zh/main/K230_Fancy_POC概述.html#teach_ai)。在这两章中，我们详细讲解了K230的多媒体应用、AI推理流程以及基于K230的人工智能开发流程，从代码层面全面解析了K230的AI开发知识。
+> 对于希望深入了解K230人工智能开发流程的用户，建议学习[第5章](https://www.kendryte.com/ai_docs/zh/main/fast_learn)和[第6章](https://www.kendryte.com/ai_docs/zh/main/K230_Fancy_POC概述.html#teach_ai)。在这两章中，我们详细讲解了K230的多媒体应用、AI推理流程以及基于K230的人工智能开发流程，从代码层面全面解析了K230的AI开发知识。

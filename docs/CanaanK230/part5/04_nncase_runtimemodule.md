@@ -85,11 +85,11 @@ data = result.to_numpy() # 将输出tensor转换为numpy对象
 
 ### 2.6. 使用AI2D+KPU进行推理
 
-使用AI2D对摄像头采集的数据进行预处理，然后使用KPU进行推理。摄像头等输入设备的配置请参考[AI Demo示例说明](https://developer.canaan-creative.com/k230_canmv/main/zh/userguide/nncase_runtime_使用说明.html#../example/AI_Demo示例说明.md#14-nncase使用ai2d)，这里仅介绍AI2D+KPU的使用流程。
+使用AI2D对摄像头采集的数据进行预处理，然后使用KPU进行推理。摄像头等输入设备的配置请参考[AI Demo示例说明](https://www.kendryte.com/k230_canmv/main/zh/userguide/nncase_runtime_使用说明.html#../example/AI_Demo示例说明.md#14-nncase使用ai2d)，这里仅介绍AI2D+KPU的使用流程。
 
 #### 2.6.1. 配置AI2D参数
 
-AI2D功能有：`crop`，`shift`，`pad`，`resize`，`affine`。可以根据实际需求配置对应的参数，不使用的功能不需要配置。 各个场景的不同用法请参考[AI demo 多模型示例解析](https://developer.canaan-creative.com/k230_canmv/main/zh/userguide/nncase_runtime_使用说明.html#../example/AI_Demo示例说明.md#三ai-demo多模型示例解析)。
+AI2D功能有：`crop`，`shift`，`pad`，`resize`，`affine`。可以根据实际需求配置对应的参数，不使用的功能不需要配置。 各个场景的不同用法请参考[AI demo 多模型示例解析](https://www.kendryte.com/k230_canmv/main/zh/userguide/nncase_runtime_使用说明.html#../example/AI_Demo示例说明.md#三ai-demo多模型示例解析)。
 
 ```
 # 基础配置： 输入、输出layout，输入、输出dtype

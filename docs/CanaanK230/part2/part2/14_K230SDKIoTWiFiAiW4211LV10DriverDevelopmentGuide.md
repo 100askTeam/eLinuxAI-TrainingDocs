@@ -266,7 +266,7 @@ AiW4211LV10驱动加载后生成的无线网卡与一般WiFi网卡无异，因�
 
 #### 6.1.1 API
 
-int kd_wifi_config([wifi_config_t](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-config-t) *config)
+int kd_wifi_config([wifi_config_t](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-config-t) *config)
 
 配置WiFi工作参数：
 
@@ -295,9 +295,9 @@ wifi_keepalive_t keepalive;
 | 成员                                                         | 说明                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | config_mask                                                  | 配置目标项掩码，使能或屏蔽目标项，例如全部配置则：config_mask = CFG_MASK_SLEEP\|CFG_MASK_CONNECT\|CFG_MASK_KEEPALIVE; CFG_MASK_SLEEP：配置休眠参数，CFG_MASK_CONNECT：配置AP连接参数，CFG_MASK_KEEPALIVE：配置tcp keepalive参数 |
-| [sleep](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-sleep-t) | 休眠参数                                                     |
-| [conn](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-connect-t) | AP连接参数                                                   |
-| [keepalive](https://developer.canaan-creative.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-keepalive-t) | tcp keepalive参数                                            |
+| [sleep](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-sleep-t) | 休眠参数                                                     |
+| [conn](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-connect-t) | AP连接参数                                                   |
+| [keepalive](https://www.kendryte.com/k230/zh/dev/01_software/board/osdrv/K230_SDK_IoT_WiFi_AiW4211LV10_驱动开发指南.html#wifi-keepalive-t) | tcp keepalive参数                                            |
 
 #### 6.1.2.2 wifi_sleep_t
 

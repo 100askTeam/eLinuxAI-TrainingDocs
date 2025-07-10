@@ -320,7 +320,7 @@ print(val0 == val)
 
 
 
-具体接口定义请参考 [Cipher](https://developer.canaan-creative.com/k230_canmv/main/zh/api/cipher/K230_CanMV_Ucryptolib模块API手册.html)、[Hash](https://developer.canaan-creative.com/k230_canmv/main/zh/api/cipher/K230_CanMV_Hashlib模块API手册.html)
+具体接口定义请参考 [Cipher](https://www.kendryte.com/k230_canmv/main/zh/api/cipher/K230_CanMV_Ucryptolib模块API手册.html)、[Hash](https://www.kendryte.com/k230_canmv/main/zh/api/cipher/K230_CanMV_Hashlib模块API手册.html)
 
 ## 2. ADC - ADC例程
 
@@ -339,7 +339,7 @@ print(adc.read_uv(), "uV")
 
 
 
-具体接口定义请参考 [ADC](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_ADC模块API手册.html)
+具体接口定义请参考 [ADC](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_ADC模块API手册.html)
 
 ## 3. FFT - FFT例程
 
@@ -376,7 +376,7 @@ print(res)
 
 
 
-具体接口定义请参考 [FFT](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_FFT模块API手册.html)
+具体接口定义请参考 [FFT](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_FFT模块API手册.html)
 
 ## 4. FPIOA - FPIOA例程
 
@@ -405,7 +405,7 @@ fpioa.get_pin_func(0)
 
 
 
-具体接口定义请参考 [FPIOA](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_FPIOA模块API手册.html)
+具体接口定义请参考 [FPIOA](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_FPIOA模块API手册.html)
 
 ## 5. PWM - PWM例程
 
@@ -427,7 +427,7 @@ pwm0.enable(1)
 
 
 
-具体接口定义请参考 [PWM](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_PWM模块API手册.html)
+具体接口定义请参考 [PWM](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_PWM模块API手册.html)
 
 ## 6. SPI - SPI例程
 
@@ -493,7 +493,7 @@ print(b)
 
 
 
-具体接口定义请参考 [SPI](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_SPI模块API手册.html)
+具体接口定义请参考 [SPI](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_SPI模块API手册.html)
 
 ## 7. Timer - Timer例程
 
@@ -517,7 +517,7 @@ tim.deinit()
 
 
 
-具体接口定义请参考 [Timer](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_Timer模块API手册.html)
+具体接口定义请参考 [Timer](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_Timer模块API手册.html)
 
 ## 8. WDT - WDT例程
 
@@ -537,4 +537,4 @@ time.sleep(2)
 
 
 
-具体接口定义请参考 [WDT](https://developer.canaan-creative.com/k230_canmv/main/zh/api/machine/K230_CanMV_WDT模块API手册.html)
+具体接口定义请参考 [WDT](https://www.kendryte.com/k230_canmv/main/zh/api/machine/K230_CanMV_WDT模块API手册.html)
