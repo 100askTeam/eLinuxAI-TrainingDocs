@@ -7,16 +7,13 @@ sidebar_position: 3
 
 - DshanPI-CanMV开发板
 - GC2093摄像头
-- Type-C数据线 x2
+- Type-C数据线 
 
 开发环境：
 
 - Ubuntu20.04
 
-
-配套源码：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
-
-具体位置： `12_多媒体应用示例源码\02_sample_vicap_100ask` 
+资料具体位置： `09_RTSmart+Linux双系统资料\02_多媒体应用示例源码\02_sample_vicap_100ask` 
 
 
 ## 1.修改源码

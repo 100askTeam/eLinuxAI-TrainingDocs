@@ -13,13 +13,9 @@ sidebar_position: 7
 
 - Ubuntu20.04
 
+  
 
-
-注意：在学习前请按照[《K230 SDK环境搭建》](https://eai.100ask.net/CanaanK230/part2/DshanPICanMVK230SDKEnvironmentConstruction)搭建好K230的开发环境或者直接获取资料光盘中搭建好环境的Ubuntu虚拟机。
-
-配套源码：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
-
-具体位置： `12_多媒体应用示例源码\06_sample_venc_100ask` 
+资料具体位置： `09_RTSmart+Linux双系统资料\02_多媒体应用示例源码\06_sample_venc_100ask` 
 
 ## 1.视频编码架构
 
@@ -150,25 +146,19 @@ clean:
 cd ~/k230_sdk
 ```
 
-2.下载toolchain和准备源码
+2.进入Docker环境
 
 ```
-source tools/get_download_url.sh && make prepare_sourcecode
+sudo docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
 ```
 
-3.挂载工具链目录
-
-```
-sudo mount --bind $(pwd)/toolchain /opt/toolchain
-```
-
-4.配置板级型号
+3.配置板级型号
 
 ```
 make CONF=k230_canmv_dongshanpi_defconfig prepare_memory	
 ```
 
-5.编译程序
+4.编译程序
 
 ```
 make mpp-apps
@@ -197,7 +187,7 @@ cd /sharefs/app
 2.运行程序
 
 ```
-./sample_venc_100ask.elf
+./sample_venc_100ask.elf 0 -o out.h265
 ```
 
 执行完成后效果如下所示：
@@ -205,6 +195,16 @@ cd /sharefs/app
 ![image-20241021102839994](${images}/image-20241021102839994.png)
 
 3.输入`q`并按下回车即可退出程序。
+
+
+
+运行完成后，在当前目录下看到`out.h265`文件中，可以通过ADB将此码流文件从开发板拉取出来，可在Ubuntu或者Windows中执行：
+
+```
+adb pull /sharefs/app/out.h265
+```
+
+
 
 ### 2.4 程序解析
 

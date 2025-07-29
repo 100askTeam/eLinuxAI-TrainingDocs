@@ -35,7 +35,7 @@ video ouput 包含了一个用例，即vo osd层插入帧的测试
 vo osd 层插入帧
 
 ```
-./sample_vo.elf 18    //18:DshanPI-CanMV
+./sample_vo.elf 17    //18:DshanPI-CanMV MIPI
 ./sample_vo.elf 15    //15:DshanPI-CanMV HDMI
 ```
 
@@ -195,13 +195,13 @@ Vdec demo通过读取流文件进行解码。解码输出结果通过屏幕显�
 ###### 2.4.4.1.1 VDEC绑定VO解码显示
 
 ```
-./sample_vdec.elf -type 4 -i output-480-800.h264   // DshanPI-CanMV
+./sample_vdec.elf -type 2 -i output-480-800.h264   // DshanPI-CanMV
 ```
 
 ###### 2.4.4.1.2 MAPI VDEC绑定VO解码显示
 
 ```
-./sample_vdec.elf -type 4 -i output-480-800.h264   // DshanPI-CanMV
+./sample_vdec.elf -type 2 -i output-480-800.h264   // DshanPI-CanMV
 ```
 
 ##### 2.4.4.2 查看结果
@@ -437,28 +437,11 @@ Options:
 ```
 ./sample_vicap -conn 1 -dev 0 -sensor 23 -chn 0 -chn 1 -ow 640 -oh 480 -preview 0 // Canmv-K230-V1.0/1.1板
 ./sample_vicap -conn 1 -dev 0 -sensor 33 -chn 0 -chn 1 -ow 640 -oh 480 -preview 0 // Canmv-K230-V2.0板
-./sample_vicap -conn 4 -dev 0 -sensor 46 -chn 0 -chn 1 -ow 640 -oh 480 -preview 1 // DshanPI-CanMV
+./sample_vicap -conn 3 -dev 0 -sensor 46 -chn 0 -chn 1 -ow 640 -oh 480 -preview 1 // DshanPI-CanMV
 ./sample_vicap -conn 1 -dev 0 -sensor 46 -chn 0 -chn 1 -ow 640 -oh 480 -preview 0 // DshanPI-CanMV HDMI
 ```
 
 说明：将ov5647@1920x1080 RGB输出 绑定到vicap设备0,并使能vicap设备输出通道0和通道1，其中通道0输出大小默认为输入图像大小（1920x1080），通道1输出图像大小为640x480
-
-示例2：ov5647三摄
-
-![三摄OV5647](${images}/Tri_camera_board.png)
-
-注意：背面的两个ov5647可以使用树莓派的ov5647摄像头，Canmv-K230 V1.0 V1.1版本的板子需要更换LDO为1.8V，如RT9013-18。如下图所示
-
-![换LDO](${images}/pi_change_io.png)
-
-如果不方便更换LDO可以等待后续的V1.2版本的板子。
-
-```
-./sample_vicap.elf -conn 1 -mode 1 -dev 0 -sensor 23 -chn 0 -ow 320 -oh 240 -dev 1 -sensor 26 -chn 0 -ow 320 -oh 240 -dev 2 -sensor 27 -chn 0 -ow 320 -oh 240 -ofmt 1 // Canmv-K230-V1.0/1.1板
-./sample_vicap.elf -conn 1 -mode 1 -dev 0 -sensor 31 -chn 0 -ow 320 -oh 240 -dev 1 -sensor 32 -chn 0 -ow 320 -oh 240 -dev 2 -sensor 33 -chn 0 -ow 320 -oh 240 -ofmt 1 // Canmv-K230-V2.0板
-```
-
-![三摄结果](${images}/Tri_camera_result.png)
 
 ### 2.7 DMA_demo
 

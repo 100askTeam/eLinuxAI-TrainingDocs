@@ -15,11 +15,7 @@ sidebar_position: 8
 
 
 
-注意：在学习前请按照[《K230 SDK环境搭建》](https://eai.100ask.net/CanaanK230/part2/DshanPICanMVK230SDKEnvironmentConstruction)搭建好K230的开发环境或者直接获取资料光盘中搭建好环境的Ubuntu虚拟机。
-
-配套源码：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
-
-具体位置： `12_多媒体应用示例源码\07_sample_vdec*` 
+资料具体位置： `09_RTSmart+Linux双系统资料\02_多媒体应用示例源码\07_sample_vdec*` 
 
 ## 1.视频解码
 
@@ -145,25 +141,19 @@ clean:
 cd ~/k230_sdk
 ```
 
-2.下载toolchain和准备源码
+2.进入Docker环境
 
 ```
-source tools/get_download_url.sh && make prepare_sourcecode
+sudo docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
 ```
 
-3.挂载工具链目录
-
-```
-sudo mount --bind $(pwd)/toolchain /opt/toolchain
-```
-
-4.配置板级型号
+3.配置板级型号
 
 ```
 make CONF=k230_canmv_dongshanpi_defconfig prepare_memory	
 ```
 
-5.编译程序
+4.编译程序
 
 ```
 make mpp-apps

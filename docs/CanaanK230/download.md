@@ -225,19 +225,12 @@ DshanPIxCanMV_BaseBoard_V1.zip
 
 
 
-## 9.多媒体应用示例源码
+## 9.RTSmart+Linux双系统资料
 
 ```
-01_sample_vi
-02_sample_vicap_100ask
-03_sample_vo__hdmi_100ask
-03_sample_vo_mipi
-04_sample_vo_mipi
-05_sample_vivo-mipi
-05_sample_vivo_hdmi
-06_sample_venc_100ask
-07_sample_vdec_hdmi
-07_sample_vdec_mipi
+01_SDK源码
+02_多媒体应用RT-smart示例源码
 ```
 
-多媒体相关的示例代码，具体使用教程可访问应用开发章节。
+- 01_SDK源码：RTSmart+Linux双系统 SDK
+- 02_多媒体应用RT-smart示例源码：多媒体应用源码

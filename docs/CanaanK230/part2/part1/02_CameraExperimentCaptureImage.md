@@ -7,17 +7,13 @@ sidebar_position: 2
 
 - DshanPI-CanMV开发板
 - GC2093摄像头
-- Type-C数据线 x2
+- Type-C数据线
 
 开发环境：
 
 - Ubuntu20.04
 
-配套源码：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
-
-具体位置： `12_多媒体应用示例源码\01_sample_vi` 
-
-注意：在学习前请按照[《K230 SDK环境搭建》](https://eai.100ask.net/CanaanK230/part2/DshanPICanMVK230SDKEnvironmentConstruction)搭建好K230的开发环境或者直接获取资料光盘中搭建好环境的Ubuntu虚拟机。
+资料具体位置： `09_RTSmart+Linux双系统资料\02_多媒体应用示例源码\01_sample_vi` 
 
 
 
@@ -174,31 +170,27 @@ clean:
 cd ~/k230_sdk
 ```
 
-2.下载toolchain和准备源码
+2.进入Docker环境
 
 ```
-source tools/get_download_url.sh && make prepare_sourcecode
+sudo docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
 ```
 
-3.挂载工具链目录
-
-```
-sudo mount --bind $(pwd)/toolchain /opt/toolchain
-```
-
-4.配置板级型号
+3.配置板级型号
 
 ```
 make CONF=k230_canmv_dongshanpi_defconfig prepare_memory	
 ```
 
-5.编译程序
+4.编译程序
 
 ```
 make mpp-apps
 ```
 
 等待编译完成，编译完成后，可执行程序`sample_vicap_100ask.elf`会生成在`k230_sdk/src/big/mpp/userapps/sample/elf`目录下。
+
+> 注意：ADB需要退出docker环境，在终端输入`exit`即可退出docker环境。
 
 使用ADB将可执行程序传输至开发板中
 
@@ -210,7 +202,7 @@ adb push src/big/mpp/userapps/sample/elf/sample_vicap_100ask.elf /sharefs/app
 
 ### 2.2 程序运行
 
-使用串口软件访问开发板的大核串口终端。
+使用串口软件访问开发板的大核串口Uart3终端。
 
 > 如果没有关闭开机自启程序，可按下q+回车键可退出开机自启程序。
 

@@ -13,9 +13,7 @@ sidebar_position: 4
 
 - Ubuntu20.04
 
-配套源码：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
-
-具体位置： `12_多媒体应用示例源码\05_sample_vo*` 
+资料具体位置： `09_RTSmart+Linux双系统资料\02_多媒体应用示例源码\03_sample_vo*` 
 
 ## 1.视频输出
 
@@ -69,7 +67,7 @@ mkdir sample_vo_100ask
 ![image-20241023152648041](${images}/image-20241023152648041.png)
 
 ```
-@cd sample_vicap_100ask; make clean
+@cd sample_vo_100ask; make clean
 ```
 
 ![image-20241023152708325](${images}/image-20241023152708325.png)
@@ -85,7 +83,7 @@ cd sample_vicap_100ask/
 #### 2.1.4 新建源码文件
 
 ```
-vi sample_vicap_100ask.c
+vi sample_vo_100ask.c
 ```
 
 填入源码。
@@ -146,25 +144,19 @@ clean:
 cd ~/k230_sdk
 ```
 
-2.下载toolchain和准备源码
+2.进入Docker环境
 
 ```
-source tools/get_download_url.sh && make prepare_sourcecode
+sudo docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
 ```
 
-3.挂载工具链目录
-
-```
-sudo mount --bind $(pwd)/toolchain /opt/toolchain
-```
-
-4.配置板级型号
+3.配置板级型号
 
 ```
 make CONF=k230_canmv_dongshanpi_defconfig prepare_memory	
 ```
 
-5.编译程序
+4.编译程序
 
 ```
 make mpp-apps

@@ -31,207 +31,113 @@ sidebar_position: 3
 3. **寻找局部最大值**
     累加器中投票值最高的点，就是图像中存在圆形的概率最大的地方。
 
-### 2.2 API
 
-```
-image.find_circles([roi[, x_stride=2[, y_stride=1[, threshold=2000[, x_margin=10[, y_margin=10[, r_margin=10]]]]]]])
-```
-
-使用霍夫变换在图像中查找圆。返回一个 image.circle 对象列表（见上）。
-
-roi 是一个用以复制的矩形的感兴趣区域(x, y, w, h)。如果未指定， ROI 即图像矩形。操作范围仅限于roi区域内的像素。
-
-x_stride 是霍夫变换时需要跳过的x像素的数量。若已知圆较大，可增加 x_stride 。
-
-y_stride 是霍夫变换时需要跳过的y像素的数量。若已知圆较大，可增加 y_stride 。
-
-threshold 控制从霍夫变换中监测到的圆。只返回大于或等于 threshold 的圆。 应用程序的正确的 threshold 值取决于图像。注意：一个圆的大小(magnitude)是组成圆所有索贝尔滤波像素大小的总和。
-
-x_margin 控制所检测的圆的合并。 圆像素为 x_margin 、 y_margin 和 r_margin 的部分合并。
-
-y_margin 控制所检测的圆的合并。 圆像素为 x_margin 、 y_margin 和 r_margin 的部分合并。
-
-r_margin 控制所检测的圆的合并。 圆像素为 x_margin 、 y_margin 和 r_margin 的部分合并。
-
-不支持压缩图像和bayer图像。
 
 
 
 ## 3.代码解析
 
-### 创建摄像头对象
 
-```
-sensor = Sensor(width=1280, height=960) #构建摄像头对象，将摄像头长宽设置为4:3
-```
-
-创建一个摄像头对象，设置最大采集分辨率为 1280x960（内部图像缓存大小）。
-
-### 复位摄像头
-
-```
-sensor.reset() #复位和初始化摄像头
-```
-
- 对摄像头进行复位操作（清除上一次配置，确保状态干净）。
-
-### 设置摄像头属性
-
-```
-sensor.set_framesize(width=320, height=240) #设置帧大小，默认通道0
-```
-
-设置摄像头实际输出图像的大小（为节省资源，缩小分辨率）。
-
-```
-sensor.set_pixformat(Sensor.RGB565)
-```
-
-设置图像像素格式为 RGB565（每个像素占 2 字节），适合嵌入式处理和显示。
-
-### 初始化显示屏
-
-```
-Display.init(Display.ST7701, to_ide=True) #同时使用3.5寸mipi屏和IDE缓冲区显示图像，800x480分辨率
-```
-
-初始化 ST7701 LCD 显示屏，分辨率为 800x480，支持在 IDE 中查看图像（调试方便）。
-
-### 初始化媒体系统
-
-```
-MediaManager.init() #初始化media资源管理器
-```
-
-初始化媒体系统（分配摄像头等硬件资源），必须调用一次。
-
-### 启动摄像头
-
-```
-sensor.run() #启动sensor
-```
-
-启动摄像头，开始捕捉图像帧。
-
-### 获取一帧图像
-
-```
-    img = sensor.snapshot() #拍摄一张图片
-```
-
-从摄像头拍一帧图像，得到图像对象 `img`，用于后续处理。
-
-### 获取圆形对象
-
-```
-    for c in img.find_circles(threshold = 2000, x_margin = 10, y_margin= 10,
-                              r_margin = 10,r_min = 2, r_max = 100, r_step = 2):
-```
-
-在图像中寻找圆形对象，满足：
-
-- 亮度对比度达到 `threshold`；
-- 合并相似圆（xy、半径差值小于 margin）；
-- 只检测半径为 2~100 的圆，每 2 像素步进检测一次。
-
-### 绘制圆形
-
-```
-        img.draw_circle(c.x(), c.y(), c.r(), color = (255, 0, 0),thickness=2)
-```
-
-在图像上绘制检测到的圆，颜色为红色，线宽 2 像素。
-
-### 图像显示
-
-```
-    #显示图片，仅用于LCD居中方式显示
-    Display.show_image(img, x=round((800-sensor.width())/2),y=round((480-sensor.height())/2))
-```
-
-把图像显示到 LCD 屏幕上，并居中显示。LCD 分辨率为 800x480，图像大小为 320x240。
 
 ## 4.示例代码
 
 ```
-'''
-本程序遵循GPL V3协议, 请遵循协议
-实验平台: DshanPI CanMV
-开发板文档站点	: https://eai.100ask.net/
-百问网学习平台   : https://www.100ask.net
-百问网官方B站    : https://space.bilibili.com/275908810
-百问网官方淘宝   : https://100ask.taobao.com
-'''
-import time, os, sys
+import cv2
+import numpy as np
 
-from media.sensor import *    # 摄像头相关接口
-from media.display import *   # 显示屏相关接口
-from media.media import *     # 多媒体资源管理接口
+# 摄像头配置参数
+SENSOR_W, SENSOR_H = 1280, 960  # 摄像头采集分辨率（原始）
+FRAME_W, FRAME_H = 320, 240     # 实际输出帧大小
 
-# === 配置参数 ===
-SENSOR_W, SENSOR_H     = 1280, 960          # 摄像头采集分辨率（原始）
-FRAME_W, FRAME_H       = 320, 240           # 实际输出帧大小
-LCD_W, LCD_H           = 800, 480           # LCD 屏幕分辨率
-CIRCLE_THRESHOLD       = 2000               # 圆检测强度阈值，越高圆越少但更准确
-CIRCLE_X_MARGIN        = 10                 # 圆心 X 坐标合并容差
-CIRCLE_Y_MARGIN        = 10                 # 圆心 Y 坐标合并容差
-CIRCLE_R_MARGIN        = 10                 # 半径合并容差
-CIRCLE_R_MIN           = 2                  # 最小检测半径
-CIRCLE_R_MAX           = 100                # 最大检测半径
-CIRCLE_R_STEP          = 2                  # 半径步进
-CIRCLE_COLOR           = (255, 0, 0)        # 检测圆形绘制颜色（红色）
+# 打开摄像头1并设置分辨率
+cap = cv2.VideoCapture(1)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, SENSOR_W)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, SENSOR_H)
 
-# === 初始化摄像头 ===
-sensor = Sensor(width=SENSOR_W, height=SENSOR_H)   # 创建摄像头对象
-sensor.reset()                                     # 初始化摄像头
-sensor.set_framesize(width=FRAME_W, height=FRAME_H) # 设置图像帧尺寸
-sensor.set_pixformat(Sensor.RGB565)                # 设置图像格式为 RGB565
+# 检查摄像头是否成功打开
+if not cap.isOpened():
+    print(f"无法打开摄像头1(分辨率{SENSOR_W}x{SENSOR_H})！请检查设备连接。")
+    exit()
 
-# === 初始化显示屏 ===
-Display.init(Display.ST7701, to_ide=True)          # 初始化 MIPI LCD 和 IDE 显示输出
-# Display.init(Display.VIRT, sensor.width(), sensor.height()) # 仅使用 IDE 显示输出（调试用）
+print(f"摄像头设置: 采集 {SENSOR_W}x{SENSOR_H} → 处理 {FRAME_W}x{FRAME_H}")
 
-# === 初始化媒体系统 ===
-MediaManager.init()                                # 启用媒体管理器
-sensor.run()                                       # 开始采集图像
 
-# === 主循环：捕获图像并检测圆形 ===
-clock = time.clock()
+# 缩放比例计算 (用于检测参数的调整)
+SCALE_FACTOR = max(SENSOR_W/FRAME_W, SENSOR_H/FRAME_H)
 
 while True:
-    clock.tick()                                   # 开始计时（用于FPS计算）
-    img = sensor.snapshot()                        # 拍摄一帧图像
-
-    # 在图像中检测圆形
-    circles = img.find_circles(
-        threshold=CIRCLE_THRESHOLD,
-        x_margin=CIRCLE_X_MARGIN,
-        y_margin=CIRCLE_Y_MARGIN,
-        r_margin=CIRCLE_R_MARGIN,
-        r_min=CIRCLE_R_MIN,
-        r_max=CIRCLE_R_MAX,
-        r_step=CIRCLE_R_STEP
+    # 捕获高分辨率帧
+    ret, frame_high_res = cap.read()
+    if not ret:
+        print("无法获取帧，退出中...")
+        break
+    
+    # 缩放至处理尺寸
+    frame = cv2.resize(frame_high_res, (FRAME_W, FRAME_H))
+    
+    # 转换为灰度图像
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    # 高斯模糊降噪
+    blurred = cv2.GaussianBlur(gray, (9, 9), 2)
+    
+    # 自适应参数计算 (根据缩放比例调整)
+    min_dist_scaled = max(20, int(50 / SCALE_FACTOR))
+    min_radius_scaled = max(5, int(10 / SCALE_FACTOR))
+    max_radius_scaled = min(100, int(100 / SCALE_FACTOR))
+    
+    # 霍夫圆检测
+    circles = cv2.HoughCircles(
+        blurred, 
+        cv2.HOUGH_GRADIENT, 
+        dp=1,   # 分辨率因子
+        minDist=min_dist_scaled,  # 圆之间的最小距离(缩放调整)
+        param1=50,   # Canny边缘检测阈值
+        param2=30,   # 圆心检测阈值(越小检测越多)
+        minRadius=min_radius_scaled, # 最小半径(缩放调整)
+        maxRadius=max_radius_scaled   # 最大半径(缩放调整)
     )
+    
+    # 绘制检测到的圆
+    if circles is not None:
+        circles = np.uint16(np.around(circles))
+        for circle in circles[0, :]:
+            # 将坐标转换回高分辨率坐标系
+            x_high_res = int(circle[0] * SCALE_FACTOR)
+            y_high_res = int(circle[1] * SCALE_FACTOR)
+            radius_high_res = int(circle[2] * SCALE_FACTOR)
+            
+            # 在高分辨率帧上绘制
+            cv2.circle(frame_high_res, 
+                      (x_high_res, y_high_res), 
+                      radius_high_res, 
+                      (0, 255, 0), 3)
+            # 绘制圆心
+            cv2.circle(frame_high_res, 
+                      (x_high_res, y_high_res), 
+                      3, 
+                      (0, 0, 255), 5)
+    
+    # 在高分辨率帧上添加分辨率信息
+    cv2.putText(frame_high_res, 
+               f"Sensor: {SENSOR_W}x{SENSOR_H} | Display: {FRAME_W}x{FRAME_H}",
+               (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    
+    # 显示高分辨率结果
+    cv2.imshow('Real-time Circle Detection', frame_high_res)
+    
+    # 按'q'键退出
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-    # 遍历检测到的所有圆
-    for c in circles:
-        img.draw_circle(c.x(), c.y(), c.r(), color=CIRCLE_COLOR, thickness=2)  # 绘制圆
-        print(c)  # 输出圆的参数（圆心坐标、半径、强度）
-
-    # 居中显示图像
-    Display.show_image(
-        img,
-        x=round((LCD_W - sensor.width()) / 2),
-        y=round((LCD_H - sensor.height()) / 2)
-    )
-
-    print(clock.fps())  # 打印每秒帧率
+# 释放资源
+cap.release()
+cv2.destroyAllWindows()
 ```
 
 
 
 ## 5.实验结果
 
- 	点击运行代码后可以在显示屏上实时显示检测到的圆形。
+运行代码后可以在显示屏上实时显示检测到的圆形。
 
-![image-20250422164315527](${images}/image-20250422164315527.png)

@@ -13,9 +13,9 @@ sidebar_position: 5
 
 - Ubuntu20.04
 
-配套源码：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d
 
-具体位置： `12_多媒体应用示例源码\05_sample_vo*` 
+
+资料具体位置： `09_RTSmart+Linux双系统资料\02_多媒体应用示例源码\04_sample_vo*` 
 
 ## 1.修改源码
 
