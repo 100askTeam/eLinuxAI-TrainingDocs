@@ -210,8 +210,8 @@ cd /sharefs/app
     // rst display subsystem
     kd_display_reset();
 
-    connector_type = ILI9806_MIPI_2LAN_480X800_30FPS;
-    printf("connector_type = ILI9806_MIPI_2LAN_480X800_30FPS;");
+    connector_type = ST7701_V1_MIPI_2LAN_480X800_30FPS;
+    printf("connector_type = ST7701_V1_MIPI_2LAN_480X800_30FPS;");
 ```
 
 

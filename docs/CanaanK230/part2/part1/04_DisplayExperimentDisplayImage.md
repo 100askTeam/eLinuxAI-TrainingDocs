@@ -214,7 +214,7 @@ cd /sharefs/app
 ### 3.2 显示图像
 
 ```
-    sample_connector_osd_install_frame(ILI9806_MIPI_2LAN_480X800_30FPS);
+    sample_connector_osd_install_frame(ST7701_V1_MIPI_2LAN_480X800_30FPS);
 ```
 
 
