@@ -145,7 +145,7 @@ fpioa = FPIOA()
 fpioa.set_function(42, FPIOA.PWM0)
 
 # 初始化舵机PWM对象（PWM通道0，频率50Hz）
-S1 = PWM(0, 50, duty=0, enable=True)
+S1 = PWM(0, freq=50, duty=0)
 
 def Servo(servo, angle):
     '''
@@ -153,7 +153,7 @@ def Servo(servo, angle):
     角度范围：-90 到 90
     对应 PWM 占空比范围：2.5% ~ 12.5%
     '''
-    duty = (angle + 90) / 180 * 10 + 2.5  # 将角度映射到 duty 占空比
+    duty =int((angle + 90) / 180 * 10 + 2.5)  # 将角度映射到 duty 占空比
     servo.duty(duty)
 
 # 定义旋转角度顺序：先前进到 90，再逐步退回到 -90
