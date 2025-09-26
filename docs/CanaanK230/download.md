@@ -5,6 +5,8 @@ sidebar_position: 2
 
 DshanPI-CanMV开发板配套的软件、源码、原理图、芯片手册、工具包等，都可访问以下资料获取。
 
+DshanPI-K230_BTB_EVB评估板链接: https://pan.baidu.com/s/1jU1_09tT0NnJ4LlUip2a2w?pwd=4tvy 提取码: 4tvy
+
 CANMV_V2开发板资料获取链接: https://pan.baidu.com/s/11X-iiLop80RiqobQ0zgdAQ?pwd=root 提取码: root 
 
 CANMV_V1开发板资料获取链接：https://pan.baidu.com/s/1VBd0n3FKO0bj8yHOWk4HEw?pwd=ov5d 提取码：ov5d 

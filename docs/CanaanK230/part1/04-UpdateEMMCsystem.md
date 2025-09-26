@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # 更新EMMC系统
@@ -27,7 +27,13 @@ sidebar_position: 3
 
  将下图中的拨码开关的boot0和boot1都向下拨，使开发板进入SD_CARD模式。使用Type-C线连接开发板端和电脑端，用于给开发板进行供电和使用OTG口进行烧录EMMC系统。
 
+**DshanPI CanMV V2开发板：**
+
 ![image-20250421103607845](${images}/image-20250421103607845.png)
+
+**DshanPI-K230-BTB-EVB评估板：**
+
+![image-20250923110934125](${images}/image-20250923110934125.png)
 
 ## 1.2 更新驱动
 
@@ -78,7 +84,13 @@ k230芯片上电从存储介质启动失败，且检查到连接了usb线，则�
 
 烧录成功后，需要将开发板端的Boot0调整为ON,Boot1调整为OFF，即使用EMMC方式启动。
 
+**DshanPI CanMV V2开发板：**
+
 ![image-20250421104249402](${images}/image-20250421104249402.png)
+
+**DshanPI-K230-BTB-EVB评估板：**
+
+![image-20250923111157515](${images}/image-20250923111157515.png)
 
 调整完成后按一下RST键，开发板将会使用烧录的系统启动。
 
