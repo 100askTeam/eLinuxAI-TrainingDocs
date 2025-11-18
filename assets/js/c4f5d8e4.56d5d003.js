@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[4195],{62841:(e,t,s)=>{s.r(t),s.d(t,{default:()=>r});s(67294);var u=s(16550),n=s(85893);function r(){return(0,n.jsx)(u.l_,{to:"ELinuxAIBase/BoardIntroduction/"})}}}]);
