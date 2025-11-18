@@ -28,25 +28,28 @@ DshanPI-CanMV采用核心板+底板设计，扩展接口丰富，极大程度的
 | USB接口    | 3路USB-TypeA               |
 | 其他连接器 | ·TF卡槽 · · JTAG调试口     |
 
-| 外观尺寸 |           |
-| -------- | --------- |
-| CanMV V2 | 92mmx75mm |
-| CanMV V1 | 99mmx92mm |
+| 外观尺寸             |           |
+| -------------------- | --------- |
+| DshanPI-K230_BTB_EVB | 92mmx87mm |
+| CanMV V2             | 92mmx75mm |
+| CanMV V1             | 99mmx92mm |
 
 
 
-### 开发板组成位置
+## 开发板组成位置
 
  本章节介绍开发板中关键的元器件及位置功能介绍如下所示:
 
-**开发板功能图：**
+### K230_BTB_EVB
 
-**CanMV V2:**
+![image-20251118145711590](images/image-20251118145711590.png)
+
+### CanMV V2
 
 ![image-20250421101816321](${images}/image-20250421101816321.png)
 
 ![image-20250724101640246](${images}/image-20250724101640246.png)
 
-**CanMV V1：**
+### CanMV V1
 
 ![image-20240729155648319](${images}/image-20240729155648319.png)

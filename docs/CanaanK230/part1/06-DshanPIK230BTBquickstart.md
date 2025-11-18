@@ -125,3 +125,39 @@ sidebar_position: 3
 - RT-smart系统：只有UART0作为系统串口输出。
 - Linux系统：只有UART0作为系统串口输出。
 - Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。
+
+
+
+## [拓展]连接CKLink调试工具
+
+硬件要求：
+
+- 百问网独家RISV调试器
+
+软件要求：
+
+- 玄铁CPU调试器：https://www.xrvm.cn/soft-tools/tools/debugger-server
+
+- 调试系统DebugServer：[XuanTie DebugServer](https://www.xrvm.cn/community/download?spm=a2cl5.29981144.0.0.4888lr4Flr4FWN&id=4380347564587814912&isLatestVersion=1)，如果无法访问，请自行前往玄铁官网下载：[XuanTie玄铁](https://www.xrvm.cn/)
+
+
+
+开始前请先下载[玄铁CPU调试器](https://www.xrvm.cn/soft-tools/tools/debugger-server)，下载后安装到您的主机端，启动DebugServer后可看到如下画面：
+
+![image-20251118144436809](images/image-20251118144436809.png)
+
+
+
+上电前请确保调试器的排线是同面排线，并使用排线连接至调试器和K230 开发板，如下图所示：
+
+![image-20251118144043900](images/image-20251118144043900.png)
+
+安装完成后请检查排线座子是否压紧，如果没压紧会导致无法连接成功！
+
+进入玄铁CPU调试器界面，点击`Run Debugger Server`
+
+![image-20251118144848789](images/image-20251118144848789.png)
+
+运行成功后，可看到如下画面：
+
+![image-20251118145000453](images/image-20251118145000453.png)

@@ -12,7 +12,6 @@ sidebar_position: 4
 
 **软件要求：**
 
-- DshanPI-CanMV开发板loader文件
 - DshanPI-CanMV开发板系统镜像（配套资料中03_开发板系统固件）
   - 01_MicroPython固件（适合零基础的小白，优先推荐！！！）
 
