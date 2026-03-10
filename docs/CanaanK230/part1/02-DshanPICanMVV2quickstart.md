@@ -82,6 +82,7 @@ sidebar_position: 2
 硬件要求：
 
 - USB转UART串口模块
+- Type-C转单串口模块
 - Type-C转双串口模块
 
 软件注意事项：
@@ -91,9 +92,25 @@ sidebar_position: 2
 - Linux系统：UART0
 - Rt-smart+Linux双系统：UART0(Linux小核)，UART3(Rt-smart大核)
 
+### 使用Type-C访问单串口
 
+将Type-C数据线接入Type-C串口模块，杜邦线端接入USB转串口模块。连接成功后，USB转串口模块需要接入电脑，使用电脑访问串口模块，波特率为115200。
 
-### 使用Type-C访问串口
+> 注意：
+>
+> - Type-C双串口模块的RX需要连接USB转串口模块的TX。
+> - Type-C双串口模块的TX需要连接USB转串口模块的RX。
+> - Type-C双串口模块的GND需要连接USB转串口模块的GND。
+
+接线参考图如下所示：
+
+![image-20260310102312806](images/image-20260310102312806.png)
+
+其中单串口默认访问的是UART0。
+
+连接完成后，访问配套资料中`02_开发工具/【Windows】USB串口驱动`安装串口驱动。
+
+### 使用Type-C访问双串口
 
 将Type-C数据线接入Type-C双串口模块，杜邦线端接入USB转串口模块。连接成功后，USB转串口模块需要接入电脑，使用电脑访问串口模块，波特率为115200。
 
