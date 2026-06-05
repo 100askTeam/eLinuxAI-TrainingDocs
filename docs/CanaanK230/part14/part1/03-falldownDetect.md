@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+exclude_boards: [AIMaix]
 ---
 # 跌倒检测
 

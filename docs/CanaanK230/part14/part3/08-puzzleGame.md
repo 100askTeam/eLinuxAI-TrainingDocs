@@ -1,5 +1,6 @@
 ---
 sidebar_position: 8
+exclude_boards: [AIMaix]
 ---
 # 拼图游戏
 

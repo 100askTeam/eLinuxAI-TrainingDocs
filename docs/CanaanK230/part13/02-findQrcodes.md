@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+exclude_boards: [AIMaix]
 ---
 # 二维码识别
 

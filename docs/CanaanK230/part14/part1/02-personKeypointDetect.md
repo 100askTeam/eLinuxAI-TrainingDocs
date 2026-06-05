@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+exclude_boards: [AIMaix]
 ---
 # 人体关键点检测
 

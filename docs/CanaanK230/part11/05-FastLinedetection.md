@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+exclude_boards: [AIMaix]
 ---
 # 快速线性回归
 

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+
+exclude_boards: [AIMaix]
 ---
 # 绘制实验
 

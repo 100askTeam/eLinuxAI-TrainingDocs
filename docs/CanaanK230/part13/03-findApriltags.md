@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+exclude_boards: [AIMaix]
 ---
 # AprilTag标签识别
 

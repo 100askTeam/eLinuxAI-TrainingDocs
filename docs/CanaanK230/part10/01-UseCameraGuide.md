@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+exclude_boards: [AIMaix]
 ---
 # Camera 摄像头
 

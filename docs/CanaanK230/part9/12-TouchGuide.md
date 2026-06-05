@@ -1,3 +1,7 @@
+---
+sidebar_position: 11
+exclude_boards: [AIMaix]
+---
 # 触摸实验
 
 硬件需求：

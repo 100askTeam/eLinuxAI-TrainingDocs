@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+exclude_boards: [AIMaix]
 ---
 # PWM 舵机
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+boards: [CanMV_V2]
 ---
 # DshanPI-CanMV_V2 快速启动
 

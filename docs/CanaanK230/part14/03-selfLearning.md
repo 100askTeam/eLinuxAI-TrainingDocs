@@ -1,5 +1,6 @@
 ---
 sidebar_position: 8
+exclude_boards: [AIMaix]
 ---
 # 自分类学习
 

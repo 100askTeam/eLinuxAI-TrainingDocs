@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+exclude_boards: [AIMaix]
 ---
 # 手掌关键点分类
 

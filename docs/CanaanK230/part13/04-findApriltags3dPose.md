@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+exclude_boards: [AIMaix]
 ---
 # AprilTag姿态估计
 

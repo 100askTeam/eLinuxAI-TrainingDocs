@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+boards: [CanMV_EVB]
 ---
 # DshanPI-K230_BTB_EVB 快速启动
 

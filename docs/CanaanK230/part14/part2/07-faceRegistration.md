@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+exclude_boards: [AIMaix]
 ---
 # 人脸识别
 

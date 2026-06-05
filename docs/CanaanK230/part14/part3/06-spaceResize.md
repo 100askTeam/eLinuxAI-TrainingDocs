@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+exclude_boards: [AIMaix]
 ---
 # 手势区域裁剪
 

@@ -8,6 +8,40 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+/**
+ * 递归过滤侧边栏：
+ * - boards: [板卡]  → 仅在指定板卡显示（包含模式）
+ * - exclude_boards: [板卡] → 在指定板卡隐藏（排除模式）
+ * - 无标记 → 公共文档，所有板卡都显示
+ */
+function filterSidebarByBoard(items, board, docs) {
+  return items
+    .map(item => {
+      if (item.type === 'category') {
+        const filtered = filterSidebarByBoard(item.items, board, docs);
+        if (filtered.length === 0) return null;
+        return { ...item, items: filtered };
+      }
+      if (item.type === 'doc') {
+        const doc = docs.find(d => d.id === item.id);
+        if (!doc) return item;
+        const boards = doc.frontMatter?.boards;
+        const excludeBoards = doc.frontMatter?.exclude_boards;
+        // 有 boards 标记但在列表中找不到当前板卡 → 隐藏
+        if (boards && Array.isArray(boards) && boards.length > 0) {
+          if (!boards.includes(board)) return null;
+        }
+        // 有 exclude_boards 标记且列表中包含当前板卡 → 隐藏
+        if (excludeBoards && Array.isArray(excludeBoards) && excludeBoards.length > 0) {
+          if (excludeBoards.includes(board)) return null;
+        }
+        return item;
+      }
+      return item;
+    })
+    .filter(Boolean);
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '东山Π',
@@ -54,6 +88,12 @@ const config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           sidebarPath: './sidebars.js',
+          sidebarItemsGenerator: async function ({ defaultSidebarItemsGenerator, item, docs, ...rest }) {
+            const items = await defaultSidebarItemsGenerator({ defaultSidebarItemsGenerator, item, docs, ...rest });
+            const board = item.customProps?.board;
+            if (!board) return items;
+            return filterSidebarByBoard(items, board, docs);
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -93,11 +133,37 @@ const config = {
             label: '嵌入式AI基础',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'canaanK230Sidebar',
-            position: 'left',
+            type: 'dropdown',
             label: '嘉楠K230开发',
-          }, 
+            position: 'left',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'canmvV1Sidebar',
+                label: 'CanMV V1',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'canmvV2Sidebar',
+                label: 'CanMV V2',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'canmvV3Sidebar',
+                label: 'CANMV V3',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'aimaixSidebar',
+                label: 'AIMaix',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'canmvEvbSidebar',
+                label: 'CANMV EVB',
+              },
+            ],
+          },
           {
             type: 'docSidebar',
             sidebarId: 'calsspartoneSidebar',

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+exclude_boards: [AIMaix]
 ---
 # 录制音频
 
@@ -10,89 +11,68 @@ sidebar_position: 3
 ## 2.示例代码
 
 ```
-'''
-本程序遵循GPL V3协议, 请遵循协议
-实验平台: DshanPI CanMV
-开发板文档站点	: https://eai.100ask.net/
-百问网学习平台   : https://www.100ask.net
-百问网官方B站    : https://space.bilibili.com/275908810
-百问网官方淘宝   : https://100ask.taobao.com
-'''
 import os
-import time
-import sys
-from media.media import MediaManager
-from media.pyaudio import PyAudio, paInt16
-import media.wave as wave
+from media.media import *   #导入media模块，用于初始化vb buffer
+from media.pyaudio import * #导入pyaudio模块，用于采集和播放音频
+import media.wave as wave   #导入wav模块，用于保存和加载wav音频文件
 
 def exit_check():
-    """检测退出点或键盘中断"""
     try:
         os.exitpoint()
-    except KeyboardInterrupt:
-        print("User interrupted recording.")
+    except KeyboardInterrupt as e:
+        print("user stop: ", e)
         return True
     return False
 
-class AudioRecorder:
-    def __init__(self, filename, duration):
-        self.filename = filename
-        self.duration = duration
-        self.chunk = int(44100 / 25)
-        self.format = paInt16
-        self.channels = 1
-        self.rate = 44100
-        self.frames = []
+def record_audio(filename, duration):
+    CHUNK = 44100//25  #设置音频chunk值
+    FORMAT = paInt16       #设置采样精度,支持16bit(paInt16)/24bit(paInt24)/32bit(paInt32)
+    CHANNELS = 2           #设置声道数,支持单声道(1)/立体声(2)
+    RATE = 44100           #设置采样率
 
-    def record(self):
-        """执行音频录制主流程"""
+    try:
         p = PyAudio()
-        p.initialize(self.chunk)
-        MediaManager.init()
+        MediaManager.init()    #vb buffer初始化
 
-        stream = p.open(format=self.format,
-                        channels=self.channels,
-                        rate=self.rate,
+        #创建音频输入流
+        stream = p.open(format=FORMAT,
+                        channels=CHANNELS,
+                        rate=RATE,
                         input=True,
-                        frames_per_buffer=self.chunk)
+                        frames_per_buffer=CHUNK)
 
-        try:
-            print(f"Start recording: {self.filename}")
-            for _ in range(int(self.rate / self.chunk * self.duration)):
-                data = stream.read()
-                self.frames.append(data)
-                if exit_check():
-                    break
+        stream.volume(vol=55, channel=LEFT)
+        print("volume :",stream.volume())
 
-            self._save_wave(p)
-            print("Recording finished.")
-        except Exception as e:
-            print(f"Exception during recording: {e}")
-            sys.print_exception(e)
-        finally:
-            stream.stop_stream()
-            stream.close()
-            p.terminate()
-            MediaManager.deinit()
+        #启用音频3A功能：自动噪声抑制(ANS)
+        stream.enable_audio3a(AUDIO_3A_ENABLE_ANS)
 
-    def _save_wave(self, pyaudio_instance):
-        """将录制的音频保存为 WAV 文件"""
-        wf = wave.open(self.filename, 'wb')
-        wf.set_channels(self.channels)
-        wf.set_sampwidth(pyaudio_instance.get_sample_size(self.format))
-        wf.set_framerate(self.rate)
-        wf.write_frames(b''.join(self.frames))
-        wf.close()
-
-def main():
-    os.exitpoint(os.EXITPOINT_ENABLE)
-    print("Audio Recorder Sample Start")
-    recorder = AudioRecorder("/data/test.wav", 15)
-    recorder.record()
-    print("Audio Recorder Sample Done")
+        frames = []
+        #采集音频数据并存入列表
+        for i in range(0, int(RATE / CHUNK * duration)):
+            data = stream.read()
+            frames.append(data)
+            if exit_check():
+                break
+        #将列表中的数据保存到wav文件中
+        wf = wave.open(filename, 'wb') #创建wav 文件
+        wf.set_channels(CHANNELS) #设置wav 声道数
+        wf.set_sampwidth(p.get_sample_size(FORMAT))  #设置wav 采样精度
+        wf.set_framerate(RATE)  #设置wav 采样率
+        wf.write_frames(b''.join(frames)) #存储wav音频数据
+        wf.close() #关闭wav文件
+    except BaseException as e:
+            print(f"Exception {e}")
+    finally:
+        stream.stop_stream() #停止采集音频数据
+        stream.close()#关闭音频输入流
+        p.terminate()#释放音频对象
+        MediaManager.deinit() #释放vb buffer
 
 if __name__ == "__main__":
-    main()
+    os.exitpoint(os.EXITPOINT_ENABLE)
+    print("音频示例开始")
+    record_audio('/data/test.wav', 5)  # 录制WAV文件
 ```
 
 

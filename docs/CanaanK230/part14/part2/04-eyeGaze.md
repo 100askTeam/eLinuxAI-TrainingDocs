@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+exclude_boards: [AIMaix]
 ---
 # 人脸注视方向检测
 

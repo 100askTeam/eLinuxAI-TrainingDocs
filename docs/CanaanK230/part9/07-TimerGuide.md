@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+exclude_boards: [AIMaix]
 ---
 # Timer 定时器
 
