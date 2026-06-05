@@ -9,15 +9,25 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 /**
- * 递归过滤侧边栏：
+ * 递归过滤侧边栏（文档 + 分类都支持）：
  * - boards: [板卡]  → 仅在指定板卡显示（包含模式）
  * - exclude_boards: [板卡] → 在指定板卡隐藏（排除模式）
- * - 无标记 → 公共文档，所有板卡都显示
+ * - 无标记 → 公共，所有板卡都显示
+ * 分类级别通过 _category_.json 的 customProps 配置
  */
 function filterSidebarByBoard(items, board, docs) {
   return items
     .map(item => {
       if (item.type === 'category') {
+        // 分类级别过滤（通过 _category_.json 的 customProps）
+        const catBoards = item.customProps?.boards;
+        const catExclude = item.customProps?.exclude_boards;
+        if (catBoards && Array.isArray(catBoards) && catBoards.length > 0) {
+          if (!catBoards.includes(board)) return null;
+        }
+        if (catExclude && Array.isArray(catExclude) && catExclude.length > 0) {
+          if (catExclude.includes(board)) return null;
+        }
         const filtered = filterSidebarByBoard(item.items, board, docs);
         if (filtered.length === 0) return null;
         return { ...item, items: filtered };
@@ -27,11 +37,9 @@ function filterSidebarByBoard(items, board, docs) {
         if (!doc) return item;
         const boards = doc.frontMatter?.boards;
         const excludeBoards = doc.frontMatter?.exclude_boards;
-        // 有 boards 标记但在列表中找不到当前板卡 → 隐藏
         if (boards && Array.isArray(boards) && boards.length > 0) {
           if (!boards.includes(board)) return null;
         }
-        // 有 exclude_boards 标记且列表中包含当前板卡 → 隐藏
         if (excludeBoards && Array.isArray(excludeBoards) && excludeBoards.length > 0) {
           if (excludeBoards.includes(board)) return null;
         }

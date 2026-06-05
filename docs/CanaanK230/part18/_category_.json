@@ -1,6 +1,7 @@
 {
   "label": "进阶-Linux单系统开发",
   "position": 16,
+  "customProps": {"exclude_boards": ["AIMaix"]},
   "link": {
     "type": "generated-index",
     "description": "5 minutes to learn the most important Docusaurus concepts."

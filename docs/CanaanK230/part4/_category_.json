@@ -1,6 +1,7 @@
 {
   "label": "进阶-系统级AI应用开发指南",
   "position": 15,
+  "customProps": {"exclude_boards": ["AIMaix"]},
   "link": {
     "type": "generated-index",
     "description": "5 minutes to learn the most important Docusaurus concepts."
