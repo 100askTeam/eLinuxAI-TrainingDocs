@@ -299,7 +299,7 @@ try:
 
     # set chn0 output size, 1920x1080
     #sensor.set_framesize(Sensor.FHD)
-    sensor.set_framesize(width=800,height=480)
+    sensor.set_framesize(width=640,height=480)
     # set chn0 output format
     sensor.set_pixformat(Sensor.YUV420SP)
     # bind sensor chn0 to display layer video 1
@@ -308,7 +308,7 @@ try:
 
     # use lcd as display output
     #Display.init(Display.VIRT, sensor.width(), sensor.height())
-    Display.init(Display.ST7701, width = 800, height = 480, to_ide=True)
+    Display.init(Display.ST7701, width = 640, height = 480, to_ide=True)
     # init media manager
     MediaManager.init()
     # sensor start run
