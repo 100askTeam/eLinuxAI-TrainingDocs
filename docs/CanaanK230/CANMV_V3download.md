@@ -6,6 +6,8 @@ boards: [CanMV_V3]
 
 DshanPI-CanMV开发板配套的软件、源码、原理图、芯片手册、工具包等，都可访问以下资料获取。
 
+链接: https://pan.baidu.com/s/1e5bXmcgl8x9kdGk0SAUwdw?pwd=xnt5 提取码: xnt5 
+
 
 > 注意：获取资料后请一定阅读下面的文档了解资料中包含那些内容。
 
