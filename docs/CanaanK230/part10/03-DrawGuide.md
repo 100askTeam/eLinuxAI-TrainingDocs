@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 绘制实验
 

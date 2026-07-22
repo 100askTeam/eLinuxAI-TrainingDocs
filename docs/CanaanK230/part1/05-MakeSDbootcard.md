@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 制作SD卡镜像
 

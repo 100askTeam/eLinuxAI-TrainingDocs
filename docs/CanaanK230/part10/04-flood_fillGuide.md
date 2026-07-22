@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 洪水填充区域
 

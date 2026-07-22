@@ -31,7 +31,7 @@ DshanPI-AIMaix资料链接: https://pan.baidu.com/s/1u8HOaUKzyWJftlgEz_n0jw?pwd=
 
 该文件夹中保存有学习站点的链接。
 
-DshanPI-CanMV开发板配套的文档都保存在：https://eai.100ask.net/CanaanK230/Userdoc
+DshanPI-CanMV开发板配套的文档都保存在：https://eai.100ask.net
 
 
 

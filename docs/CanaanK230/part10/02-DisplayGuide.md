@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 图像显示
 

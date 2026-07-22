@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 手掌检测
 

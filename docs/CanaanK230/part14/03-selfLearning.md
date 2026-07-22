@@ -1,6 +1,6 @@
 ---
 sidebar_position: 8
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 自分类学习
 

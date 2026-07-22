@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 播放音频
 

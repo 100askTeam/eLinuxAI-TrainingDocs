@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 人脸姿态估计
 

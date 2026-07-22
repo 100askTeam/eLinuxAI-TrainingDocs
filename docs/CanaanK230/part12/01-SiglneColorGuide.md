@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 单一颜色识别
 

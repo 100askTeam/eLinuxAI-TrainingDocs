@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-exclude_boards: [AIMaix]
+exclude_boards: [AIMaix,CanMV_V3]
 ---
 # 实时跟踪
 

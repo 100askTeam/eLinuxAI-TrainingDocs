@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-boards: [AIMaix]
+boards: [AIMaix,CanMV_V3]
 ---
 # 录制音频
 
