@@ -1,0 +1,9 @@
+{
+  "label": "CV_Lite图像高速处理",
+  "position": 9,
+  "customProps": {"exclude_boards": ["AIMaix"]},
+  "link": {
+    "type": "generated-index",
+    "description": "5 minutes to learn the most important Docusaurus concepts."
+  }
+}
