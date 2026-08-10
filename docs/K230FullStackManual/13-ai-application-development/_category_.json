@@ -1,0 +1,11 @@
+{
+  "label": "AI 应用开发",
+  "position": 14,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/K230FullStackManual/ai-application-development",
+    "description": "涵盖开发环境搭建、K230 AI 推理流程、人脸检测与识别、目标检测以及云端模型训练。"
+  }
+}

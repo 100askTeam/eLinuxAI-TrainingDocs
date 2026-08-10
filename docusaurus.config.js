@@ -174,6 +174,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'k230FullStackManualSidebar',
+            position: 'left',
+            label: 'K230全栈开发手册',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'calsspartoneSidebar',
             position: 'left',
             label: '嘉楠K510开发',
