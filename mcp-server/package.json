@@ -1,0 +1,24 @@
+{
+  "name": "elinuxai-docs-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Read-only MCP server for the eLinuxAI documentation repository",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test",
+    "check": "node --check src/cli.js && node --check src/document-index.js && node --check src/mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.0.0",
+    "@modelcontextprotocol/server": "2.0.0",
+    "dotenv": "17.4.2",
+    "zod": "4.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.0.0"
+  }
+}
