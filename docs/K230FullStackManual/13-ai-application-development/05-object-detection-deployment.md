@@ -945,3 +945,8 @@ adb pull /sharefs/object_detect_yolov8n/object_det.jpg
 执行程序之后可在显示屏看到视频流推理yolov8模型的画面。
 
 ![K230 嵌入式 AI 全栈开发手册 - 292](../images/image-292.png)
+
+---
+
+版权所有：深圳百问网科技有限公司
+未经授权不得拷贝、复制、修改、传播本文档，否则将追究法律责任。

@@ -1455,3 +1455,8 @@ adb pull /sharefs/face_detect/face_detection_resul.jpg
 cd /sharefs/face_detect
 ./face_detect_isp.sh
 ```
+
+---
+
+版权所有：深圳百问网科技有限公司
+未经授权不得拷贝、复制、修改、传播本文档，否则将追究法律责任。

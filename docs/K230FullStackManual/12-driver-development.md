@@ -984,3 +984,8 @@ rt_device_write(hello_dev, 0, buf, 1);
 从这个例子里，可以看到hello驱动的框架为（设备管理层源码为在rt-thread\\src\\device.c里，它实现了rt\_device\_register等函数，用来管理驱动）：
 
 ![K230 嵌入式 AI 全栈开发手册 - 140](./images/image-140.png)
+
+---
+
+版权所有：深圳百问网科技有限公司
+未经授权不得拷贝、复制、修改、传播本文档，否则将追究法律责任。
