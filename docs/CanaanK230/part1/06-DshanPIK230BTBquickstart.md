@@ -126,28 +126,30 @@ boards: [CanMV_EVB]
 
 连接完成后，访问配套资料中`02_开发工具/【Windows】USB串口驱动`安装串口驱动。
 
-### 使用Type-C访问双串口
+### 使用排针访问双串口
 
-将Type-C数据线接入Type-C双串口模块，杜邦线端接入USB转串口模块。连接成功后，USB转串口模块需要接入电脑，使用电脑访问串口模块，波特率为115200。
+在拓展排针上，硬件也将UART0和UART3引到了拓展排针上，即您可以使用USB转UART串口使用杜邦线连接拓展排针上的串口进行访问，可以查看硬件原理图中拓展排针部分，可知UART0和UART3的位置：
 
-> 注意：
+![image-20260813142918799](images/image-20260813142918799.png)
+
+下面展示如何通过拓展排针访问UART0:
+
+![image-20260813143512715](images/image-20260813143512715.png)
+
+> - MicroPython系统：只有UART0作为系统串口输出。
+> - RT-smart系统：只有UART0作为系统串口输出。
+> - Linux系统：只有UART0作为系统串口输出。
+> - Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。
 >
-> - Type-C双串口模块的RX需要连接USB转串口模块的TX。
-> - Type-C双串口模块的TX需要连接USB转串口模块的RX。
-> - Type-C双串口模块的GND需要连接USB转串口模块的GND。
 
-![image-20250627100241144](${images}/image-20250627100241144.png)
+下面展示如何通过拓展排针访问UART3:
 
-对于DshanPI-K230_BTB_EVB，只需要将Type-C双串口模块板载Type-C口即可。
+![image-20260813143734885](images/image-20260813143734885.png)
 
-![image-20250923102053522](${images}/image-20250923102053522.png)
-
-- MicroPython系统：只有UART0作为系统串口输出。
-- RT-smart系统：只有UART0作为系统串口输出。
-- Linux系统：只有UART0作为系统串口输出。
-- Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。
-
-
+> - MicroPython系统：只有UART0作为系统串口输出。
+> - RT-smart系统：只有UART0作为系统串口输出。
+> - Linux系统：只有UART0作为系统串口输出。
+> - Rt-smart+Linux双系统：UART0作为Linux小核系统输出，UART3作为Rt-smart大核系统输出。
 
 ## [拓展]连接CKLink调试工具
 
