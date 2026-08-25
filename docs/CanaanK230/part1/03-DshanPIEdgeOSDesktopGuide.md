@@ -22,6 +22,8 @@ description: DshanPI-CanMV_V3 EdgeOS Desktop 的首次使用、AI 应用、相�
 
 视觉AI交换协议VAXP示例程序：[https://github.com/dshanpi/vaxp-host-sdk](https://github.com/dshanpi/vaxp-host-sdk)
 
+完整系统SDK获取地址：资料包中的 `10_SDK/01_基于RT-Smart的MicroPython系统`
+
 ## 1. 系统概览
 
 DshanPI EdgeOS Desktop 是运行在 DshanPI-CanMV_V3 上的横屏触控桌面。它将相机、离线 AI 推理、云平台模型部署、网络摄像机、UART/VAXP 调试、相册、画板、系统设置和安全 OTA 集成到同一个入口中。
