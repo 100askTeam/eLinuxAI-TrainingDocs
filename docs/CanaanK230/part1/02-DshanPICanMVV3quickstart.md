@@ -137,7 +137,7 @@ boards: [CanMV_V3]
 
 下面展示如何通过拓展排针访问UART0:
 
-![image-20260721182122497](images/image-20260721182122497.png)
+![image-20260827162031684](images/image-20260827162031684.png)
 
 
 > - MicroPython系统：只有UART0作为系统串口输出。
@@ -147,7 +147,7 @@ boards: [CanMV_V3]
 
 下面展示如何通过拓展排针访问UART3:
 
-![image-20260721182448009](images/image-20260721182448009.png)
+![image-20260827162250377](images/image-20260827162250377.png)
 
 > - MicroPython系统：只有UART0作为系统串口输出。
 > - RT-smart系统：只有UART0作为系统串口输出。
