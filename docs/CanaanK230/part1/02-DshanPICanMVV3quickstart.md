@@ -133,11 +133,11 @@ boards: [CanMV_V3]
 
 在拓展排针上，硬件也将UART0和UART3引到了拓展排针上，即您可以使用USB转UART串口使用杜邦线连接拓展排针上的串口进行访问，可以查看硬件原理图中拓展排针部分，可知UART0和UART3的位置：
 
-![image-20260721180845682](images/image-20260721180845682.png)
+![image-20260828100043130](images/image-20260828100043130.png)
 
 下面展示如何通过拓展排针访问UART0:
 
-![image-20260827162031684](images/image-20260827162031684.png)
+![image-20260828101233899](images/image-20260828101233899.png)
 
 
 > - MicroPython系统：只有UART0作为系统串口输出。
@@ -147,7 +147,7 @@ boards: [CanMV_V3]
 
 下面展示如何通过拓展排针访问UART3:
 
-![image-20260827162250377](images/image-20260827162250377.png)
+![image-20260828100913473](images/image-20260828100913473.png)
 
 > - MicroPython系统：只有UART0作为系统串口输出。
 > - RT-smart系统：只有UART0作为系统串口输出。
