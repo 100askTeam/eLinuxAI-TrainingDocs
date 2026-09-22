@@ -1,24 +1,15 @@
 import React from 'react';
 import Link from '@theme-original/DocSidebarItem/Link';
-import {useDocsSidebar} from '@docusaurus/theme-common/internal';
 
 export default function LinkWrapper(props) {
-  const sidebar = useDocsSidebar();
-  const sidebarName = sidebar?.name;
-  // 修改 href，附加 sidebar 参数保持当前侧边栏上下文
-  const modifiedProps = {...props};
-  if (sidebarName && props.item?.href) {
-    try {
-      const url = new URL(props.item.href, window.location.origin);
-      url.searchParams.set('sidebar', sidebarName);
-      modifiedProps.item = {...props.item, href: url.pathname + url.search};
-    } catch (e) {
-      // 非标准 URL 保持原样
-    }
+  const sidebarName = props.item?.customProps?.sidebarName;
+  const href = props.item?.href;
+  // 只处理站内绝对路径；SSR 和浏览器使用相同逻辑，不依赖 window。
+  if (sidebarName && href?.startsWith('/') && !href.startsWith('//')) {
+    const url = new URL(href, 'https://docusaurus.invalid');
+    url.searchParams.set('sidebar', sidebarName);
+    // 仅覆盖导航目标，保留 item.href 供原组件计算高亮和展开状态。
+    return <Link {...props} to={url.pathname + url.search + url.hash} />;
   }
-  return (
-    <>
-      <Link {...modifiedProps} />
-    </>
-  );
+  return <Link {...props} />;
 }
