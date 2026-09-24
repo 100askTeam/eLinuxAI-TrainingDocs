@@ -118,11 +118,9 @@ boards: [CanMV_EVB]
 
 接线参考图如下所示：
 
-![image-20260310102312806](images/image-20260310102312806.png)
+![image-20260924113905181](images/image-20260924113905181.png)
 
-其中单串口默认访问的是UART0。对于DshanPI-K230_BTB_EVB，只需要将Type-C双串口模块板载Type-C口即可。
-
-![image-20250923102053522](${images}/image-20250923102053522.png)
+其中单串口默认访问的是UART0。对于DshanPI-K230_BTB_EVB，只需要将Type-C串口模块板载Type-C口即可。
 
 连接完成后，访问配套资料中`02_开发工具/【Windows】USB串口驱动`安装串口驱动。
 

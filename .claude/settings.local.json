@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx docusaurus *)",
+      "Bash(mv CanaanK230/CanMV_V1 CanaanK230-Boards/CanMV_V1)",
+      "Bash(mkdir -p CanaanK230-Boards)",
+      "Bash(mv CanaanK230/CanMV_V2 CanaanK230-Boards/CanMV_V2)",
+      "Bash(mv CanaanK230/CANMV_V3 CanaanK230-Boards/CANMV_V3)",
+      "Bash(mv CanaanK230/VisionBit CanaanK230-Boards/VisionBit)",
+      "Bash(yarn build *)",
+      "Bash(cd \"d:/Programmers/Canaan-Docs/eLinuxAI/eLinuxAI-TrainingDocs/docs\" && echo \"=== files in part1/images/ ===\" && ls \"CanaanK230/part1/images/\" && echo \"\" && echo \"=== files in part1/\\\\${images}/ ===\" && ls \"CanaanK230/part1/\\\\${images}/\")",
+      "Read(//d/Programmers/Canaan-Docs/eLinuxAI/eLinuxAI-TrainingDocs/CanaanK230/part1/**)",
+      "Bash(cp -r 'CanaanK230/part1/${images}' CanaanK230-Boards/__TRACKED_VAR__/)",
+      "Bash(mkdir -p CanaanK230-Boards/__TRACKED_VAR__/images)",
+      "Bash(cp CanaanK230/part1/images/* CanaanK230-Boards/__TRACKED_VAR__/images/)",
+      "Bash(mkdir -p __TRACKED_VAR__/part1)",
+      "Bash(mv __TRACKED_VAR__/*.md __TRACKED_VAR__/part1/)",
+      "Bash(mv '__TRACKED_VAR__/${images}' '__TRACKED_VAR__/part1/${images}')",
+      "Bash(mv __TRACKED_VAR__/images __TRACKED_VAR__/part1/images)",
+      "Bash(mv __TRACKED_VAR__/part1/index.md __TRACKED_VAR__/)",
+      "Bash(cp ../CanaanK230/part1/_category_.json __TRACKED_VAR__/part1/)",
+      "Bash(NODE_OPTIONS=--max-old-space-size=8192 yarn build)"
+    ]
+  }
+}
