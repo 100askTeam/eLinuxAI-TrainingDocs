@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">DshanPI-K230_BTB_EVB 快速启动 | 东山Π</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://eai.100ask.net/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://eai.100ask.net/CanaanK230/part1/DshanPIK230BTBquickstart"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="DshanPI-K230_BTB_EVB 快速启动 | 东山Π"><meta data-rh="true" name="description" content="硬件要求"><meta data-rh="true" property="og:description" content="硬件要求"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://eai.100ask.net/CanaanK230/part1/DshanPIK230BTBquickstart"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part1/DshanPIK230BTBquickstart" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/en/CanaanK230/part1/DshanPIK230BTBquickstart" hreflang="en"><link data-rh="true" rel="alternate" href="https://eai.100ask.net/CanaanK230/part1/DshanPIK230BTBquickstart" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.592e4ad7.css">
-<script src="/assets/js/runtime~main.a888790e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e265244c.js" defer="defer"></script>
 <script src="/assets/js/main.09bd7412.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -88,9 +88,8 @@
 </ul>
 </blockquote>
 <p>接线参考图如下所示：</p>
-<p><img loading="lazy" alt="image-20260310102312806" src="/assets/images/image-20260310102312806-a966e7dc80a30eafbb7a4a491efe0463.png" width="3303" height="1128" class="img_ev3q"></p>
-<p>其中单串口默认访问的是UART0。对于DshanPI-K230_BTB_EVB，只需要将Type-C双串口模块板载Type-C口即可。</p>
-<p><img loading="lazy" alt="image-20250923102053522" src="/assets/images/image-20250923102053522-06be2836b6cffe50fdfc4f5d1d568c12.png" width="691" height="698" class="img_ev3q"></p>
+<p><img loading="lazy" alt="image-20260924113905181" src="/assets/images/image-20260924113905181-c100004b2f7dfff61c94a6afc4025036.png" width="1434" height="1071" class="img_ev3q"></p>
+<p>其中单串口默认访问的是UART0。对于DshanPI-K230_BTB_EVB，只需要将Type-C串口模块板载Type-C口即可。</p>
 <p>连接完成后，访问配套资料中<code>02_开发工具/【Windows】USB串口驱动</code>安装串口驱动。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="使用排针访问双串口">使用排针访问双串口<a href="#使用排针访问双串口" class="hash-link" aria-label="使用排针访问双串口的直接链接" title="使用排针访问双串口的直接链接">​</a></h3>
 <p>在拓展排针上，硬件也将UART0和UART3引到了拓展排针上，即您可以使用USB转UART串口使用杜邦线连接拓展排针上的串口进行访问，可以查看硬件原理图中拓展排针部分，可知UART0和UART3的位置：</p>
@@ -126,7 +125,7 @@
 <p>玄铁CPU调试器：<a href="https://www.xrvm.cn/soft-tools/tools/debugger-server" target="_blank" rel="noopener noreferrer">https://www.xrvm.cn/soft-tools/tools/debugger-server</a></p>
 </li>
 <li>
-<p>调试  系统DebugServer：<a href="https://www.xrvm.cn/community/download?spm=a2cl5.29981144.0.0.4888lr4Flr4FWN&amp;id=4380347564587814912&amp;isLatestVersion=1" target="_blank" rel="noopener noreferrer">XuanTie DebugServer</a>，如果无法访问，请自行前往玄铁官网下载：<a href="https://www.xrvm.cn/" target="_blank" rel="noopener noreferrer">XuanTie玄铁</a></p>
+<p>调试系统DebugServer：<a href="https://www.xrvm.cn/community/download?spm=a2cl5.29981144.0.0.4888lr4Flr4FWN&amp;id=4380347564587814912&amp;isLatestVersion=1" target="_blank" rel="noopener noreferrer">XuanTie DebugServer</a>，如果无法访问，请自行前往玄铁官网下载：<a href="https://www.xrvm.cn/" target="_blank" rel="noopener noreferrer">XuanTie玄铁</a></p>
 </li>
 </ul>
 <p>开始前请先下载<a href="https://www.xrvm.cn/soft-tools/tools/debugger-server" target="_blank" rel="noopener noreferrer">玄铁CPU调试器</a>，下载后安装到您的主机端，启动DebugServer后可看到如下画面：</p>
